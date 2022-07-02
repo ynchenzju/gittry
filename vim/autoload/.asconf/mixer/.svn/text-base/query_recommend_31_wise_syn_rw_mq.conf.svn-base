@@ -1,0 +1,60 @@
+[@query_recommend_description]
+alive : 0
+[.recommend_condition]
+flow_type : wise_page_im
+asyn_ads_mode : 0
+page_no : 0
+
+[.@recommend_output_product]
+alive : 1
+recommend_output_product_name: query_mining
+@select_result_set_fild_name : 
+qm_multi_queries_use_original_query : 1
+qm_max_multi_queries_num : 2
+qm_multi_queries_product_tag : 0
+qm_original_query_weight : 100
+multi_queries_sim_thr : 0.7
+query_mining_mingshi : 1
+multi_queries_no_req_exact_adv:1
+[..ctr]
+alive:1
+cut_alive:0
+ctr_thr:0
+uqueryq_replace_xqueryq : 0
+use_indep_xqueryq : 0
+recom_query_qm_ctr1_alpha : 2.485
+recom_query_qm_ctr1_beta : 3.746
+recom_query_qm_ctr1_gamma : 11.430
+ori_query_qm_ctr1_alpha: 2.485
+ori_query_qm_ctr1_beta: 3.746
+ori_query_qm_ctr1_gamma: 11.194
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : intent-rewt-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : ori-query-rewt-query-table
+result_set_field_name : query_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_sign_list
+trigger_depend_data_field_priority: 890
+interrelate_thr : 0.15
+interrelate_dict_thr : 0.15
+gbdt_thr : 0
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+g_trigger_key_flow_type:0
+alive: 1
+multi_queries_branch_id : 1
+max_multi_queries_num : 2
+multi_queries_weight : 80
+multi_queries_type : 2
+@branch_trigger_key_flow_type : 0
+@branch_trigger_key_flow_type : 0
+@branch_trigger_key_flow_type : 0
+@branch_trigger_key_flow_type : 0
+@branch_trigger_key_flow_type : 0

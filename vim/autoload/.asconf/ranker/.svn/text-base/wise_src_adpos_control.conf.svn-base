@@ -1,0 +1,342 @@
+#!!!根据国家规定,广告条数不准超过自然结果条数的30%
+#
+#自然结果条数
+wise_nature_result_num : 10
+#允许展现的广告位数占整体(自然结果+广告)的比例
+wise_adpos_control_precent : 0.3
+
+#[豁免数据源]
+#   广告条数限制只针对无线首页,即:160,613,872,828,903,941,926,963,
+#       111,615,878,830,904,942,927,964,601,602
+#   其余无线小频道/中间页性质的数据源,不需要对广告条数进行限制
+#   需要加到wise_ads_nocontrol_src中
+#   
+# add 872/878  读心导流优的逻辑比较特殊: 读心与优选是处于同一个卡片的,正常逻辑下不出优选时读心也不会出,因此我们只需要对优选卡片计入adpos名额即可,因此将读心数据源设置为nocontrol by xiangkang01 20160607
+@wise_ads_nocontrol_src :  1204
+@wise_ads_nocontrol_src :  1182
+@wise_ads_nocontrol_src :  872
+@wise_ads_nocontrol_src :  878
+@wise_ads_nocontrol_src :  877
+@wise_ads_nocontrol_src :  983
+@wise_ads_nocontrol_src :  984
+@wise_ads_nocontrol_src :  876
+@wise_ads_nocontrol_src :  656
+@wise_ads_nocontrol_src :  657
+@wise_ads_nocontrol_src :  664
+@wise_ads_nocontrol_src :  612
+@wise_ads_nocontrol_src :  758
+@wise_ads_nocontrol_src :  706
+@wise_ads_nocontrol_src :  774
+@wise_ads_nocontrol_src :  775
+@wise_ads_nocontrol_src :  785
+@wise_ads_nocontrol_src :  786
+@wise_ads_nocontrol_src :  791
+@wise_ads_nocontrol_src :  792
+@wise_ads_nocontrol_src :  805
+@wise_ads_nocontrol_src :  814
+@wise_ads_nocontrol_src :  824
+@wise_ads_nocontrol_src :  823
+@wise_ads_nocontrol_src :  820
+@wise_ads_nocontrol_src :  821
+@wise_ads_nocontrol_src :  825
+@wise_ads_nocontrol_src :  829
+@wise_ads_nocontrol_src :  831
+@wise_ads_nocontrol_src :  836
+@wise_ads_nocontrol_src :  846
+@wise_ads_nocontrol_src :  859
+@wise_ads_nocontrol_src :  867
+@wise_ads_nocontrol_src :  868
+@wise_ads_nocontrol_src :  869
+@wise_ads_nocontrol_src :  870
+@wise_ads_nocontrol_src :  874
+@wise_ads_nocontrol_src :  875
+@wise_ads_nocontrol_src :  873
+@wise_ads_nocontrol_src :  880
+@wise_ads_nocontrol_src :  858
+@wise_ads_nocontrol_src :  895
+@wise_ads_nocontrol_src :  896
+@wise_ads_nocontrol_src :  890
+@wise_ads_nocontrol_src :  879
+@wise_ads_nocontrol_src :  905
+@wise_ads_nocontrol_src :  906
+@wise_ads_nocontrol_src :  907
+@wise_ads_nocontrol_src :  910
+@wise_ads_nocontrol_src :  898
+@wise_ads_nocontrol_src :  923
+@wise_ads_nocontrol_src :  920
+@wise_ads_nocontrol_src :  921
+@wise_ads_nocontrol_src :  914
+@wise_ads_nocontrol_src :  915
+@wise_ads_nocontrol_src :  925
+@wise_ads_nocontrol_src :  922
+@wise_ads_nocontrol_src :  932
+@wise_ads_nocontrol_src :  931
+@wise_ads_nocontrol_src :  933
+@wise_ads_nocontrol_src :  936
+@wise_ads_nocontrol_src :  937
+@wise_ads_nocontrol_src :  938
+@wise_ads_nocontrol_src :  994
+@wise_ads_nocontrol_src :  939
+@wise_ads_nocontrol_src :  930
+@wise_ads_nocontrol_src :  955
+@wise_ads_nocontrol_src : 956
+@wise_ads_nocontrol_src : 960
+@wise_ads_nocontrol_src : 957
+@wise_ads_nocontrol_src : 952
+@wise_ads_nocontrol_src : 965
+@wise_ads_nocontrol_src :  968
+@wise_ads_nocontrol_src : 966
+@wise_ads_nocontrol_src :  967
+@wise_ads_nocontrol_src :  969
+@wise_ads_nocontrol_src :  980
+@wise_ads_nocontrol_src :  987
+@wise_ads_nocontrol_src :  989
+@wise_ads_nocontrol_src :  978
+@wise_ads_nocontrol_src :  981
+@wise_ads_nocontrol_src :  988
+@wise_ads_nocontrol_src :  990
+@wise_ads_nocontrol_src :  1012
+@wise_ads_nocontrol_src :  1014
+@wise_ads_nocontrol_src :  1018
+@wise_ads_nocontrol_src :  1023
+@wise_ads_nocontrol_src :  1024
+@wise_ads_nocontrol_src :  1026
+@wise_ads_nocontrol_src :  1057
+@wise_ads_nocontrol_src :  1108
+@wise_ads_nocontrol_src :  1106
+@wise_ads_nocontrol_src :  1103
+@wise_ads_nocontrol_src :  912
+@wise_ads_nocontrol_src :  913
+@wise_ads_nocontrol_src :  985
+@wise_ads_nocontrol_src :  986
+@wise_ads_nocontrol_src :  1022
+@wise_ads_nocontrol_src :  982
+@wise_ads_nocontrol_src :  1033
+@wise_ads_nocontrol_src :  1034
+@wise_ads_nocontrol_src :  1035
+@wise_ads_nocontrol_src :  1036
+@wise_ads_nocontrol_src :  1037
+@wise_ads_nocontrol_src :  1038
+@wise_ads_nocontrol_src :  1029
+@wise_ads_nocontrol_src : 1047
+@wise_ads_nocontrol_src : 1048
+@wise_ads_nocontrol_src :  1066
+@wise_ads_nocontrol_src :  1073
+@wise_ads_nocontrol_src :  1076
+@wise_ads_nocontrol_src :  1080
+@wise_ads_nocontrol_src :  1081
+@wise_ads_nocontrol_src :  1083
+@wise_ads_nocontrol_src :  1084
+@wise_ads_nocontrol_src :  1078
+@wise_ads_nocontrol_src :  1058
+@wise_ads_nocontrol_src :  1059
+@wise_ads_nocontrol_src :  1088
+@wise_ads_nocontrol_src : 1083
+@wise_ads_nocontrol_src : 1084
+@wise_ads_nocontrol_src : 1092
+@wise_ads_nocontrol_src : 1093
+@wise_ads_nocontrol_src :  1097
+@wise_ads_nocontrol_src :  1098
+@wise_ads_nocontrol_src :  1100
+@wise_ads_nocontrol_src :  1101
+@wise_ads_nocontrol_src :  1102
+@wise_ads_nocontrol_src :  1105
+@wise_ads_nocontrol_src :  1077
+@wise_ads_nocontrol_src :  1120
+@wise_ads_nocontrol_src :  1119
+@wise_ads_nocontrol_src :  1127
+@wise_ads_nocontrol_src :  1131
+@wise_ads_nocontrol_src :  1118
+@wise_ads_nocontrol_src :  1132
+@wise_ads_nocontrol_src :  1133
+@wise_ads_nocontrol_src :  1129
+@wise_ads_nocontrol_src :  1130
+@wise_ads_nocontrol_src :  1135
+@wise_ads_nocontrol_src :  1125
+@wise_ads_nocontrol_src :  1149
+@wise_ads_nocontrol_src : 1146
+@wise_ads_nocontrol_src : 1161
+@wise_ads_nocontrol_src : 1162
+@wise_ads_nocontrol_src : 1145
+@wise_ads_nocontrol_src : 1157
+@wise_ads_nocontrol_src : 1158
+@wise_ads_nocontrol_src : 1095
+@wise_ads_nocontrol_src : 1166
+@wise_ads_nocontrol_src : 1167
+@wise_ads_nocontrol_src : 1173
+@wise_ads_nocontrol_src : 1179
+#健康快车
+@wise_ads_nocontrol_src :  1183
+@wise_ads_nocontrol_src :  1184
+@wise_ads_nocontrol_src :  1185
+@wise_ads_nocontrol_src :  1186
+@wise_ads_nocontrol_src :  1187
+@wise_ads_nocontrol_src :  1188
+@wise_ads_nocontrol_src :  1159
+@wise_ads_nocontrol_src :  1160
+@wise_ads_nocontrol_src :  1189
+@wise_ads_nocontrol_src :  1190
+@wise_ads_nocontrol_src : 1171
+@wise_ads_nocontrol_src : 1205
+@wise_ads_nocontrol_src : 1206
+@wise_ads_nocontrol_src : 1207
+@wise_ads_nocontrol_src : 1208
+@wise_ads_nocontrol_src : 1214
+@wise_ads_nocontrol_src : 1215
+@wise_ads_nocontrol_src : 1191
+@wise_ads_nocontrol_src : 1192
+@wise_ads_nocontrol_src : 1193
+@wise_ads_nocontrol_src : 1235
+@wise_ads_nocontrol_src : 1236
+@wise_ads_nocontrol_src : 1237
+@wise_ads_nocontrol_src : 1238
+@wise_ads_nocontrol_src : 1220
+@wise_ads_nocontrol_src : 1221
+@wise_ads_nocontrol_src : 1222
+#[广告条数纳入控制的数据源]
+#   从上到下的顺序表示广告展现的优先级,默认ppim>混排>下方
+#   类似百度商家,作为一个广告位.
+#   per_pos_ads_num 为该数据源上,一个广告位所能展现的广告条数.
+#       例如混排位置为1条广告占据一个广告位,知心卡片为3条广告占一个广告位
+#       一个队列所占的广告位数=队列广告条数/per_pos_ads_num + (广告条数%per_pos_ads_num > 0 ? 1 : 0)
+#       如果某个数据源存在类似第1条占一个广告,后3条占一个广告位的特殊场景(如ppim展现多广告pla)
+#       请自行在imas_func_packnewstyle.conf do_wise_adpos_control()添加特殊逻辑
+#上方数据源
+[@wise_src_adpos_control]
+src_id :  1183
+per_pos_ads_num : 3
+
+[@wise_src_adpos_control]
+src_id :  1184
+per_pos_ads_num : 3
+
+[@wise_src_adpos_control]
+src_id :  1187
+per_pos_ads_num : 3
+
+[@wise_src_adpos_control]
+src_id :  1188
+per_pos_ads_num : 3
+
+[@wise_src_adpos_control]
+src_id : 1159
+per_pos_ads_num : 15
+
+[@wise_src_adpos_control]
+src_id :  1160
+per_pos_ads_num : 15
+
+[@wise_src_adpos_control]
+src_id :  1013
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  1017
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  160
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  1260
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  111
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  1261
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  1019
+per_pos_ads_num : 3
+
+[@wise_src_adpos_control]
+src_id :  1020
+per_pos_ads_num : 3
+
+[@wise_src_adpos_control]
+src_id :  613
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  615
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  828
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  830
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  926
+per_pos_ads_num : 20
+
+[@wise_src_adpos_control]
+src_id :  927
+per_pos_ads_num : 20
+
+[@wise_src_adpos_control]
+src_id : 963
+per_pos_ads_num : 20
+
+[@wise_src_adpos_control]
+src_id : 964
+per_pos_ads_num : 20
+
+#百度商家虚拟src_id
+[@wise_src_adpos_control]
+src_id :  1150
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  1151
+per_pos_ads_num : 1
+
+#中间数据源,混排/知心卡片
+[@wise_src_adpos_control]
+src_id :  903
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  904
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  941
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  942
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  1100
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  1101
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  1185
+per_pos_ads_num : 24
+
+[@wise_src_adpos_control]
+src_id :  1186
+per_pos_ads_num : 24
+
+#下方数据源
+[@wise_src_adpos_control]
+src_id :  601
+per_pos_ads_num : 1
+
+[@wise_src_adpos_control]
+src_id :  602
+per_pos_ads_num : 1

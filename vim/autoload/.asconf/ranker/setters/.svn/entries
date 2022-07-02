@@ -1,0 +1,64 @@
+10
+
+dir
+441272
+https://svn.baidu.com/app/ecom/im/trunk/production/prod/ranker/conf/setters
+https://svn.baidu.com/app/ecom/im
+
+
+
+2017-11-27T03:31:59.799693Z
+421509
+huangxuan03
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e3b41110-2515-456f-954c-48b0ae168b4c
+
+RedCarpetQTTransformSetter
+dir
+
+AppCpaPromotionSetter
+dir
+
+ChunhuaQCaliTransSetter
+dir
+
+ClickqDefaultValSetter
+dir
+
+ZtcReplace3rdQualitySetter
+dir
+
+RigRelatedSetter
+dir
+
+CalibrateZtcCvrqDisSetter
+dir
+
+MsaMinBidSetter
+dir
+
+QCaliAndTransSetter
+dir
+
+DisGspScoreSetter
+dir
+
+PlutoUrlCorrelationSetter
+dir
+
+ZtcCvrQtTransSetter
+dir
+

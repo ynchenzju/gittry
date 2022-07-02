@@ -1,0 +1,84 @@
+all do
+  @platform = ''
+  @isp = ''
+end
+
+node '[n+ct+imas]' do
+  @platform = 'd1'
+  @isp = 'cu'
+end
+
+node '[n+cu+imas]' do
+  @platform = 'd1'
+  @isp = 'cu'
+end
+
+node '[n+cm+imas]' do
+  @platform = 'd1'
+  @isp = 'cu'
+end
+
+node '[n+hd+imas]' do
+  @platform = 'd1'
+  @isp = 'hd'
+end
+
+node '[n+nj+imas]' do
+  @platform = 'd1'
+  @isp = 'nj'
+end
+
+node '[d+ct+imas]' do
+  @platform = 'd1'
+  @isp = 'cu'
+end
+
+node '[d+cu+imas]' do
+  @platform = 'd1'
+  @isp = 'cu'
+end
+
+node '[d+cm+imas]' do
+  @platform = 'd1'
+  @isp = 'cu'
+end
+
+node '[d+hd+imas]' do
+  @platform = 'd1'
+  @isp = 'hd'
+end
+
+node '[d+nj+imas]' do
+  @platform = 'd1'
+  @isp = 'nj'
+end
+
+node '[bp+imas]' do
+  @platform = 'bp'
+  @isp = 'cu'
+end
+
+node '[bpoff+imas]' do
+  @platform = 'bpoff'
+  @isp = 'bpoff'
+end
+
+node '[n+ecj+imas]' do
+  @platform = 'd1'
+  @isp = 'nj'
+end
+
+node '[d+ecj+imas]' do
+  @platform = 'd1'
+  @isp = 'nj'
+end
+
+node '[n+gzhxy+imas]' do
+  @platform = 'd1'
+  @isp = 'gzhxy'
+end
+
+node '[d+gzhxy+imas]' do
+  @platform = 'd1'
+  @isp = 'gzhxy'
+end

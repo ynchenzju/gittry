@@ -1,0 +1,77 @@
+all do
+    @adrest_isp = @isp
+    @adrest_platform = 'ps'    
+    @adrest_shard_num = 32 
+    @paadrest_isp = @isp
+    @paadrest_platform = 'ps'
+    @paadrest_shard_num = 4
+end
+
+####### adrest diff #######
+opera 'e2+[ct,cu,cm]' do
+    @adrest_isp = 'bj'
+end
+
+opera 'e2+gzhxy' do
+    @adrest_isp = 'gzns'
+end
+
+opera 'dr' do
+    @adrest_platform = 'dr'
+end
+
+opera 'e2' do
+    @adrest_platform = 'e2'
+end
+
+opera 'e7' do
+    @adrest_platform = 'ps'
+end
+
+opera 'deptest' do
+    @adrest_isp = 'cu'
+    @paadrest_isp = 'cu'
+    @paadrest_platform = 'ps'
+end
+
+opera 'bpoff' do
+    @adrest_isp = 'bpoff'
+    @adrest_platform = 'bpoff'
+    @paadrest_isp = 'ct'
+    @paadrest_platform = 'bpoff'
+end
+
+opera '[bid,ads,adsbp]' do
+    @adrest_platform = 'bid'
+end
+
+opera '[e6]' do
+    @adrest_platform = 'ps'
+end
+
+opera 'img' do
+    @adrest_platform = 'img'
+end
+
+opera 'syssurvey' do
+    @adrest_isp = 'bpoff'
+    @adrest_platform = 'bpoff' 
+    @paadrest_isp = 'ct'
+    @paadrest_platform = 'bpoff'
+end
+
+opera 'img+ct' do
+    @adrest_isp = 'cm'
+end
+
+
+node '[bpoff+imas]' do
+    @adrest_platform = 'bpoff'
+    @adrest_isp = 'bpoff'
+    @paadrest_isp = 'ct'
+    @paadrest_platform = 'bpoff'
+end
+
+opera 'bp' do
+    @adrest_platform = 'bp'
+end

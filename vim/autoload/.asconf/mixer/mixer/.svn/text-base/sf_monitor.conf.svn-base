@@ -1,0 +1,8 @@
+AM_PORT : 2006
+AM_REQ_TIMES : 10
+AM_REQ_TIMEOUT : 5
+AM_IO_TIMEOUT : 100
+AM_QUEUE_NUM : 256
+OVLEXP_LIST_OUTPUT_FILE : ./data/ovlexp_list.txt
+
+YACL_OVLEXP_LIST_OUTPUT_FILE : ./data/mixer_yacl_ovlexp_list.txt

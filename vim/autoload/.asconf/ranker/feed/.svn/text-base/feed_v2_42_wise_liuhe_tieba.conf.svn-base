@@ -1,0 +1,61 @@
+#wise_ald_a_zone
+[@fsdv2]
+@cond_qm_gids:51
+@cond_qm_gids:510001
+@cond_qm_gids:510002
+@cond_qm_gids:510003
+@cond_qm_gids:510004
+@cond_qm_gids:510005
+@cond_qm_gids:510006
+@cond_qm_gids:510007
+@cond_qm_gids:510008
+@cond_qm_gids:510009
+@cond_qm_gids:510010
+@cond_qm_gids:510011
+@cond_qm_gids:510012
+@cond_qm_gids:510013
+alive:1
+
+#黑名单[1,20]
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:query_black_list
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:2
+plugin_name:feed_adv_id_black_list_multi_dict
+alive:1
+[..plugin_params]
+[...feed_black_list_params]
+key_name:user_id
+dict_name:mip_userid_black_dict
+
+[.@plugin_desc]
+plugin_instance_id:5
+plugin_name:minbid_thr_filter
+alive:1
+[..plugin_params]
+minbid_thr:30
+
+[.@plugin_desc]
+plugin_instance_id : 32
+plugin_name : ctr_thr_filter
+alive : 0
+[..plugin_params]
+ctr_thr : 6000
+
+[.@plugin_desc]
+plugin_instance_id : 33
+plugin_name : mincpm_thr_filter
+alive : 0
+[..plugin_params]
+mincpm_thr : 2500000
+
+#样式物料处理[41,60]
+[.@plugin_desc]
+plugin_instance_id:19
+plugin_name:nst_admit_adv_filter
+alive:0
+[..plugin_params]
+admit_mt_list:3176

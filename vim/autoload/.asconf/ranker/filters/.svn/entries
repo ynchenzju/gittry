@@ -1,0 +1,55 @@
+10
+
+dir
+441272
+https://svn.baidu.com/app/ecom/im/trunk/production/prod/ranker/conf/filters
+https://svn.baidu.com/app/ecom/im
+
+
+
+2017-08-25T03:48:12.357223Z
+373748
+zhaoshen01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e3b41110-2515-456f-954c-48b0ae168b4c
+
+LimitTsExpAdvFilter
+dir
+
+UvMinbidFilter
+dir
+
+ChunhuaMinbidFilter
+dir
+
+ChunhuaCpaFilter
+dir
+
+AduserFilter
+dir
+
+ZtcWiseCvrFilter
+dir
+
+ROIBudgetControlFilter
+dir
+
+BudgetThrottlingFilter
+dir
+
+TrafficConsumeControlFilter
+dir
+

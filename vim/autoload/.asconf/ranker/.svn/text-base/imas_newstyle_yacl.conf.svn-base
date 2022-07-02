@@ -1,0 +1,1001 @@
+ccc_card_title_guard:9
+
+ad_click_rs_dedup_random_prob : 0.4
+ad_click_rs_similarity_thr : 0.7
+
+@slp_product_mt : 3192
+@slp_product_mt : 3193
+@slp_product_mt : 3194
+@slp_product_mt : 3540
+@slp_product_mt : 3541
+
+@app_mt_list : 2002
+@app_mt_list : 2021
+@app_mt_list : 2028
+@app_mt_list : 2066
+@app_mt_list : 2067
+@app_mt_list : 3129
+@app_mt_list : 2008
+
+@slp_pic_content_mt:3205
+@slp_pic_content_mt:3206
+@slp_pic_content_mt:3207
+
+
+screen_height_thr:490
+
+dynamic_second_title_style : 1
+dynamic_second_title_tag : [ÕªÒª]
+
+@truncation_adjustment_mt:3061
+@truncation_adjustment_mt:3161
+@truncation_adjustment_mt:3160
+@truncation_adjustment_mt:3157
+
+@strong_mts : 2028
+@strong_mts : 2027
+@strong_mts : 98766
+
+@wise_nst_desc_grid_limit_src_array : 987
+@wise_nst_desc_grid_limit_src_array : 989
+@wise_nst_desc_grid_limit_src_array : 966
+@wise_nst_desc_grid_limit_src_array : 967
+@wise_nst_desc_grid_limit_src_array : 963
+@wise_nst_desc_grid_limit_src_array : 964
+@wise_nst_desc_grid_limit_src_array : 1129
+@wise_nst_desc_grid_limit_src_array : 1130
+@wise_nst_desc_grid_limit_src_array : 999999
+@wise_nst_desc_grid_limit_src_array : 999999
+@wise_nst_desc_grid_limit_src_array : 999999
+@wise_nst_desc_grid_limit_src_array : 999999
+@wise_nst_desc_grid_limit_src_array : 999999
+@wise_nst_desc_grid_limit_src_array : 999999
+@wise_nst_desc_grid_limit_src_array : 999999
+
+wise_im_nst_screen_grid_desc_limit : 2062_3335@9_4,3005_2027@9_1,3005@12_1,2062_3008_2001@9_2,2062_3010_2001@9_2,3009_3008_2001@9_2,3009_3010_2001@9_2,2062_3008_2002@9_2,2062_3010_2002@9_2,3009_3008_2002@9_2,3009_3010_2002@9_2,2062_4002@9_3,2062_3051@9_2,2062_3008@9_3,2062_3010@9_3,3009_3008@9_3,3009_3010@9_3,4002_2062@9_1,2045_2893@10_1,2045_2894@10_1,3184_2062@9_1,3200_2032@9_1,3200_2046@9_1,3202_2032@9_1,3202_2046@9_1,3204_2032@9_2,3204_2046@9_2,2071_2072@12_1,2046_2062@9_1,2080_2062@9_1,2062_2037@9_1,2062_2137@9_1,2062_2107@6_3,2107@9_3,2062_2027@6_2,1038_2027@6_2,2062_2129@6_3,2062_2111@6_3,2062_2120@6_3,2161_3136@12_1,2046_3191@9_1,1047_2037@12_1,1051_2037@12_1,2001_2037@12_2,2015_2037@12_2,2027_2037@9_1,2032_2037@12_1,2043_2037@12_1,2046_2037@12_1,2056_2037@12_2,2108_2037@12_1,2114_2037@12_1,2165_2037@12_1,2302_2037@12_1,3004_2037@12_1,3008_2037@12_1,3010_2037@12_1,3017_2037@12_1,3034_2037@12_1,3042_2037@12_1,3043_2037@12_1,3127_2037@9_1,3136_2037@12_1,3335_2037@12_1,2037@12_1,3110@12_1,2893@12_1,2894@12_1,2892@12_2,3193@9_2,3194@12_1,3153@12_1,3184@12_1,3183@12_1,3200@9_2,3202@9_2,3204@9_3,2156@9_2,3135@12_2,3129@9_2,2033@12_2,2053@12_1,2046@12_1,2043@12_1,2032@12_1,2020@12_1,2021@12_1,2002@12_1,2035@12_1,2036@12_1,2037@12_1,2137@12_1,1031@12_1,2045@12_2,2059@12_1,2071@12_2,2027@9_2,2129@9_3,2111@9_2,2062@9_2,1047@12_1,2080@12_1,2155@12_2,3171@12_2,2161@12_2,2108@12_1,2109@12_1,2114@12_2,2117@9_3,2118@9_2,3191@9_2,2057@9_2,2086@12_2,2088@12_2,2091@12_2,2092@12_2,2093@12_2,2103@12_2,2104@12_1,3028@12_2,3030@12_2,3052@12_2,3010@12_1,3051@12_1,1051@12_1,3041@9_1,1060@12_1,2119@12_2,3008@12_1,2165@12_2,3046@12_2,2126@12_2,2168@10_3,2181@12_2,2188@10_3,2189@10_3,2308@12_1,2019@9_3,2222@9_2,2182@12_2,2164@12_3,3004@12_2,8529_2062@8_3,8529@12_2,8530_2062@8_2,8530@12_1,8531_2062@8_3,8531@12_2
+wise_im_expand_area_nst_screen_grid_desc_limit : 2062_3335@9_4,3005_2027@9_1,3005@12_1,2062_3008_2001@9_2,2062_3010_2001@9_2,3009_3008_2001@9_2,3009_3010_2001@9_2,2062_3008_2002@9_2,2062_3010_2002@9_2,3009_3008_2002@9_2,3009_3010_2002@9_2,2062_4002@9_3,2062_3051@9_2,2062_3008@9_3,2062_3010@9_3,3009_3008@9_3,3009_3010@9_3,4002_2062@9_1,2045_2893@10_1,2045_2894@10_1,3184_2062@9_1,3200_2032@9_1,3200_2046@9_1,3202_2032@9_1,3202_2046@9_1,3204_2032@9_2,3204_2046@9_2,2071_2072@12_1,2046_2062@9_2,2080_2062@9_2,2062_2037@9_2,2062_2137@9_2,2062_2107@6_3,2107@9_3,2062_2027@6_3,1038_2027@6_3,2062_2129@6_3,2062_2111@6_3,2062_2120@6_3,2161_3136@12_1,2046_3191@9_2,1047_2037@12_1,1051_2037@12_1,2001_2037@12_3,2015_2037@12_3,2027_2037@9_2,2032_2037@12_1,2043_2037@12_1,2046_2037@12_1,2056_2037@12_2,2108_2037@12_1,2114_2037@12_1,2165_2037@12_1,2302_2037@12_1,3004_2037@12_1,3008_2037@12_1,3010_2037@12_1,3017_2037@12_1,3034_2037@12_1,3042_2037@12_1,3043_2037@12_1,3127_2037@9_2,3136_2037@12_1,3335_2037@12_1,2037@12_2,3110@12_1,2893@12_1,2894@12_1,2892@12_2,3193@9_2,3194@12_1,3153@12_1,3184@12_2,3183@12_2,3200@9_2,3202@9_2,3204@9_3,2156@9_2,3135@12_3,3129@9_2,2033@12_2,2053@12_2,2046@12_2,2043@12_2,2032@12_2,2020@12_2,2021@12_2,2002@12_2,2035@12_2,2036@12_2,2037@12_2,2137@12_2,1031@12_2,2045@12_3,2059@12_2,2071@12_2,2027@9_3,2129@9_3,2111@9_2,2062@9_3,1047@12_2,2080@12_2,2155@12_3,3171@12_2,2161@12_2,2108@12_1,2109@12_1,2114@12_2,2117@9_3,2118@9_2,3191@9_3,2057@9_2,2086@12_2,2088@12_2,2091@12_2,2092@12_2,2093@12_2,2103@12_2,2104@12_1,3028@12_2,3030@12_2,3052@12_2,3010@12_2,3051@12_2,1051@12_2,3041@9_1,1060@12_1,2119@12_2,3008@12_2,2165@12_2,3046@12_2,2126@12_2,2168@10_3,2181@12_2,2188@10_3,2189@10_3,2308@12_1,2019@9_3,2222@9_3,2182@12_2,2164@12_3,3004@12_2,8529_2062@8_3,8529@12_2,8530_2062@8_2,8530@12_1,8531_2062@8_3,8531@12_2
+wise_ppim_nst_screen_grid_desc_limit:9015_2062@8_4,9007@12_2,3037@12_2,2062_3335@8_4,2027_3008@9_3,3008_2062@8_3,2062_4002@8_3,2062_3051@8_3,3200_2032@8_2,3200_2046@8_2,3202_2032@8_2,3202_2046@8_2,3204_2032@8_3,3204_2046@8_3,3159_2067@7_1,3127_1038@6_2,3123_1038@6_2,2080_2062@8_3,2046_2062@8_3,3009_2037@8_2,3009_3008@8_3,3009_3010@8_3,3009_1051@8_4,3009_1060@8_4,2062_2037@8_2,2054_2050@8_2,2062_2050@8_2,2062_2107@8_3,2107@9_3,2062_2027@8_5,1038_2027@8_3,2062_2129@8_3,2062_2111@8_3,2062_2120@8_3,2071_2072@12_1,2161_3136@12_1,2040_2062@8_2,2040_2054@8_2,2040_2045@12_1,2040_2033@12_1,2046_3191@8_2,1047_2037@12_1,1051_2037@12_1,1051_2027@9_2,2001_2037@12_2,2015_2037@12_2,2027_2037@9_1,2032_2037@12_1,2043_2037@12_1,2046_2037@12_1,2056_2037@12_2,2108_2037@12_1,2114_1051@12_1,2114_1060@12_1,2169_1051@12_1,2169_1060@12_1,2114_2037@12_1,2165_2037@12_1,2302_2037@12_1,3004_2037@12_1,3008_2037@12_1,2027_3010@9_2,3010_2037@12_1,3017_2037@12_1,3034_2037@12_1,3042_2037@12_1,3043_2037@12_1,3127_2037@9_1,3136_2037@12_1,3335_2037@12_1,2037@12_1,3110@12_1,2893@12_1,2894@12_1,2892_1051@12_1,2892_1060@12_1,2892_3008@12_1,2892_3010@12_1,2892_3034@12_1,2892@12_2,3193@8_2,3194@12_1,3153@12_1,2162@8_3,2163@12_2,3184@12_1,3183@12_1,3200@8_3,3202@8_3,3204@8_4,2156@8_3,3159@7_2,3135@12_2,3129@9_2,2183@9_2,3127@9_2,3123@9_2,2067_2028@12_2,2028@7_2,2008@8_2,2033@12_2,2022@8_2,2046@12_1,2043@12_1,2032@12_1,3009_2020@8_2,2020@12_1,2021@12_1,2002@12_1,1031@12_1,2040@12_1,2041@12_1,2045@12_2,2050@12_1,2054@8_3,2027@9_2,2129@9_3,2111@9_2,3034_2062@8_2,2062@8_5,2071@12_2,1047@12_1,2080@12_1,3130@8_2,2155@12_1,3171@12_2,2161@12_2,2108@12_1,2109@12_1,3009_2114@8_3,2114@12_2,2117@8_4,2118@9_2,3191@8_3,2057@8_3,2086@12_2,2088@12_2,2091@12_2,2092@12_2,2093@12_2,2103@12_2,2104@12_1,3028@12_2,3030@12_2,3052@12_2,3051@12_1,1051@12_1,3041@8_2,1060_2027@9_2,1060@12_1,2119@12_2,3009_2165@8_3,3009_2126@8_3,3009@8_4,2165@12_2,3046@12_2,2126@12_2,2168@10_3,2181@12_2,2188@10_3,2189@10_3,2019@9_3,2222@8_4,2182@12_2,2164@12_3,2199@10_3,9004@12_3,9005_2027@9_2,9005_3009@8_3,9005_2062@8_3,9005@12_2,2027@9_2,3009@8_4,2062@9_3,8529_2062@8_3,8529@12_2,8530_2062@8_2,8530@12_1,8531_2062@8_3,8531@12_2
+wise_ppim_expand_area_nst_screen_grid_desc_limit:9015_2062@8_4,9007@12_2,3037@12_2,2062_3335@8_4,2027_3008@9_3,3008_2062@8_3,2062_4002@8_3,2062_3051@8_3,4002_2062@8_3,3200_2032@8_2,3200_2046@8_2,3202_2032@8_2,3202_2046@8_2,3204_2032@8_3,3204_2046@8_3,3159_2067@7_1,3127_1038@6_3,3123_1038@6_3,2080_2062@8_4,2046_2062@8_4,3009_2037@8_2,3009_3008@8_3,3009_3010@8_3,3009_1051@8_4,3009_1060@8_4,2062_2037@8_3,2054_2050@8_2,2062_2050@8_3,2062_2107@8_3,2107@9_3,2062_2027@8_5,1038_2027@8_4,2062_2129@8_3,2062_2111@8_3,2062_2120@8_3,2071_2072@12_1,2161_3136@12_1,2040_2062@8_3,2040_2054@8_3,2040_2045@12_2,2040_2033@12_2,2046_3191@8_3,1047_2037@12_1,1051_2037@12_1,1051_2027@9_2,2001_2037@12_3,2015_2037@12_3,2027_2037@9_2,2032_2037@12_1,2043_2037@12_1,2046_2037@12_1,2056_2037@12_2,2108_2037@12_1,2114_1051@12_1,2114_1060@12_1,2169_1051@12_1,2169_1060@12_1,2114_2037@12_1,2165_2037@12_1,2302_2037@12_1,3004_2037@12_1,3008_2037@12_1,2027_3010@9_2,3010_2037@12_1,3017_2037@12_1,3034_2037@12_1,3042_2037@12_1,3043_2037@12_1,3127_2037@9_2,3136_2037@12_1,3335_2037@12_1,2037@12_2,3110@12_1,2893@12_1,2894@12_1,2892_1051@12_1,2892_1060@12_1,2892_3008@12_1,2892_3010@12_1,2892_3034@12_1,2892@12_2,3193@8_2,3194@12_1,3153@12_1,2162@8_3,2163@12_2,3184@12_2,3183@12_2,3200@8_3,3202@8_3,3204@8_4,2156@8_3,3159@7_2,3135@12_3,3129@9_2,2183@9_2,3127@9_2,3123@9_2,2028@8_3,2008@8_3,2033@12_2,2022@8_2,2046@12_2,2043@12_2,2032@12_2,3009_2020@8_3,2020@12_2,2021@12_2,2002@12_2,1031@12_2,2040@12_2,2041@12_2,2045@12_3,2050@12_2,2054@8_3,2027@9_3,2129@9_3,2111@9_2,3034_2062@8_3,2062@8_5,2071@12_2,1047@12_2,2080@12_2,3130@8_2,2155@12_2,3171@12_2,2161@12_2,2108@12_1,2109@12_1,3009_2114@8_3,2114@12_2,2117@8_4,2118@9_2,3191@8_4,2057@8_3,2086@12_2,2088@12_2,2091@12_2,2092@12_2,2093@12_2,2103@12_2,2104@12_1,3028@12_2,3030@12_2,3052@12_2,3051@12_2,1051@12_2,3041@8_2,1060_2027@9_2,1060@12_1,2119@12_2,3009_2165@8_3,3009_2126@8_3,3009@8_4,2165@12_2,3046@12_2,2126@12_2,2168@10_3,2181@12_2,2188@10_3,2189@10_3,2019@9_3,2222@8_5,2182@12_2,2164@12_3,2199@10_3,9004@12_3,9005_2027@9_2,9005_3009@8_3,9005_2062@8_4,9005@12_2,2027@9_3,3009@8_4,2062@9_4,8529_2062@8_3,8529@12_2,8530_2062@8_2,8530@12_1,8531_2062@8_3,8531@12_2
+wise_pp_nst_screen_grid_desc_limit : 2062_3335@9_4,3005_2027@9_1,3005@12_1,2062_4002@9_3,2062_3051@9_2,2062_3008_2001@9_2,2062_3010_2001@9_2,3009_3008_2001@9_2,3009_3010_2001@9_2,2062_3008_2002@9_2,2062_3010_2002@9_2,3009_3008_2002@9_2,3009_3010_2002@9_2,2062_3008@9_3,2062_3010@9_3,3009_3008@9_3,3009_3010@9_3,3110@12_1,2156@9_2,2020@12_1,2021@12_1,2002@12_1,2032@12_1,2046@12_1,2161_3136@12_1,2161@12_2,2062_2107@6_3,2107@9_3,2062_2129@6_3,2129@9_3,2062_2111@6_3,2062_2120@6_3,2111@9_2,2062@9_2,2108@12_1,2109@12_1,2114@12_2,2117@9_3,2118@9_2,2057@9_2,2086@12_2,2088@12_2,2091@12_2,2092@12_2,2093@12_2,2103@12_2,2104@12_1,3028@12_2,3030@12_2,3052@12_2,3010@12_1,3051@12_1,1051@12_1,3041@9_1,1060@12_1,2119@12_2,3008@12_1,2165@12_2,3046@12_2,2126@12_2,2168@10_3,2181@12_2,2188@10_3,2189@10_3,2019@9_3,2222@9_2,2182@12_2,2164@12_3,3004@12_2,8529_2062@8_3,8529@12_2,8530_2062@8_2,8530@12_1,8531_2062@8_3,8531@12_2
+wise_ppim_expand_strong_style_grid_nst_desc_limit : 2062_3335@9_4,3005_2027@9_1,3005@12_1,2062_4002@9_3,2062_3051@9_2,2062_3008_2001@9_2,2062_3010_2001@9_2,3009_3008_2001@9_2,3009_3010_2001@9_2,2062_3008_2002@9_2,2062_3010_2002@9_2,3009_3008_2002@9_2,3009_3010_2002@9_2,2062_3008@9_3,2062_3010@9_3,3009_3008@9_3,3009_3010@9_3,3110@12_1,2156@9_2,3127_1038@6_3,2183@9_3,3127@9_3,3123_1038@6_3,3123@9_3,2062_2107@6_3,2107@9_3,1038_2027@6_3,2062_2027@6_3,2027@9_3,2067_2028@12_2,2028@7_2,2008@6_2,2161_3136@12_1,2161@12_2,2108@12_1,2109@12_1,2062_2129@6_3,2129@9_3,2062_2111@6_3,2062_2120@6_3,2111@9_2,2114@12_2,2117@9_3,2118@9_2,2057@9_2,2086@12_2,2088@12_2,2091@12_2,2092@12_2,2093@12_2,2103@12_2,2104@12_1,3028@12_2,3030@12_2,3052@12_2,3010@12_2,3051@12_2,1051@12_2,3041@9_1,1060@12_1,2119@12_2,3008@12_2,2165@12_2,3046@12_2,2126@12_2,2168@10_3,2181@12_2,2188@10_3,2189@10_3,2019@9_3,2222@9_2,2182@12_2,2164@12_3,3004@12_2,8529_2062@8_3,8529@12_2,8530_2062@8_2,8530@12_1,8531_2062@8_3,8531@12_2
+wise_nst_desc_row_occupy_mt : 2045@10,3135@10,2161@4,2129@16,2107@16
+wise_nst_desc_block_occupy_mt :
+
+ad_click_rs_dup_num : 3
+wise_pa_title_mt_source_list : 3034,1060,3017,3010
+@mtid_planid_query_mt_list : 3411
+wise_nst_with_src_rank_screen_grid_desc_limit : 3008_2062@9_3_160_1,3008_2062@9_3_941_1,9005_3009@9_4_160_1,9005_3009@9_4_111_1,9005_3009@9_4_601_1,9005_3009@9_4_602_1,9005_2062@9_4_160_1,9005_2062@9_4_111_1,9005_2062@9_4_601_1,9005_2062@9_4_602_1
+wise_nst_short_desc_grid_row : 2062_3008@9_2,2062_3010@9_2,3009_3008@9_2,3009_3010@9_2
+@traverse_ignore_opt_field_mt_list : 9004
+@traverse_ignore_opt_field_mt_list : 9020
+@traverse_ignore_opt_field_mt_list : 11003
+@traverse_ignore_opt_field_mt_list : 3198
+@traverse_ignore_opt_field_mt_list : 11006
+@traverse_ignore_opt_field_mt_list : 11014
+@traverse_ignore_opt_field_mt_list : 11015
+@traverse_ignore_opt_field_mt_list : 3180
+@traverse_ignore_opt_field_mt_list : 3199
+@traverse_ignore_opt_field_mt_list : 3231
+@traverse_ignore_opt_field_mt_list : 3232
+@traverse_ignore_opt_field_mt_list : 22506
+@traverse_ignore_opt_field_mt_list : 22510
+@traverse_ignore_opt_field_mt_list : 3037
+@traverse_ignore_opt_field_mt_list : 11018
+@traverse_ignore_opt_field_mt_list : 11009
+@traverse_ignore_opt_field_mt_list : 11017
+@traverse_ignore_opt_field_mt_list : 11027
+@traverse_ignore_opt_field_mt_list : 11028
+@traverse_ignore_opt_field_mt_list : 11029
+@traverse_ignore_opt_field_mt_list : 11030
+@traverse_ignore_opt_field_mt_list : 11031
+
+wise_web_official_title_occupy_pixel:30
+@slp_landingpage_proxy_srclist : 160
+@slp_landingpage_proxy_srclist : 111
+@slp_landingpage_proxy_srclist : 601
+@slp_landingpage_proxy_srclist : 602
+@slp_landingpage_proxy_srclist : 941
+@slp_landingpage_proxy_srclist : 942
+@slp_shoubai_speed_srclist : 160
+@slp_shoubai_speed_srclist : 111
+@slp_shoubai_speed_srclist : 601
+@slp_shoubai_speed_srclist : 602
+@slp_shoubai_speed_srclist : 941
+@slp_shoubai_speed_srclist : 942
+
+slp_shoubai_speed_ua_pattern : baiduboxapp/(d{1,}.d{1,})
+slp_shoubai_speed_ua_ver : 8.6
+slp_sp0_url_prefix : https://sp0.baidu.com/5bgWsjip0QIZ8tyhnq/?
+slp_landingpage_proxy_na_tag : 1
+
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 99999
+@mt_list_skip_basic_mts_pk : 22520
+@mt_list_skip_basic_mts_pk : 22517
+@mt_list_skip_basic_mts_pk : 22526
+@mt_list_skip_basic_mts_pk : 1040
+@mt_list_skip_basic_mts_pk : 11017
+@mt_list_skip_basic_mts_pk : 11018
+@mt_list_skip_basic_mts_pk : 11015
+@mt_list_skip_basic_mts_pk : 11014
+@mt_list_skip_basic_mts_pk : 11009
+@mt_list_skip_basic_mts_pk : 11008
+@mt_list_skip_basic_mts_pk : 11007
+@mt_list_skip_basic_mts_pk : 11006
+@mt_list_skip_basic_mts_pk : 11003
+@mt_list_skip_basic_mts_pk : 31507
+@mt_list_skip_basic_mts_pk : 31503
+@mt_list_skip_basic_mts_pk : 31504
+@mt_list_skip_basic_mts_pk : 3000
+@mt_list_skip_basic_mts_pk : 3199
+@mt_list_skip_basic_mts_pk : 3180
+@mt_list_skip_basic_mts_pk : 3142
+@mt_list_skip_basic_mts_pk : 22506
+@mt_list_skip_basic_mts_pk : 2142
+@mt_list_skip_basic_mts_pk : 2144
+@mt_list_skip_basic_mts_pk : 13002
+@mt_list_skip_basic_mts_pk : 2152
+@mt_list_skip_basic_mts_pk : 2170
+@mt_list_skip_basic_mts_pk : 2169
+@mt_list_skip_basic_mts_pk : 2141
+@mt_list_skip_basic_mts_pk : 3232
+@mt_list_skip_basic_mts_pk : 3231
+@mt_list_skip_basic_mts_pk : 2019
+@mt_list_skip_basic_mts_pk : 30002
+@mt_list_skip_basic_mts_pk : 30005
+@mt_list_skip_basic_mts_pk : 30006
+@mt_list_skip_basic_mts_pk : 30007
+@mt_list_skip_basic_mts_pk : 11020
+@mt_list_skip_basic_mts_pk : 11022
+@mt_list_skip_basic_mts_pk : 11023
+@mt_list_skip_basic_mts_pk : 11024
+@mt_list_skip_basic_mts_pk : 11025
+@mt_list_skip_basic_mts_pk : 11026
+@mt_list_skip_basic_mts_pk : 13509
+@mt_list_skip_basic_mts_pk : 13510
+@mt_list_skip_basic_mts_pk : 13511
+@mt_list_skip_basic_mts_pk : 11021
+
+@slp_url_prefix_list : https://sp0.baidu.com/5bgWsjip0QIZ8tyhnq
+@slp_url_prefix_list : https://slp.aipage.com
+@slp_url_prefix_list : http://slp.aipage.com
+@slp_cpa_srclist : 160
+@slp_cpa_srclist : 111
+@chunhua_allowed_mt : 3000
+@chunhua_allowed_mt : 11504
+flush_style_opt_thr : `0,FLOW[WISE_PS]=1241850379,FLOW[PC_PS]=1241850379
+aa_2114_replace_default_tag_textid : 0
+aa_2114_replace_default_sublink_textid : 100004
+aa_2165_replace_default_tag_textid : 0
+aa_2165_replace_default_sublink_textid : 110001
+aa_2182_replace_default_tag_textid : 0
+aa_2182_replace_default_sublink_textid : 110002
+@mt_for_long_term_exp : 99999
+mt_long_term_exp_rigq_thr : 0.1
+mts_height_type_num : 3
+wise_expand_2nd_floor_height : 512
+wise_expand_3rd_floor_height : 534
+nst_opt_hc_using_bid_for_cpm : 1
+nst_opt_hc_cpm_reduce_thresh : 9.0
+nst_opt_hc_cpm_reduce_thresh_percent : 2.0
+ppim_expand_area_nst_screen_grid_desc_limit : 3034_2165@12_1,3180@12_1,9015_2062@9_3,9007@12_2,3037@12_2,2062_3335@9_4,2027_3008@9_2,3008_2062@9_3,2062_4002@9_3,2062_3051@9_2,3200_2032@9_1,3200_2046@9_1,3202_2032@9_1,3202_2046@9_1,3204_2032@9_2,3204_2046@9_2,3159_2067@7_1,3127_1038@6_3,3123_1038@6_3,2080_2062@9_2,2046_2062@9_2,3009_2037@9_1,3009_3008@9_3,3009_3010@9_3,3009_1051@9_3,3009_1060@9_3,2062_2037@9_2,2054_2050@8_1,2062_2050@9_2,2062_2107@6_3,2107@9_3,2062_2027@6_3,1038_2027@6_3,2062_2129@6_3,2062_2111@6_3,2062_2120@6_3,2071_2072@12_1,2046_3191@9_2,1047_2037@12_1,1051_2037@12_1,1051_2027@9_2,2001_2037@12_3,2015_2037@12_3,2027_2037@9_2,2032_2037@12_1,2043_2037@12_1,2046_2037@12_1,2056_2037@12_2,2108_2037@12_1,2114_2037@12_1,2165_2037@12_1,2302_2037@12_1,3004_2037@12_1,3008_2037@12_1,2027_3010@9_2,3010_2037@12_1,3034_2037@12_1,3042_2037@12_1,3043_2037@12_1,3127_2037@9_2,3136_2037@12_1,3335_2037@12_1,2037@12_2,3110@12_1,2893@12_1,2894@12_1,2892_1051@12_1,2892_1060@12_1,2892_3008@12_1,2892_3010@12_1,2892_3034@12_1,2892@12_2,3193@9_2,3194@12_1,3153@12_1,2163@12_2,3184@12_2,3183@12_2,3200@9_2,3202@9_2,3204@9_3,2156@9_2,3159@7_2,3135@12_3,3129@9_2,2183@9_2,3127@9_2,3123@9_2,2028@6_2,2008@6_2,2033@12_2,2022@6_1,2046@12_2,2043@12_2,2032@12_2,3009_2020@9_2,2020@12_2,2021@12_2,2002@12_2,2037@12_2,1031@12_2,2041@12_2,2045@12_3,2050@12_2,2054@8_2,2129@9_3,2111@9_2,3034_2062@9_2,2071@12_2,1047@12_2,2080@12_2,3130@8_2,2155@12_2,3171@12_2,2108@12_1,2109@12_1,3009_2114@9_2,2114_1051@12_1,2114_1060@12_1,2169_1051@12_1,2169_1060@12_1,2114@12_2,2117@9_3,2118@9_2,3191@9_3,2057@9_2,2086@12_2,2088@12_2,2091@12_2,2092@12_2,2093@12_2,2103@12_2,2104@12_1,3028@12_2,3030@12_2,3010@12_2,3051@12_2,1051@12_2,3041@9_2,1060_2027@9_2,1060@12_1,2119@12_2,3008@12_2,3009_2165@9_2,3009_2126@9_2,2165@12_2,3046@12_2,2126@12_2,2168@10_3,2181@12_2,2188@10_3,2189@10_3,2019@9_3,2222@9_3,2182@12_2,2164@12_3,2199@10_3,9004@12_3,9005_2027@9_2,9005_3009@9_2,9005_2062@9_2,9005@12_2,2027@9_3,3009@9_4,2062@9_3,9016@8_3,9017@12_2,31504@12_2,22505@10_1
+nst_with_src_rank_screen_grid_desc_limit : 3008_2062@9_4_160_1,3008_2062@9_4_941_1,9005_3009@9_4_160_1,9005_3009@9_4_111_1,9005_3009@9_4_601_1,9005_3009@9_4_602_1,9005_2062@9_4_160_1,9005_2062@9_4_111_1,9005_2062@9_4_601_1,9005_2062@9_4_602_1,11007@12_1_160_1,11007@12_1_111_1,3009_3008@9_4_160_1,3009_3008@9_4_111_1,3009_3010@9_4_160_1,3009_3010@9_4_111_1
+nst_desc_row_occupy_mt : 2045@10,3135@10,2161@4,2129@16,2107@16
+@fancy_dedup_field_list : name
+@fancy_dedup_field_list : price
+@fancy_dedup_field_list : merchant_name
+@fancy_dedup_field_list : opt,simple_attr
+@fancy_simi_dedup_field_list : name
+@fancy_simi_dedup_field_list : link
+@fancy_select_field_list : merchant_name
+@generic_brand_mt_pc : 2999
+@generic_brand_mt_pc : 9999
+nst_opt_hc_using_bid_for_pk : 0
+ps_web_official_title_occupy_len : 4
+@app_dynamic_premium_mts : 2028
+@app_dynamic_premium_mts : 2002
+[ue_mt_param]
+a_showurl_limit1 : 22
+a_showurl_limit2 : 36
+a_screen_thr : 414
+b_showurl_limit1 : 16
+b_showurl_limit2 : 28
+b_screen_thr : 360
+c_showurl_limit1 : 11
+c_showurl_limit2 : 23
+c_screen_thr : 320
+d_showurl_limit1 : 7
+d_showurl_limit2 : 17
+d_screen_thr : 280
+e_showurl_limit1 : 1
+e_showurl_limit2 : 6
+pc_showurl_limit1 : 25
+pc_showurl_limit2 : 48
+pad1_showurl_limit1 : 36
+pad1_showurl_limit2 : 59
+comment_text_px : 2
+comment_text_px_pc : 2
+showurl_trunc_delta : 5
+showurl_trunc_delta_pc : 5
+cut_cta_for_replace_showurl_nst : 1
+cut_cta_for_showurl : 0
+screen_width_floor : 280
+screen_width_ceiling : 600
+default_screen_width : 320
+deprecate_local_1019mt : 1
+
+[@replace_showurl_nst_list]
+mt: 2051
+field: item.brand_name
+[@replace_showurl_nst_list]
+mt: 2106
+field: item.company
+[@replace_showurl_nst_list]
+mt: 2105
+field: item.company
+[@replace_showurl_nst_list]
+mt: 3129
+field: app_name
+[@replace_showurl_nst_list]
+mt: 2890
+field: item.site_name
+[@replace_showurl_nst_list]
+mt: 2891
+field: item.site_name
+[@replace_showurl_nst_list]
+mt: 2033
+field: app_name
+[@replace_showurl_nst_list]
+mt: 2156
+field: item.brand
+[@replace_showurl_nst_list]
+mt: 1001
+field: hospital
+[@replace_showurl_nst_list]
+mt: 3020
+field: item.showurl
+need_remove_htmltag: 1
+no_trunc: 1
+[@replace_showurl_nst_list]
+mt: 1058
+field: item.org_name
+[@replace_showurl_nst_list]
+mt: 2063
+field: display_url
+[@replace_showurl_nst_list]
+mt: 2186
+field: shop_name
+[@replace_showurl_nst_list]
+mt: 22504
+field: item.brand_name
+
+[@cuttable_showurl_nst_list]
+mt: 2001
+occupy_char: 13
+[@cuttable_showurl_nst_list]
+mt: 2015
+occupy_char: 13
+[@cuttable_showurl_nst_list]
+mt: 2064
+occupy_char: 13
+
+[@uncuttable_showurl_nst_list]
+mt: 3122
+occupy_char: 13
+
+[image_style]
+wise_image_matching_strategy : manual,picword,cs_picword,winfoid,unitid,planid,userid
+ns_image_matching_strategy : picword,winfoid
+wise_bannar_image_matching_strategy : winfoid
+[wise_grid_param]
+outter_spacing : 17
+inner_spacing : 0
+row_grid_num : 12
+coef_w : 55
+desc_row_delta : 3
+desc_row_delta_ratio : 1.0
+min_desc_row_num : 1
+max_desc_row_num : 5
+min_desc_grid_num : 1
+default_chinese_pixel : 14
+screen_width_floor : 320
+screen_width_ceiling : 1280
+default_screen_width : 375
+
+cut_desc_min_row_num : 2
+[@show_mt_by_rank_delta]
+src_id:160
+mt1:3141
+mt2:3136
+rank_delta:2
+
+[@show_mt_by_rank_delta]
+src_id:111
+mt1:3141
+mt2:3136
+rank_delta:2
+[@show_mt_by_rank_delta]
+src_id:601
+mt1:3141
+mt2:3136
+rank_delta:2
+[@show_mt_by_rank_delta]
+src_id:602
+mt1:3141
+mt2:3136
+rank_delta:2
+
+[@mt_statistic]
+mt:1047
+dongtaistyle_sub_str:tuijianbiaotiliebiao
+[@mt_statistic]
+mt:1049
+dongtaistyle_sub_str:tuijianbiaotizhaiyao
+[@mt_statistic]
+mt:2032
+dongtaistyle_sub_str:zilian
+wildcard_str:NO_SUB
+[@mt_statistic]
+mt:2042
+dongtaistyle_sub_str:biaoqianzilian
+wildcard_str:NO_SUB
+[@mt_statistic]
+mt:3136
+dongtaistyle_sub_str:neirongzhida
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3156
+dongtaistyle_sub_str:neirongzhida
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3160
+dongtaistyle_sub_str:neirongzhida
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3141
+dongtaistyle_sub_str:zhishifengchao
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3157
+dongtaistyle_sub_str:zhishifengchao
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3161
+dongtaistyle_sub_str:zhishifengchao
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3161
+dongtaistyle_sub_str:zhishifengchao
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3061
+dongtaistyle_sub_str:zhishifengchao
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3062
+dongtaistyle_sub_str:tuwenzhuanqu
+wildcard_str:{dongtaistyle}
+[@mt_statistic]
+mt:3053
+dongtaistyle_sub_str:tuwenzhuanqu
+wildcard_str:{dongtaistyle}
+
+[@height_control_by_src]
+src_id:213
+[.@mt_height]
+mt:30613061
+height:1.0
+[.@mt_height]
+mt:3167
+height:1.0
+[.@mt_height]
+mt:3332
+height:1.0
+
+[@mt_grid_width]
+mt:2052
+mt_width:2
+[@mt_grid_width]
+mt:2062
+mt_width:2
+[@mt_byte_width_pc]
+mt:2052
+mt_width:32
+[@mt_byte_width_pc]
+mt:2062
+mt_width:32
+
+[@mt_byte_width_wise]
+mt:2052
+mt_width:22
+[@mt_byte_width_wise]
+mt:2062
+mt_width:22
+
+[@src_strong_newstyle]
+src_id:160
+@show_rule_mt:3159
+@show_rule_mt:3160
+@show_rule_mt:3335
+@show_rule_mt:3136
+@show_rule_mt:3152
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+[.@mt_ads_num]
+mt:3167
+ads_num:3
+[.@mt_ads_num]
+mt:3159
+ads_num:3
+[.@mt_ads_num]
+mt:3141
+ads_num:3
+[.@mt_ads_num]
+mt:3136
+ads_num:3
+[.@mt_ads_num]
+mt:3335
+ads_num:3
+[.@mt_ads_num]
+mt:3160
+ads_num:3
+[.@mt_ads_num]
+mt:3151
+ads_num:3
+[.@mt_ads_num]
+mt:3152
+ads_num:3
+[.@mt_ads_num]
+mt:9999
+ads_num:3
+[.@mt_ads_num]
+mt:2144
+ads_num:3
+[.@mt_ads_num]
+mt:3171
+ads_num:3
+[.@mt_ads_num]
+mt:99999
+ads_num:2
+[.@mt_ads_num]
+mt:99999
+ads_num:2
+
+[@src_strong_newstyle]
+src_id:111
+@show_rule_mt:3159
+@show_rule_mt:3160
+@show_rule_mt:3335
+@show_rule_mt:3136
+@show_rule_mt:3152
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+[.@mt_ads_num]
+mt:3167
+ads_num:3
+[.@mt_ads_num]
+mt:3159
+ads_num:3
+[.@mt_ads_num]
+mt:3141
+ads_num:3
+[.@mt_ads_num]
+mt:3136
+ads_num:3
+[.@mt_ads_num]
+mt:3335
+ads_num:3
+[.@mt_ads_num]
+mt:3160
+ads_num:3
+[.@mt_ads_num]
+mt:3151
+ads_num:3
+[.@mt_ads_num]
+mt:3152
+ads_num:3
+[.@mt_ads_num]
+mt:9999
+ads_num:3
+[.@mt_ads_num]
+mt:2144
+ads_num:3
+[.@mt_ads_num]
+mt:3171
+ads_num:3
+
+[@src_strong_newstyle]
+src_id:601
+@show_rule_mt:3160
+@show_rule_mt:3335
+@show_rule_mt:3136
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+[.@mt_ads_num]
+mt:9999
+ads_num:3
+[.@mt_ads_num]
+mt:2144
+ads_num:3
+
+[@src_strong_newstyle]
+src_id:602
+@show_rule_mt:3160
+@show_rule_mt:3335
+@show_rule_mt:3136
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+@show_rule_mt:98765
+[.@mt_ads_num]
+mt:9999
+ads_num:3
+[.@mt_ads_num]
+mt:2144
+ads_num:3
+
+[misc]
+wise_title_expand_exceed_thresh:9
+@wise_et_avoid_mts: 2034
+@wise_et_avoid_mts: 3167
+@wise_et_avoid_mts: 3159
+@wise_et_avoid_mts: 3141
+@wise_et_avoid_mts: 3136
+@wise_et_avoid_mts: 3160
+@wise_et_avoid_mts: 3151
+@wise_et_avoid_mts: 3152
+@wise_et_avoid_mts: 99999
+@wise_et_avoid_mts: 31507
+material_bonus_thresh : 4
+title_delta_pixel : -8
+ellipsis_symbol : ...
+symbols_white : )>]¡¿¡¹
+symbols_black : ¡¸Ø­
+min_split_segment_length : 4
+min_split_segment_num : 4
+second_line_length_ratio_min : 0.102
+second_line_length_ratio_max : 0.85
+mt_title_pixel_buf : 18
+title_add_element_mt : #
+desc_trim_delta : 0
+forward_length : 16
+[GLOBAL]
+@jingxiu_mt:3175
+@jingxiu_mt:3180
+@jingxiu_mt:3187
+@jingxiu_mt:3189
+@jingxiu_mt:3430
+@jingxiu_mt:3431
+@jingxiu_mt:3432
+@jingxiu_mt:3433
+@jingxiu_mt:3142
+@jingxiu_mt:31501
+@jingxiu_mt:31502
+@jingxiu_mt:31503
+@jingxiu_mt:31504
+@jingxiu_mt:31507
+@jingxiu_mt:31508
+@jingxiu_mt:31509
+@jingxiu_mt:31513
+@jingxiu_mt : 3440
+@jingxiu_mt : 3199
+@jingxiu_mt : 22506
+@jingxiu_mt : 22510
+@jingxiu_mt : 22511
+@jingxiu_mt : 22520
+@jingxiu_mt : 22512
+@jingxiu_mt : 22517
+@jingxiu_mt : 99999
+@jingxiu_mt : 99999
+@jingxiu_mt : 99999
+[@jingxiu_minbid_ratio]
+mt:9999
+minbid_ratio:1.7
+
+[GLOBAL]
+@pc_jingxiu_mt:3186
+@pc_jingxiu_mt:3231
+@pc_jingxiu_mt:3232
+@pc_jingxiu_mt : 3440
+@pc_jingxiu_mt : 3142
+@pc_jingxiu_mt : 22526
+
+
+[GLOBAL]
+@jingxiu_delete_strong_mt:2034
+@jingxiu_delete_strong_mt:3136
+@jingxiu_delete_strong_mt:3137
+@jingxiu_delete_strong_mt:3009
+@jingxiu_delete_strong_mt:99999
+
+[GLOBAL]
+@new_youxuan_mt_dup:3122
+@new_youxuan_mt_dup:3136
+@new_youxuan_mt_dup:3161
+@new_youxuan_mt_dup:2062
+@new_youxuan_mt_dup:3017
+@new_youxuan_mt_dup:3128
+@new_youxuan_mt_dup:3149
+@new_youxuan_mt_dup:2034
+@new_youxuan_mt_dup:3021
+@new_youxuan_mt_dup:3039
+@new_youxuan_mt_dup:3163
+@new_youxuan_mt_dup:3138
+
+[GLOBAL]
+jingxiu_query_insert_limit:16
+
+[GLOBAL]
+
+[GLOBAL]
+
+[GLOBAL]
+
+[GLOBAL]
+@query_minning_allowed_adtype:65536
+@query_minning_allowed_bmm_adtype:311
+@query_minning_allowed_bmm_adtype:312
+mengya_wenda_title_line:2
+mengya_wenda_desc_line:3
+
+
+[GLOBAL]
+[@pic_mt_gridcnt]
+mt:2062
+grid_cnt:3
+bonus_desc_sw_thresh:375
+[@pic_mt_gridcnt]
+mt:3009
+grid_cnt:3
+bonus_desc_sw_thresh:375
+
+[GLOBAL]
+[@pc_sublink_mt_info]
+mt_id : 4002
+sublink_vpath : item@link
+sublink_delta_char : 0
+sublink_inner_char : 4
+sublink_total_char : 66
+sublink_cnt_limit : 3,7
+[.@multi_mt]
+mt_id : 2062
+sublink_total_char : 48
+sublink_cnt_limit : 2,7
+
+[GLOBAL]
+[@wise_sublink_mt_info]
+mt_id : 4002
+sublink_vpath : item@link
+sublink_delta_char : 0
+sublink_inner_char : 3
+sublink_total_char : 12
+sublink_cnt_limit : 2,5
+[.@multi_mt]
+mt_id:2062
+sublink_limit_char : 12
+sublink_cnt_limit : 4
+[ps_ad_click_rs_param]
+similarity_thr : 0.7
+dedup_random_prob : 0.4
+max_dup_num : 3
+[@add_target_url_mt_list]
+mt : 3235
+field : left_img.link
+
+[GLOBAL]
+[dynamic_idea_sublink_switch]
+@pc_mt_list : 2032
+@wise_mt_list : 2032
+[dynamic_nature_pic_content_switch]
+@pc_mt_list : 3122
+@pc_mt_list : 3153
+@wise_mt_list : 3122
+@wise_mt_list : 3153
+[dynamic_nature_ask_answer_switch]
+@pc_mt_list : 3161
+@wise_mt_list : 3161
+[dynamic_fengchao_pic_switch]
+@pc_mt_list : 2062888
+@wise_mt_list : 2062888
+[dynamic_nature_sublink_switch]
+@pc_mt_list : 3136
+@wise_mt_list : 3136
+@wise_mt_list : 3335
+[dynamic_attribute_style_switch]
+@pc_mt_list : 2039
+@wise_mt_list : 2046
+[dynamic_idea_shortlink]
+wise_inner_chars : 3
+pc_inner_chars : 3
+pc_grid_limit : 76
+pc_overlay_pic_grid_limit : 56
+sublink_skip_tag : em
+[GLOBAL]
+pc_long_sublink_overlay_pic_limit_len:21
+
+[GLOBAL]
+[@dynamic_idea_sublink_style]
+mt : 9021
+item_path : sublink.item
+text_name : text
+total_delta : 0
+text_delta : 2
+max_sublink_num : 4
+min_sublink_num : 2
+[@mt_rule]
+mt:2062
+delta:3
+rank:2
+[@mt_rule]
+mt:2062
+delta:3
+rank:3
+
+[@dynamic_idea_sublink_style]
+mt : 9024
+item_path : tag_sublink.rows.sublinks
+item_tag : tag
+text_name : text
+total_delta : 10
+text_delta : 3
+max_sublink_num : 4
+min_sublink_num : 2
+
+[@dynamic_idea_sublink_style]
+mt : 9028
+item_path : text_links
+text_name : text
+total_delta : 10
+text_delta : 3
+max_sublink_num : 4
+min_sublink_num : 3
+
+[GLOBAL]
+@tianmu_mt:31503
+@tianmu_mt:31504
+@tianmu_mt:31505
+@tianmu_mt:31507
+@tianmu_mt:31510
+@tianmu_mt:31514
+@tianmu_mt:99999
+@tianmu_mt:99999
+
+[GLOBAL]
+@tianmu_cover_mt:31505
+@tianmu_cover_mt:31510
+@tianmu_cover_mt:31514
+@tianmu_cover_mt:99999
+@tianmu_cover_mt:99999
+
+[GLOBAL]
+@tianmu_can_cover_mt:3180
+@tianmu_can_cover_mt:22510
+@tianmu_can_cover_mt:22517
+@tianmu_can_cover_mt:22515
+@tianmu_can_cover_mt:2062
+@tianmu_can_cover_mt:99999
+@tianmu_can_cover_mt:99999
+
+[GLOBAL]
+@generic_brand_mt:2199
+@generic_brand_mt:22515
+@generic_brand_mt:99999
+@generic_brand_mt:99999
+@generic_brand_mt:99999
+@generic_brand_mt:99999
+
+[GLOBAL]
+@tianmu_not_avoid_brand_mt : 31504
+@tianmu_not_avoid_brand_mt : 22517
+@tianmu_not_avoid_brand_mt : 3430
+
+[GLOBAL]
+[@statistic_targeturl_regex]
+host:tracker.marinsm.com
+pattern:&lp=(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+[@statistic_targeturl_regex]
+host:ad.doubleclick.net
+pattern:;[a-z]{1}\?(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+[@statistic_targeturl_regex]
+host:c.admaster.com.cn
+pattern:u(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+[@statistic_targeturl_regex]
+host:click.dsp.com
+pattern:&url=(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+[@statistic_targeturl_regex]
+host:clickserve.dartsearch.net
+pattern:&ds_dest_url=(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+[@statistic_targeturl_regex]
+host:clickc.admaster.com.cn
+pattern:u(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+[@statistic_targeturl_regex]
+host:e.cn.miaozhen.com
+pattern:&o=(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+[@statistic_targeturl_regex]
+host:pixel.everesttech.net
+pattern:&url=(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+[@statistic_targeturl_regex]
+host:t86.sagetrc.com
+pattern:&lpg=(http://|https://|https%3a%2f%2f|http%3a%2f%2f|https%3A%2F%2F|http%3A%2F%2F)(([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,6})
+pos:2
+
+[GLOBAL]
+[@multi_mt_list]
+@mt : 2028
+@mt : 2062
+[@multi_mt_list]
+@mt : 2028
+@mt : 3009
+[@multi_mt_list]
+@mt : 2028
+@mt : 3037
+[@multi_mt_list]
+@mt : 2028
+@mt : 3198
+
+[GLOBAL]
+@strict_medical_mts : 13519
+@strict_medical_mts : 13518
+@strict_medical_mts : 13517
+@strict_medical_mts : 13516
+@strict_medical_mts : 13515
+@strict_medical_mts : 13514
+@strict_medical_mts : 13513
+@strict_medical_mts : 13512
+@strict_medical_mts : 13510
+@strict_medical_mts : 13509
+@strict_medical_mts : 13511
+@strict_medical_mts : 8501
+@strict_medical_mts : 8512
+[pa_prod_pla_nst]
+[.@rule]
+name : fancy_pla
+enable : 1
+mtid : 11003
+exp : 0
+min_adv_num : 2
+select_adv_num : 3
+max_adv_num : 3
+[..@dedup_node]
+@field : merchant_name
+@field : simple_attr
+@field : price
+@field : name
+[..@select_node]
+@field : merchant_name
+[.@rule]
+name : fancy_simi_pla
+enable : 1
+mtid : 11005
+exp : 0
+min_adv_num : 0
+select_adv_num : 0
+max_adv_num : 10
+[..@dedup_node]
+@field : name
+@field : link
+[.@rule]
+name : slide_pla
+enable : 1
+mtid : 11036
+exp : 0
+min_adv_num : 3
+select_adv_num : 8
+max_adv_num : 20
+[..@dedup_node]
+@field : name
+@field : price
+@field : merchant_name
+[..@dedup_node]
+@field : image_fp
+[..@select_node]
+@field : merchant_name
+[@pic_mts]
+mt : 13511
+field : left_img.img_src
+[@pic_mts]
+mt : 13513
+field : left_img.img_src
+[@pic_mts]
+mt : 13515
+field : left_img.img_src
+[@pic_mts]
+mt : 13516
+field : left_img.img_src
+[@pic_mts]
+mt : 13518
+field : left_img.img_src
+[@app_static_to_dynamic_premium_combs]
+main_mt : 2028
+[.@valid_combs]
+@mt : 3009
+[.@valid_combs]
+@mt : 2062
+[.@valid_combs]
+@mt : 3037
+[.@valid_combs]
+@mt : 3198
+[@app_static_to_dynamic_premium_combs]
+main_mt : 2002
+[.@valid_combs]
+@mt : 9038
+[.@valid_combs]
+@mt : 3335
+[.@valid_combs]
+@mt : 3221
+[.@valid_combs]
+@mt : 3198
+[.@valid_combs]
+@mt : 3149
+[.@valid_combs]
+@mt : 3138
+[.@valid_combs]
+@mt : 3136
+[.@valid_combs]
+@mt : 3128
+[.@valid_combs]
+@mt : 3051
+[.@valid_combs]
+@mt : 3049
+[.@valid_combs]
+@mt : 3041
+[.@valid_combs]
+@mt : 3037
+[.@valid_combs]
+@mt : 3035
+[.@valid_combs]
+@mt : 3032
+[.@valid_combs]
+@mt : 3017
+[.@valid_combs]
+@mt : 3010
+[.@valid_combs]
+@mt : 3009
+[.@valid_combs]
+@mt : 3008
+[.@valid_combs]
+@mt : 3004
+[.@valid_combs]
+@mt : 2062
+[.@valid_combs]
+@mt : 2034

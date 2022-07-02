@@ -1,0 +1,49 @@
+[pc_tgsk_fixed_fields]
+multi_preq : session_first
+pre_query : session_first
+click_title : -
+session_seq : session_first
+multi_qry_src : 4
+queryid_list : -
+cookie_showclk : -
+cookie_query_showclk : -
+sa_index_list : -
+title_list : session%5Ffirst
+time : "2017-01-19 10:01:00"
+time_list : session_first
+query_trade_list : session%5Ffirst
+tn_list : session%5Ffirst
+uiurl_subinfo_list : session%5Ffirst
+hostid_list : session%5Ffirst
+session_mt : session_first
+req_print : PreviewAPI
+refer : -
+[wise_tgsk_fixed_fields]
+co_qry_sclk_w : -
+co_sclk_w : -
+title_list : session%5Ffirst
+gs_wise_session_seq : session%5Ffirst
+age_id : 0
+multi_preq : session%5Ffirst
+gs_wise_term_list : session%5Ffirst
+gs_wise_time_list : session%5Ffirst
+uiurl_subinfo_list : session%5Ffirst
+hostid_list : session%5Ffirst
+tn_list : session%5Ffirst
+query_profile : -
+passp_sclk_w : -
+gs_wise_multi_preq : session%5Ffirst
+gender_id : 0
+query_trade_list : session%5Ffirst
+wbwsver : 9.1
+speed : 210
+wadptid : 47913
+wpt : 2
+ua : "Mozilla/5.0 (Linux; U; Android 4.0.4; zh-CN; GT-I9308 Build/IMM76D) AppleWebKit/534.31 (KHTML, like Gecko) UCBrowser/9.1.0.297 U3/0.8.0 Mobile Safari/534.31 tuiguangshikuang"
+wosver : 4.0
+wosid : 2
+wbwsid : 1
+sz : 1320_480
+inner_width : 414
+inner_height : 736
+refer : -

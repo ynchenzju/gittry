@@ -1,0 +1,109 @@
+[@query_recommend_description]
+alive : 0
+[.recommend_condition]
+flow_type : wise_page_ppim
+asyn_ads_mode : 0
+page_no : 0
+
+
+[.@recommend_output_product]
+alive : 0
+recommend_output_product_name: ad_click_rs
+@select_result_set_fild_name : 
+[..ctr]
+alive : 1
+cut_alive : 0
+ctr_thr : 0
+recom_query_qm_ctr1_alpha : 1
+recom_query_qm_ctr1_beta : 0
+recom_query_qm_ctr1_gamma : 0
+ori_query_qm_ctr1_alpha:1
+ori_query_qm_ctr1_beta:0
+ori_query_qm_ctr1_gamma:0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+
+[.@recommend_output_product]
+alive : 0
+recommend_output_product_name: recom_rs
+@select_result_set_fild_name : 
+[..recommend_condition]
+cookie_wpr_min_thr:1
+[..ctr]
+alive : 1
+cut_alive : 0
+ctr_thr : 0
+recom_query_qm_ctr1_alpha : 1
+recom_query_qm_ctr1_beta : 0
+recom_query_qm_ctr1_gamma : 0
+ori_query_qm_ctr1_alpha:1
+ori_query_qm_ctr1_beta:0
+ori_query_qm_ctr1_gamma:0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+
+[.@recommend_output_product]
+alive : 0
+recommend_output_product_name: query_mining
+@select_result_set_fild_name : 
+[..recommend_condition]
+wepvq: 0
+[..ctr]
+alive:1
+cut_alive:0
+ctr_thr:0
+recom_query_qm_ctr1_alpha : 1
+recom_query_qm_ctr1_beta : 0
+recom_query_qm_ctr1_gamma : 0
+ori_query_qm_ctr1_alpha:1
+ori_query_qm_ctr1_beta:0
+ori_query_qm_ctr1_gamma:0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : title-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query
+result_set_field_name : title_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: same_query_click_title_sign_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_title_sign_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-query-query
+result_set_field_name : query_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_sign_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1

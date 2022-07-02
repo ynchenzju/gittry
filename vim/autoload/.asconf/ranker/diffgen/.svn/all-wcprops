@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/app/ecom/im/!svn/ver/428720/trunk/production/prod/ranker/conf/diffgen
+END
+budgetrpc_gstransport.conf.rule
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/app/ecom/im/!svn/ver/326084/trunk/production/prod/ranker/conf/diffgen/budgetrpc_gstransport.conf.rule
+END
+budgetrpc_gstransport.conf.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/app/ecom/im/!svn/ver/333088/trunk/production/prod/ranker/conf/diffgen/budgetrpc_gstransport.conf.erb
+END
+gstransport.conf.rule
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/app/ecom/im/!svn/ver/352140/trunk/production/prod/ranker/conf/diffgen/gstransport.conf.rule
+END
+xbox_gstransport.conf.rule
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/app/ecom/im/!svn/ver/352140/trunk/production/prod/ranker/conf/diffgen/xbox_gstransport.conf.rule
+END
+gstransport.conf.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/213948/trunk/production/prod/ranker/conf/diffgen/gstransport.conf.erb
+END
+xbox_gstransport.conf.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/428720/trunk/production/prod/ranker/conf/diffgen/xbox_gstransport.conf.erb
+END
+ranker_tester.conf.rule
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/app/ecom/im/!svn/ver/352140/trunk/production/prod/ranker/conf/diffgen/ranker_tester.conf.rule
+END
+ranker_tester.conf.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/app/ecom/im/!svn/ver/188291/trunk/production/prod/ranker/conf/diffgen/ranker_tester.conf.erb
+END
+downstream_rules.conf.rule
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/app/ecom/im/!svn/ver/184910/trunk/production/prod/ranker/conf/diffgen/downstream_rules.conf.rule
+END
+downstream_rules.conf.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/184910/trunk/production/prod/ranker/conf/diffgen/downstream_rules.conf.erb
+END

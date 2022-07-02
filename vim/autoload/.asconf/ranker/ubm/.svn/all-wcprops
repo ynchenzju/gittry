@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/app/ecom/im/!svn/ver/406682/trunk/production/prod/ranker/conf/ubm
+END
+dnn_cvm_model.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/dnn_cvm_model.conf
+END
+ubmq_cvm_extractor.conf
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/ubmq_cvm_extractor.conf
+END
+ubm_feature_list_on.conf
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/386135/trunk/production/prod/ranker/conf/ubm/ubm_feature_list_on.conf
+END
+ubm_feature_list_on.conf.md5
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/app/ecom/im/!svn/ver/406682/trunk/production/prod/ranker/conf/ubm/ubm_feature_list_on.conf.md5
+END
+fe.conf
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/fe.conf
+END
+ubm_feature_list_on.conf_done
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/386135/trunk/production/prod/ranker/conf/ubm/ubm_feature_list_on.conf_done
+END
+dynamic_flush_feature_list.conf
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/app/ecom/im/!svn/ver/142932/trunk/production/prod/ranker/conf/ubm/dynamic_flush_feature_list.conf
+END
+compute.conf
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/compute.conf
+END
+dnn_model.conf
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/dnn_model.conf
+END
+ubm_fealib_on.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/143061/trunk/production/prod/ranker/conf/ubm/ubm_fealib_on.conf
+END
+record_preprocess.conf
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/record_preprocess.conf
+END
+ubm_model.conf
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/ubm_model.conf
+END

@@ -1,0 +1,16 @@
+#adaptive_auction_mechanism conf file
+aam_cf_fcr_xbox_keyid_priority_list : 3,2,1,0
+aam_cf_msa_xbox_keyid_priority_list : 3,2,1,0
+aam_cf_optgsp_c_ratio_pc : 0.85
+aam_cf_optgsp_v_ratio_pc : 0.8
+aam_cf_optgsp_c_ratio_wise : 1.0
+aam_cf_optgsp_v_ratio_wise : 1.0
+aam_cf_optgsp_c_safe_pc : 0.9999
+aam_cf_optgsp_v_safe_pc : 10000
+aam_cf_optgsp_c_safe_wise : 1.0
+aam_cf_optgsp_v_safe_wise : 99999
+aam_cf_dft_mechanism_wise : 3
+aam_cf_dft_mechanism_pc : 3
+aam_cf_dft_mechanism_other : 2
+msa_ext_loss_max_rank : 2
+msa_sort_ext_loss_factor : 10000

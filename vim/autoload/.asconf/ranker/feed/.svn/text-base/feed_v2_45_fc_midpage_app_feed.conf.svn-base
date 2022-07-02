@@ -1,0 +1,40 @@
+[@fsdv2]
+@cond_qm_gids:911
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:31
+plugin_name:bid_discount_general
+alive:1
+[..plugin_params]
+discount : 1.0
+
+[.@plugin_desc]
+plugin_instance_id:22
+plugin_name:minbid_thr_filter
+alive:1
+[..plugin_params]
+minbid_thr:30
+
+[.@plugin_desc]
+plugin_instance_id : 27
+plugin_name : ctr_thr_filter
+alive : 1
+[..plugin_params]
+ctr_thr : 0
+
+[.@plugin_desc]
+plugin_instance_id : 28
+plugin_name : mincpm_thr_filter
+alive : 1
+[..plugin_params]
+mincpm_thr : 0
+
+[.@plugin_desc]
+plugin_instance_id:29
+plugin_name:bsq_bid_mt_ratio_sort
+alive:1
+[..plugin_params]
+[...bsq_bid_mt_ratio_for_sort]
+default_ratio:1.0
+

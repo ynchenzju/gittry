@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/app/ecom/im/!svn/ver/438439/trunk/production/prod/ranker/conf/fcr/mtq
+END
+fcr_mtq_feature_list.conf
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/438439/trunk/production/prod/ranker/conf/fcr/mtq/fcr_mtq_feature_list.conf
+END
+fcr_mtq_extract.conf
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/397154/trunk/production/prod/ranker/conf/fcr/mtq/fcr_mtq_extract.conf
+END

@@ -1,0 +1,12 @@
+wise_xbox_key_template_sublink : {WINFO}__wise
+pc_xbox_key_template_sublink: {WINFO}__pc
+xbox_table_name_sublink: ad-style-library-longsublink
+extend_key_level_sublink: 0
+wise_xbox_key_template_shortsublink : {WINFO}__wise
+pc_xbox_key_template_shortsublink : {WINFO}__pc
+xbox_table_name_shortsublink : ad-style-library-shortsublink
+extend_key_level_shortsublink : 0
+wise_preemptive_key_template_sublink : 
+pc_preemptive_key_template_sublink : 
+wise_preemptive_key_template_shortsublink : 
+pc_preemptive_key_template_shortsublink : 

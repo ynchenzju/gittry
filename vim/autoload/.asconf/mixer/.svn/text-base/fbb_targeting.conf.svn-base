@@ -1,0 +1,3 @@
+query_template : {QUERY}
+bidword_template : {ITERM}
+title_seperator : |

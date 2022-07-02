@@ -1,0 +1,279 @@
+POSITION_FIXED_SUBLINKS : 附近|以上|特价|更多|more|查看|不限|其它|全部|所有|周边
+DIGITAL_RANGE_HYPHEN : -|到|至
+PAQ_MIN_EPVQ_THR : -100.0
+PAQ_MIN_CPMQ_THR : -100.0
+PAQ_MAX_ADVNUM_THR : 100
+PAQ_MAX_STYLENUM_THR : 80
+PAQ_MAX_QUERY_STYLENUM_THR : 1000
+
+# pla类待添加
+[@mt]
+mt_id : 3120
+enable_paq : 1
+enable_tailor : 1
+[.json_text]
+dir : plas.product_name
+@array : plas,num_tailor_exclude_ziti,4
+
+[@mt]
+mt_id : 3138
+enable_paq : 1
+enable_tailor : 1
+[.json_text]
+dir : plas.product_name
+@array : plas,num_tailor,8
+
+[@mt]
+mt_id : 3198
+enable_paq : 1
+enable_tailor : 1
+[.json_text]
+dir : plas.product_name
+@array : plas,num_tailor,8
+
+[@mt]
+mt_id : 3221
+enable_paq : 1
+enable_tailor : 1
+[.json_text]
+dir : plas.product_name
+@array : plas,num_tailor,3
+
+#新商品计划
+[@mt]
+mt_id : 11007
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : plas.title
+@array : plas,num_tailor,8
+
+[@mt]
+mt_id : 11009
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : plas.title
+@array : plas,num_tailor,3
+
+[@mt]
+mt_id : 11015
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : plas.text1
+@array : plas,num_tailor,3
+
+#结构化自提样式
+[@mt]
+mt_id : 11027
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : plas.value_1
+@array : plas,num_tailor,8
+
+[@mt]
+mt_id : 11028
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : plas.value_1
+@array : plas,num_tailor,5
+
+[@mt]
+mt_id : 11029
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : plas.title
+@array : plas,num_tailor,5
+
+[@mt]
+mt_id : 11031
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : plas.title
+@array : plas,num_tailor,6
+
+# 导航类
+[@mt]
+mt_id : 3017
+enable_paq : 1
+enable_tailor : 1
+[.json_industry]
+dir: industry
+[.json_text]
+dir : rows.sublinks.text
+@array : rows,num_tailor,10
+@array : sublinks,nav_num_tailor,11
+
+[@mt]
+mt_id : 3010
+enable_paq : 0
+enable_tailor : 0
+[.json_industry]
+dir: industry
+[.json_text]
+dir : rows.sublinks.text
+@array_element : rows,0
+@array : sublinks,nav_num_tailor,11
+
+[@mt]
+mt_id : 2034
+enable_paq : 1
+enable_tailor : 1
+[.json_industry]
+dir: navigation.industry
+[.json_text]
+dir : navigation.sublinks.sublink.text
+@array : sublinks,num_tailor,10
+@array : sublink,nav_num_tailor,10
+
+[@mt]
+mt_id : 3008
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : text_links.text
+@array : text_links,nav_str_len_tailor,32
+
+[@mt]
+mt_id : 3041
+enable_paq : 1
+enable_tailor : 1
+[.json_text]
+dir : sublinks.text
+@array : sublinks,nav_num_tailor,6
+
+[@mt]
+mt_id : 3051
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : item.idea_desc
+@array : item,num_tailor,4
+
+[@mt]
+mt_id : 3011
+enable_paq : 1
+enable_tailor : 1
+[.json_industry]
+dir: industry
+[.json_text]
+dir : sublinks.sublink.text
+@array : sublinks 
+@array : sublink,nav_num_tailor,10
+
+[@mt]
+mt_id : 3124
+enable_paq : 0
+enable_tailor : 0
+[.json_industry]
+dir: industry
+[.json_text]
+dir : sublinks.sublink.text
+@array : sublinks,num_tailor,10
+@array : sublink,nav_num_tailor,10
+
+[@mt]
+mt_id : 1046
+enable_paq : 0
+enable_tailor : 0
+[.json_industry]
+dir: industry
+[.json_text]
+dir : navigation_links.sublinks.content
+@array : navigation_links,num_tailor,10
+@array : sublinks,nav_num_tailor,10
+
+[@mt]
+mt_id : 3015
+enable_paq : 1
+enable_tailor : 1
+[.json_industry]
+dir: industry
+[.json_text]
+dir : sublinks.sublink.text
+@array : sublinks
+@array : sublink,nav_num_tailor,10
+
+
+# 图文类
+[@mt]
+mt_id : 3009
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : image_item.image_link
+@array_element : image_item,0
+
+[@mt]
+mt_id : 3002
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : ppim_image_link.image_url
+
+
+# 列表类,3003/3016待添加
+[@mt]
+mt_id : 3128
+enable_paq : 1
+enable_tailor : 1
+[.json_industry]
+dir : industry
+[.json_text]
+dir : rows.cells.content
+@array : rows,num_tailor,3
+@array_element : cells,0
+
+[@mt]
+mt_id : 3039
+enable_paq : 0
+enable_tailor : 0
+[.json_industry]
+dir : industry
+[.json_text]
+dir : rows.cells.content
+@array : rows,num_tailor,3
+@array_element : cells,0
+
+[@mt]
+mt_id : 3004
+enable_paq : 0
+enable_tailor : 0
+[.json_industry]
+dir : industry
+[.json_text]
+dir : sublinks.sublink.text
+@array : sublinks,num_tailor,3
+@array_element : sublink,0
+
+
+# 全息类, 3148待添加
+[@mt]
+mt_id : 3149
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : properties.content
+@array : properties,num_tailor,10
+
+[@mt]
+mt_id : 1051
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : properties.content
+@array : properties
+
+[@mt]
+mt_id : 1061
+enable_paq : 0
+enable_tailor : 0
+[.json_text]
+dir : properties.content
+@array : properties
+

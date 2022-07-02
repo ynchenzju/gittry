@@ -1,0 +1,99 @@
+max_pack_memory_cost : 2000000
+is_log_process_time : 1
+default_response_timeout : 100000
+#换成gst之后，inferior_q的耗时为base-diff，即145-35=110
+inferior_timeout_diff_ms:35
+use_snappy : <%= @use_snappy %> 
+is_use_gst : 1
+record_rpc_detail:1
+gstransport_conf : ./conf/predictor_thin_connect/gstransport.conf
+[UbClientConfig]
+ConfType  : 10
+[.Reactor]
+ThreadNum  : 20
+CheckTime : 1
+
+[.Naming]
+DIR : ./conf/
+FILE : naming_back.conf
+WebfootQueryTimeout: 30000
+SeviceSynInterval : 1000
+IsUseBnsBackupConf : 1
+
+[.UbClient]
+[UbClientConfig]                                                                                                      
+[.Naming]
+[..@Service]
+Name : predictor_proxy_name
+WebfootServiceName: group.opera-<%= @predictorproxy_platform %>-predictorproxy-all-<%= @predictorproxy_isp %>.<%= __product %>.all
+SendBuf : -1
+RecvBuf : -1
+ConnectAll :0
+DefaultPort :5382
+DefaultConnectTimeOut : 10
+DefaultReadTimeOut  : <%= @proxy_read_timeout %> 
+DefaultWriteTimeOut  :30
+DefaultMaxConnect  :  <%= @max_connect_num %>
+DefaultRetry  : 5 
+#DefaultFetchConnMaxTime : 0
+#LONG / SHORT
+DefaultConnectType  :  LONG
+DefaultLinger  :  1
+ReqBuf  :  13107200 
+ResBuf  :  13107200
+DefaultAsyncWaitingNum  :  100
+
+[...CurrStrategy]
+ClassName : imLbStrategy
+RatioPrecision  :   1000
+MaxServerNum    :   1024
+FailQueueLen    :   10
+QueueBufLen :   2
+[....@Point]
+x : 3 
+y : <%= @ratio1 %> 
+[....@Point]
+x : 10
+y : <%= @ratio2 %>
+
+[...CurrHealthy]
+ClassName  :UbClientHealthyChecker
+
+[UbClientConfig]                                                                                                      
+[.Naming]
+[..@Service]
+Name : predictor_inferior_proxy_name
+WebfootServiceName: group.opera-<%= @predictorproxy_platform %>-predictorproxy-all-<%= @predictorproxy_isp %>.<%= __product %>.all
+SendBuf : -1
+RecvBuf : -1
+ConnectAll :0
+DefaultPort :5382
+DefaultConnectTimeOut : 10
+DefaultReadTimeOut  : <%= @proxy_inferior_read_timeout %> 
+DefaultWriteTimeOut  :30
+DefaultMaxConnect  :  <%= @max_connect_num %>
+DefaultRetry  : 5 
+#DefaultFetchConnMaxTime : 0
+#LONG / SHORT
+DefaultConnectType  :  LONG
+DefaultLinger  :  1
+ReqBuf  :  13107200 
+ResBuf  :  13107200
+DefaultAsyncWaitingNum  :  100
+
+[...CurrStrategy]
+ClassName : imLbStrategy
+RatioPrecision  :   1000
+MaxServerNum    :   1024
+FailQueueLen    :   10
+QueueBufLen :   2
+[....@Point]
+x : 3 
+y : <%= @ratio1 %> 
+[....@Point]
+x : 10
+y : <%= @ratio2 %>
+
+[...CurrHealthy]
+ClassName  :UbClientHealthyChecker
+

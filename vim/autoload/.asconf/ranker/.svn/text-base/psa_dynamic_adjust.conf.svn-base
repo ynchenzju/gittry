@@ -1,0 +1,10 @@
+dft_mixer_used_tm : 200000
+[@adjust_curve_points]
+precut_len : 60
+used_tm : 0
+[@adjust_curve_points]
+precut_len : 8
+used_tm : 220000
+[@adjust_curve_points]
+precut_len : 2
+used_tm : 400000

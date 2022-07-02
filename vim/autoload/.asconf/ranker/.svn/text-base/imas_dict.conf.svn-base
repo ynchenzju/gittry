@@ -1,0 +1,3206 @@
+thread_number : 6
+
+
+[msa_dual_floor]
+filename : ./data/auction/msa_dual_floor.txt
+[ztc_user_src_black]
+filename : ./data/pl/a_comm/ztc_user_src_black.txt
+[wise_direct_tel_new_weak_style_dict]
+filename : ./data/pl/a_comm/wise_direct_tel_new_weak_style_dict.txt
+[fcr_entity_tongtai_userid_white_list]
+filename : ./data/pl/a_comm/fcr_entity_tongtai_userid_white_list.txt
+[region_map]
+filename : ./data/pl/a_comm/rgn.map
+use_public_buffer_reload : 1
+[msa_entity_disorder_bidword_independent_mean_dict]
+filename : ./data/pl/a_comm/msa_entity_disorder_bidword_independent_mean_dict.txt
+[fcr_entity_disorder_bidword_independent_mean_dict]
+filename : ./data/pl/a_comm/fcr_entity_disorder_bidword_independent_mean_dict.txt
+[smart_landing_page_trade_adtype]
+filename : ./data/pl/a_comm/smart_landing_page_trade_adtype_dict.txt
+[smart_landing_page_expid]
+filename : ./data/pl/a_comm/smart_landing_page_expid_dict.txt
+[pluto_brand_protect_dict]
+filename : ./data/pl/a_comm/pluto_brand_protect_dict.txt
+[yule_black_user_trade2_dict]
+filename : ./data/pl/a_comm/wise_yule_black_user_trade2_dict.txt
+use_public_buffer_reload : 0
+[yule_black_user_dict]
+filename : ./data/pl/a_comm/wise_yule_black_user_dict.txt
+use_public_buffer_reload : 0
+[wise_direct_tel_to_call_only_dict]
+filename : ./data/pl/a_comm/wise_direct_tel_to_call_only_dict.txt
+[image_search_smart_landing_page_user_dict]
+filename : ./data/pl/a_comm/image_search_smart_landing_page_user_dict.txt
+use_public_buffer_reload : 0
+[ztc_user_cpa_dict]
+filename : ./data/pl/a_comm/ztc_user_cpa_dict_new.txt
+[user_credit_grade]
+filename : ./data/pl/a_comm/user_credit_grade.txt
+[ztc_user_first_disp]
+filename : ./data/pl/a_comm/ztc_user_first_disp.txt
+[ztc_user_src_limit]
+filename : ./data/pl/a_comm/ztc_user_src_limit.txt
+[ip3_wise_roi_threshold_dict]
+filename : ./data/pl/a_comm/ip3_wise_roi_threshold_dict.txt
+[ip3_wise_ctr_threshold_dict]
+filename : ./data/pl/a_comm/ip3_wise_ctr_threshold_dict.txt
+[msa_entity_tongtai_userid_white_list]
+filename : ./data/pl/a_comm/msa_entity_tongtai_userid_white_list.txt
+[msa_entity_disorder_bidword_rigq_punish_dict]
+filename : ./data/pl/a_comm/msa_entity_disorder_bidword_rigq_punish_dict.txt
+[msa_im_mt_premium_v2]
+filename : ./data/auction/msa_im_mt_premium.txt
+[ip3_psa_wise_ctr_threshold_dict]
+filename : ./data/pl/a_comm/ip3_psa_wise_ctr_threshold_dict.txt
+[ip3_psa_pc_ctr_threshold_dict]
+filename : ./data/pl/a_comm/ip3_psa_pc_ctr_threshold_dict.txt
+[dynamic_mt_bid_ratio_ul]
+filename : ./data/auction/dynamic_mt_bid_ratio_ul.txt
+[pa_bidword_mtid_advid_dict]
+filename : ./data/auction/pa_bidword_mtid_advid_dict
+[ztc_brand_user_dict]
+filename : ./data/pl/a_comm/ztc_brand_user.txt
+[map_query_minning_trade_blk]
+filename : ./data/pl/a_comm/map_query_minning_trade_blk.txt
+[map_query_minning_term_blk]
+filename : ./data/pl/a_comm/map_query_minning_term_blk.txt
+[ip3_ctr_threshold_dict]
+filename : ./data/pl/a_comm/ip3_ctr_threshold_dict.txt
+[msa_nst_template_dict]
+filename : ./data/auction/msa_nst_template_dict.txt
+[action_ads_courseq_model_dict]
+filename : ./data/pl/a_comm/action_ads_courseq_model_dict.txt
+[pa_mt_cpm_epvthres_dict]
+filename : ./data/pl/a_comm/pa_mt_cpm_epvthres_dict.txt
+[pa_mt_transform_blacklist]
+filename : ./data/pl/a_comm/pa_mt_transform_blacklist.txt
+[ztc_zhongce_image_dict]
+filename : ./data/msa/ztc_zhongce_image_dict.txt
+[dsa_ad_consume_control]
+filename : ./data/auction/dsa_ad_consume_control_dict
+[ztc_targettype_smartbid_dict]
+filename : ./data/msa/ztc_targettype_smartbid.txt
+[local_express_poi_category]
+filename : ./data/pl/a_comm/local_express_poi_category.txt
+[local_express_deal_category]
+filename : ./data/pl/a_comm/local_express_deal_category.txt
+[vc_weight_dict]
+filename : ./data/auction/vc_weight_dict.txt
+[wise_anti_monopoly_minbid]
+filename : ./data/pl/a_comm/anti_monopoly_minbid_dict.txt
+[msa_shangou_brandnamelist_dict]
+filename : ./data/pl/a_comm/msa_shangou_brandnamelist_dict.txt
+[map_userid_trade_blk_dict]
+filename : ./data/pl/a_comm/map_userid_trade_blk.txt
+[map_trade_match_dict]
+filename : ./data/pl/a_comm/map_trade_match.txt
+[pa_mtid_subquery_dict]
+filename : ./data/auction/pa_mtid_subquery_dict
+[msa_shangou_promads_users_dict]
+filename : ./data/pl/a_comm/msa_shangou_promads_users.txt
+[virtualcharge_blacklist_dict]
+filename : ./data/pl/a_comm/vc_blacklist_dict.txt
+[action_ads_non_closed_loop_basic_style_department_dict]
+filename : ./data/pl/a_comm/action_ads_non_closed_loop_basic_style_department_dict.txt
+[action_ads_non_closed_loop_basic_style_department_model_dict]
+filename : ./data/pl/a_comm/action_ads_non_closed_loop_basic_style_department_model_dict.txt
+[wise_new_youxuan_blacklist]
+filename : ./data/pl/a_comm/wise_new_youxuan_blacklist.txt
+[columbus_usr_id_first_trade]
+filename : ./data/pl/a_comm/columbus_usr_id_first_trade.txt
+[columbus_ads_pic]
+filename : ./data/pl/a_comm/columbus_ads_admit_pic.txt
+[columbus_ads_admit]
+filename : ./data/pl/a_comm/columbus_ads_admit_dict.txt
+[action_ads_mt_mincpm_dict]
+filename : ./data/pl/a_comm/action_ads_mt_mincpm_dict.txt
+[pc_map_lbs_dict]
+filename : ./data/pl/a_comm/pc_map_lbs.txt
+[ztc_dealid_sales_dict]
+filename : ./data/pl/a_comm/ztc_dealid_sales.txt
+[ztc_src_qweight_dict]
+filename : ./data/pl/a_comm/ztc_src_qweight.txt
+[local_express_poi_address]
+filename : ./data/pl/a_comm/local_express_poi_address.txt
+[fcr_opt_gsp_dict]
+filename : ./data/auction/fcr_opt_gsp_dict.txt
+[msa_shangou_promotionswords_dict]
+filename : ./data/pl/a_comm/msa_shangou_promotionswords_dict.txt
+[msa_shangou_brandname_dict]
+filename : ./data/pl/a_comm/msa_shangou_brandname_dict.txt
+
+######################  PLEASE ADD  "use_public_buffer_reload : 1" FOR NEW DICT ###################
+[ns_roi_cvrthr_param]
+filename : ./data/auction/ns_roi_cvrthr_param.txt
+[ztc_cpa_info]
+filename : ./data/pl/a_comm/ztc_cpa_info.txt
+[sensitive_words_another_dict]
+filename : ./data/pl/a_comm/sensitive_words_another_dict.txt
+[local_express_nuomi_promotions]
+filename : ./data/pl/a_comm/local_express_nuomi_promotions.txt
+[msa_mt_per_height_ratio_dict]
+filename : ./data/auction/msa_mt_per_height_ratio_dict.txt
+[user_ent_dict]
+filename : ./data/pl/a_comm/user_ent.txt
+[action_ads_query_blacklist_dict]
+filename : ./data/pl/a_comm/action_ads_query_blacklist_dict.txt
+[wise_duxiu_black]
+filename : ./data/pl/a_comm/wise_duxiu_black.txt
+[pc_local_express_info_ranker]
+filename : ./data/pl/a_comm/pc_local_express_info_ranker.txt
+[pa_mt_bid_ratio_dict]
+filename : ./data/pl/a_comm/pa_mt_bid_ratio_dict.txt
+[msa_shangou_bidword_dict]
+filename : ./data/pl/a_comm/msa_shangou_bidword_dict.txt
+[excluded_terms_mt_list]
+filename : ./data/pl/a_comm/mt_excluded_terms_white_list.txt
+[mt_excluded_terms]
+filename : ./data/pl/a_comm/mt_excluded_terms.txt
+[local_express_im_ctr_threshold_dict]
+filename : ./data/pl/a_comm/local_express_im_ctr_threshold_dict.txt
+[action_ads_roi_bidding_userid_black_dict]
+filename : ./data/pl/a_comm/action_ads_roi_bidding_userid_black_dict.txt
+[action_ads_doctor_new_qiao_userid_dict]
+filename : ./data/pl/a_comm/action_ads_doctor_new_qiao_userid_dict.txt
+[precision_loc_adv_model_dict]
+filename : ./data/pl/a_comm/precision_loc_adv_model_dict.txt
+[wise_duxiu_info]
+filename : ./data/pl/a_comm/wise_duxiu_info_auto.txt
+[msa_opt_gsp_dict]
+filename : ./data/auction/msa_opt_gsp_dict.txt
+[pa_mt_trade_qthres_dict]
+filename : ./data/pl/a_comm/pa_mt_trade_qthres_dict.txt
+[action_ads_non_closed_loop_style_plan_material_info_dict]
+filename : ./data/pl/a_comm/action_ads_non_closed_loop_style_plan_material_info_dict.txt
+[generic_fuwuyuan_template_dict]
+filename : ./data/pl/a_comm/generic_fuwuyuan_template_dict.txt
+[ztc_q_bonus_dict]
+filename : ./data/pl/a_comm/ztc_q_bonus.txt
+[pp_cpm_trade_level_thres_dict]
+filename : ./data/auction/pp_cpm_trade_dict.txt
+[roi_exp_params]
+filename : ./data/auction/roi_exp_params.txt
+[user_entity]
+filename : ./data/auction/user_entity.txt
+[msa_ocpc_params]
+filename : ./data/auction/msa_ocpc_params.txt
+[wise_mixads_query_blacklist]
+filename : ./data/pl/a_comm/wise_mixads_query_blacklist_dict.txt
+[action_ads_finance_query_dict]
+filename : ./data/pl/a_comm/action_ads_finance_query_dict.txt
+[iphone_app_activation]
+filename : ./data/pl/a_comm/iphone_app_activation.txt
+[chunhua_query_pid_smartprice_dict]
+filename : ./data/pl/a_comm/chunhua_query_pid_smartprice_dict.txt
+[action_ads_department_replace_dict]
+filename : ./data/pl/a_comm/action_ads_department_replace_dict.txt
+[chunhua_query_pid_smartbid_dict]
+filename : ./data/pl/a_comm/chunhua_query_pid_smartbid_dict.txt
+[wise_ns_query_filter_dict]
+filename : ./data/auction/wise_ns_query_filter_dict.txt
+[wise_ns_tradeid_filter_dict]
+filename : ./data/auction/wise_ns_tradeid_filter_dict.txt
+[wise_ns_winfoid_filter_dict]
+filename : ./data/auction/wise_ns_winfoid_filter_dict.txt
+[wise_ns_userid_filter_dict]
+filename : ./data/auction/wise_ns_userid_filter_dict.txt
+[outer_roi_cvrthr_param]
+filename : ./data/auction/outer_roi_cvrthr_param.txt
+[local_express_adv_limit_dict]
+filename : ./data/pl/a_comm/local_express_adv_limit_dict.txt
+[map_exp_pic_winfoid_blk]
+filename : ./data/pl/a_comm/map_exp_pic_winfoid_blk_dict.txt
+[map_exp_pic_csid_blk]
+filename : ./data/pl/a_comm/map_exp_pic_csid_blk_dict.txt
+[pa_nst_mt_trade_mincpm_dict]
+filename : ./data/pl/a_comm/pa_nst_mt_trade_mincpm_dict.txt
+use_public_buffer_reload : 1
+[scenarized_add_tag_user_dict]
+filename : ./data/pl/a_comm/scenarized_zt_add_tag.txt
+[search_remarketing_blacklist]
+filename : ./data/pl/a_comm/search_remarketing_blacklist.txt
+[direct_nuomi_poi_deal_dict]
+filename : ./data/pl/a_comm/direct_nuomi_poi_deal_dict.txt
+use_public_buffer_reload : 1
+[wise_at_match_ad_quality_control]
+filename : ./data/auction/wise_at_match_ad_quality_control_dict
+[pc_at_match_ad_quality_control]
+filename : ./data/auction/pc_at_match_ad_quality_control_dict
+[fwy_click_ratio]
+filename : ./data/auction/fwy_click_ratio.txt
+use_public_buffer_reload : 1
+[fwy_bid_ratio]
+filename : ./data/auction/fwy_bid_ratio.txt
+use_public_buffer_reload : 1
+[ad_height_dict]
+filename : ./data/pl/a_comm/ad_height_dict.txt
+[wise_gfp_src]
+filename : ./data/pl/a_comm/wise_gfp_src.txt
+use_public_buffer_reload : 0
+[wise_disorder_buy_word_userid_dict]
+filename : ./data/auction/wise_disorder_buy_word_userid_dict.txt
+use_public_buffer_reload : 0
+[ocpc_convert_cost_mappings]
+filename : ./data/auction/ocpc_convert_cost_mappings.txt
+[msa_ns_roi_q_controls]
+filename : ./data/auction/msa_ns_roi_q_controls.txt
+[msa_ns_roi_bidding_controls]
+filename : ./data/auction/msa_ns_roi_bidding_controls_channelid.txt
+[ns_roi_q_controls]
+filename : ./data/auction/ns_roi_q_controls.txt
+[ns_roi_bidding_controls]
+filename : ./data/auction/ns_roi_bidding_controls_channelid.txt
+[ns_roi_smartbid_param]
+filename : ./data/auction/ns_roi_smartbid_param.txt
+[local_style_wise_ut_feed_single_pic]
+filename : ./data/pl/a_comm/wise_ut_feed_single_pic.txt
+[image_wise_query_user_black]
+filename : ./data/pl/a_comm/image_wise_query_user_black.txt
+use_public_buffer_reload : 0
+[image_wise_query_black]
+filename : ./data/pl/a_comm/image_wise_query_black.txt
+use_public_buffer_reload : 0
+[image_wise_user_ratio_black]
+filename : ./data/pl/a_comm/image_wise_user_ratio_black.txt
+use_public_buffer_reload : 0
+[tusou_dync_pic_query_user_black]
+filename : ./data/pl/a_comm/tusou_dync_pic_query_user_black.txt
+use_public_buffer_reload : 0
+[tusou_dync_pic_query_black]
+filename : ./data/pl/a_comm/tusou_dync_pic_query_black.txt
+use_public_buffer_reload : 0
+[tusou_dync_pic_user_ratio_black]
+filename : ./data/pl/a_comm/tusou_dync_pic_user_ratio_black.txt
+use_public_buffer_reload : 0
+[ocpc_convert_type_mappings]
+filename : ./data/auction/ocpc_convert_type_mappings.txt
+[wise_call_only_keyword_dict]
+filename : ./data/pl/a_comm/wise_call_only_keyword_dict.txt
+use_public_buffer_reload : 0
+[direct_ad_show_query_list_dict]
+filename : ./data/auction/direct_ad_show_first_rule_dict.txt
+[roi_type_mappings]
+filename : ./data/auction/roi_type_mappings.txt
+[action_ads_course_entity_dict]
+filename : ./data/pl/a_comm/action_ads_course_entity_dict.txt
+[action_ads_disease_department_dict]
+filename : ./data/pl/a_comm/action_ads_disease_department_dict.txt
+[wise_raw_ads_heart_black_list]
+filename : ./data/pl/a_comm/wise_raw_ads_heart_black_list.txt
+[wise_budget_off_ratio]
+filename : ./data/pl/a_comm/wise_budget_off_ratio.txt
+[outer_roi_bid_param]
+filename : ./data/auction/outer_roi_bid_param.txt
+[msa_roi_v_adjust_control]
+filename : ./data/auction/msa_roi_v_adjust_control.txt
+use_public_buffer_reload : 0
+[msa_roi_v_adjust]
+filename : ./data/auction/msa_roi_v_adjust.txt
+use_public_buffer_reload : 0
+[roi_v_adjust_control]
+filename : ./data/auction/fcr_roi_v_adjust_control.txt
+use_public_buffer_reload : 0
+[roi_v_adjust]
+filename : ./data/auction/fcr_roi_v_adjust.txt
+use_public_buffer_reload : 0
+[planid_mt_fliter_ads]
+filename : ./data/pl/a_comm/planid_with_mt.txt
+[msa_nst_prio_exp_dict]
+filename : ./data/pl/a_comm/msa_nst_prio_exp.txt
+use_public_buffer_reload : 0
+[local_express_phonenum_dict]
+filename : ./data/pl/a_comm/local_express_phonenum_dict.txt
+use_public_buffer_reload : 0
+[msa_roi_smartbid_ratio]
+filename : ./data/auction/msa_roi_smartbid_ratio.txt
+[roi_smartbid_ratio]
+filename : ./data/auction/roi_smartbid_ratio.txt
+[wise_bridge_auto]
+filename : ./data/pl/a_comm/wise_bridge_auto.txt
+use_public_buffer_reload : 1
+
+
+[msa_query_squash]
+filename : ./data/auction/msa_query_squash.txt
+use_public_buffer_reload : 1
+
+[direct_ad_show_first_rule_dict]
+filename : ./data/auction/direct_ad_show_first_rule_dict.txt
+use_public_buffer_reload : 1
+
+
+[msa_navigation_blacklist_dict]
+filename : ./data/auction/msa_navigation_blacklist_dict.txt
+use_public_buffer_reload : 1
+
+[partial_match_navigation_entity_dict]
+filename : ./data/auction/partial_match_navigation_entity_dict.txt
+use_public_buffer_reload : 1
+
+[fcr_navigation_blacklist_dict]
+filename : ./data/auction/fcr_navigation_blacklist_dict.txt
+use_public_buffer_reload : 1
+
+[pp_cpm_thres_dict]
+filename : ./data/auction/pp_cpm_thrd_dict.txt
+use_public_buffer_reload : 1
+
+
+
+[pc_lbs_in_desc_dict]
+filename : ./data/msa/pc_lbs_in_desc.txt
+use_public_buffer_reload : 1
+
+[action_ads_user_im_dict]
+filename : ./data/pl/a_comm/action_ads_user_im_dict.txt
+use_public_buffer_reload : 1
+
+[image_wise_query_winfo_black]
+filename : ./data/pl/a_comm/image_wise_query_winfo_black.txt
+use_public_buffer_reload : 1
+
+[image_wise_winfo_black]
+filename : ./data/pl/a_comm/image_wise_winfo_black.txt
+use_public_buffer_reload : 1
+
+
+[image_wise_user_black]
+filename : ./data/pl/a_comm/image_wise_user_black.txt
+use_public_buffer_reload : 1
+
+[tusou_dync_pic_query_winfo_black]
+filename : ./data/pl/a_comm/tusou_dync_pic_query_winfo_black.txt
+use_public_buffer_reload : 1
+
+
+[local_express_shop_json_dict]
+filename : ./data/pl/a_comm/local_express_shop_json_dict.txt
+use_public_buffer_reload : 1
+
+[wise_call_only_query_dict]
+filename : ./data/pl/a_comm/wise_call_only_query_dict.txt
+use_public_buffer_reload : 1
+
+[wise_call_only_user_dict]
+filename : ./data/pl/a_comm/wise_call_only_user_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_disease_query_list_dict]
+filename : ./data/pl/a_comm/action_ads_disease_query_list_dict.txt
+use_public_buffer_reload : 1
+
+[pc_map_winfoid_blk]
+filename : ./data/pl/a_comm/pc_map_winfoid_blk_dict.txt
+use_public_buffer_reload : 1
+
+[pc_map_userid_blk]
+filename : ./data/pl/a_comm/pc_map_userid_blk_dict.txt
+use_public_buffer_reload : 1
+
+
+
+
+
+[trade_dict]
+filename : ./data/pl/a_comm/trade_dict.txt
+use_public_buffer_reload : 1
+
+[msa_lbs_for_near_advs_dict]
+filename : ./data/pl/a_comm/msa_lbs_for_near_advs_dict.txt
+use_public_buffer_reload : 1
+
+
+[wise_app_preview_query]
+filename : ./data/pl/a_comm/wise_app_preview_query.txt
+use_public_buffer_reload : 1
+
+[wise_app_preview_info]
+filename : ./data/pl/a_comm/wise_app_preview_info.txt
+use_public_buffer_reload : 1
+
+[layer_all_filter_mt_native_advs]
+filename : ./data/pl/a_comm/layer_all_filter_mt_dict.txt
+use_public_buffer_reload : 1
+
+
+[chunhua_query_ssg_dict]
+filename : ./data/pl/a_comm/chunhua_query_ssg_dict.txt
+use_public_buffer_reload : 1
+
+[uid_callback_dict]
+filename : ./data/pl/a_comm/msa_uid_callback_dict.txt
+use_public_buffer_reload : 1
+
+[wise_dsa_ad_quality_control]
+filename : ./data/auction/wise_dsa_ad_quality_control_dict
+use_public_buffer_reload : 1
+
+[pc_dsa_ad_quality_control]
+filename : ./data/auction/pc_dsa_ad_quality_control_dict
+use_public_buffer_reload : 1
+
+[local_style_wise_focus_time_pic]
+filename : ./data/pl/a_comm/local_style_wise_focus_time_pic.txt
+use_public_buffer_reload : 1
+
+[fep_action_ads_finance_plan_expert_dict]
+filename : ./data/pl/a_comm/fep_action_ads_finance_plan_expert_dict.txt
+use_public_buffer_reload : 1
+
+[wise_tieba_app_info_dict]
+filename : ./data/pl/a_comm/wise_tieba_app_info_dict.txt
+use_public_buffer_reload : 1
+
+
+[wise_red_carpet_query]
+filename : ./data/pl/a_comm/wise_red_carpet_query.txt
+use_public_buffer_reload : 1
+
+[action_ads_hospital_dict]
+filename : ./data/pl/a_comm/action_ads_hospital_dict.txt
+use_public_buffer_reload : 1
+
+[user_doctor_consultation_num_dict]
+filename : ./data/pl/a_comm/user_doctor_consultation_num_dict.txt
+use_public_buffer_reload : 1
+
+[url_trigger_add_param_white_user]
+filename : ./data/pl/a_comm/url_trigger_add_param_white_userid.txt
+use_public_buffer_reload : 1
+
+[msa_new_mt_mincpm_dict]
+filename : ./data/pl/a_comm/msa_new_mt_mincpm.txt
+use_public_buffer_reload : 1
+
+[pc_cvrq_user_select_dict]
+filename : ./data/pl/a_comm/pc_cvrq_user_select_dict.txt
+use_public_buffer_reload : 1
+
+
+[msa_pre_query_mincpm]
+filename : ./data/auction/msa_pre_query_mincpm.txt
+use_public_buffer_reload : 1
+
+[msa_query_mincpm]
+filename : ./data/auction/msa_query_mincpm.txt
+use_public_buffer_reload : 1
+
+[direct_nuomi_user_dict]
+filename : ./data/calc_price/direct_nuomi_user_dict.txt
+use_public_buffer_reload : 1
+
+[new_youxuan_user_black]
+filename : ./data/pl/a_comm/youxuan_user_black_dict.txt
+use_public_buffer_reload : 1
+
+[wise_roi_auto]
+filename : ./data/pl/a_comm/wise_roi_auto.txt
+use_public_buffer_reload : 1
+
+
+
+[action_ads_diseaseq_model_dict]
+filename : ./data/pl/a_comm/action_ads_diseaseq_model_dict.txt
+use_public_buffer_reload : 1
+
+[pa_mt_threshold_dict]
+filename : ./data/auction/pa_mt_threshold_dict.txt
+use_public_buffer_reload : 1
+
+[pa_query_bidword_mt_blacklist]
+filename : ./data/auction/pa_query_bidword_mt_blacklist.txt
+use_public_buffer_reload : 1
+
+
+[android_app_activation_new]
+filename : ./data/pl/a_comm/android_app_activation_new.txt
+use_public_buffer_reload : 1
+
+[msa_query_winfoid_price_dict]
+filename : ./data/pl/a_comm/msa_query_winfoid_price_dict.txt
+use_public_buffer_reload : 1
+
+[fcr_query_winfoid_price_dict]
+filename : ./data/pl/a_comm/fcr_query_winfoid_price_dict.txt
+use_public_buffer_reload : 1
+
+[url_trigger_black_user]
+filename : ./data/pl/a_comm/url_trigger_black_userid.txt
+use_public_buffer_reload : 1
+
+[wise_stro_direct_tel_count]
+filename : ./data/pl/a_comm/wise_stro_direct_tel_count.txt
+use_public_buffer_reload : 1
+
+
+
+[fep_action_ads_finance_topic_info_dict]
+filename : ./data/pl/a_comm/fep_action_ads_finance_topic_info_dict.txt
+use_public_buffer_reload : 1
+
+[fep_action_ads_finance_material_knowledge_dict]
+filename : ./data/pl/a_comm/fep_action_ads_finance_material_knowledge_dict.txt
+use_public_buffer_reload : 1
+
+[fep_action_ads_finance_plan_templet_dict]
+filename : ./data/pl/a_comm/fep_action_ads_finance_plan_templet_dict2.txt
+use_public_buffer_reload : 1
+
+[fep_action_ads_finance_user_brand_dict]
+filename : ./data/pl/a_comm/fep_action_ads_finance_user_brand_dict.txt
+use_public_buffer_reload : 1
+
+
+[wise_dt_auto]
+filename : ./data/pl/a_comm/wise_dt_auto.txt
+use_public_buffer_reload : 1
+
+
+
+
+[chunhua_query_dict]
+filename : ./data/pl/a_comm/chunhua_query_msg_dict.txt
+use_public_buffer_reload : 1
+
+[ns_userid_wordid_minbid]
+filename : ./data/ns/ns_userid_wordid_minbid
+use_public_buffer_reload : 1
+
+
+[local_express_json_dict]
+filename : ./data/pl/a_comm/local_express_json_dict.txt
+use_public_buffer_reload : 1
+
+
+[ps_accurate_priority_user_dict]
+filename : ./data/pl/a_comm/ps_accurate_priority_user_dict.txt
+use_public_buffer_reload : 1
+
+
+
+
+
+
+[action_ads_disease_tag_info_dict]
+filename : ./data/pl/a_comm/action_ads_disease_tag_info_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_query_disease_tag_list_dict]
+filename : ./data/pl/a_comm/action_ads_query_disease_tag_list_dict.txt
+use_public_buffer_reload : 1
+
+[lu_exposure_exp_user_list]
+filename : ./data/pl/a_comm/lu_exposure_exp_user_list.txt
+use_public_buffer_reload : 1
+
+[msa_mt_minbid]
+filename : ./data/auction/msa_mt_minbid.txt
+use_public_buffer_reload : 1
+
+[roi_q_control_thrs]
+filename : ./data/auction/roi_q_control_thrs.txt
+use_public_buffer_reload : 1
+
+[roi_q_controls]
+filename : ./data/auction/roi_q_controls.txt
+use_public_buffer_reload : 1
+
+[roi_q_baseQ]
+filename : ./data/auction/roi_q_baseQ.txt
+use_public_buffer_reload : 1
+
+[ocpc_bounds]
+filename : ./data/auction/ocpc_bounds.txt
+use_public_buffer_reload : 1
+
+[red_carpet_unitid]
+filename : ./data/pl/a_comm/red_carpet_unitid.txt
+use_public_buffer_reload : 1
+
+
+
+
+
+
+
+[userid_wordid_minbid]
+filename : ./data/auction/userid_wordid_minbid
+use_public_buffer_reload : 1
+
+[wordid_minbid]
+filename : ./data/auction/wordid_minbid
+use_public_buffer_reload : 1
+
+[action_ads_hospital_query_dict]
+filename : ./data/pl/a_comm/action_ads_hospital_query_dict.txt
+use_public_buffer_reload : 1
+
+
+
+[msa_disc_mincpm_lq]
+filename : ./data/pl/a_comm/msa_disc_mincpm_lq.txt
+use_public_buffer_reload : 1
+
+[local_style_pc_red_carpet_multi_pic]
+filename : ./data/pl/a_comm/pc_red_carpet_multi_pic.txt
+use_public_buffer_reload : 1
+
+
+
+[mt_mincpm]
+filename : ./data/auction/mt_mincpm.txt
+use_public_buffer_reload : 1
+
+[mt_bid_ratio]
+filename : ./data/auction/mt_bid_ratio.txt
+use_public_buffer_reload : 1
+
+[ocpc_controls]
+filename : ./data/auction/ocpc_controls.txt
+use_public_buffer_reload : 1
+
+[ocpc_params]
+filename : ./data/auction/ocpc_params.txt
+use_public_buffer_reload : 1
+
+[msa_disc_mincpm]
+filename : ./data/pl/a_comm/msa_disc_mincpm.txt
+use_public_buffer_reload : 1
+
+[pc_red_carpet_query]
+filename : ./data/pl/a_comm/pc_red_carpet_query.txt
+use_public_buffer_reload : 1
+
+[msa_roi_q_control_thrs]
+filename : ./data/auction/msa_roi_q_control_thrs.txt
+use_public_buffer_reload : 1
+
+[msa_roi_q_controls]
+filename : ./data/auction/msa_roi_q_controls.txt
+use_public_buffer_reload : 1
+
+[msa_roi_q_baseQ]
+filename : ./data/auction/msa_roi_q_baseQ.txt
+use_public_buffer_reload : 1
+
+[wise_applist_userid_black]
+filename : ./data/pl/a_comm/wise_applist_userid_black.txt
+use_public_buffer_reload : 1
+
+
+[tusou_dync_pic_winfo_black]
+filename : ./data/pl/a_comm/tusou_dync_pic_winfo_black.txt
+use_public_buffer_reload : 1
+
+[tusou_dync_pic_user_black]
+filename : ./data/pl/a_comm/tusou_dync_pic_user_black.txt
+use_public_buffer_reload : 1
+
+
+[pa_dynamic_idea_xbox_whitelist]
+filename : ./data/auction/pa_dynamic_idea_xbox_whitelist.txt
+use_public_buffer_reload : 1
+
+[action_ads_uniq_doctorq_excempt]
+filename : ./data/pl/a_comm/action_ads_unit_doctorid_excempt.txt
+use_public_buffer_reload : 1
+
+
+[action_ads_query_user_course_blacklist]
+filename : ./data/pl/a_comm/action_ads_query_user_course_blacklist.txt
+use_public_buffer_reload : 1
+
+[action_ads_user_course_map_dict]
+filename : ./data/pl/a_comm/action_ads_user_course_map_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_plan_course_map_dict]
+filename : ./data/pl/a_comm/action_ads_plan_course_map_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_education_company_info_dict]
+filename : ./data/pl/a_comm/action_ads_education_company_info_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_education_course_info_dict]
+filename : ./data/pl/a_comm/action_ads_education_course_info_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_education_query_dict]
+filename : ./data/pl/a_comm/action_ads_education_query_dict.txt
+use_public_buffer_reload : 1
+
+[wise_user_orginic_q_dict]
+filename : ./data/pl/a_comm/wise_user_orginic_q_dict.txt
+use_public_buffer_reload : 1
+
+[wise_trade_preq_weight_dict]
+filename : ./data/pl/a_comm/wise_trade_preq_weight_dict.txt
+use_public_buffer_reload : 1
+
+[pc_user_orginic_q_dict]
+filename : ./data/pl/a_comm/pc_user_orginic_q_dict.txt
+use_public_buffer_reload : 1
+
+[pc_trade_preq_weight_dict]
+filename : ./data/pl/a_comm/pc_trade_preq_weight_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_doctor_dict]
+filename : ./data/pl/a_comm/action_ads_doctor_dict.txt
+use_public_buffer_reload : 1
+
+[query_app_blacklist]
+filename : ./data/msa/query_app_blacklist_dict.txt
+use_public_buffer_reload : 1
+
+[gold_booth_black_ka_user]
+filename : ./data/pl/a_comm/msa_gold_booth_black_ka_user.txt
+use_public_buffer_reload : 1
+
+[gold_booth_user_pic_url]
+filename : ./data/pl/a_comm/msa_gold_booth_user_pic_url.txt
+use_public_buffer_reload : 1
+
+[pla_youxuan_wedding_query_list]
+filename : ./data/pl/a_comm/pla_youxuan_wedding_query_list.txt
+use_public_buffer_reload : 1
+
+[cvrq_user_select_dict]
+filename : ./data/pl/a_comm/cvrq_user_select_dict.txt
+use_public_buffer_reload : 1
+
+[fuwuyuan_user_query_dict]
+filename : ./data/pl/a_comm/fuwuyuan_user_query_dict.txt
+use_public_buffer_reload : 1
+
+[gold_booth_medic_rival_bidword_usrid]
+filename : ./data/pl/a_comm/gold_booth_medic_rival_bidword_usrid.txt
+use_public_buffer_reload : 1
+
+[gold_booth_medic_rival_bidword]
+filename : ./data/pl/a_comm/gold_booth_medic_rival_bidword.txt
+use_public_buffer_reload : 1
+
+[gold_booth_medic_addr_bidword]
+filename : ./data/pl/a_comm/gold_booth_medic_addr_bidword.txt
+use_public_buffer_reload : 1
+
+[gold_booth_medic_black_usrid]
+filename : ./data/pl/a_comm/gold_booth_medic_black_usrid.txt
+use_public_buffer_reload : 1
+
+[wise_cta_strong_style]
+filename : ./data/pl/a_comm/wise_cta_strong_style.txt
+use_public_buffer_reload : 1
+
+[bid_ratio_by_srcid]
+filename : ./data/pl/a_comm/bid_ratio_by_srcid.txt
+use_public_buffer_reload : 1
+
+[pa_nav_sublinkopt_v1]
+filename : ./data/auction/pa_nav_sublinkopt_v1.txt
+use_public_buffer_reload : 1
+
+[msa_mt_bid_ratio]
+filename : ./data/auction/msa_mt_bid_ratio.txt
+use_public_buffer_reload : 1
+
+[app_bid_adjustment]
+filename : ./data/pl/a_comm/app_bid_adjustment.txt
+use_public_buffer_reload : 1
+
+[action_ads_medicine_shop_dict]
+filename : ./data/pl/a_comm/action_ads_medicine_shop_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_query_medicine_dict]
+filename : ./data/pl/a_comm/action_ads_query_medicine_dict.txt
+use_public_buffer_reload : 1
+
+[showurl_dedup_dict]
+filename : ./data/pl/a_comm/showurl_dedup_dict.txt
+use_public_buffer_reload : 1
+
+
+
+
+
+
+[msa_cta_text_icon_dict]
+filename : ./data/pl/a_comm/msa_cta_text_icon_dict.txt
+use_public_buffer_reload : 1
+
+[sma_rsword_dict]
+filename : ./data/pl/a_comm/sma_rsword_dict.txt
+use_public_buffer_reload : 1
+
+[sma_left_query_black_dict]
+filename : ./data/pl/a_comm/sma_left_query_black_dict.txt
+use_public_buffer_reload : 1
+
+[msa_cash_ratio_dict]
+filename : ./data/pl/a_comm/msa_cash_ratio_dict.txt
+use_public_buffer_reload : 1
+
+[pc_cash_ratio_dict]
+filename : ./data/auction/pc_cash_ratio_dict.txt
+use_public_buffer_reload : 1
+
+[msa_ctr_clkq_mincpm_score_dict]
+filename : ./data/pl/a_comm/msa_ctr_clkq_mincpm_score_dict.txt
+use_public_buffer_reload : 1
+
+[wise_disgsp_userid_c]
+filename : ./data/auction/wise_disgsp_userid_c.txt
+use_public_buffer_reload : 1
+
+[pr_2_rt_dict]
+filename : ./data/auction/pr_2_rt_dict.txt
+use_public_buffer_reload : 1
+
+[listing_ads_black_user]
+filename : ./data/pl/a_comm/listing_ads_black_userid.txt
+use_public_buffer_reload : 1
+
+[action_ads_user_doctor_query_blacklist]
+filename : ./data/pl/a_comm/black/action_ads_user_doctor_query_blacklist.txt
+use_public_buffer_reload : 1
+
+[gold_booth_own_bid]
+filename : ./data/pl/a_comm/gold_booth_own_bid.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_right_pic_with_sublink]
+filename : ./data/pl/a_comm/wise_right_pic_with_sublink.txt
+use_public_buffer_reload : 1
+
+[pc_adjust_beta]
+filename : ./data/auction/pc_adjust_beta
+use_public_buffer_reload : 1
+
+[micro_fc_json_dict]
+filename : ./data/pl/a_comm/micro_fc_json_dict.txt
+use_public_buffer_reload : 1
+
+[im_video_adv_unitid]
+filename : ./data/pl/a_comm/mcid_index.txt
+use_public_buffer_reload : 1
+
+[im_picture_adv_unitid]
+filename : ./data/pl/a_comm/picture_mcid_index.txt
+use_public_buffer_reload : 1
+
+[im_map_adv_unitid]
+filename : ./data/pl/a_comm/map_mcid_index.txt
+use_public_buffer_reload : 1
+
+[query_src_mt_blacklist]
+filename : ./data/pl/a_comm/query_src_mt_blacklist.txt
+use_public_buffer_reload : 1
+
+[ns_outer_bidder_c_u_r_dict]
+filename : ./data/auction/outer_bidder_c_u_r_dict.txt
+use_public_buffer_reload : 1
+
+[ns_outer_bidder_c_r_dict]
+filename : ./data/auction/outer_bidder_c_r_dict.txt
+use_public_buffer_reload : 1
+
+[ns_aduser_blacklist_dict]
+filename : ./data/pl/a_comm/aduser_blacklist_dict.txt
+use_public_buffer_reload : 1
+
+[ns_smooth_l_k_dict]
+filename : ./data/auction/a_comm/smooth_l_k.dat
+use_public_buffer_reload : 1
+
+[ns_smooth_r_k_dict]
+filename : ./data/auction/a_comm/smooth_r_k.dat
+use_public_buffer_reload : 1
+
+[ns_manual_l_q_dict]
+filename : ./data/auction/a_comm/manual_l_q_data.txt
+use_public_buffer_reload : 1
+
+[ns_manual_r_q_dict]
+filename : ./data/auction/a_comm/manual_r_q_data.txt
+use_public_buffer_reload : 1
+
+[smartbid_flow_discount]
+filename : ./data/auction/smartbid_flow_discount.txt
+use_public_buffer_reload : 1
+
+[ns_im_wht_qry_winfo]
+filename : ./data/pl/a_comm/white/im_white_qry_winfo.txt
+use_public_buffer_reload : 1
+
+[ns_im_winfo_deny]
+filename : ./data/pl/a_comm/black/im_black_winfo.txt
+use_public_buffer_reload : 1
+
+[ns_im_qry_deny]
+filename : ./data/pl/a_comm/black/ns_im_black_qry.txt
+use_public_buffer_reload : 1
+
+[ns_im_qry_user_except]
+filename : ./data/pl/a_comm/except/im_except_qry_user.txt
+use_public_buffer_reload : 1
+
+[ns_im_qry_kw_deny]
+filename : ./data/pl/a_comm/black/im_black_qry_kw.txt
+use_public_buffer_reload : 1
+
+[ns_im_qry_winfo_deny]
+filename : ./data/pl/a_comm/black/im_black_qry_winfo.txt
+use_public_buffer_reload : 1
+
+[ns_im_kw_user_deny]
+filename : ./data/pl/a_comm/black/im_black_kw_user.txt
+use_public_buffer_reload : 1
+
+[ns_im_kw_url_deny]
+filename : ./data/pl/a_comm/black/im_black_kw_url.txt
+use_public_buffer_reload : 1
+
+[ns_url_protection]
+filename : ./data/auction/url_protection_dict
+use_public_buffer_reload : 1
+
+[huichuan_userid_blacklist]
+filename : ./data/pl/a_comm/huichuan_userid_blacklist.txt
+use_public_buffer_reload : 1
+
+[query_cmatch_dict]
+filename : ./data/pl/a_comm/query_cmatch_black.txt
+use_public_buffer_reload : 1
+
+[huichuan_userid_logo]
+filename : ./data/pl/a_comm/huichuan_userid_logo
+use_public_buffer_reload : 1
+
+[image_pla_querylist]
+filename : ./data/pl/a_comm/image_pla_querylist.txt
+use_public_buffer_reload : 1
+
+[ns_media_page]
+filename : ./data/pl/a_comm/ns_media_page_dict.txt
+use_public_buffer_reload : 1
+
+[fcleft_deny_file]
+filename : ./data/pl/a_comm/fc_query_black_data.txt
+use_public_buffer_reload : 1
+
+[left_deny_file]
+filename : ./data/pl/a_comm/left_deny.txt
+use_public_buffer_reload : 1
+
+[fcavail_tn_file]
+filename : ./data/pl/a_comm/fc_avail.txt
+use_public_buffer_reload : 1
+
+[image_plus_filter_dict]
+filename : ./data/pl/a_comm/image_plus_bs_blacklist.txt
+use_public_buffer_reload : 1
+
+[cvrq_user_dict]
+filename : ./data/pl/a_comm/cvrq_user_dict.txt
+use_public_buffer_reload : 1
+
+[pc_brand_zone_query]
+filename : ./data/pl/a_comm/pc_brand_zone_query.txt
+use_public_buffer_reload : 1
+
+[action_ads_plan_doctor_ratio_map_dict]
+filename : ./data/pl/a_comm/action_ads_plan_doctor_ratio_map_dict.txt
+use_public_buffer_reload : 1
+
+[user_dt_interest_dict]
+filename : ./data/msa/user_dt_interest_dict.txt
+use_public_buffer_reload : 1
+
+[pa_dynamic_idea_blacklist]
+filename : ./data/auction/pa_dynamic_idea_blacklist.txt
+use_public_buffer_reload : 1
+
+[flow_cn_url_black_dict]
+filename : ./data/pl/a_comm/black/flow_cn_url_black_dict.txt
+use_public_buffer_reload : 1
+
+[flow_cn_black_dict]
+filename : ./data/pl/a_comm/black/flow_cn_black_dict.txt
+use_public_buffer_reload : 1
+
+[lu_relevance_bidder_dict]
+filename : ./data/auction/lu_relevance_bidder_dict.txt
+use_public_buffer_reload : 1
+
+[android_app_activation]
+filename : ./data/pl/a_comm/android_app_activation.txt
+use_public_buffer_reload : 1
+
+[huiliu_flow_tag_dict]
+filename : ./data/pl/a_comm/huiliu_flow_tag_dict.txt
+use_public_buffer_reload : 1
+
+[flow_user_black_dict]
+filename : ./data/pl/a_comm/black/flow_user_black_dict.txt
+use_public_buffer_reload : 1
+
+[sublink_interval_control]
+filename : ./data/pl/a_comm/sublink_interval_control.txt
+use_public_buffer_reload : 1
+
+[msa_clkq_cpa_filter_moduserid_tag_dict]
+filename : ./data/pl/a_comm/msa_clkq_cpa_filter_moduserid_tag_dict.txt
+use_public_buffer_reload : 1
+
+[msa_clkq_cpa_filter_userid_cpathr_dict]
+filename : ./data/pl/a_comm/msa_clkq_cpa_filter_userid_cpathr_dict.txt
+use_public_buffer_reload : 1
+
+[msa_clkq_cpa_filter_userid_tag_dict]
+filename : ./data/pl/a_comm/msa_clkq_cpa_filter_userid_tag_dict.txt
+use_public_buffer_reload : 1
+
+[yellow_page_ads_query_dict]
+filename : ./data/pl/a_comm/yellow_page_ads_query_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_diseaseq_dict]
+filename : ./data/pl/a_comm/action_ads_diseaseq_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_doctorq_dict]
+filename : ./data/pl/a_comm/action_ads_doctorq_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_user_doctor_map_dict]
+filename : ./data/pl/a_comm/action_ads_user_doctor_map_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_plan_doctor_map_dict_v2]
+filename : ./data/pl/a_comm/action_ads_user_doctor_map_dict.txt
+use_public_buffer_reload : 1
+
+[gold_booth_optimize_delimit_users]
+filename : ./data/pl/a_comm/gold_booth_optimize_delimit_users.txt
+use_public_buffer_reload : 1
+
+[gold_booth_alfa_beta]
+filename : ./data/pl/a_comm/gold_booth_alfa_beta.txt
+use_public_buffer_reload : 1
+
+
+[msa_docq_participated_plan_id]
+filename : ./data/msa/msa_docq_participated_plan_id.txt
+use_public_buffer_reload : 1
+
+[gold_booth_black_user_query]
+filename : ./data/pl/a_comm/msa_gold_booth_black_user_query.txt
+use_public_buffer_reload : 1
+
+[gold_booth_black_query]
+filename : ./data/pl/a_comm/msa_gold_booth_black_query.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_client_dynamic_idea]
+filename : ./data/pl/a_comm/wise_client_dynamic_idea.txt
+use_public_buffer_reload : 1
+
+[wise_trade_level_mt_thr]
+filename : ./data/msa/wise_trade_level_mt_thr
+use_public_buffer_reload : 1
+
+[pc_trade_level_mt_thr]
+filename : ./data/auction/pc_trade_level_mt_thr
+use_public_buffer_reload : 1
+
+[lbs_info_pic]
+filename : ./data/pl/a_comm/msa_lbs_info_pic_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_user_minbid_dict]
+filename : ./data/pl/a_comm/action_ads_user_minbid_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_plan_minbid_dict]
+filename : ./data/pl/a_comm/action_ads_plan_minbid_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_unit_minbid_dict]
+filename : ./data/pl/a_comm/action_ads_unit_minbid_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_winfo_minbid_dict]
+filename : ./data/pl/a_comm/action_ads_winfo_minbid_dict.txt
+use_public_buffer_reload : 1
+
+[msa_docq_participated_user_id]
+filename : ./data/msa/docq_participated_user_id.txt
+use_public_buffer_reload : 1
+
+
+[mob_im_ubm_model]
+filename : ./data/auction/mob_im_ubm_model.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_detail]
+filename : ./data/pl/a_comm/wise_detail_dict.txt
+use_public_buffer_reload : 1
+
+[app_grade]
+filename : ./data/pl/a_comm/app_grade.txt
+use_public_buffer_reload : 1
+
+[video_consume_control]
+filename : ./data/pl/a_comm/video_consume_control.txt
+use_public_buffer_reload : 1
+
+
+
+[local_style_wise_right_pa_pic]
+filename : ./data/pl/a_comm/wise_large_pa_pic_dict.txt
+use_public_buffer_reload : 1
+
+[winfo_layer_imgfc_multi_img]
+filename : ./data/pl/a_comm/imgfc_layer_winfoid_nst_dict.txt
+use_public_buffer_reload : 1
+
+
+[pa_query_mtid_advid_dict]
+filename : ./data/auction/pa_query_mtid_advid_dict
+use_public_buffer_reload : 1
+
+
+
+
+[msa_userid_rigq_adjust]
+filename : ./data/auction/internal_customer_userlist.txt
+use_public_buffer_reload : 1
+
+[fcr_userid_rigq_adjust]
+filename : ./data/auction/internal_customer_userlist.txt
+use_public_buffer_reload : 1
+
+[ald_info_m]
+filename : ./data/pl/a_comm/ald_info.txt
+use_public_buffer_reload : 1
+
+
+[mixer_dynamicads_user_anchor_url_sign_black_list]
+filename : ./data/pl/a_comm/mixer_dynamicads_user_anchor_url_sign_black_list.txt
+use_public_buffer_reload : 1
+
+[mixer_dynamicads_user_anchor_sign_black_list]
+filename : ./data/pl/a_comm/mixer_dynamicads_user_anchor_sign_black_list.txt
+use_public_buffer_reload : 1
+
+[local_style_client_dynamic_idea]
+filename : ./data/pl/a_comm/client_dynamic_idea.txt
+use_public_buffer_reload : 1
+
+[msa_zdh_convq_exp_user]
+filename : ./data/pl/a_comm/msa_zdh_convq_exp_user.txt
+use_public_buffer_reload : 1
+
+[action_ads_query_dict]
+filename : ./data/pl/a_comm/action_ads_query_dict.txt
+use_public_buffer_reload : 1
+
+[action_ads_plan_doctor_map_dict]
+filename : ./data/pl/a_comm/action_ads_plan_doctor_map_dict.txt
+use_public_buffer_reload : 1
+
+
+
+[cta_query_tag_dict]
+filename : ./data/pl/a_comm/msa_cta_query_tag.txt
+use_public_buffer_reload : 1
+
+[pa_bidword_query_mtid_blacklist]
+filename : ./data/auction/pa_bidword_query_mtid_blacklist.txt
+use_public_buffer_reload : 1
+
+[msa_duair_w_dict]
+filename : ./data/pl/a_comm/msa_duair_w_dict.txt
+use_public_buffer_reload : 1
+
+
+[local_style_brand_name]
+filename : ./data/pl/a_comm/local_style_brand_name.txt
+use_public_buffer_reload : 1
+
+[local_style_brand_name_new]
+filename : ./data/pl/a_comm/local_style_brand_name_new.txt
+use_public_buffer_reload : 1
+
+[local_style_brand_logo]
+filename : ./data/pl/a_comm/local_style_brand_logo.txt
+use_public_buffer_reload : 1
+
+
+
+
+[lbs_info_desc]
+filename : ./data/pl/a_comm/msa_lbs_info_dict_2045.txt
+use_public_buffer_reload : 1
+
+
+[mob_mt_param]
+filename : ./data/auction/mob_mt_param.txt
+use_public_buffer_reload : 1
+
+[mob_mtq_model]
+filename : ./data/auction/mob_mtq_model.txt
+use_public_buffer_reload : 1
+
+
+[internal_customer_userlist]
+filename : ./data/auction/internal_customer_userlist.txt
+use_public_buffer_reload : 1
+
+[rank_mt_thr_dict]
+filename : ./data/auction/rank_mt_thr_dict.txt
+use_public_buffer_reload : 1
+
+
+[msa_roi_bidding_control_thrs]
+filename : ./data/auction/msa_roi_bidding_control_thrs.txt
+use_public_buffer_reload : 1
+
+[msa_roi_bidding_controls]
+filename : ./data/auction/msa_roi_bidding_controls.txt
+use_public_buffer_reload : 1
+
+[msa_roi_bidding_baseQ]
+filename : ./data/auction/msa_roi_bidding_baseQ.txt
+use_public_buffer_reload : 1
+
+
+[msa_mt_mincpm_dict]
+filename : ./data/pl/a_comm/msa_mt_mincpm.txt
+use_public_buffer_reload : 1
+
+[user_high_priority_mt_dict]
+filename : ./data/pl/a_comm/user_high_priority_mt_dict.txt
+use_public_buffer_reload : 1
+
+[dynamicads_user_anchor_url_sign_black_list]
+filename : ./data/pl/a_comm/dynamicads_user_anchor_url_sign_black_list.txt
+use_public_buffer_reload : 1
+
+[dynamicads_user_anchor_sign_black_list]
+filename : ./data/pl/a_comm/dynamicads_user_anchor_sign_black_list.txt
+use_public_buffer_reload : 1
+
+[roi_bidding_control_thrs]
+filename : ./data/auction/roi_bidding_control_thrs.txt
+use_public_buffer_reload : 1
+
+[roi_bidding_controls]
+filename : ./data/auction/roi_bidding_controls.txt
+use_public_buffer_reload : 1
+
+[msa_query_cluster_mincpm]
+filename : ./data/auction/msa_query_cluster_mincpm_dict
+use_public_buffer_reload : 1
+
+[structed_user_bidword_mt_black_list]
+filename : ./data/pl/a_comm/struct_user_bidword_mt_black_list.txt
+use_public_buffer_reload : 1
+
+[structed_plan_mt_black_list]
+filename : ./data/pl/a_comm/struct_plan_mt_black_list.txt
+use_public_buffer_reload : 1
+
+
+[msa_lbs_style_feature]
+filename : ./data/msa/msa_lbs_style_feature.txt
+use_public_buffer_reload : 1
+
+[msa_navigation_query_domain]
+filename : ./data/auction/msa_navigation_pro_dict.txt
+use_public_buffer_reload : 1
+
+[fcr_navigation_query_domain]
+filename : ./data/auction/fcr_navigation_pro_dict.txt
+use_public_buffer_reload : 1
+
+[msa_navigation_query]
+filename : ./data/auction/msa_navigation_pro_dict.txt
+use_public_buffer_reload : 1
+
+[fcr_navigation_query]
+filename : ./data/auction/fcr_navigation_pro_dict.txt
+use_public_buffer_reload : 1
+
+[mt_anchor_type_dict]
+filename : ./data/pl/a_comm/mt_anchor_type_dict.txt
+use_public_buffer_reload : 1
+
+[navigation_protection_dict_WISE]
+filename : ./data/auction/msa_navigation_pro_dict.txt
+use_public_buffer_reload : 1
+
+[navigation_protection_dict_PC]
+filename : ./data/auction/fcr_navigation_pro_dict.txt
+use_public_buffer_reload : 1
+
+[navigation_protection_dict]
+filename : ./data/auction/fcr_navigation_pro_dict.txt
+use_public_buffer_reload : 1
+
+[sublink_style_limit]
+filename : ./data/pl/a_comm/sublink_style_limit_dict.txt
+use_public_buffer_reload : 1
+
+
+
+[query_app_match]
+filename : ./data/pl/a_comm/query_app_match.txt
+use_public_buffer_reload : 1
+
+
+[msa_new_annotation_json]
+filename : ./data/msa/msa_new_annotation_json.txt
+use_public_buffer_reload : 1
+
+[msa_new_annotation_codes]
+filename : ./data/msa/msa_new_annotation_codes.txt
+use_public_buffer_reload : 1
+
+
+
+[wise_rp_rigq_score]
+filename : ./data/auction/dsq_calc_price/wise_rp_rigq_score_dict
+use_public_buffer_reload : 1
+
+[pc_rp_rigq_score]
+filename : ./data/auction/dsq_calc_price/pc_rp_rigq_score_dict
+use_public_buffer_reload : 1
+
+[youxuan_query_trade_dict]
+filename : ./data/pl/a_comm/youxuan_query_trade_dict.txt
+use_public_buffer_reload : 1
+
+[wise_dt_ratio]
+filename : ./data/pl/a_comm/wise_dt_ratio.txt
+use_public_buffer_reload : 1
+
+[wise_dt_info]
+filename : ./data/pl/a_comm/wise_dt_info.txt
+use_public_buffer_reload : 1
+
+
+[msa_lbt_roi_model]
+filename : ./data/msa/msa_lbt_roi_model.txt
+use_public_buffer_reload : 1
+
+[user_trade]
+filename : ./data/msa/user_trade.txt
+use_public_buffer_reload : 1
+
+[youxuan_banner_query_black_dict]
+filename : ./data/pl/a_comm/youxuan_banner_query_black_dict.txt
+use_public_buffer_reload : 1
+
+[wise_bid_scaling_query_switch]
+filename : ./data/auction/bt/wise_bid_scaling_query_switch.data
+use_public_buffer_reload : 1
+
+
+[mob_ubm_model]
+filename : ./data/auction/mob_ubm_model.txt
+use_public_buffer_reload : 1
+
+[mcid_q_thres_dict]
+filename : ./data/pl/a_comm/mcid_q_thres_dict.txt
+use_public_buffer_reload : 1
+
+[annual_audit_user_deny]
+filename : ./data/pl/a_comm/black/annual_audit_user_deny.txt
+use_public_buffer_reload : 1
+
+[mcid_blacklist]
+filename : ./data/pl/a_comm/mcid_blacklist.txt
+use_public_buffer_reload : 1
+
+[outer_bidder_c_r_dict]
+filename : ./data/auction/outer_bidder_c_r_dict.txt
+use_public_buffer_reload : 1
+
+[outer_bidder_c_u_r_dict]
+filename : ./data/auction/outer_bidder_c_u_r_dict.txt
+use_public_buffer_reload : 1
+
+
+[outer_flow_more_pp_chargename_dict]
+filename : ./data/pl/a_comm/outer_flow_more_pp_chargename.txt
+use_public_buffer_reload : 1
+
+[roi_bidding_controls_planid]
+filename : ./data/auction/roi_bidding_controls_planid.txt
+use_public_buffer_reload : 1
+
+[roi_bidding_controls_userid]
+filename : ./data/auction/roi_bidding_controls_userid.txt
+use_public_buffer_reload : 1
+
+[roi_bidding_baseQ]
+filename : ./data/auction/roi_bidding_baseQ.txt
+use_public_buffer_reload : 1
+
+[chunhua_material]
+filename : ./data/pl/a_comm/chunhua_material.txt
+use_public_buffer_reload : 1
+
+[chunhua_query_appid]
+filename : ./data/pl/a_comm/chunhua_query_appid.txt
+use_public_buffer_reload : 1
+
+[wise_show_suggest_by_cn]
+filename : ./data/auction/bt/wise_show_suggest_by_cn.data
+use_public_buffer_reload : 1
+
+[show_suggest_by_cn]
+filename : ./data/auction/bt/show_suggest_by_cn.data
+use_public_buffer_reload : 1
+
+[platform_tax]
+filename : ./data/auction/platform_tax.txt
+use_public_buffer_reload : 1
+
+[offline_winfoid_deny_2]
+filename : ./data/pl/a_comm/119/offline_winfoid_deny.txt
+use_public_buffer_reload : 1
+
+[offline_winfoid_deny_1]
+filename : ./data/pl/a_comm/119/offline_winfoid_deny.txt
+use_public_buffer_reload : 1
+
+[offline_winfoid_deny_0]
+filename : ./data/pl/a_comm/119/offline_winfoid_deny.txt
+use_public_buffer_reload : 1
+
+[app_youxuan_user_black_dict]
+filename : ./data/pl/a_comm/app_youxuan_user_black.txt
+use_public_buffer_reload : 1
+
+[app_youxuan_info_dict]
+filename : ./data/pl/a_comm/app_youxuan_info.txt
+use_public_buffer_reload : 1
+
+[msa_lbt_loc_info]
+filename : ./data/pl/a_comm/msa_lbt_loc_info.txt
+use_public_buffer_reload : 1
+
+
+[fenlei_ch_check_dict]
+filename : ./data/pl/a_comm/fenlei_ch_check_dict.txt
+use_public_buffer_reload : 1
+
+[wise_rs_word]
+filename : ./data/pl/a_comm/wise_rs_word.txt
+use_public_buffer_reload : 1
+
+[ppim_reqnum]
+filename : ./data/pl/a_comm/template_ppim_reqnum_file.txt
+use_public_buffer_reload : 1
+
+[cpa_msa_user_roitype]
+filename : ./data/auction/msa_user_roi_type_dict.txt
+use_public_buffer_reload : 1
+
+[cpa_lower_bound]
+filename : ./data/auction/cpa_lower_bound.dat
+use_public_buffer_reload : 1
+
+[cpa_upper_bound]
+filename : ./data/auction/cpa_upper_bound.dat
+use_public_buffer_reload : 1
+
+[cpa_plan_dict]
+filename : ./data/auction/msa_cpa_bidding_plan_level.dat
+use_public_buffer_reload : 1
+
+[cpa_winfo_dict]
+filename : ./data/auction/msa_cpa_bidding.dat
+use_public_buffer_reload : 1
+
+
+
+[complex_config]
+filename : ./data/pl/a_comm/complex_config.txt
+use_public_buffer_reload : 1
+
+[structed_product_user_dict]
+filename : ./data/pl/a_comm/struct_product_user_dict.txt
+use_public_buffer_reload : 1
+
+[structed_user_black_list]
+filename : ./data/pl/a_comm/struct_user_black_list.txt
+use_public_buffer_reload : 1
+
+[wise_asq_personal_fea]
+filename : ./data/pl/a_comm/wise_asq_personal_fea.txt
+use_public_buffer_reload : 1
+
+[msa_tcq_filter]
+filename : ./data/pl/a_comm/msa_tcq_filter.txt
+use_public_buffer_reload : 1
+
+
+[lbs_info]
+filename : ./data/pl/a_comm/msa_lbs_info_dict.txt
+use_public_buffer_reload : 1
+
+[msa_mt_weight_dict]
+filename : ./data/pl/a_comm/msa_mt_weight.txt
+use_public_buffer_reload : 1
+
+[xml_traffic_ad_block]
+filename : ./data/pl/a_comm/xml_traffic_ad_block.txt
+use_public_buffer_reload : 1
+
+
+[dynamic_idea_exclude_words]
+filename : ./data/pl/a_comm/dynamic_idea_exclude_words_dict.txt
+use_public_buffer_reload : 1
+
+[telephone_area]
+filename : ./data/pl/a_comm/msa_telephone_area.txt
+use_public_buffer_reload : 1
+
+[pp_reqnum]
+filename : ./data/pl/a_comm/ppshow_data.txt
+use_public_buffer_reload : 1
+
+[nst_optimize_ratio_dict]
+filename : ./data/pl/a_comm/nst_optimize_ratio_dict.txt
+use_public_buffer_reload : 1
+
+[inter_business_cname]
+filename : ./data/pl/a_comm/inter_business_cname.txt
+use_public_buffer_reload : 1
+
+[layer_unitid_nst_dict]
+filename : ./data/pl/a_comm/layer_unitid_nst_dict.txt
+use_public_buffer_reload : 1
+
+[layer_winfoid_nst_dict]
+filename : ./data/pl/a_comm/layer_winfoid_nst_dict.txt
+use_public_buffer_reload : 1
+
+[layer_planid_nst_dict]
+filename : ./data/pl/a_comm/layer_planid_nst_dict.txt
+use_public_buffer_reload : 1
+
+[layer_userid_nst_dict]
+filename : ./data/pl/a_comm/layer_userid_nst_dict.txt
+use_public_buffer_reload : 1
+
+[nst_query_dict]
+filename : ./data/pl/a_comm/nst_query_dict.txt
+use_public_buffer_reload : 1
+
+[xml_to_js_negword_dict]
+filename : ./data/pl/a_comm/xml_to_js_neg_word.txt
+use_public_buffer_reload : 1
+
+[xml_to_js_keyword_dict]
+filename : ./data/pl/a_comm/xml_to_js_key_word.txt
+use_public_buffer_reload : 1
+
+[wise_iknow_user_black]
+filename : ./data/pl/a_comm/wise_iknow_user_black.txt
+use_public_buffer_reload : 1
+
+[dsq_gsp]
+filename : ./data/auction/dsq_calc_price/dsq_gsp_dict
+use_public_buffer_reload : 1
+
+[dsq_rp_ubm_score]
+filename : ./data/auction/dsq_calc_price/dsq_rp_ubm_score_dict
+use_public_buffer_reload : 1
+
+[dsq_rp_sort_score]
+filename : ./data/auction/dsq_calc_price/dsq_rp_sort_score_dict
+use_public_buffer_reload : 1
+
+[wise_lbs_query]
+filename : ./data/pl/a_comm/msa_lbs_query.txt
+use_public_buffer_reload : 1
+
+[ald_info]
+filename : ./data/pl/a_comm/ald_info.txt
+use_public_buffer_reload : 1
+
+[pic_era_trim_mtid_dict]
+filename : ./data/pl/a_comm/pic_era_trim_mtid_dict.txt
+use_public_buffer_reload : 1
+
+[native_app_intent_scheme]
+filename : ./data/pl/a_comm/native_app_intent_scheme.txt
+use_public_buffer_reload : 1
+
+[native_app_user_info]
+filename : ./data/pl/a_comm/native_app_user_info.txt
+use_public_buffer_reload : 1
+
+[native_app_plan_info]
+filename : ./data/pl/a_comm/native_app_plan_info.txt
+use_public_buffer_reload : 1
+
+[traffic_bidder_user_mod]
+filename : ./data/auction/traffic_bidder_user_mod.data
+use_public_buffer_reload : 1
+
+[traffic_control_user_mod]
+filename : ./data/auction/traffic_consume_control_user_mod.data
+use_public_buffer_reload : 1
+
+[nst_chinese_domain_name_dict]
+filename : ./data/pl/a_comm/nst_chinese_domain_name.txt
+use_public_buffer_reload : 1
+
+
+[wise_zhixin_query]
+filename : ./data/pl/a_comm/msa_zhixin_query.txt
+use_public_buffer_reload : 1
+
+[msa_coupon_icon_userid]
+filename : ./data/pl/a_comm/msa_coupon_icon.txt
+use_public_buffer_reload : 1
+
+[brand_zone_query]
+filename : ./data/pl/a_comm/msa_brand_zone_query.txt
+use_public_buffer_reload : 1
+
+[newstyle_planid_black]
+filename : ./data/pl/a_comm/newstyle_planid_black_dict.txt
+use_public_buffer_reload : 1
+
+[youxuan_user_black]
+filename : ./data/pl/a_comm/youxuan_user_black_dict.txt
+use_public_buffer_reload : 1
+
+[youxuan_user_brand]
+filename : ./data/pl/a_comm/youxuan_user_brand_dict.txt
+use_public_buffer_reload : 1
+
+[youxuan_query]
+filename : ./data/pl/a_comm/youxuan_query_dict.txt
+use_public_buffer_reload : 1
+
+[msa_trade_cpm_dict]
+filename : ./data/pl/a_comm/msa_trade_cpm.txt
+use_public_buffer_reload : 1
+
+[local_branding_region]
+filename : ./data/pl/a_comm/local_branding_planid_city.txt
+use_public_buffer_reload : 1
+
+[msa_stro_app]
+filename : ./data/pl/a_comm/msa_stro_app.txt
+use_public_buffer_reload : 1
+
+[newstyle_query_black]
+filename : ./data/pl/a_comm/newstyle_query_black_dict.txt
+use_public_buffer_reload : 1
+
+[newstyle_userid_white]
+filename : ./data/pl/a_comm/newstyle_userid_white_dict.txt
+use_public_buffer_reload : 1
+
+[newstyle_userid_black]
+filename : ./data/pl/a_comm/newstyle_userid_black_dict.txt
+use_public_buffer_reload : 1
+
+
+[pa_srcid_showid]
+filename : ./data/auction/pa_srcid_showid
+use_public_buffer_reload : 1
+
+[pa_mtid_showid]
+filename : ./data/auction/pa_mtid_showid
+use_public_buffer_reload : 1
+
+[ipad_bridge_user]
+filename : ./data/pl/a_comm/ipad_bridge_user.txt
+use_public_buffer_reload : 1
+
+
+
+
+[siva_black_user]
+filename : ./data/pl/a_comm/siva_black_user_dict.txt
+use_public_buffer_reload : 1
+
+[siva_mt]
+filename : ./data/pl/a_comm/siva_mt_dict.txt
+use_public_buffer_reload : 1
+
+[media_page]
+filename : ./data/pl/a_comm/media_page_dict.txt
+use_public_buffer_reload : 1
+
+[pa_mtid_query_dict]
+filename : ./data/auction/pa_mtid_query_dict
+use_public_buffer_reload : 1
+
+
+[im_except_qry_user_ext]
+filename : ./data/pl/a_comm/except/im_except_qry_user_ext.txt
+use_public_buffer_reload : 1
+
+[gold_booth_query_dict]
+filename : ./data/pl/a_comm/msa_gold_booth_query.txt
+use_public_buffer_reload : 1
+
+[offline_winfoid_allow]
+filename : ./data/pl/a_comm/119/offline_winfoid_allow.txt
+use_public_buffer_reload : 1
+
+[offline_winfoid_deny]
+filename : ./data/pl/a_comm/119/offline_winfoid_deny.txt
+use_public_buffer_reload : 1
+
+[no_v_punish_ratio]
+filename : ./data/auction/no_v_punish_ratio.txt
+use_public_buffer_reload : 1
+
+[query_url]
+filename : ./data/pl/a_comm/query_url_new.txt
+use_public_buffer_reload : 1
+
+[sp_unit_wt]
+filename : ./data/auction/sp_unit_wt.dat
+use_public_buffer_reload : 1
+
+[plus_v_userid]
+filename : ./data/pl/a_comm/plus_v_userid.txt
+use_public_buffer_reload : 1
+
+[pa_newstyle_mt_bidword_whitelist]
+filename : ./data/auction/pa_newstyle_mt_bidword_whitelist
+use_public_buffer_reload : 1
+
+[pa_newstyle_bidword_limit_mt]
+filename : ./data/auction/pa_newstyle_bidword_limit_mt
+use_public_buffer_reload : 1
+
+[push_pp_black]
+filename : ./data/auction/a_comm/push_pp_black.dat
+use_public_buffer_reload : 1
+
+[msa_smart_cpm]
+filename : ./data/pl/a_comm/msa_smart_cpm.txt
+use_public_buffer_reload : 1
+
+
+
+
+[pa_newstyle_brand_filter]
+filename : ./data/auction/pa_newstyle_brand_filter
+use_public_buffer_reload : 1
+
+[pa_newstyle_strong_mt]
+filename : ./data/auction/pa_newstyle_strong_mtid
+use_public_buffer_reload : 1
+
+[pa_newstyle_all_mt]
+filename : ./data/auction/pa_newstyle_all_mt
+use_public_buffer_reload : 1
+
+[msa_url_protection]
+filename : ./data/auction/url_protection_dict
+use_public_buffer_reload : 1
+
+[add_target_query]
+filename : ./data/pl/a_comm/msa_add_target_query.txt
+use_public_buffer_reload : 1
+
+[se_region]
+filename : ./data/pl/a_comm/msa_se_region_user.txt
+use_public_buffer_reload : 1
+
+[highend_bid_q]
+filename : ./data/pl/a_comm/highend_lpq_dict.txt
+use_public_buffer_reload : 1
+
+[lowend_bid_q]
+filename : ./data/pl/a_comm/lowend_lpq_dict.txt
+use_public_buffer_reload : 1
+
+[highend_mul_q]
+filename : ./data/pl/a_comm/highend_mulq_lpq_dict.txt
+use_public_buffer_reload : 1
+
+[lowend_mul_q]
+filename : ./data/pl/a_comm/lowend_mulq_lpq_dict.txt
+use_public_buffer_reload : 1
+
+[wapsite_type]
+filename : ./data/pl/a_comm/msa_wapsite_type.txt
+use_public_buffer_reload : 1
+
+[wapsite_whitelist]
+filename : ./data/pl/a_comm/msa_wapsite_whitelist.txt
+use_public_buffer_reload : 1
+
+[anti_cookie]
+filename : ./data/pl/a_comm/im_cookie_dict_for_anti.txt
+use_public_buffer_reload : 1
+
+[anti_ip]
+filename : ./data/pl/a_comm/im_ip_dict_for_anti.txt
+use_public_buffer_reload : 1
+
+[anti_cookieuser]
+filename : ./data/pl/a_comm/im_cookie_userid_dict_for_anti.txt
+use_public_buffer_reload : 1
+
+[anti_ipuser]
+filename : ./data/pl/a_comm/im_ip_userid_dict_for_anti.txt
+use_public_buffer_reload : 1
+
+[phonecall_freq]
+filename : ./data/pl/a_comm/msa_userid_phonecall_freq.txt
+use_public_buffer_reload : 1
+
+[mob_showurl_subdomain_blk]
+filename : ./data/pl/a_comm/mob_showurl_subdomain_blk.txt
+use_public_buffer_reload : 1
+
+[asq_personal_fea]
+filename : ./data/pl/a_comm/asq_personal_fea.txt
+use_public_buffer_reload : 1
+
+[winfo_minbid]
+filename : ./data/auction/winfo_minbid
+use_public_buffer_reload : 1
+
+[lu_show_suggest_by_cn]
+filename : ./data/auction/bt/lu_show_suggest_by_cn.data
+use_public_buffer_reload : 1
+
+[local_style_taobao_item]
+filename : ./data/pl/a_comm/local_style_taobao_item.txt
+use_public_buffer_reload : 1
+
+[local_style_taobao_shop]
+filename : ./data/pl/a_comm/local_style_taobao_shop.txt
+use_public_buffer_reload : 1
+
+[local_style_ns_domain_name]
+filename : ./data/pl/a_comm/local_style_ns_domain_name.txt
+use_public_buffer_reload : 1
+
+[local_style_zhida_fuwuyuan_text]
+filename : ./data/pl/a_comm/local_style_zhida_fuwuyuan_text.txt
+use_public_buffer_reload : 1
+
+[huge_screen_unitid]
+filename : ./data/pl/a_comm/huge_screen_unitid.txt
+use_public_buffer_reload : 1
+
+[local_style_pc_red_carpet_passtime]
+filename : ./data/pl/a_comm/pc_red_carpet_passtime_style.txt
+use_public_buffer_reload : 1
+
+[local_style_huizhan_pic]
+filename : ./data/pl/a_comm/local_style_huizhan_pic.txt
+use_public_buffer_reload : 1
+
+[local_style_focus_time_pic]
+filename : ./data/pl/a_comm/local_style_focus_time_pic.txt
+use_public_buffer_reload : 1
+
+[local_style_pc_overall_strong_style]
+filename : ./data/pl/a_comm/local_style_pc_overall_strong_style.txt
+use_public_buffer_reload : 1
+
+[local_style_pc_showurl_bold]
+filename : ./data/pl/a_comm/pc_showurl_bold_style.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_ut_mengya_brand_name]
+filename : ./data/pl/a_comm/wise_ut_mengya_brand_name.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_ut_mengya_four_pic]
+filename : ./data/pl/a_comm/wise_ut_mengya_four_pic.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_ut_mengya_single_pic]
+filename : ./data/pl/a_comm/wise_ut_mengya_single_pic.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_ut_feed_three_pic]
+filename : ./data/pl/a_comm/wise_ut_feed_three_pic.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_ut_feed_brand_name]
+filename : ./data/pl/a_comm/wise_ut_feed_brand_name.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_ut_feed_big_pic]
+filename : ./data/pl/a_comm/wise_ut_feed_big_pic.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_ut_feed_app]
+filename : ./data/pl/a_comm/wise_ut_feed_app.txt
+use_public_buffer_reload : 1
+
+[huge_screen_unitid_new]
+filename : ./data/pl/a_comm/huge_screen_unitid_new.txt
+use_public_buffer_reload : 1
+
+[local_express_for_wise_map]
+filename : ./data/pl/a_comm/local_express_for_wise_map_dict.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_promotion_pic]
+filename : ./data/pl/a_comm/local_style_wise_promotion_pic.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_promotion_sublink]
+filename : ./data/pl/a_comm/local_style_wise_promotion_sublink.txt
+use_public_buffer_reload : 1
+
+[local_style_icon_wise_attribute_style]
+filename : ./data/pl/a_comm/local_style_icon_wise_attribute_style.txt
+use_public_buffer_reload : 1
+
+[wise_taiyi_drop_down]
+filename : ./data/pl/a_comm/wise_taiyi_drop_down.txt
+use_public_buffer_reload : 1
+
+[wise_drop_down_label]
+filename : ./data/pl/a_comm/wise_drop_down_label.txt
+use_public_buffer_reload : 1
+
+
+[userid_show_pr_thres_dict]
+filename : ./data/auction/userid_show_pr_thres_dict.txt
+use_public_buffer_reload : 1
+
+[planid_show_pr_thres_dict]
+filename : ./data/auction/planid_show_pr_thres_dict.txt
+use_public_buffer_reload : 1
+
+[local_style_sanjia_hospital_style]
+filename : ./data/pl/a_comm/sanjia_hospital.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_canvas]                                                                                                                                                                                    
+filename : ./data/pl/a_comm/local_style_wise_canvas.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_h5]                                                                                                                                                                                    
+filename : ./data/pl/a_comm/local_style_wise_h5.txt
+use_public_buffer_reload : 1
+
+[local_style_lp_forward_card]
+filename : ./data/pl/a_comm/local_style_lp_forward_card.txt
+use_public_buffer_reload : 1
+
+[local_style_lp_forward_list]
+filename : ./data/pl/a_comm/local_style_lp_forward_list.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_corp_for_short]
+filename : ./data/pl/a_comm/local_style_wise_corp_for_short.txt
+use_public_buffer_reload : 1
+
+
+
+
+
+
+
+
+
+
+[ztc_allocq_dict]
+filename : ./data/pl/a_comm/ztc_allocq_dict.txt
+[app_more_targeting_plan_dict]
+filename : ./data/pl/a_comm/app_more_targeting_plan_dict.txt
+[wise_tourism_columbs_black]
+filename : ./data/pl/a_comm/wise_tourism_columbs_black.txt
+[dsa_ad_user_consume_control]
+filename : ./data/auction/dsa_ad_user_consume_control_dict
+[fwy_dynamic_weaktitle_splitter]
+filename : ./data/auction/fwy_dynamic_weaktitle_splitter.txt
+[feed_query_black_list]
+filename : ./data/feed/feed_query_black_list.txt
+[feed_query_trade2_black_list]
+filename : ./data/feed/feed_query_trade2_black_list.txt
+[feed_user_id_black_list]
+filename : ./data/feed/feed_user_id_black_list.txt
+[feed_user_trade2_black_list]
+filename : ./data/feed/feed_user_trade2_black_list.txt
+[smart_landing_page_black]
+filename : ./data/pl/a_comm/smart_landing_page_black_dict.txt
+
+[local_style_pc_wise_ut_mengya_four_pic_with_link]
+filename :./data/pl/a_comm/pc_wise_ut_mengya_four_pic_with_link.txt
+[wise_ut_mengya_app]
+filename : ./data/pl/a_comm/wise_ut_mengya_app.txt
+
+[local_style_search_feed_multi_pic]
+filename :./data/pl/a_comm/local_style_search_feed_multi_pic_dict.txt
+use_public_buffer_reload : 1
+[aduser_filter_dict]
+filename : ./data/pl/a_comm/black/outflow_user_blk.txt
+[ztc_mvhouse_planid]
+filename : ./data/pl/a_comm/ztc_mvhouse_planid.txt
+[ztc_cpa_drate_user]
+filename : ./data/pl/a_comm/ztc_cpa_drate_user.txt
+[feed_winfoid_black_list]
+filename : ./data/feed/feed_winfoid_black_list.txt
+[at_match_targeturl_user_dict]
+filename : ./data/pl/a_comm/at_match_targeturl_user_white_data.txt
+[brand_name_man_dict]
+filename : ./data/pl/a_comm/brand_name_man_dict.txt
+[post_ut_cpm_dict]
+filename : ./data/pl/a_comm/post_ut_cpm_dict.txt
+[utq_model_dict]
+filename : ./data/pl/a_comm/utq_model_dict.txt
+[feed_ut_model_dict]
+filename : ./data/pl/a_comm/feed_ut_model_dict.txt
+[feed_ut_model_dict_exp]
+filename : ./data/pl/a_comm/feed_ut_model_dict_exp.txt
+[utq_model_dict_hot_query_exp]
+filename : ./data/pl/a_comm/utq_model_dict_hot_query_exp.txt
+[utq_model_dict_exp]
+filename : ./data/pl/a_comm/utq_model_dict_exp.txt
+[ut_ads_planid]
+filename : ./data/pl/a_comm/ut_ads_planid.txt
+[ztc_deal_multi_pic_dict]
+filename : ./data/pl/a_comm/ztc_deal_multi_pic.txt
+[ip3_psa_pc_v2_ctr_threshold_dict]
+filename : ./data/pl/a_comm/ip3_psa_pc_v2_ctr_threshold_dict.txt
+[ip3_psa_wise_v2_ctr_threshold_dict]
+filename : ./data/pl/a_comm/ip3_psa_wise_v2_ctr_threshold_dict.txt
+[ip3_psa_price_ratio_dict]
+filename : ./data/pl/a_comm/ip3_psa_price_ratio_dict.txt
+[ip3_psa_total_consume_dict]
+filename : ./data/pl/a_comm/ip3_psa_total_consume_dict.txt
+[ztc_ocpc_cmatch_control]
+filename : ./data/pl/a_comm/ztc_ocpc_cmatch_control.txt
+[ztc_ocpc_roitype_dict]
+filename : ./data/pl/a_comm/ztc_ocpc_roitype_dict.txt
+[ztc_ocpc_cpabid_dict]
+filename : ./data/pl/a_comm/ztc_ocpc_cpabid_dict.txt
+[action_ads_non_closed_loop_plastic_department_dict]
+filename : ./data/pl/a_comm/action_ads_non_closed_loop_plastic_department_dict.txt
+[cname_url_filter_dict]
+filename : ./data/pl/a_comm/black/cname_url_deny.txt
+[wise_map_userid_blk_dict]
+filename : ./data/pl/a_comm/wise_map_userid_blk_dict.txt
+[wise_map_winfoid_blk_dict]
+filename : ./data/pl/a_comm/wise_map_winfoid_blk_dict.txt
+[baichuan_trade2_blacklist]
+filename : ./data/pl/a_comm/baichuan_trade2_blacklist.txt
+[baichuan_user_id_blacklist]
+filename : ./data/pl/a_comm/baichuan_user_id_blacklist.txt
+[baichuan_plan_id_blacklist]
+filename : ./data/pl/a_comm/baichuan_plan_id_blacklist.txt
+[baichuan_idea_id_blacklist]
+filename : ./data/pl/a_comm/baichuan_idea_id_blacklist.txt
+[baichuan_mt_minbid_dict]
+filename : ./data/pl/a_comm/baichuan_mt_minbid_dict.txt
+[baichuan_idea_id_qvalue_dict]
+filename : ./data/pl/a_comm/baichuan_idea_id_qvalue_dict.txt
+[local_style_wise_ut_ads_label]
+filename :./data/pl/a_comm/wise_ut_ads_label.txt
+
+[msa_uv_minbid_dict]
+filename : ./data/pl/a_comm/msa_uv_minbid.txt
+[traffic_control_dict]
+filename : ./data/auction/traffic_consume_control.data
+[msa_sc_wordid_minbid_dict]
+filename : ./data/msa/msa_sc_wordid_minbid
+[msa_sc_userid_wordid_minbid_dict]
+filename : ./data/msa/msa_sc_userid_wordid_minbid
+[utq_user_tag_dict]
+filename : ./data/pl/a_comm/utq_user_tag_dict.txt
+[wise_mengya_model_data_dict]
+filename : ./data/pl/a_comm/wise_mengya_model_data_dict.txt
+[fcr_entity_disorder_bidword_independent_all_dict]
+filename : ./data/pl/a_comm/fcr_entity_disorder_bidword_independent_all_dict.txt
+[msa_entity_disorder_bidword_independent_all_dict]
+filename : ./data/pl/a_comm/msa_entity_disorder_bidword_independent_all_dict.txt
+[feed_winfo_ctr_thr_dict]
+filename : ./data/feed/feed_winfo_ctr_thr_dict.txt
+[ztc_navigation_query_dict]
+filename : ./data/auction/ztc_navigation_query_dict.txt
+[white_query_winfo_dict]
+filename : ./data/pl/a_comm/white/im_white_qry_winfo.txt
+[winfo_deny_dict]
+filename : ./data/pl/a_comm/black/im_black_winfo.txt
+[query_deny_dict]
+filename : ./data/pl/a_comm/black/im_black_qry.txt
+[query_user_except_dict]
+filename : ./data/pl/a_comm/except/im_except_qry_user.txt
+[query_word_deny_dict]
+filename : ./data/pl/a_comm/black/im_black_qry_kw.txt
+[query_winfo_deny_dict]
+filename : ./data/pl/a_comm/black/im_black_qry_winfo.txt
+[word_user_deny_dict]
+filename : ./data/pl/a_comm/black/im_black_kw_user.txt
+[word_url_deny_dict]
+filename : ./data/pl/a_comm/black/im_black_kw_url.txt
+[msa_shw_reserve_dict]
+filename : ./data/auction/msa_shw_reserve_dict.txt
+[fcr_shw_reserve_dict]
+filename : ./data/auction/fcr_shw_reserve_dict.txt
+[msa_mt_pk_list_dict]
+filename : ./data/auction/msa_mt_pk_list_dict.txt
+[fcr_pre_query_mincpm_dict]
+filename : ./data/auction/fcr_pre_query_mincpm_dict.txt
+[msa_app_cpa_base_info_dict]
+filename : ./data/pl/a_comm/msa_app_cpa_base_info.txt
+[msa_app_cpa_exp_user_dict]
+filename : ./data/pl/a_comm/msa_app_cpa_exp_user.txt
+[userid_tradeid_dict]
+filename : ./data/pl/a_comm/userid_tradeid.txt
+[fwy_dynamic_premium_via_epvq]
+filename : ./data/auction/fwy_dynamic_premium_via_epvq.txt
+[ztc_user_cvr_thr_dict]
+filename : ./data/pl/a_comm/ztc_user_cvr_thr_dict.txt
+[consum_hitline_userid_planid_dict]
+filename : ./data/auction/wise_consume_hitline_userid_planid.txt
+[smart_landing_page_smartminbid_dict]
+filename : ./data/pl/a_comm/smart_landing_page_smartminbid_dict.txt
+[smart_landing_page_smartbid_dict]
+filename : ./data/pl/a_comm/smart_landing_page_smartbid_dict.txt
+[feed_winfo_ctr_dict]
+filename : ./data/feed/feed_winfo_ctr_dict.txt
+[feed_ads_explore_winfo_dict]
+filename : ./data/feed/feed_ads_explore_winfo_dict.txt
+[ztc_namap_multipic]
+filename : ./data/pl/a_comm/ztc_namap_multipic.txt
+[ztc_replace_3rd_query_dict]
+filename : ./data/pl/a_comm/ztc_replace_3rd_query_dict.txt
+[ztc_adjust_bid_hours_dict]
+filename : ./data/pl/a_comm/ztc_adjust_bid_hours.txt
+[ztc_smart_bid_dict]
+filename : ./data/pl/a_comm/ztc_smart_bid_dict.txt
+[local_express_smart_bid_dict]
+filename : ./data/pl/a_comm/local_express_smart_bid.txt
+[pa_brand_dict]
+filename : ./data/auction/pa_brand_dict.txt
+[pa_main_brand_dict]
+filename : ./data/auction/pa_main_brand_dict.txt
+[ztc_user_cpa_bid_dict]
+filename : ./data/pl/a_comm/ztc_user_cpa_bid.txt
+
+[local_style_wise_fsg_image_style]
+filename : ./data/pl/a_comm/local_style_wise_fsg_image_dict.txt
+use_public_buffer_reload : 1
+
+[local_style_wise_fsg_sublink_style]
+filename : ./data/pl/a_comm/local_style_wise_fsg_sublink_dict.txt
+use_public_buffer_reload : 1
+
+[ztc_bidword_uid_whitelist_dict]
+filename : ./data/pl/a_comm/bidword_uid_whitelist.txt
+[yacl_demo_deduper_dict]
+filename : ./data/pl/a_comm/yacl_demo_deduper.txt
+[jingxiu_query_dict]
+filename : ./data/pl/a_comm/jingxiu_query_dict.txt
+[local_style_wise_jingxiu_logo]
+filename:./data/pl/a_comm/local_style_wise_jingxiu_logo.txt
+[local_style_wise_jingxiu_trade]
+filename:./data/pl/a_comm/local_style_wise_jingxiu_trade.txt
+[local_style_wise_jingxiu_generic_style]
+filename:./data/pl/a_comm/local_style_wise_jingxiu_generic_style.txt
+[local_style_wise_jingxiu_navigation]
+filename:./data/pl/a_comm/local_style_wise_jingxiu_navigation.txt
+[local_style_wise_jingxiu_price]
+filename:./data/pl/a_comm/local_style_wise_jingxiu_price.txt
+[local_style_wise_duxiu_image]
+filename:./data/pl/a_comm/local_style_wise_duxiu_image.txt
+[local_style_wise_duxiu_five_image]
+filename:./data/pl/a_comm/local_style_wise_duxiu_five_image.txt
+[local_style_wise_duxiu_sublink]
+filename:./data/pl/a_comm/local_style_wise_duxiu_sublink.txt
+[feed_cuid_usrid_black_list]
+filename : ./data/feed/feed_cuid_usrid_black_list.txt
+[pa_entity_dict]
+filename : ./data/auction/pa_entity_dict.txt
+[pa_main_entity_dict]
+filename : ./data/auction/pa_main_entity_dict.txt
+[wise_mengya_white]
+filename : ./data/feed/wise_mengya_white.txt
+[pc_strong_mt_dict]
+filename : ./data/auction/pc_strong_mt_dict.txt
+[pc_baichuan_trade2_blacklist]
+filename : ./data/pl/a_comm/pc_baichuan_trade2_blacklist.txt
+[pc_baichuan_user_id_blacklist]
+filename : ./data/pl/a_comm/pc_baichuan_user_id_blacklist.txt
+[pc_baichuan_plan_id_blacklist]
+filename : ./data/pl/a_comm/pc_baichuan_plan_id_blacklist.txt
+[pc_baichuan_idea_id_blacklist]
+filename : ./data/pl/a_comm/pc_baichuan_idea_id_blacklist.txt
+[pc_baichuan_mt_minbid_dict]
+filename : ./data/pl/a_comm/pc_baichuan_mt_minbid_dict.txt
+[pc_baichuan_idea_id_qvalue_dict]
+filename : ./data/pl/a_comm/pc_baichuan_idea_id_qvalue_dict.txt
+[ai_planid_dict]
+filename : ./data/pl/a_comm/ai_planid_dict.txt
+[wise_entityid_anti_monopoly_minbid]
+filename : ./data/pl/a_comm/wise_entityid_anti_monopoly_minbid_dict.txt
+[ztc_mt_opt_dict]
+filename : ./data/pl/a_comm/ztc_mt_opt.txt
+[generic_brand_tag_planid_dict]
+filename : ./data/pl/a_comm/generic_brand_tag_planid_dict.txt
+[image_sub_strategy_black_dict]
+filename : ./data/pl/a_comm/image_sub_strategy_black_dict.txt
+[bigpic_text_user_blacklist]
+filename : ./data/pl/a_comm/bigpic_text_user_blacklist_dict.txt
+[pa_mt_to_title_white_label_list]
+filename : ./data/pl/a_comm/pa_mt_to_title_white_label_list.txt
+[wise_jingxiu_brand]
+filename : ./data/pl/a_comm/wise_jingxiu_brand.txt
+[feed_userid_minbid_dict]
+filename : ./data/feed/feed_userid_minbid.txt
+[medical_struct_plan_department_dict]
+filename : ./data/pl/a_comm/medical_struct_plan_department_dict.txt
+[medical_struct_idea_black_dict]
+filename : ./data/pl/a_comm/medical_struct_idea_black_dict.txt
+
+[local_style_wise_fc_video]
+filename:./data/pl/a_comm/wise_fc_video.txt
+[pa_relevanceq_thr_dict]
+filename : ./data/auction/pa_relevanceq_thr_dict.txt
+[pa_pic_mt_winfoid_whitelist]
+filename : ./data/auction/pa_pic_mt_winfoid_whitelist.txt
+[mtid_planid_query_filter_ads]
+filename : ./data/pl/a_comm/mtid_planid_query_filter_dict.txt
+[local_style_wise_h5_forward]
+filename : ./data/pl/a_comm/local_style_wise_h5_forward.txt
+[ztc_cid_target_url_dict]
+filename : ./data/pl/a_comm/ztc_cid_target_url.txt
+[ztc_expand_region_src_dict]
+filename : ./data/pl/a_comm/ztc_expand_region_src.txt
+[ztc_action_mt_dict]
+filename : ./data/pl/a_comm/ztc_action_mt_dict.txt
+[image_conf_dict]
+filename : ./data/pl/a_comm/image_conf_dict.txt
+[wise_mengya_area]
+filename : ./data/feed/wise_mengya_area.txt
+[feed_target_url_black_list]
+filename : ./data/feed/feed_target_url_black_list.txt
+[medical_bazhun_department_dict]
+filename : ./data/pl/a_comm/medical_bazhun_department_dict.txt
+[medical_userid_dict]
+filename : ./data/pl/a_comm/medical_userid_dict.txt
+[feed_user_consume_control_dict]
+filename : ./data/feed/feed_user_consume_control_dict.txt
+[at_time_consume_control_whitelist]
+filename : ./data/auction/at_time_consume_control_whitelist
+[at_user_consume_control_whitelist]
+filename : ./data/auction/at_user_consume_control_whitelist
+[fuwuyuan_advid_blacklist]
+filename : ./data/pl/a_comm/fuwuyuan_advid_blacklist.txt
+[smart_landing_page_minbid_dict]
+filename : ./data/pl/a_comm/smart_landing_page_minbid_dict.txt
+[smart_landing_page_bidder_dict]
+filename : ./data/pl/a_comm/smart_landing_page_bidder_dict.txt
+[medical_query_recom_dict]
+filename : ./data/pl/a_comm/medical_query_recom_dict.txt
+[wise_knowledge_query_dict]
+filename : ./data/feed/wise_knowledge_query_dict.txt
+[generic_brand_tag_userid_dict]
+filename : ./data/pl/a_comm/generic_brand_tag_userid_dict.txt
+[ztc_user_level_dict]
+filename : ./data/pl/a_comm/ztc_user_level.txt
+[roi_ecpc_bidding_planid_groupid_mapping]
+filename : ./data/auction/roi_ecpc_bidding_planid_groupid_mapping.txt
+[msa_roi_ecpc_bidding_planid_groupid_mapping]
+filename : ./data/auction/msa_roi_ecpc_bidding_planid_groupid_mapping.txt
+[pc_nst_template]
+filename : ./data/auction/pc_nst_template.txt
+[feed_adv_add_param_dict]
+filename : ./data/feed/feed_adv_add_param_dict.txt
+[user_experience_white_list]
+filename : ./data/pl/a_comm/user_experience_white_list.txt
+[pc_rigq_calibration_dict]
+filename : ./data/pl/a_comm/pc_rigq_calibration_dict
+[wise_rigq_calibration_dict]
+filename : ./data/pl/a_comm/wise_rigq_calibration_dict
+[ztc_plus_planid]
+filename : ./data/pl/a_comm/ztc_plus_planid.txt
+[ztc_plus_info]
+filename : ./data/pl/a_comm/ztc_plus_info.txt
+[ztc_plus_smart_bid_dict]
+filename : ./data/pl/a_comm/ztc_plus_smart_bid_dict.txt
+[multi_mt_fiter_user_blacklist]
+filename : ./data/auction/multi_mt_fiter_user_blacklist.txt
+[wise_tieba_trade2_blacklist]
+filename : ./data/pl/a_comm/wise_tieba_trade2_blacklist.txt
+[wise_tieba_trade3_blacklist]
+filename : ./data/pl/a_comm/wise_tieba_trade3_blacklist.txt
+[default_trade2_blacklist]
+filename : ./data/pl/a_comm/default_trade2_blacklist.txt
+[default_trade3_blacklist]
+filename : ./data/pl/a_comm/default_trade3_blacklist.txt
+[dsa_cmatch_filter_dict]
+filename : ./data/pl/a_comm/dsa_cmatch_filter_dict.txt
+[pa_json_url_user_delim_dict]
+filename : ./data/pl/a_comm/pa_json_url_user_delim_dict.txt
+[ztc_cpt_material_dict]
+filename : ./data/pl/a_comm/ztc_cpt_material.txt
+[pa_knowledge_userid_mt_blacklist]
+filename : ./data/auction/pa_knowledge_userid_mt_blacklist.txt
+[smart_landing_page_single]
+filename : ./data/pl/a_comm/smart_landing_page_single_dict_new.txt
+[ztc_poi_pid_cid_dict]
+filename : ./data/pl/a_comm/ztc_poi_pid_cid_dict.txt
+[feed_passportuid_usrid_black_list]
+filename : ./data/feed/feed_passportuid_usrid_black_dict.txt
+[msa_mt_entity_word_wmatch_minbid]
+filename : ./data/pl/a_comm/msa_mt_entity_word_wmatch_minbid_dict.txt
+[at_cmatch_filter_dict]
+filename : ./data/pl/a_comm/at_cmatch_filter_dict.txt
+[ac_component_query_black_dict]
+filename : ./data/pl/a_comm/ac_component_query_black_dict.txt
+[ac_component_url_black_dict]
+filename : ./data/pl/a_comm/ac_component_url_black_dict.txt
+[pa_mt_parigq_thres_dict]
+filename : ./data/auction/pa_mt_parigq_thres_dict.txt
+[wenda_user_trade_dict]
+filename : ./data/pl/a_comm/wenda_user_trade_dict.txt
+[wenda_url_trade_dict]
+filename : ./data/pl/a_comm/wenda_url_trade_dict.txt
+[wise_jingxiu_ar]
+filename : ./data/pl/a_comm/wise_jingxiu_ar.txt
+[image_wise_xiangui_query_user_black]
+filename : ./data/pl/a_comm/image_wise_xiangui_query_user_black.txt
+[baichuan_src_trade2_blacklist]
+filename : ./data/pl/a_comm/baichuan_src_trade2_blacklist.txt
+[baichuan_src_user_id_blacklist]
+filename : ./data/pl/a_comm/baichuan_src_user_id_blacklist.txt
+[baichuan_src_plan_id_blacklist]
+filename : ./data/pl/a_comm/baichuan_src_plan_id_blacklist.txt
+[baichuan_src_idea_id_blacklist]
+filename : ./data/pl/a_comm/baichuan_src_idea_id_blacklist.txt
+[baichuan_src_winfo_id_blacklist]
+filename : ./data/pl/a_comm/baichuan_src_winfo_id_blacklist.txt
+[pa_relevance_rule_control_dict]
+filename : ./data/auction/pa_relevance_rule_control_dict.txt
+[ztcas_feed_smart_bid_dict]
+filename : ./data/pl/a_comm/ztcas_feed_smart_bid_dict.txt
+[antou_mingshi_exp_user_ratio_dict]
+filename : ./data/pl/a_comm/antou_mingshi_exp_user_ratio_dict.txt
+[antou_mingshi_srcid_ratio_dict]
+filename : ./data/pl/a_comm/antou_mingshi_srcid_ratio_dict.txt
+[smart_jingxiu_bid_ratio]
+filename : ./data/pl/a_comm/smart_jingxiu_bid_ratio.txt
+[ztc_plus_user_consume_control]
+filename : ./data/pl/a_comm/ztc_plus_user_consume_control.txt
+[planid_mt_dict]
+filename : ./data/pl/a_comm/planid_mt_dict.txt
+[feed_material_xbox_white]
+filename : ./data/pl/a_comm/feed_material_xbox_white.txt
+[ipad_app_planid_dict]
+filename : ./data/pl/a_comm/ipad_app_planid.txt
+[feed_zhenghetoufang_userid_white_dict]
+filename : ./data/pl/a_comm/feed_zhenghetoufang_userid_white_dict.txt
+[wise_conversion_premium_default_value_dict]
+filename : ./data/pl/a_comm/wise_conversion_premium_default_value_dict.txt
+[wise_conversion_premium_user_value_dict]
+filename : ./data/pl/a_comm/wise_conversion_premium_user_value_dict.txt
+[wise_good_ue_query_dict]
+filename : ./data/pl/a_comm/wise_good_ue_query_dict.txt
+[ad_style_library_product_white_list]
+filename : ./data/pl/a_comm/ad_style_library_product_white_list.txt
+[cname_url_filter_cname_dict]
+filename : ./data/pl/a_comm/black/cname_url_deny.txt
+[entity_punish_price_dict]
+filename : ./data/pl/a_comm/entity_punish_price_dict.txt
+[wise_raw_ads_heart_query_black_list]
+filename : ./data/pl/a_comm/wise_raw_ads_heart_query_black_list.txt
+[ztc_plus_planid_plus]
+filename : ./data/pl/a_comm/ztc_plus_planid_plus.txt
+[ztc_plus_info_plus]
+filename : ./data/pl/a_comm/ztc_plus_info_plus.txt
+[fcr_qlq_domain_white_list]
+filename : ./data/pl/a_comm/fcr_qlq_domain_white_list.txt
+[msa_qlq_domain_white_list]
+filename : ./data/pl/a_comm/msa_qlq_domain_white_list.txt
+[ch_smartbid_dict]
+filename : ./data/feed/ch_smartbid_dict.txt
+[feed_trade_userid_white_dict]
+filename : ./data/feed/feed_trade_userid_white_dict.txt
+[smart_landing_page_user_control_up]
+filename : ./data/pl/a_comm/smart_landing_page_user_control_up_dict.txt
+[msa_mt_minbid_discount_param]
+filename : ./data/pl/a_comm/msa_mt_minbid_discount_param_dict.txt
+[ztc_replace_url_dict]
+filename : ./data/pl/a_comm/ztc_replace_url.txt
+[material_score_white_userid_list]
+filename : ./data/pl/a_comm/material_score_white_userid_list.txt
+[pa_small_channel_mt]
+filename : ./data/auction/pa_small_channel_mt
+[dynamic_idea_plan_exclude_words_dict]
+filename : ./data/pl/a_comm/dynamic_idea_plan_exclude_words_dict.txt
+[feed_md_feed_user_id_black_list]
+filename : ./data/feed/feed_md_feed_user_id_black_list.txt
+[feed_md_wise_user_id_black_list]
+filename : ./data/feed/feed_md_wise_user_id_black_list.txt
+[feed_md_pc_user_id_black_list]
+filename : ./data/feed/feed_md_pc_user_id_black_list.txt
+[feed_md_feed_user_trade2_black_list]
+filename : ./data/feed/feed_md_feed_user_trade2_black_list.txt
+[feed_md_wise_user_trade2_black_list]
+filename : ./data/feed/feed_md_wise_user_trade2_black_list.txt
+[feed_md_pc_user_trade2_black_list]
+filename : ./data/feed/feed_md_pc_user_trade2_black_list.txt
+[feed_md_feed_pv_query_black_list]
+filename : ./data/feed/feed_md_feed_pv_query_black_list.txt
+[feed_md_wise_pv_query_black_list]
+filename : ./data/feed/feed_md_wise_pv_query_black_list.txt
+[feed_md_pc_pv_query_black_list]
+filename : ./data/feed/feed_md_pc_pv_query_black_list.txt
+[feed_md_feed_adv_query_black_list]
+filename : ./data/feed/feed_md_feed_adv_query_black_list.txt
+[feed_md_wise_adv_query_black_list]
+filename : ./data/feed/feed_md_wise_adv_query_black_list.txt
+[feed_md_pc_adv_query_black_list]
+filename : ./data/feed/feed_md_pc_adv_query_black_list.txt
+[wise_image_malicious_competion_query_dict]
+filename : ./data/pl/a_comm/wise_image_malicious_competion_query_dict.txt
+[action_ads_userid_deparment_blacklist]
+filename:./data/pl/a_comm/userid_department_blacklist.txt
+[wise_image_malicious_competion_white_query_domain_dict]
+filename : ./data/pl/a_comm/wise_image_malicious_competion_white_query_domain_dict.txt
+[ns_image_malicious_competion_query_dict]
+filename : ./data/pl/a_comm/ns_image_malicious_competion_query_dict.txt
+[ns_image_malicious_competion_white_query_domain_dict]
+filename : ./data/pl/a_comm/ns_image_malicious_competion_white_query_domain_dict.txt
+[feed_cuid_usrid_black_list_new]
+filename : ./data/feed/feed_cuid_usrid_black_list_new.txt
+[ztc_planid_comment_dict]
+filename : ./data/pl/a_comm/ztc_planid_comment_dict.txt
+[msa_new_url_minbid_dict]
+filename : ./data/pl/a_comm/msa_new_url_minbid_dict.txt
+[night_ad_consume_control]
+filename : ./data/auction/night_ad_consume_control_dict
+[bes_publisher_settings_dict]
+filename : ./data/pl/a_comm/bes_publisher_settings.txt
+[municipality_city_dict]
+filename : ./data/pl/a_comm/municipality_city_dict.txt
+[chunhua_visible_smartbid_dict]
+filename : ./data/msa/chunhua_visible_smartbid_dict.txt
+[chunhua_minbid_dict]
+filename : ./data/msa/chunhua_minbid_dict.txt
+[ztc_replace_3rd_user_dict]
+filename : ./data/pl/a_comm/ztc_replace_3rd_adv.txt
+[ztc_replace_3rd_winfo_dict]
+filename : ./data/pl/a_comm/ztc_replace_3rd_adv_service.txt
+[wise_query_minning_user_trade_black]
+filename : ./data/pl/a_comm/wise_query_minning_user_trade_black.txt
+[jingxiu_query_black_list]
+filename : ./data/pl/a_comm/jingxiu_query_black_list.txt
+[ac_component_user_url_black_dict]
+filename : ./data/pl/a_comm/ac_component_user_url_black_dict.txt
+[ac_component_material_dict]
+filename : ./data/pl/a_comm/ac_component_material_dict.txt
+[ip3_ctr_threshold_dict_exp0]
+filename : ./data/pl/a_comm/ip3_ctr_threshold_dict_exp0.txt
+[ip3_wise_ctr_threshold_dict_exp0]
+filename : ./data/pl/a_comm/ip3_wise_ctr_threshold_dict_exp0.txt
+[ip3_wise_roi_threshold_dict_exp0]
+filename : ./data/pl/a_comm/ip3_wise_roi_threshold_dict_exp0.txt
+[ip3_psa_pc_ctr_threshold_dict_exp0]
+filename : ./data/pl/a_comm/ip3_psa_pc_ctr_threshold_dict_exp0.txt
+[ip3_psa_wise_ctr_threshold_dict_exp0]
+filename : ./data/pl/a_comm/ip3_psa_wise_ctr_threshold_dict_exp0.txt
+[ip3_psa_pc_v2_ctr_threshold_dict_exp0]
+filename : ./data/pl/a_comm/ip3_psa_pc_v2_ctr_threshold_dict_exp0.txt
+[ip3_psa_wise_v2_ctr_threshold_dict_exp0]
+filename : ./data/pl/a_comm/ip3_psa_wise_v2_ctr_threshold_dict_exp0.txt
+[feed_zhenghetoufang_userid_black_dict]
+filename : ./data/pl/a_comm/feed_zhenghetoufang_userid_black_dict.txt
+[client_adid_user_dict]
+filename : ./data/pl/a_comm/client_adid_user_dict.txt
+[wise_query_minning_userid_black]
+filename : ./data/pl/a_comm/wise_query_minning_userid_black.txt
+[feed_md_feed_target_url_main_domain_black_list]
+filename : ./data/feed/feed_md_feed_target_url_main_domain_black_list.txt
+[feed_md_feed_target_url_first_dir_black_list]
+filename : ./data/feed/feed_md_feed_target_url_first_dir_black_list.txt
+[low_rank_strong_mt_mincpm]
+filename : ./data/pl/a_comm/low_rank_strong_mt_mincpm.txt
+[pc_user_pre_nplq_to_left_dict]
+filename : ./data/pl/a_comm/pc_user_pre_nplq_to_left_dict.txt
+[pa_knowledge_query_tradeid_dict]
+filename : ./data/auction/pa_knowledge_query_tradeid_dict.txt
+[pa_knowledge_tradeid_domain_dict]
+filename : ./data/auction/pa_knowledge_tradeid_domain_dict.txt
+[pluto_feed_consume_control]
+filename : ./data/auction/pluto_feed_consume_control.txt
+[at_flag_rigq_dict]
+filename : ./data/pl/a_comm/at_flag_rigq_dict
+[msa_random_weak_mt_dict]
+filename : ./data/auction/msa_random_weak_mt_dict.txt
+[msa_random_strong_mt_dict]
+filename : ./data/auction/msa_random_strong_mt_dict.txt
+[medical_mid_page_replace_querylist]
+filename : ./data/pl/a_comm/medical_mid_page_replace_querylist.txt
+[medical_target_word_pic_dict]
+filename : ./data/pl/a_comm/medical_target_word_pic_dict.txt
+[unitid_opera_type_dict]
+filename : ./data/pl/a_comm/unitid_opera_type_dict.txt
+[feed_user_consume_control_exp_dict]
+filename : ./data/feed/feed_user_consume_control_exp_dict.txt
+[at_default_open_user_list]
+filename : ./data/auction/at_default_open_user_list
+[at_default_open_plan_list]
+filename : ./data/auction/at_default_open_plan_list
+[htk_real_targeting_type_uid_blacklist]
+filename : ./data/pl/a_comm/htk_real_targeting_type_uid_blacklist.txt
+[chunhua_history_cvr_dict]
+filename : ./data/msa/chunhua_history_cvr_dict.txt
+[ac_component_sublink_dict]
+filename : ./data/pl/a_comm/ac_component_sublink_dict.txt
+[ztc_feed_card_userid]
+filename : ./data/pl/a_comm/ztc_feed_card_userid.txt
+[ztc_feed_card_idea]
+filename : ./data/pl/a_comm/ztc_feed_card_idea.txt
+[medical_lead_card_query_blacklist]
+filename : ./data/pl/a_comm/medical_lead_card_query_blacklist.txt
+[medical_userid_hospital_dict]
+filename : ./data/pl/a_comm/medical_userid_hospital_dict.txt
+[win_rank_offline_dict]
+filename : ./data/auction/win_rank_offline_dict.txt
+[pc_valid_mts_list_dict]
+filename : ./data/pl/a_comm/pc_valid_mts_list_dict.txt
+[ac_component_free_exp_dict]
+filename : ./data/pl/a_comm/ac_component_free_exp_dict.txt
+[bz_ctrl_userid_dict]
+filename : ./data/pl/a_comm/bz_ctrl_userid_dict.txt
+[bz_hospital_dict]
+filename : ./data/pl/a_comm/bz_hospital_dict.txt
+[bz_department_dict]
+filename : ./data/pl/a_comm/bz_department_dict.txt
+[bz_knowledge_dict]
+filename : ./data/pl/a_comm/bz_knowledge_dict.txt
+[ztc_limit_bid_by_budget_dict]
+filename : ./data/pl/a_comm/ztc_limit_bid_by_budget_dict.txt
+[multi_thr_trade_dict]
+filename : ./data/pl/a_comm/multi_thr_trade_dict
+[feed_user_trade3_zhenghe_black_list]
+filename : ./data/feed/feed_user_trade3_zhenghe_black_list.txt
+[slp_landingpage_proxy_user_dict]
+filename : ./data/pl/a_comm/slp_landingpage_proxy_user_dict.txt
+[pa_new_production_advid]
+filename : ./data/auction/pa_new_production_advid
+[msa_ma_white_list_dict]
+filename : ./data/auction/a_comm/msa_ma_white_list
+[wise_valid_mts_list_dict]
+filename : ./data/pl/a_comm/wise_valid_mts_list_dict.txt
+[UserShortname]
+filename : ./data/pl/a_comm/user_shortname_dict.txt
+[FcrQlqCalibrationDict]
+filename : ./data/pl/a_comm/fcr_qlq_calibration_dict
+[MsaQlqCalibrationDict]
+filename : ./data/pl/a_comm/msa_qlq_calibration_dict
+[ztc_ctr_opt_dict]
+filename : ./data/pl/a_comm/ztc_ctr_opt_list.txt
+[entity_cluster_id_dict]
+filename : ./data/pl/a_comm/entity_cluster_id_dict.txt
+[query_cluster_id_dict]
+filename : ./data/pl/a_comm/query_cluster_id_dict.txt
+[fcr_pluto_single_type_threshold_dict]
+filename : ./data/pl/a_comm/fcr_pluto_single_type_threshold_dict.txt
+[msa_pluto_single_type_threshold_dict]
+filename : ./data/pl/a_comm/msa_pluto_single_type_threshold_dict.txt
+[msa_chunhua_budget_control_dict]
+filename : ./data/pl/a_comm/msa_chunhua_budget_control_dict.txt
+[ztc_ecpc_plan_info_dict]
+filename : ./data/pl/a_comm/ztc_ecpc_plan_info_dict.txt
+[cpl_userid_pic_dict]
+filename : ./data/pl/a_comm/cpl_userid_pic_dict.txt
+[QueryTitleAction]
+filename : ./data/pl/a_comm/query_title_action_dict.txt
+[QueryPositionCtr]
+filename : ./data/pl/a_comm/wise_mixads_query_position_ctr_dict.txt
+[TradePositionCtr]
+filename : ./data/pl/a_comm/wise_mixads_trade_position_ctr_dict.txt
+[TusouCsidBlack]
+filename : ./data/pl/a_comm/image_csid_black.txt
+use_public_buffer_reload : 0
+[TusouQueryCsidBlack]
+filename : ./data/pl/a_comm/image_query_csid_black.txt
+[TusouManualImages]
+filename : ./data/pl/a_comm/image_search_ads_manual_images.txt
+[MsaAppMincpmInner]
+filename : ./data/msa/msa_app_mincpm_inner.txt
+use_public_buffer_reload : 1
+[MsaCompeteBrand]
+filename : ./data/msa/wise_compete_brand_filter_dict.txt
+use_public_buffer_reload : 1
+[MobAnchoringRp]
+filename : ./data/pl/a_comm/msa_anchoring_rp.txt
+use_public_buffer_reload : 1
+[MobDisGsp]
+filename : ./data/pl/a_comm/msa_dis_gsp.txt
+use_public_buffer_reload : 1
+[MobDisGspWordid]
+filename : ./data/pl/a_comm/msa_dis_gsp_wordid.txt
+use_public_buffer_reload : 1
+[PcDisGspWordid]
+filename : ./data/pl/a_comm/pc_dis_gsp_wordid.txt
+use_public_buffer_reload : 1
+[WiseDisGspWordidWmatchRank_V]
+filename : ./data/msa/wise_wordid_wmatch_rank_disgspv.txt
+use_public_buffer_reload : 1
+[WiseEuseridPriceCoupon]
+filename : ./data/auction/wise_e_userid_price_coupon_dict.txt
+use_public_buffer_reload : 1
+[MtsvWiseWordidWmatch_v]
+filename : ./data/auction/wise_wordid_wmatch_v_dict.txt
+[MtsvWiseQuery_v]
+filename : ./data/pl/a_comm/wise_use_mtsv_query_v_dict.txt
+[fcr_at_smartbid_userid_white_list]
+filename : ./data/pl/a_comm/fcr_at_smartbid_userid_white_list.txt
+[msa_at_smartbid_userid_white_list]
+filename : ./data/pl/a_comm/msa_at_smartbid_userid_white_list.txt
+[fcr_at_smartbid_userid_exp_list]
+filename : ./data/pl/a_comm/fcr_at_smartbid_userid_exp_list.txt
+[msa_at_smartbid_userid_exp_list]
+filename : ./data/pl/a_comm/msa_at_smartbid_userid_exp_list.txt
+[LowRankStrongMT]
+filename : ./data/pl/a_comm/low_rank_pic_filter_pc.txt
+[sn_strong_intention_dict]
+filename : ./data/pl/a_comm/sn_strong_intention_dict.txt
+[ZtcBlackQuery]
+filename : ./data/pl/a_comm/ztc_black_query.txt
+[MsaChunhuaBudgetControlPlanidDict]
+filename : ./data/pl/a_comm/msa_chunhua_budget_control_planid_dict.txt
+[MsaChunhuaCvrthrPlanidDict]
+filename : ./data/pl/a_comm/msa_chunhua_cvrthr_planid_dict.txt
+[pa_attribute_filter_danube_ranker_dict]
+filename : ./data/auction/pa_attribute_filter_danube_ranker_dict
+[pa_query_attributes_ranker_dict]
+filename : ./data/auction/pa_query_attributes_ranker_dict
+[pa_kg_attributes_ranker_dict]
+filename : ./data/auction/pa_kg_attributes_ranker_dict
+[pa_product_to_kg_ranker_dict]
+filename : ./data/auction/pa_product_to_kg_ranker_dict
+[Ip3PsaHitTimeDictPc]
+filename : ./data/pl/a_comm/ip3_psa_hit_time_dict_pc.txt
+[Ip3PsaHitTimeDictWise]
+filename : ./data/pl/a_comm/ip3_psa_hit_time_dict_wise.txt
+[ztc_gold_uid_dict]
+filename : ./data/pl/a_comm/ztc_gold_uid_dict.txt
+[slp_landingpage_proxy_user_ratio_dict]
+filename : ./data/pl/a_comm/slp_landingpage_proxy_user_ratio_dict.txt
+[ztc_local_hotel_info]
+filename : ./data/pl/a_comm/ztc_local_hotel_info.txt
+[local_style_wise_single_video]
+filename : ./data/pl/a_comm/local_style_wise_single_video.txt
+[local_style_wise_triple_video]
+filename : ./data/pl/a_comm/local_style_wise_triple_video.txt
+[local_style_tianmu_normal_pic]
+filename : ./data/pl/a_comm/local_style_tianmu_normal_pic.txt
+[local_style_wise_tianmu_animation]
+filename:./data/pl/a_comm/local_style_wise_tianmu_animation_dict.txt
+[htk_uid_list_dict]
+filename : ./data/pl/a_comm/htk_uid_list_t.txt
+[NightTargetingClickqThres]
+filename : ./data/pl/a_comm/night_targeting_clickq_thres.txt
+[ActionAdsFreeFormWidgetWidthDict]
+filename : ./data/pl/a_comm/action_ads_freeform_widget_width_dict.txt
+[apa_acp_ctrl_pid_v_budget_line_ratio_dict]
+filename : ./data/msa/apa_acp_ctrl_pid_v_budget_line_ratio_dict.txt
+[apa_expected_cpa_dict]
+filename : ./data/msa/apa_expected_cpa_dict.txt
+[apa_acp_ctrl_pid_max_price_ub_dict]
+filename : ./data/msa/apa_acp_ctrl_pid_max_price_ub_dict.txt
+[slp_user_detail_dict]
+filename : ./data/pl/a_comm/slp_user_detail_dict.txt
+[local_style_wise_group_promote_pic1]
+filename:./data/pl/a_comm/local_style_wise_group_promote_pic1.txt
+use_public_buffer_reload : 1
+[local_style_wise_group_promote_pic3]
+filename:./data/pl/a_comm/local_style_wise_group_promote_pic3.txt
+use_public_buffer_reload : 1
+[local_style_wise_activity_promote]
+filename:./data/pl/a_comm/local_style_wise_activity_promote.txt
+use_public_buffer_reload : 1
+[local_style_wise_activity_promote_sublink]
+filename:./data/pl/a_comm/local_style_wise_activity_promote_sublink.txt
+use_public_buffer_reload : 1
+[local_style_wise_busy_season]
+filename:./data/pl/a_comm/local_style_wise_busy_season.txt
+use_public_buffer_reload : 1
+[ns_pc_wenku_jinxiansuo_dict]
+filename : ./data/pl/a_comm/ns_pc_wenku_jinxiansuo.txt
+[shoubai_speed_user_ratio_dict]
+filename : ./data/pl/a_comm/slp_shoubai_speed_user_ratio_dict.txt
+[win_domain_offline_dict]
+filename : ./data/auction/win_domain_offline_dict.txt
+[pa_prod_pla_mt]
+filename : ./data/auction/pa_prod_pla_mt.txt
+[pa_prod_pla_virtual_mt]
+filename : ./data/auction/pa_prod_pla_virtual_mt.txt
+[pa_prod_single_mt]
+filename : ./data/auction/pa_prod_single_mt.txt
+[imei_replace_user_dict]
+filename : ./data/pl/a_comm/imei_replace_user_dict.txt
+[ztc_user_bid_minbid_dict]
+filename : ./data/pl/a_comm/ztc_user_bid_minbid_dict.txt
+[ztc_user_bid_gsp_ratio_dict]
+filename : ./data/pl/a_comm/ztc_user_bid_gsp_ratio_dict.txt
+[no_v_punish_v2_dict]
+filename : ./data/auction/no_v_punish_ratio_v2.txt
+[ztc_400_tel]
+filename : ./data/pl/a_comm/ztc_400_tel.txt
+[aamfw_userid_white_dict]
+filename : ./data/pl/a_comm/aamfw_userid_white_dict.txt
+[aamfw_advid_mcid_black_dict]
+filename : ./data/pl/a_comm/aamfw_advid_mcid_black_dict.txt
+[aavm_connect_dict]
+filename : ./data/pl/a_comm/aavm_connect_dict.txt
+[aavm_department_style_blacklist]
+filename : ./data/pl/a_comm/aavm_department_style_blacklist.txt
+[aavm_hospital_style_blacklist]
+filename : ./data/pl/a_comm/aavm_hospital_style_blacklist.txt
+[commadmit_user_deny]
+filename : ./data/pl/a_comm/commadmit_user_deny.txt
+[ztc_mt_prem_dict]
+filename : ./data/pl/a_comm/ztc_mt_prem_dict.txt
+[ai_client_planid_time]
+filename : ./data/pl/a_comm/ai_client_planid_time.txt
+[local_style_wise_try_out]
+filename:./data/pl/a_comm/local_style_wise_try_out.txt
+[local_style_wise_try_out_sublink]
+filename:./data/pl/a_comm/local_style_wise_try_out_sublink.txt
+[na_lp_badcase_dict]
+filename : ./data/pl/a_comm/na_lp_badcase_dict.txt
+[na_lp_badcase_slp_useid_whitelist]
+filename : ./data/pl/a_comm/na_lp_badcase_slp_useid_whitelist.txt
+[ecpc_auto_targeting_uid_whitelist]
+filename : ./data/pl/a_comm/ecpc_auto_targeting_uid_whitelist.txt
+[wise_duxiu_plan_minbid]
+filename : ./data/pl/a_comm/wise_duxiu_plan_minbid.txt
+[wise_duxiu_word_minbid]
+filename : ./data/pl/a_comm/wise_duxiu_word_minbid.txt
+[ztc_ecpc_bidword_info_dict]
+filename : ./data/pl/a_comm/ztc_ecpc_bidword_info_dict.txt
+[phone_closed_loop_replace_num]
+filename : ./data/pl/a_comm/phone_close_loop_replace_number.txt
+[ztc_query_region_to_trade_dict]
+filename : ./data/pl/a_comm/ztc_query_region_to_trade_dict.txt
+[ztc_marrige_card_cpt_material_dict]
+filename : ./data/pl/a_comm/ztc_marrige_card_cpt_material_dict.txt
+[zhongxiu_planid]
+filename : ./data/pl/a_comm/zhongxiu_planid.txt
+[zhongxiu_brand_normalize]
+filename : ./data/pl/a_comm/zhongxiu_brand_normalize.txt
+[zhongxiu_brand_competitor]
+filename : ./data/pl/a_comm/zhongxiu_brand_competitor.txt
+[zhongxiu_ad_black]
+filename : ./data/pl/a_comm/zhongxiu_ad_black.txt
+[brand_url_domain_dict]
+filename : ./data/pl/a_comm/brand_url_domain_dict.txt
+[strong_style_blklist_dict]
+filename : ./data/pl/a_comm/strong_style_blklist_dict.txt
+[insight_add_tag_user_dict]
+filename : ./data/pl/a_comm/insight_targeting_add_tag.txt
+[phone_tonglan_style_material]
+filename : ./data/pl/a_comm/phone_tonglan_style_material.txt
+[LexparserPatternidDynamicTitle]
+filename : ./data/pl/a_comm/lexparser_aa_patternid_dynamic_title.txt
+[IdeaidGuidewords]
+filename : ./data/pl/a_comm/aa_ideaid_guidewords.txt
+[pc_at_match_ad_quality_new]
+filename : ./data/pl/a_comm/pc_at_match_ad_quality_new.txt
+[wise_at_match_ad_quality_new]
+filename : ./data/pl/a_comm/wise_at_match_ad_quality_new.txt
+[pa_prod_bsku_detail_dict]
+filename : ./data/auction/pa_prod_bsku_detail_dict.txt
+[badcase_offline_winfoid_deny]
+filename : ./data/pl/a_comm/badcase_offline_winfoid_deny_dict.txt
+[badcase_offline_entityid_wordid_deny]
+filename : ./data/pl/a_comm/badcase_offline_entityid_wordid_deny_dict.txt
+[badcase_offline_entityid_wordid_allow]
+filename : ./data/pl/a_comm/badcase_offline_entityid_wordid_allow_dict.txt
+[fast_wise_valid_mts_list_dict]
+filename : ./data/pl/a_comm/wise_valid_mts_list_dict.txt
+[fast_msa_nst_template_dict]
+filename : ./data/auction/msa_nst_template_dict.txt
+[ztc_feed_diff_trade_ctr_thrd_dict]
+filename : ./data/feed/ztc_feed_diff_trade_ctr_thrd_dict.txt
+[slp_landingpage_proxy_user_control_dict]
+filename : ./data/pl/a_comm/slp_landingpage_proxy_user_control_dict.txt
+[local_fc_shop_to_url_dict]
+filename : ./data/pl/a_comm/local_fc_shop_to_url_dict.txt
+[phone_closed_loop_replace_num_user_bind]
+filename : ./data/pl/a_comm/phone_close_loop_replace_number_user_bind.txt
+[phone_close_loop_call_only_user_name]
+filename : ./data/pl/a_comm/phone_close_loop_call_only_user_name.txt
+[image_ads_target_url_white]
+filename : ./data/pl/a_comm/image_ads_target_url_white.txt
+[pc_explore_mts_list_dict]
+filename : ./data/pl/a_comm/pc_explore_mts_list_dict.txt
+[wise_explore_mts_list_dict]
+filename : ./data/pl/a_comm/wise_explore_mts_list_dict.txt
+[chunhua_ebusiness_dict]
+filename : ./data/pl/a_comm/chunhua_ebusiness_dict.txt
+[cpm_ad_dict]
+filename : ./data/pl/a_comm/cpm_ad_dict.txt
+[brand_url_v3_dict]
+filename : ./data/pl/a_comm/brand_url_v3_dict.txt
+[mt_history_ctr_dict]
+filename : ./data/pl/a_comm/mt_history_ctr_dict.txt
+[newstyle_only_precise_user_dict]
+filename : ./data/pl/a_comm/newstyle_only_precise_user_dict.txt
+[msa_chunhua_budget_control_on_planid_dict]
+filename : ./data/pl/a_comm/msa_chunhua_budget_control_on_planid_dict.txt
+[msa_chunhua_budget_control_trade_consum_curve_dict]
+filename : ./data/pl/a_comm/msa_chunhua_budget_control_trade_consum_curve_dict.txt
+[msa_slp_cvr_model]
+filename : ./data/pl/a_comm/msa_slp_cvr_model.txt
+[cpm_ad_user_bidword_dict]
+filename : ./data/pl/a_comm/cpm_ad_user_bidword_dict.txt
+[aa_cpa_bid_ratio_dict]
+filename : ./data/pl/a_comm/aa_cpa_bid_ratio_dict.txt
+[fast_pc_valid_mts_list_dict]
+filename : ./data/pl/a_comm/pc_valid_mts_list_dict.txt
+[action_ads_word2vec_dict]
+filename : ./data/pl/a_comm/aa_word2vec_dict.txt
+[slp_cpa_user_list]
+filename : ./data/pl/a_comm/slp_cpa_user_list.txt
+[slp_cpa_bid_ratio]
+filename : ./data/pl/a_comm/slp_cpa_bid_ratio.txt
+[smart_landing_page_user_to_xbox]
+filename : ./data/pl/a_comm/smart_landing_page_user_to_xbox.txt
+[auto_dealer_card_dict]
+filename : ./data/pl/a_comm/auto_dealer_card_dict.txt
+[fc_youpin_query_winfo_id_dict]
+filename : ./data/pl/a_comm/fc_youpin_query_winfo_id_dict.txt
+[medical_price_express_dict]
+filename : ./data/pl/a_comm/medical_price_express_dict.txt
+[query_entityid_black_list]
+filename : ./data/pl/a_comm/new_query_entityid_black_list.txt
+[ai_client_planid_condition_dict]
+filename : ./data/pl/a_comm/ai_client_planid_condition_dict.txt
+[ns_sensitive_words_dict]
+filename : ./data/pl/a_comm/ns_sensitive_words_dict.txt
+[apa_cpa_to_cpi_dict]
+filename : ./data/msa/apa_cpa_to_cpi_dict.txt
+[chunhua_myerson_dict]
+filename : ./data/pl/a_comm/chunhua_myerson_dict
+[ztc_myerson_dict]
+filename : ./data/pl/a_comm/ztc_myerson_dict
+[title_dismatch_os_dict]
+filename : ./data/msa/title_dismatch_os_stra.txt
+[rigq_pre_tuning_dict]
+filename : ./data/pl/a_comm/rigq_pre_tuning_dict.txt
+[ai_client_userid_sublink_material]
+filename : ./data/pl/a_comm/ai_client_userid_sublink_material.txt
+[jingxiu_chart_query_title_dict]
+filename : ./data/pl/a_comm/jingxiu_chart_query_title_dict.txt
+[ztc_mix_pcvr_lr_dict]
+filename : ./data/pl/a_comm/ztc_mix_pcvr_lr_dict.txt
+[risk_prompt_dict]
+filename : ./data/pl/a_comm/risk_prompt_dict.txt
+[risk_prompt_srcid_dict]
+filename : ./data/pl/a_comm/risk_prompt_srcid_dict.txt
+[chunhua_lp_button_q_dict]
+filename : ./data/pl/a_comm/chunhua_lp_button_q_dict
+[aamfw_connect_dict]
+filename : ./data/pl/a_comm/aamfw_connect_dict.txt
+[ztc_mt_info_prem_dict]
+filename : ./data/pl/a_comm/ztc_mt_info_prem_dict.txt
+[ztc_phone_mt_prem_dict]
+filename : ./data/pl/a_comm/ztc_phone_mt_prem_dict.txt
+[ztc_hongbao_premium_opt_dict]
+filename : ./data/pl/a_comm/ztc_hongbao_premium_opt_dict.txt
+
+[juping_ads_info_style_dict]
+filename: ./data/pl/a_comm/juping_ads_info_style_dict.txt
+[mip_userid_black_dict]
+filename: ./data/pl/a_comm/mip_userid_black_dict.txt
+
+[ztc_cpt_cpm_fix_dict]
+filename : ./data/pl/a_comm/ztc_cpt_cpm_fix_dict.txt
+[medical_rank_ratio_dict]
+filename : ./data/pl/a_comm/medical_rank_ratio_dict.txt
+[night_add_tag_user_dict]
+filename : ./data/pl/a_comm/night_targeting_add_tag.txt
+[aa_mt_default_text_dict]
+filename : ./data/pl/a_comm/aa_mt_default_text_dict.txt
+[fc_youpin_query_title_dict]
+filename : ./data/pl/a_comm/fc_youpin_query_title.txt
+[phone_close_loop_replace_pic_user_bind]
+filename : ./data/pl/a_comm/phone_close_loop_replace_pic_user_bind.txt
+[zhidao_user_id_blacklist]
+filename : ./data/pl/a_comm/zhidao_user_id_blacklist.txt
+[title_url_add_monitor_dict]
+filename : ./data/pl/a_comm/title_url_add_monitor_dict.txt
+[health_express_blacklist_dict]
+filename : ./data/pl/a_comm/health_express_blacklist_dict.txt
+[multi_slots_auction_rank_bias_ratio]
+filename : ./data/pl/a_comm/multi_slots_auction_rank_bias_ratio.txt
+[fc_youpin_query_user_id_dict]
+filename : ./data/pl/a_comm/fc_youpin_query_user_id_dict.txt
+[medical_new_general_style_dict]
+filename : ./data/pl/a_comm/medical_new_general_style_dict.txt
+[aamfw_query_black_dict]
+filename : ./data/pl/a_comm/aamfw_query_black_dict.txt
+[aamfw_advid_black_dict]
+filename : ./data/pl/a_comm/aamfw_advid_black_dict.txt
+[aamfw_query_advid_mt_black_dict]
+filename : ./data/pl/a_comm/aamfw_query_advid_mt_black_dict.txt
+[local_style_wise_chujing_slide_dict]
+filename:./data/pl/a_comm/local_style_wise_chujing_slide_dict.txt
+[local_style_wise_jingxiu_big_image_dict]
+filename:./data/pl/a_comm/local_style_wise_jingxiu_big_image_dict.txt
+[redundant_idea_minbid_dict]
+filename : ./data/pl/a_comm/redundant_idea_minbid_dict.txt
+[aa_mt_ratio_schema_dict]
+filename : ./data/pl/a_comm/aa_mt_ratio_schema_dict.txt
+[pc_aa_premium_by_dict]
+filename : ./data/pl/a_comm/pc_aa_premium_by_dict.txt
+[aa_mt_conversion_ratio]
+filename : ./data/pl/a_comm/aa_mt_conversion_ratio.txt
+[fcr_mtq_model]
+filename : ./data/auction/fcr_mtq_model.txt
+[pc_weak_mt_dict]
+filename : ./data/pl/a_comm/pc_weak_mt_dict.txt
+[ztc_bidword_image_dict]
+filename : ./data/msa/ztc_bidword_image_dict.txt
+[zhongxiu_brand_platform]
+filename : ./data/pl/a_comm/zhongxiu_brand_platform.txt
+[zhongxiu_ad_brand]
+filename : ./data/pl/a_comm/zhongxiu_ad_brand.txt
+[zhongxiu_ad_material]
+filename : ./data/pl/a_comm/zhongxiu_ad_material.txt
+[ad_general_data_na_fix]
+filename : ./data/pl/a_comm/ad_general_data_na_fix.txt
+[ad_general_data_na_down]
+filename : ./data/pl/a_comm/ad_general_data_na_down.txt
+[cmatch4fengsui_dict]
+filename : ./data/pl/a_comm/cmatch4fengsui_dict.txt
+[closed_loop_vertical_history_dict]
+filename : ./data/pl/a_comm/closed_loop_vertical_history_dict.txt
+[action_ads_medical_link_dict]
+filename : ./data/pl/a_comm/action_ads_mt8508_link_dict.txt
+[msa_chunhua_inner_ip_dict]
+filename : ./data/pl/a_comm/msa_chunhua_inner_ip_dict.txt
+[fc_youpin_v2_zx]
+filename : ./data/pl/a_comm/fc_youpin_v2_zx.txt
+[fc_youpin_v2_qc]
+filename : ./data/pl/a_comm/fc_youpin_v2_qc.txt
+[plan_on_special_src]
+filename : ./data/pl/a_comm/plan_on_special_src_dict.txt
+[travel_jujing_card_white_list_dict]
+filename : ./data/pl/a_comm/travel_jujing_card_white_list_dict.txt
+[lu_roi_type_mappings]
+filename : ./data/pl/a_comm/lu_smart_bid_rtp
+[insight_url_tag]
+filename : ./data/pl/a_comm/insight_url_tag.txt
+[aa_url_host_type_dict]
+filename : ./data/pl/a_comm/aa_url_host_type_dict.txt
+[aa_multiaction_mt_ki_mcid_dict]
+filename : ./data/pl/a_comm/aa_multiaction_mt_ki_mcid_dict.txt
+[app_star_rate]
+filename : ./data/pl/a_comm/app_star_rate.txt
+[range_rigq_pre_tuning_dict]
+filename : ./data/pl/a_comm/range_rigq_pre_tuning_dict.txt
+[vertical_product_query]
+filename : ./data/pl/a_comm/vertical_product_query.txt
+[smart_landing_page_user_state]
+filename : ./data/pl/a_comm/smart_landing_page_user_state_dict.txt
+[insight_filter]
+filename : ./data/pl/a_comm/insight_filter.txt
+[insight_user_trade]
+filename : ./data/pl/a_comm/insight_user_trade.txt
+[chunhua_cvrq_plan_dic]
+filename : ./data/pl/a_comm/chunhua_cvrq_plan_dic
+[local_style_wise_tianmu_animation2]
+filename:./data/pl/a_comm/local_style_wise_tianmu_animation2_dict.txt
+[msa_closedloop_cvrq_model]
+filename : ./data/pl/a_comm/msa_closedloop_cvrq_model.txt
+[msa_default_cvrq_dict]
+filename : ./data/pl/a_comm/msa_default_cvrq_dict.txt
+[maximize_click_offline_dict]
+filename : ./data/pl/a_comm/maximize_click_offline_dict.txt
+[maximize_click_user_bidding_control_dict]
+filename : ./data/pl/a_comm/maximize_click_user_bidding_control_dict.txt
+[maximize_click_bid_ratio_dict]
+filename : ./data/pl/a_comm/maximize_click_bid_ratio_dict.txt
+[zhongxiu_ad_trade]
+filename : ./data/pl/a_comm/zhongxiu_ad_trade.txt
+[symbols_to_trim_dict]
+filename : ./data/pl/a_comm/symbols_to_trim_dict.txt
+[chunhua_rigq_calibration_dict]
+filename : ./data/pl/a_comm/chunhua_rigq_calibration_dict
+[closedloop_cpa_bid_dict]
+filename : ./data/pl/a_comm/closedloop_cpa_bid_dict.txt
+[app_adflag_schema_dict]
+filename : ./data/pl/a_comm/app_adflag_schema_dict.txt
+[query_wmatch_deny_dict]
+filename : ./data/pl/a_comm/119/119_qry_wmatch_deny.txt
+[userid_wmatch_deny_dict]
+filename : ./data/pl/a_comm/119/119_userid_wmatch_deny.txt
+[planid_wmatch_deny_dict]
+filename : ./data/pl/a_comm/119/119_planid_wmatch_deny.txt
+[wordid_wmatch_deny_dict]
+filename : ./data/pl/a_comm/119/119_wordid_wmatch_deny.txt
+[winfoid_wmatch_deny_dict]
+filename : ./data/pl/a_comm/119/119_winfoid_wmatch_deny.txt
+[planid_deny_dict]
+filename : ./data/pl/a_comm/119/119_planid_deny.txt
+[query_userid_deny_dict]
+filename : ./data/pl/a_comm/119/119_qry_userid_deny.txt
+[car_official_account_show_case_query_dict]
+filename : ./data/pl/a_comm/car_official_account_show_case_query_dict.txt
+[ecpc_dont_cut_price_userid_dict]
+filename : ./data/auction/ecpc_dont_cut_price_userid_dict.txt
+[pa_symbol_standard_conf]
+filename : ./data/auction/pa_symbol_standard_conf
+[aa_query_intent_dynamic_title_dict]
+filename : ./data/pl/a_comm/aa_qry_intent_dytitle_dict.txt
+[idfa_replace_user_dict]
+filename : ./data/pl/a_comm/idfa_replace_user_dict.txt
+[ecpa_control_dict]
+filename : ./data/pl/a_comm/ecpa_control_dict
+[ecpa_q_calibration_dict]
+filename : ./data/pl/a_comm/ecpa_q_calibration_dict
+[ecpa_user_express_dict]
+filename : ./data/pl/a_comm/ecpa_user_express_dict
+[ecpa_user_jifeibi_dict]
+filename : ./data/pl/a_comm/ecpa_user_jifeibi_dict
+[ecpa_deep_control_dict]
+filename : ./data/pl/a_comm/ecpa_deep_control_dict
+[pa_mt_dedup_conf]
+filename : ./data/auction/pa_mt_dedup_conf
+[src_show_pixel_limit_dict]
+filename : ./data/pl/a_comm/src_show_pixel_limit_dict.txt
+[local_style_wise_tianmu_animation3]
+filename:./data/pl/a_comm/local_style_wise_tianmu_animation3_dict.txt
+[mtr_weight_trade_ratio_dict]
+filename : ./data/auction/mtr_weight_trade_ratio_dict.txt
+[aa_conversion_ratio_dict]
+filename : ./data/pl/a_comm/aa_conversion_ratio_dict.txt
+[mts_global_height_type_dict]
+filename : ./data/pl/a_comm/mts_global_height_type_dict.txt
+[strict_medical_style_dict]
+filename : ./data/pl/a_comm/strict_medical_style_dict.txt
+[mv_house_price_info_dict]
+filename : ./data/pl/a_comm/mv_house_price_info_dict.txt
+[query_trade_min_page_cpm]
+filename : ./data/auction/query_trade_min_page_cpm.txt
+[pa_prod_pla_bid_factor_dict]
+filename : ./data/auction/pa_prod_pla_bid_factor_dict.txt
+[app_strong_style_dynamic_premium_dict]
+filename : ./data/pl/a_comm/app_strong_style_dynamic_premium_dict.txt
+[ac_component_user_white_dict]
+filename : ./data/pl/a_comm/ac_component_user_white_dict.txt
+[ecpa_strategy_dict]
+filename : ./data/pl/a_comm/ecpa_strategy_dict
+[slp_cpc_cpa_bid_ratio]
+filename : ./data/pl/a_comm/slp_cpc_cpa_bid_ratio.txt
+[user_domain_brand_json_dict]
+filename : ./data/pl/a_comm/user_domain_brand_json_dict.txt
+[wise_gaia_tradeoff_dict]
+filename : ./data/pl/a_comm/wise_gaia_tradeoff_dict.txt
+[pc_gaia_tradeoff_dict]
+filename : ./data/pl/a_comm/pc_gaia_tradeoff_dict.txt
+[aacc_sublink_tag_dict]
+filename : ./data/pl/a_comm/aacc_sublink_tag_dict.txt
+[zhongxiu_ad_generic_black]
+filename : ./data/pl/a_comm/zhongxiu_ad_generic_black.txt
+[zhongxiu_ad_generic_query]
+filename : ./data/pl/a_comm/zhongxiu_ad_generic_query.txt
+[zhongxiu_ad_generic_trade]
+filename : ./data/pl/a_comm/zhongxiu_ad_generic_trade.txt
+[zhongxiu_ad_generic_material_logo]
+filename : ./data/pl/a_comm/zhongxiu_ad_generic_material_logo.txt
+[zhongxiu_ad_generic_material_product]
+filename : ./data/pl/a_comm/zhongxiu_ad_generic_material_product.txt
+[zhongxiu_ad_generic_material_midpage]
+filename : ./data/pl/a_comm/zhongxiu_ad_generic_material_midpage.txt
+[iguazu_user_select_dict]
+filename : ./data/pl/a_comm/iguazu_user_select.txt
+[ald_expand_info_dict]
+filename : ./data/pl/a_comm/ald_expand_info_dict.txt
+[official_query_ads_down_dict]
+filename : ./data/pl/a_comm/official_query_ads_down_dict.txt
+[medical_eight_norm_style_content_dict]
+filename : ./data/pl/a_comm/medical_eight_norm_style_content_dict.txt
+[dict_ztc_user_minbid]
+filename : ./data/pl/a_comm/ztc_user_minbid.txt
+[cop_exp_user_dict]
+filename : ./data/pl/a_comm/cop_exp_user_dict.txt
+[ecpa_mt_roitype]
+filename : ./data/pl/a_comm/ecpa_mt_roitype
+[competitor_plan_dict]
+filename : ./data/pl/a_comm/competitor_planid.txt
+[rigq_query_winfoid_white_dict]
+filename : ./data/pl/a_comm/rigq_query_winfoid_white_dict.txt
+[actionads_web_union_userid_blacklist]
+filename : ./data/pl/a_comm/actionads_web_union_userid_blacklist.txt
+[apa_roi_ctrl_cvrq_con_dict]
+filename : ./data/msa/apa_roi_ctrl_cvrq_con_dict.txt
+[apa_ecpa_ctrl_cvrq_con_dict]
+filename : ./data/msa/apa_ecpa_ctrl_cvrq_con_dict.txt
+[apa_roi_ctrl_expected_cpa_in_psa_dict]
+filename : ./data/msa/apa_roi_ctrl_expected_cpa_in_psa_dict.txt
+[apa_cpa_to_cpi_in_psa_dict]
+filename : ./data/msa/apa_cpa_to_cpi_in_psa_dict.txt
+[generic_brand_ue_platform]
+filename : ./data/pl/a_comm/generic_brand_ue_platform.txt
+[generic_brand_ue_white_query]
+filename : ./data/pl/a_comm/generic_brand_ue_white_query.txt
+[generic_brand_ue_black]
+filename : ./data/pl/a_comm/generic_brand_ue_black.txt
+[generic_brand_ue_minbid]
+filename : ./data/pl/a_comm/generic_brand_ue_minbid.txt
+[wise_gaia_trade_dict]
+filename : ./data/pl/a_comm/wise_gaia_trade_dict.txt
+[pc_gaia_trade_dict]
+filename : ./data/pl/a_comm/pc_gaia_trade_dict.txt
+[ecpa_stage_param_dict]
+filename : ./data/pl/a_comm/ecpa_stage_param_dict
+[user_consume_ratio_dict]
+filename : ./data/pl/a_comm/user_consume_ratio_dict.txt
+[type_index_map_dict]
+filename : ./data/pl/a_comm/type_index_map_dict
+[query_titles_dict]
+filename : ./data/pl/a_comm/query_titles_dict.txt
+[query_pics_dict]
+filename : ./data/pl/a_comm/query_pics_dict.txt
+[multi_slots_auction_height_control]
+filename : ./data/pl/a_comm/multi_slots_auction_height_control.txt
+[chunhua_cps_query_dict]
+filename : ./data/pl/a_comm/chunhua_cps_query_dict.txt
+[chunhua_cps_ads_dict]
+filename : ./data/pl/a_comm/chunhua_cps_ads_dict.txt
+[strict_medical_style_extend_one_phase_dict]
+filename : ./data/pl/a_comm/strict_medical_style_extend_one_phase_dict.txt
+[brand_comment_style_json_dict]
+filename : ./data/pl/a_comm/brand_comment_style_json_dict.txt
+[HighQuaAdvQueryPositionCtr]
+filename : ./data/pl/a_comm/wise_high_quality_adv_query_position_ctr_dict.txt
+[generic_brand_ue_platform_name]
+filename : ./data/pl/a_comm/generic_brand_ue_platform_name.txt
+[local_style_wise_big_pic_shining]
+filename:./data/pl/a_comm/local_style_wise_big_pic_shining.txt
+use_public_buffer_reload : 1
+[wise_trade_dft_myerson_dict]
+filename : ./data/pl/a_comm/wise_trade_dft_myerson_dict.txt
+[medical_lead_card_trigger_query]
+filename : ./data/pl/a_comm/medical_lead_card_trigger_query.txt
+######################  PLEASE ADD  "use_public_buffer_reload : 1" FOR NEW DICT ###################

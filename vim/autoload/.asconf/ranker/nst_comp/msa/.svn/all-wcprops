@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/app/ecom/im/!svn/ver/351031/trunk/production/prod/ranker/conf/nst_comp/msa
+END
+mt_decompose.conf
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/app/ecom/im/!svn/ver/351031/trunk/production/prod/ranker/conf/nst_comp/msa/mt_decompose.conf
+END
+template_repo.conf
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/app/ecom/im/!svn/ver/351031/trunk/production/prod/ranker/conf/nst_comp/msa/template_repo.conf
+END

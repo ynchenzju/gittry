@@ -1,0 +1,6 @@
+app_cpa_adaq_k_param : 1.0
+app_cpa_adaq_b_param : 0.0
+app_cpa_std_k_param : 1.0
+app_cpa_bid_low_bound_ratio : 0.2
+app_cpa_bid_high_bound_ratio : 0.2
+app_cpa_flow_ratio : 0

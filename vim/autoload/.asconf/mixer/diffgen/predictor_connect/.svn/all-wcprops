@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/app/ecom/im/!svn/ver/433559/trunk/production/prod/mixer/conf/diffgen/predictor_connect
+END
+predictor_api_naming.conf.rule
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/app/ecom/im/!svn/ver/350294/trunk/production/prod/mixer/conf/diffgen/predictor_connect/predictor_api_naming.conf.rule
+END
+predictor_api_naming.conf.erb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/app/ecom/im/!svn/ver/433559/trunk/production/prod/mixer/conf/diffgen/predictor_connect/predictor_api_naming.conf.erb
+END
+predictor_api_nonproxy.conf.rule
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/app/ecom/im/!svn/ver/397933/trunk/production/prod/mixer/conf/diffgen/predictor_connect/predictor_api_nonproxy.conf.rule
+END
+predictor_api_nonproxy.conf.erb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/app/ecom/im/!svn/ver/433559/trunk/production/prod/mixer/conf/diffgen/predictor_connect/predictor_api_nonproxy.conf.erb
+END

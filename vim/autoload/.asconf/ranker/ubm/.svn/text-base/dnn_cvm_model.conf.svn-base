@@ -1,0 +1,15 @@
+# fcr dnn模型配置示例
+[@MODEL]
+# 模型类型必须写FCR_DNN(全大写)
+MODEL_TYPE : FCR_DNN
+# 模型名字,predict接口输入的名字就是这个,模型的唯一标示,不允许重复
+MODEL_NAME : FCR_DNN_MODEL
+# fcr dnn模型lib自己的初始化配置文件信息
+CONF_PATH : ./conf/ubm/
+CONF_FILE : dnn_model.conf
+# reload检查的文件(含路径和文件名)
+RELOAD_CHECK_FILE : ./data/ubm_model/dnn/dnn_model
+# dnn模型计算得到的q的名字
+QNAME : dnn_q
+# optional 可选项,计算失败默认填写的q值
+DEFAULT_Q : 0.0 

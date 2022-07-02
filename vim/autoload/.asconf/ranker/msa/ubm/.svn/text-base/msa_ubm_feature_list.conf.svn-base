@@ -1,0 +1,61 @@
+#wextq feature list
+#base feature
+name=Belta0;class=S_belta;slot=1
+name=Cmatch;class=S_direct;slot=2;depend=cmatch;arg=int
+name=Rank;class=S_direct;slot=3;depend=rank;arg=int
+name=Wmatch;class=S_direct;slot=4;depend=wmatch;arg=int
+name=ChargeName;class=S_direct;slot=5;depend=cn;arg=str
+.name=IsLeftQConf;class=S_direct_discret;slot=6;depend=qleft_conf;arg=int,%,2
+.name=AdLeftQ;class=S_direct_discret;slot=7;depend=qleft;arg=int,/,100
+name=AdLeftQ-IsLeftQConf;class=S_combine;slot=8
+name=Cmatch-Rank;class=S_combine;slot=9;depend=cmatch,rank;arg=str
+name=Cmatch-Rank-ChargeName;class=S_combine;slot=10;depend=cmatch,rank,cn;arg=str
+name=TitleFlushLen;class=S_direct;slot=11;depend=title_flush_len;arg=int
+name=DescFlushLen;class=S_direct;slot=12;depend=desc_flush_len;arg=int
+name=Mtid;class=S_direct;slot=13;depend=mt_id;arg=str
+name=AdUBMQ;class=S_direct_discret;slot=14;depend=msa_ubmq;arg=int,/,100
+name=Ideaid-Cmatch-Rank;class=S_combine;slot=15;depend=ideaid,cmatch,rank;arg=str
+name=Ideaid-Mtid-Cmatch-Rank;class=S_combine;slot=16;depend=ideaid,mt_id,cmatch,rank;arg=str
+#name=Ideaid-Cmatch-ChargeName;class=S_combine;slot=17;depend=ideaid,cmatch,cn;arg=str
+#.name=Userid;class=S_direct;slot=30;depend=userid;arg=str
+#.name=Wordid;class=S_direct;slot=31;depend=wordid;arg=str
+.name=Ideaid;class=S_direct;slot=32;depend=ideaid;arg=str
+#global feature
+name=Query;class=S_query;slot=40;depend=query;arg=str
+name=Device;class=S_combine;slot=41;depend=wosid,wbwsid,wpt,wnettype;arg=str
+name=Device-Cmatch-Rank;class=S_combine;slot=42
+name=Width-Height;class=S_combine;slot=43;depend=innerWidth,innerHeight;arg=str
+name=Sz;class=S_direct;slot=44;depend=sz;arg=str
+#name=Ua;class=S_direct;slot=45;depend=ua;arg=str
+#up feature
+.name=IdeaidTop;class=S_up;slot=60;depend=ideaid_up;arg=str,|,0
+.name=IdeaidUp;class=S_up;slot=61;depend=ideaid_up;arg=str,|,1
+name=IdeaidTop-Ideaid;class=S_combine;slot=62
+name=IdeaidUp-Ideaid;class=S_combine;slot=63
+name=MtTop;class=S_up;slot=64;depend=mt_id_up;arg=str,|,0
+name=MtUp;class=S_up;slot=65;depend=mt_id_up;arg=str,|,1
+name=IdeaidTop-MtTop;class=S_combine;slot=66
+name=IdeaidUp-MtUp;class=S_combine;slot=67
+name=AdLeftQDifferUp;class=S_differ_up;slot=68;depend=qleft_up,qleft;arg=int,|,100
+name=TitleFlushLenDifferUp;class=S_differ_up;slot=69;depend=title_flush_len_up,title_flush_len;arg=int,|,1
+name=DescriptionFlushLenDifferUp;class=S_differ_up;slot=70;depend=desc_flush_len_up,desc_flush_len;arg=int,|,1
+name=TitleFlushUpList;class=S_combine;slot=71;depend=title_flush_len_up,title_flush_len;arg=str
+name=DescFlushUpList;class=S_combine;slot=72;depend=desc_flush_len_up,desc_flush_len;arg=str
+name=WmatchUpList-Cmatch;class=S_combine;slot=73;depend=wmatch_up,wmatch,cmatch;arg=str
+name=MtUpList-Cmatch;class=S_combine;slot=74;depend=mt_id_up,cmatch,wmatch;arg=str
+name=LeftqTop;class=S_up_discret;slot=75;depend=qleft_up;arg=int,|,0,100
+name=UbmqTop;class=S_up_discret;slot=76;depend=msa_ubmq_up;arg=int,|,0,100
+#down feature
+.name=IdeaidDown;class=S_up;slot=90;depend=ideaid_down;arg=str,|,0
+name=IdeaidDown-Ideaid;class=S_combine;slot=91
+name=MtDown;class=S_up;slot=92;depend=mt_id_down;arg=str,|,0
+name=IdeaidDown-MtDown;class=S_combine;slot=93
+name=AdLeftQDifferDown;class=S_diff_up;slot=94;depend=qleft_down,qleft;arg=int,|,0,100
+name=TitleFlushLenDifferDown;class=S_diff_up;slot=95;depend=title_flush_len_down,title_flush_len;arg=int,|,0,1
+name=DescriptionFlushLenDifferDown;class=S_diff_up;slot=96;depend=desc_flush_len_down,desc_flush_len;arg=int,|,0,1
+name=TitleHilightDownList;class=S_combine;slot=97;depend=title_flush_len_down,title_flush_len;arg=str
+name=DescUilightDownList;class=S_combine;slot=98;depend=desc_flush_len_down,desc_flush_len;arg=str
+name=WmatchDownList-Cmatch;class=S_combine;slot=99;depend=wmatch_down,wmatch,cmatch;arg=str
+name=MtDownList-Cmatch;class=S_combine;slot=100;depend=mt_id_down,cmatch,wmatch;arg=str
+name=LeftqDown;class=S_up_discret;slot=101;depend=qleft_down;arg=int,|,0,100
+name=UbmqDown;class=S_up_discret;slot=102;depend=msa_ubmq_down;arg=int,|,0,100

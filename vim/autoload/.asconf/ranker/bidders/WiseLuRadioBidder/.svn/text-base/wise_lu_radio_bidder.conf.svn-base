@@ -1,0 +1,13 @@
+wise_lu_youxuan_smart_bid_ratio : 0.92
+wise_lu_smart_bid_ratio : 0.92
+wise_lu_default_mh : 0.78
+wise_lu_primary_parameter_t : 1.0
+wise_lu_primary_parameter_a : 1.0
+wise_lu_primary_parameter_b : 1.0
+wise_lu_default_primary_discount : 0.78
+wise_lu_beta : 1.2
+wise_lu_default_final_discount : 1.0
+wise_lu_default_final_discount_max : 1.0
+wise_lu_default_final_discount_min : 0.55
+wise_lu_default_primary_medicine_avgq : 1.0
+wise_lu_default_primary_other_avgq : 1.0

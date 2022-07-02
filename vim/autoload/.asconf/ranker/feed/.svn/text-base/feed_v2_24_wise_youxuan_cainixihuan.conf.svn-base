@@ -1,0 +1,159 @@
+#¼¤·¢Çø-²ÂÄãÏ²»¶
+[@fsdv2]
+@cond_qm_gids:15
+@cond_qm_gids:150001
+@cond_qm_gids:150002
+@cond_qm_gids:150003
+@cond_qm_gids:150004
+@cond_qm_gids:150005
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:feed_string_key_black_list_multi_dict
+alive:0
+[..plugin_params]
+[...feed_black_list_params]
+key_name:pv_query
+dict_name:feed_md_wise_pv_query_black_list
+
+[.@plugin_desc]
+plugin_instance_id:2
+plugin_name:feed_string_key_black_list_multi_dict
+alive:0
+[..plugin_params]
+[...feed_black_list_params]
+key_name:adv_query
+dict_name:feed_md_wise_adv_query_black_list
+
+[.@plugin_desc]
+plugin_instance_id:3
+plugin_name:feed_adv_id_black_list_multi_dict
+alive:1
+[..plugin_params]
+[...feed_black_list_params]
+key_name:user_id
+dict_name:feed_md_wise_user_id_black_list
+
+[.@plugin_desc]
+plugin_instance_id:4
+plugin_name:feed_adv_id_black_list_multi_dict
+alive:0
+[..plugin_params]
+[...feed_black_list_params]
+key_name:user_trade2
+dict_name:feed_md_wise_user_trade2_black_list
+
+[.@plugin_desc]
+plugin_instance_id:5
+plugin_name:feed_string_key_black_list_multi_dict
+alive:1
+[..plugin_params]
+[...feed_black_list_params]
+key_name:target_url_first_dir
+dict_name:feed_md_feed_target_url_first_dir_black_list
+
+#´òÕÛ ÃÅ¼÷[21,40]
+
+[.@plugin_desc]
+plugin_instance_id:35
+plugin_name: youxuan_asyn_select_ppim
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:21
+plugin_name:bid_discount
+alive:1
+[..plugin_params]
+discount : 1.0
+
+[.@plugin_desc]
+plugin_instance_id:22
+plugin_name:minbid_thr_filter
+alive:1
+[..plugin_params]
+minbid_thr:30
+
+[.@plugin_desc]
+plugin_instance_id:23
+plugin_name:rigq_thr_filter
+alive:1
+[..plugin_params]
+[...rigq_params]
+extend_thr:0.18
+phrase_thr:0.18
+precision_thr:0.18
+
+[.@plugin_desc]
+plugin_instance_id:28
+plugin_name:rigq_gbdt_thr_filter
+alive:1
+[..plugin_params]
+[...rigq_gbdt_params]
+extend_thr:0.13
+phrase_thr:0.13
+precision_thr:0.13
+
+[.@plugin_desc]
+plugin_instance_id:24
+plugin_name:replace_utq_with_lqvalue_for_ut 
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:25
+plugin_name: update_sortq_with_utq
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id : 6
+plugin_name : ctr_thr_filter
+alive : 1
+[..plugin_params]
+ctr_thr : 25000
+
+[.@plugin_desc]
+plugin_instance_id : 27
+plugin_name : mincpm_thr_filter
+alive : 1
+[..plugin_params]
+mincpm_thr : 0
+
+[.@plugin_desc]
+plugin_instance_id:29
+plugin_name: youxuan_asyn_ctrq_admit
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:30
+plugin_name: youxuan_asyn_rigq_admit
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:31
+plugin_name: youxuan_asyn_clickq_admit
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:32
+plugin_name:youxuan_asyn_ztc_filter
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:33
+plugin_name:youxuan_asyn_wasq_filter
+alive:0
+[..plugin_params]
+baidu_youxuan_wasq : 0
+other_youxuan_wasq : 0
+
+[.@plugin_desc]
+plugin_instance_id:34
+plugin_name:youxuan_asyn_q_sort
+alive:0
+[..plugin_params]
+wasq_exp : 1
+rigq_exp : 0
+lpq_exp : 0
+bid_exp : 1
+multi_base : 1
+youxuan_sort_num : 3

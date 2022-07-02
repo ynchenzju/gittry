@@ -1,0 +1,95 @@
+#wise_ald_a_zone
+[@fsdv2]
+@cond_qm_gids:26
+@cond_qm_gids:260001
+alive:1
+
+#黑名单[1,20]
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:query_black_list
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:2
+plugin_name:feed_adv_id_black_list_multi_dict
+alive:1
+[..plugin_params]
+[...feed_black_list_params]
+key_name:user_id
+dict_name:mip_userid_black_dict
+
+[.@plugin_desc]
+plugin_instance_id:50
+plugin_name: target_url_black_list
+alive:0
+
+#打折 门槛[21,40]
+[.@plugin_desc]
+plugin_instance_id:7
+plugin_name:bid_discount
+alive:0
+[..plugin_params]
+discount : 0.85
+
+[.@plugin_desc]
+plugin_instance_id:5
+plugin_name:minbid_thr_filter
+alive:1
+[..plugin_params]
+minbid_thr:30
+
+[.@plugin_desc]
+plugin_instance_id:21
+plugin_name: update_sortq_with_utq
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id : 32
+plugin_name : ctr_thr_filter
+alive : 0
+[..plugin_params]
+ctr_thr : 6000
+
+[.@plugin_desc]
+plugin_instance_id : 33
+plugin_name : mincpm_thr_filter
+alive : 0
+[..plugin_params]
+mincpm_thr : 2500000
+
+#样式物料处理[41,60]
+[.@plugin_desc]
+plugin_instance_id:19
+plugin_name:nst_admit_adv_filter
+alive:0
+[..plugin_params]
+admit_mt_list:3176
+
+[.@plugin_desc]
+plugin_instance_id:34
+plugin_name:youxuan_asyn_wasq_filter
+alive:0
+[..plugin_params]
+baidu_youxuan_wasq : 0
+other_youxuan_wasq : 0
+
+[.@plugin_desc]
+plugin_instance_id:23
+plugin_name:rigq_thr_filter
+alive:0
+[..plugin_params]
+[...rigq_params]
+extend_thr:0.22
+phrase_thr:0.35
+precision_thr:0.22
+
+[.@plugin_desc]
+plugin_instance_id:28
+plugin_name:rigq_gbdt_thr_filter
+alive:0
+[..plugin_params]
+[...rigq_gbdt_params]
+extend_thr:0.16
+phrase_thr:0.16
+precision_thr:0.16

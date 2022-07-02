@@ -1,0 +1,288 @@
+[@query_recommend_description]
+alive : 1
+[.recommend_condition]
+src_id : 1236
+
+[.@recommend_output_product]
+alive : 1
+recommend_output_product_name: query_mining
+@select_result_set_fild_name : 
+qm_multi_queries_use_original_query : 1
+qm_max_multi_queries_num : 2
+qm_multi_queries_product_tag : 0
+qm_original_query_weight : 100
+multi_queries_sim_thr : 0.7
+query_mining_mingshi : 0
+qm_original_query_global_id:50
+[..interrelate]
+alive:0
+cut_alive:1
+interrelate_thr: 0.2
+[..interrelate_dict]
+alive:0
+cut_alive:1
+interrelate_thr:0.3
+[..gbdt]
+alive:0
+cut_alive:1
+gbdt_thr: 0.3
+[..ctr]
+alive:1
+cut_alive:0
+ctr_thr:0
+recom_query_qm_ctr1_alpha : 1
+recom_query_qm_ctr1_beta : 0
+recom_query_qm_ctr1_gamma : 0
+ori_query_qm_ctr1_alpha:1
+ori_query_qm_ctr1_beta:0
+ori_query_qm_ctr1_gamma:0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : title-query
+result_set_field_name : url_query_dict_recom_query_list
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 1770
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+need_ori_query_flush : 1
+similarity_thr : -2
+g_trigger_key_flow_type : 24
+recom_query_qm_ctr1_alpha : 2.485
+recom_query_qm_ctr1_beta : 3.746
+recom_query_qm_ctr1_gamma : 11.194
+ori_query_qm_ctr1_alpha: 0
+ori_query_qm_ctr1_beta: 0
+ori_query_qm_ctr1_gamma: 0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+multi_queries_branch_id : 1
+max_multi_queries_num : 2
+multi_queries_weight : 100
+multi_queries_type : 2
+@branch_trigger_key_flow_type : 500001
+@branch_trigger_key_flow_type : 500002
+@branch_trigger_key_flow_type : 500003
+@branch_trigger_key_flow_type : 500004
+@branch_trigger_key_flow_type : 500005
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-query-query 
+result_set_field_name : query_query_dict_recom_query_list
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 1770
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+need_ori_query_flush : 1
+similarity_thr : -2
+g_trigger_key_flow_type : 24
+recom_query_qm_ctr1_alpha : 2.485
+recom_query_qm_ctr1_beta : 3.746
+recom_query_qm_ctr1_gamma : 11.194
+ori_query_qm_ctr1_alpha: 0
+ori_query_qm_ctr1_beta: 0
+ori_query_qm_ctr1_gamma: 0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+multi_queries_branch_id : 1
+max_multi_queries_num : 2
+multi_queries_weight : 80
+multi_queries_type : 2
+@branch_trigger_key_flow_type : 500001
+@branch_trigger_key_flow_type : 500002
+@branch_trigger_key_flow_type : 500003
+@branch_trigger_key_flow_type : 500004
+@branch_trigger_key_flow_type : 500005
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : userinfo-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : feed-user-query
+result_set_field_name : title_query_dict_recom_query_list_duplicate1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: baiduid_list
+trigger_depend_data_field_priority: 1000
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0.01
+show_ratio : 100
+g_trigger_key_flow_type:25
+feed_pvrq_thr : 0
+alive: 1
+multi_queries_branch_id : 1
+max_multi_queries_num : 2
+multi_queries_weight : 80
+multi_queries_type : 2
+@branch_trigger_key_flow_type : 500006
+@branch_trigger_key_flow_type : 500007
+@branch_trigger_key_flow_type : 500008
+@branch_trigger_key_flow_type : 500009
+[...@trigger_depend_data]
+trigger_depend_data_field_name: cuid_list
+trigger_depend_data_field_priority: 1000
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0.01
+show_ratio : 100
+g_trigger_key_flow_type:25
+feed_pvrq_thr : 0
+alive: 1
+multi_queries_branch_id : 1
+max_multi_queries_num : 2
+multi_queries_weight : 80
+multi_queries_type : 2
+@branch_trigger_key_flow_type : 500006
+@branch_trigger_key_flow_type : 500007
+@branch_trigger_key_flow_type : 500008
+@branch_trigger_key_flow_type : 500009
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : title-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query
+result_set_field_name : title_query_dict_recom_query_list
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_title_list
+trigger_depend_data_field_priority: 1770
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+need_ori_query_flush : 1
+similarity_thr : -2
+g_trigger_key_flow_type : 24
+recom_query_qm_ctr1_alpha : 2.485
+recom_query_qm_ctr1_beta : 3.746
+recom_query_qm_ctr1_gamma : 11.194
+ori_query_qm_ctr1_alpha: 0
+ori_query_qm_ctr1_beta: 0
+ori_query_qm_ctr1_gamma: 0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+multi_queries_branch_id : 1
+max_multi_queries_num : 2
+multi_queries_weight : 100
+multi_queries_type : 2
+@branch_trigger_key_flow_type : 500001
+@branch_trigger_key_flow_type : 500002
+@branch_trigger_key_flow_type : 500003
+@branch_trigger_key_flow_type : 500004
+@branch_trigger_key_flow_type : 500005
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : url-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : ald-recom-query
+result_set_field_name : url_query_dict_recom_query_list_duplicate1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_target_url_list
+trigger_depend_data_field_priority: 1770
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+need_ori_query_flush : 1
+similarity_thr : -2
+g_trigger_key_flow_type : 24
+recom_query_qm_ctr1_alpha : 2.485
+recom_query_qm_ctr1_beta : 3.746
+recom_query_qm_ctr1_gamma : 11.194
+ori_query_qm_ctr1_alpha: 0
+ori_query_qm_ctr1_beta: 0
+ori_query_qm_ctr1_gamma: 0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+multi_queries_branch_id : 1
+max_multi_queries_num : 2
+multi_queries_weight : 100
+multi_queries_type : 2
+@branch_trigger_key_flow_type : 500001
+@branch_trigger_key_flow_type : 500002
+@branch_trigger_key_flow_type : 500003
+@branch_trigger_key_flow_type : 500004
+@branch_trigger_key_flow_type : 500005
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : hot-query
+[..trigger]
+alive : 1
+trigger_type: local
+trigger_client : entity_query_recommend
+result_set_field_name : entity_query_dict_hot_query_recom_query_list
+recom_query_random_num : 50
+recom_query_random_num_opt : 50
+[...@trigger_depend_data]
+trigger_depend_data_field_name: hot_query_entity_list
+trigger_depend_data_field_priority: 800
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : 0
+gbdt_feature_title_trigger : 0
+ctr_thr : 0.03
+show_ratio : 100
+g_trigger_key_flow_type:3
+feed_pvrq_thr : 0
+alive: 1
+multi_queries_branch_id : 1
+max_multi_queries_num : 2
+multi_queries_weight : 60
+multi_queries_type : 2
+@branch_trigger_key_flow_type : 500010
+@branch_trigger_key_flow_type : 500011
+@branch_trigger_key_flow_type : 500012
+@branch_trigger_key_flow_type : 500013

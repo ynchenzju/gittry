@@ -1,0 +1,92 @@
+#ctr门限
+wise_mix_ctr_thr_b_prec_c0 : 0.01
+wise_mix_ctr_thr_b_prec_c1 : 0.01
+wise_mix_ctr_thr_b_phra_c0 : 0.01
+wise_mix_ctr_thr_b_phra_c1 : 0.01
+wise_mix_ctr_thr_b_extd_c0 : 0.01
+wise_mix_ctr_thr_b_extd_c1 : 0.01
+
+
+#mincpm门限
+wise_mix_ads_mincpm_value : 0
+
+#rig门限
+wise_mix_rig_thr_b_prec : 0.2
+wise_mix_rig_thr_b_phra : 0.2
+wise_mix_rig_thr_b_extd : 0.2
+#riq-asq门限
+wise_mix_rig_asq_thr_b_prec : 1000000
+wise_mix_rig_asq_thr_b_phra : 1000000
+wise_mix_rig_asq_thr_b_extd : 1000000
+
+# 混排广告截断数
+mix_ads_num : 1
+wise_mixads_up_max_res_num : 1
+wise_mixads_cut_ads : 4
+
+mixads_title_similarity_thr : 0.6
+
+
+#psa 分rank mincpm 过滤
+@wise_mixads_down_baidu_mincpm_thr : 0
+@wise_mixads_down_union_mincpm_thr : 0
+@wise_mixads_up_baidu_mincpm_thr : 0
+@wise_mixads_up_union_mincpm_thr : 0
+
+wise_mixads_psa_precut_limit_num : 8
+wise_mixads_up_psa_count : 1
+wise_mixads_ubmq_qt_tranform_t : 1.0
+ztc_mix_rig_thr_b_extd : 0.21
+ztc_mix_rig_thr_b_phra : 0.21
+ztc_mix_rig_thr_b_prec : 0.2
+ztc_favour_cpm_thresh : 650000
+ztc_favour_ubmq_ratio : 0.35
+ztc_favour_bid_ratio : 0.6
+wise_mixads_ubmq_baidu_qt_tranform_t : 1.3
+wise_mixads_ubmq_union_qt_tranform_t : 1.3
+mixads_title_similarity_userid_dup_thr : 0.9
+mixads_sameads_title_similarity_thr : 0
+wise_mixads_position_ctr_diffthr : 0.6
+wise_mixads_reset_position_start : 12
+wise_mixads_baidu_ubmq_weight : 1
+wise_mixads_baidu_cpm_weight : 1
+wise_mixads_union_ubmq_weight : 1
+wise_mixads_union_cpm_weight : 1
+@wise_mixads_up_baidu_multi_thr : 0
+@wise_mixads_up_union_multi_thr : 0
+[GLOBAL]
+query_low_epvq_msa_mix_ads_ctr_thrd_ratio : 1.0
+query_low_epvq_msa_mix_ads_rigq_thrd_ratio : 1.0
+query_low_epvq_msa_mix_ads_mincpm_ratio : 1.0
+chunhua_mixads_rig_thr_b_extd : 0
+chunhua_mixads_rig_thr_b_phra : 0
+chunhua_mixads_rig_thr_b_prec : 0
+chunhua_mixads_cvr_conf_pv_thr : 100
+chunhua_mixads_cvr_precision_thr0 : 0
+chunhua_mixads_cvr_precision_thr1 : 0
+chunhua_mixads_cvr_phrase_thr0 : 0
+chunhua_mixads_cvr_phrase_thr1 : 0
+chunhua_mixads_cvr_extend_thr0 : 0
+chunhua_mixads_cvr_extend_thr1 : 0
+chunhua_mixads_placeid_q_ratio : 1.0
+#混排广告强样式排序加权
+[@mixads_mt_ratio]
+mt : 3156
+ratio : 1.5
+[@mixads_mt_ratio]
+mt : 3157
+ratio : 1.5
+[@mixads_mt_ratio]
+mt : 2062
+ratio : 1.2
+[@mixads_mt_ratio]
+mt : 2141
+ratio : 4.0
+[@mixads_mt_ratio]
+mt : 3154
+ratio : 1.5
+[@mixads_mt_ratio]
+mt : 3155
+ratio : 1.5
+
+

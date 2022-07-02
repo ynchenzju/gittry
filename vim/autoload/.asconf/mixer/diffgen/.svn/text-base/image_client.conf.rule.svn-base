@@ -1,0 +1,29 @@
+
+
+all do
+  @imageserver_isp = @isp
+  @imageserver_platform = 'ps'
+end
+
+opera 'ads' do
+  @imageserver_platform = 'ads'
+end
+
+opera 'bid' do
+  @imageserver_platform = 'bid'
+end
+
+opera 'bp' do
+  @imageserver_platform = 'bp'
+  @imageserver_isp = 'gzns'
+end
+
+opera 'bpoff' do
+  @imageserver_platform = 'bpoff'
+  @imageserver_isp = 'ct'
+end
+
+node 'bpoff' do
+  @imageserver_platform = 'bpoff'
+  @imageserver_isp = 'ct'
+end

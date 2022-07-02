@@ -1,0 +1,8 @@
+max_up_ratio:1.0
+max_down_ratio:1.0
+cpa_adjust_ratio:1
+q_calibration_adjust_ratio:1
+jifeibi_adjust_ratio:1
+cvr_left_thr_adjust_ratio:1
+down_thr_adjust_ratio:0
+up_thr_adjust_ratio:0

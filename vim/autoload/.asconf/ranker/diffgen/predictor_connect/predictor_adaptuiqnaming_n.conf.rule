@@ -1,0 +1,202 @@
+all do
+  @platform = 'ps'
+  @isp = 'bj'
+end
+
+node '[n+ct+imas]' do
+  @platform = 'ps'
+  @isp = 'ct'
+end
+
+node '[n+cu+imas]' do
+  @platform = 'ps'
+  @isp = 'cu'
+end
+
+node '[n+cm+imas]' do
+  @platform = 'ps'
+  @isp = 'cm'
+end
+
+node '[n+hd+imas]' do
+  @platform = 'ps'
+  @isp = 'hd'
+end
+
+node '[n+nj+imas]' do
+  @platform = 'ps'
+  @isp = 'nj'
+end
+
+node '[bp+imas]' do
+  @platform = 'bp'
+  @isp = 'bj'
+end
+
+#bpoff isp use bpoff, please not change
+node '[bpoff+imas]' do
+  @platform = 'bpoff'
+  @isp = 'bpoff'
+end
+
+node '[bid+ct+imas]' do
+  @platform = 'ps'
+  @isp = 'ct'
+end
+
+node '[bid+cm+imas]' do
+  @platform = 'ps'
+  @isp = 'cm'
+end
+
+node '[bid+cu+imas]' do
+  @platform = 'ps'
+  @isp = 'cu'
+end
+
+node '[bid+hd+imas]' do
+  @platform = 'ps'
+  @isp = 'hd'
+end
+
+node '[ads+ct+imas]' do
+  @platform = 'ps'
+  @isp = 'ct'
+end
+
+node '[ads+cu+imas]' do
+  @platform = 'ps'
+  @isp = 'cu'
+end
+
+node '[ads+cm+imas]' do
+  @platform = 'ps'
+  @isp = 'cm'
+end
+
+node '[ads+hd+imas]' do
+  @platform = 'ps'
+  @isp = 'hd'
+end
+
+node '[adsbp+imas]' do
+  @platform = 'ps'
+  @isp = 'ct'
+end
+
+node '[d+ct+imas]' do
+  @platform = 'ps'
+  @isp = 'ct'
+end
+
+node '[d+cu+imas]' do
+  @platform = 'ps'
+  @isp = 'cu'
+end
+
+node '[d+cm+imas]' do
+  @platform = 'ps'
+  @isp = 'cm'
+end
+
+node '[d+hd+imas]' do
+  @platform = 'ps'
+  @isp = 'hd'
+end
+
+node '[d+nj+imas]' do
+  @platform = 'ps'
+  @isp = 'nj'
+end
+
+node '[e0+[cm,cu,ct]+imas]' do
+  @platform = 'ps'
+  @isp = 'bj'
+end
+
+node '[e1+[cm,cu,ct]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e2+[cm,cu,ct]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e3+[cm,ct,cu]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e4+[cm,cu,ct]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e5+[cm,cu,ct]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e6+[cm,cu,ct]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e7+[cm,cu,ct]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e8+[cm,cu,ct]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e9+[cm,cu,ct]+imas]' do
+  @isp = 'bj'
+end
+
+node '[e0+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[e1+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[e2+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[e3+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[e4+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[e5+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[e6+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[e7+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[e9+nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[deptest+imas]' do
+  @platform = 'bp'
+  @isp = 'bj'
+end
+
+node '[ecj+imas]' do 
+  @platform = 'ps'
+  @isp = 'ecj'
+end
+
+node '[gzhxy+imas]' do 
+  @platform = 'ps'
+  @isp = 'gzhxy'
+end

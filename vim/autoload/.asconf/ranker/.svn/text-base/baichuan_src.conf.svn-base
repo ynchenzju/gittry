@@ -1,0 +1,38 @@
+[@baichuan_src_conf]
+src_id : 1092
+cmatch : 545
+ctr_thr : 30000
+cpm_thr : 0
+left_t_value : 1.0
+truncate_num : 2
+@nst : 3176
+@nst : 3177
+shoubai_feed_pk_a : 1.0
+shoubai_feed_pk_b : 0
+req_num : 2
+model_name : utq_model_dict_hot_query_exp
+stro_mtid_list : 3176,3177,3511,3510,3512,3513
+features_list : userid-term_list,ip,day_hour,user_tag-gender,cmatch-page_no,cuid,query,userid-age,userid-long_term_query,userid-gender,userid-wise_interest_list,planid,user_tag-age,holiday,user_tradeid_2-long_term_query,userid-holiday,winfoid,cmatch-mt_id,term_list,gender,age,userid,cookieid,ideaid,weekday,user_tradeid_1-long_term_query,cmatch-query_minning_strategy,query-query_minning_strategy
+transfer_ratio : 0.8
+vcg_ctrq_rank1_to_rank2_ratio : 0.08
+vcg_ctrq_rank_default_ratio : 0.08
+
+[@baichuan_src_conf]
+src_id : 1093
+cmatch : 546
+ctr_thr : 20000
+cpm_thr : 0
+left_t_value : 1.0
+truncate_num : 1
+@nst : 3176
+@nst : 3177
+shoubai_feed_pk_a : 1.0
+shoubai_feed_pk_b : 0
+req_num : 1
+model_name : utq_model_dict_hot_query_exp
+stro_mtid_list : 3176,3177,3511,3510,3512,3513
+features_list : userid-term_list,ip,day_hour,user_tag-gender,cmatch-page_no,cuid,query,userid-age,userid-long_term_query,userid-gender,userid-wise_interest_list,planid,user_tag-age,holiday,user_tradeid_2-long_term_query,userid-holiday,winfoid,cmatch-mt_id,term_list,gender,age,userid,cookieid,ideaid,weekday,user_tradeid_1-long_term_query,cmatch-query_minning_strategy,query-query_minning_strategy
+transfer_ratio : 0.8
+vcg_ctrq_rank1_to_rank2_ratio : 0.0
+vcg_ctrq_rank_default_ratio : 0.0
+

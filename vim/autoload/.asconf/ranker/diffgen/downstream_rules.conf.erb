@@ -1,0 +1,13 @@
+GSTRANSPORT_CONFFILE : ./conf/gstransport.conf
+
+[@Downstream]
+name : vcsvr_read
+communication_name : ranker_vcsvr_read
+platform_tag : platform
+default_platform : <%= @vcsvr_read_default_platform %>
+
+[@Downstream]
+name : vcsvr_write
+communication_name : ranker_vcsvr_write
+platform_tag : platform
+default_platform : <%= @vcsvr_write_default_platform %>

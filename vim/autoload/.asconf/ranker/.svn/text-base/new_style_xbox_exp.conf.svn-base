@@ -1,0 +1,262 @@
+exp_num : 11
+
+[@exp]
+exp_id : 0
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 1
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 1
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 2
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 2
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 3
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 4
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+[.@exper]
+mt : 2034
+tag : 1
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 5
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 6
+[.@exper]
+mt : 2039
+tag : 0
+src : 0
+[.@exper]
+mt : 2046
+tag : 0
+src : 1
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 7
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+[.@exper]
+mt : 3015
+tag : 0
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 8
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+
+[@exp]
+exp_id : 9
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+
+[@exp]
+exp_id : 10
+[.@exper]
+mt : 3002
+tag : 0
+src : 0
+[.@exper]
+mt : 3003
+tag : 0
+src : 0
+[.@exper]
+mt : 3011
+tag : 0
+src : 0
+[.@exper]
+mt : 2034
+tag : 0
+src : 1
+[.@exper]
+mt : 1046
+tag : 0
+src : 0
+[.@exper]
+mt : 2080
+tag : 11
+src : 0
+[.@exper]
+mt : 2080
+tag : 11
+src : 1

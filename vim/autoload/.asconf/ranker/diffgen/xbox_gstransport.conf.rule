@@ -1,0 +1,88 @@
+all do
+    @ps_ranker = 1
+    @xbox_tag_type = 'server'
+end
+
+opera '[bid,ads]' do
+    @xbox_tag_type = 'bns'
+end
+
+######### for opera ############
+#### data_center 
+# base
+opera 'cu' do
+  @logic_data_center = 'tc'
+end
+
+opera 'ct' do
+  @logic_data_center = 'jx'
+end
+
+opera 'cm' do
+  @logic_data_center = 'st'
+end
+
+opera 'hd' do
+  @logic_data_center = 'hz'
+end
+
+opera 'nj' do
+  @logic_data_center = 'nj'
+end
+
+opera 'ecj' do
+  @logic_data_center = 'ecj'
+end
+
+opera 'gzhxy' do
+  @logic_data_center = 'gzhxy'
+end
+
+opera 'gzns' do
+  @logic_data_center = 'gzns'
+end
+
+# diff
+opera '[bp,bpoff,deptest]' do
+  @logic_data_center = 'jx'
+end
+
+opera 'syssurvey' do
+  @logic_data_center = 'jx'
+end
+
+opera 'bp+gzns' do
+  @logic_data_center = 'gzns'
+end
+
+opera 'e1+ct' do
+  @logic_data_center = 'tc'
+end
+
+node 'bpoff' do
+  @logic_data_center = 'jx'
+end
+
+
+all do
+    @xbox_tag_type = 'server'
+end
+
+
+# img platform begin by xiedeping01
+opera 'img+cm' do
+  @logic_data_center = 'st' 
+end
+
+opera 'img+ecj' do
+  @logic_data_center = 'ecj' 
+end
+
+opera 'img+gzhxy' do
+  @logic_data_center = 'gzhxy' 
+end
+
+opera 'img+ct' do
+  @logic_data_center = 'st'
+end
+# img platform end

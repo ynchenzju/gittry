@@ -1,0 +1,3521 @@
+# ----------------------------------------------------------------------------------------------------------
+# 新样式配置文件说明（jiayinfang01@20140109）
+# exp_list : 各个新样式name.先后顺序代表优先级
+# [@exp] 每个新样式的具体配置，包括mt,name,select_exp
+# [.@exper]  每个新样式下支持多组实验参数配置,至少配置一组参数
+#            通过select_exp值跟每个exper的exper_id来决定使用时采用哪一组配置
+#            每个新样式的select_exp可托管，托管参数名为[exp_name]_select_exp，例如：mapstyle_select_exp
+# src_rank_rule : 204@4@1@1@a_b src_rank_rule 一共支持配置五个值
+#                （1）数据源（2）最大位次限制 （3）是否需要连续展现 （4）最大可展现广告个数 (5)连续两次展现之间的最小rank距离a，首次展现的最大rank值:2_1表示该样式第一次展现的rank小于1，连续两次展现至少相隔2个广告位。
+#                 (1)和（2）为必须配置项， （3）和（4）和 (5)为可选项，要配置（5）一定要配置（3）(4)，否则解析出错
+# truncation_fields 按数据源截断配置, 格式: field@srcid_limit,srcid_limit
+# notes by liaoruiqi: 999为虚拟mt，用于控制新样式框架队列的长度，请勿使用
+# ----------------------------------------------------------------------------------------------------------
+#
+# !!!! 关于MT_OCCUPY_SHOWURL_AREA与PC_MT_OCCUPY_SHOWURL_AREA配置项 !!!!
+#    为应对公关危机,2016.05.18紧急上线了"商业推广"+评价显示条数(形如:"722条评价")两个feature,使得showurl行的空间非常紧张
+#    对于新增的样式: 若占用了showurl行(比如2001直航的button, 或者2056出图的样式),必须要配置到imas_newstyle.conf里面的MT_OCCUPY_SHOWURL_AREA或PC_MT_OCCUPY_SHOWURL_AREA里面去(前者为无线后者为PC配置)
+#    配置到这份列表里面去之后，在function_packnewstyle_t::do_user_evaluate_filter()才知道showurl行的可用面积被MT占用了一部分,而不是整行可用
+#    注: showurl行的展现逻辑为:
+#     (a) 需要保证100%出"商业推广"
+#     (b) 若空间不够优先砍评论数,保留"评论";
+#     (c) 再不够则把"评论"也砍掉
+#     (d) 再不够则截断showurl,或者中文域名/机构名等特殊MT
+#         注:中文域名与机构名等替换showurl的MT的配置位于:imas_newsytle_yacl.conf里的replace_showurl_nst_list配置项
+#
+exp_list : pc_multi_pic_style,pc_aa_consult_double_sublinks_mt8562,pc_aa_replace_dynamic_content_mt8563,pc_aa_replace_dynamic_content_with_img_mt8564,pc_product_pla,pc_single_pla,pc_product_jinxuan,pc_pic_text_product_list,pc_product_list,pc_holophyly,pc_tongtai_sublink_style,pc_zixun_diejia,pc_action_ads_long_sublink,pc_zixun_subchain,ps_aa_freeform_three_widgets,ps_aa_freeform_two_widgets,ps_aa_freeform_one_widget,pc_focus_time_pic, pc_jingxiu_gen,pc_jingxiu_strong,pa_image_no_link,pc_generic_brand_new_style,pc_jingxiu_brand_new_style,strong_super_nst,pc_action_ads_ncl_mt8532,pc_action_ads_ncl_mt2130,pc_generic_brand_style,pc_navigation_mining,rank_pla,rank_text_pla,ps_search_feed_multi_pic_with_link,pc_video_low_style,pc_style_strength_horizontal,pc_style_strength_vertical,pc_promotion_summary,pc_pla_multi_pic,pc_jingxiu,pc_sponsor_ads,pc_sanjia_hospital,pc_local_express,pc_local_express_bridge,pc_nature_education_strong,pc_nature_education,pc_lbs_info,red_carpet_pastime,pc_overall_strong_style,bw_sublink_type,pc_pic_content_special_with_link,pc_pic_content_new,pc_pic_content_special,gaia_direct_mail_tag,gaia_shopping_service_tag,pa_pc_navigation_sublink,pa_nav_no_label,pa_pc_holographic_abstract,huge_screen,hot_pla,pic_text_list,holographic_list,holographic,super_nst,pc_strong_real_estate_forward,pc_ask_answer,pc_nature_long_sublink,pc_nature_ask_answer,text_nav,pic_nav,pc_lbs_in_desc,title_sublink_type,pc_loan_fuwuyuan,pc_chexian_fuwuyuan,pc_generic_fuwuyuan,pc_qiche_fuwuyuan,pc_jiaju_fuwuyuan,pc_jiazhuang_fuwuyuan,client_dynamic_idea,dc_single_sublink,tag_sublink_style,icon_attribute_style,attribute_style,domain_name,mapstyle,local_branding,official_web,promise,ipad_app,v_certify,production_safeguard,medicine_icon,airplane_icon,left_multi_pla,red_carpet_multi_pic,pa_pic_navigation,pa_pic_category_page,pc_tuji,pc_big_image,pc_dynamic_pic,pc_dynamic_pic_no_sublink,fc_image,pa_image,pc_weak_real_estate_forward,pc_navigation_sublink,pa_navigation,pa_category_page,pc_dynamic_idea_shortlink,pa_video,pc_bridge,free_callback,favicon,fc_third_comment,yh_discount,pc_taobao_item,pc_taobao_shop,baidu_reputation,social_info,pc_hover_style,pc_brand_name,pc_brand_name_new,showurl_bold,fc_new_video,tel_num_v2,tel_num,siva_mt1,siva_mt2,siva_mt3,siva_mt4,siva_mt5,siva_mt6,siva_mt7,siva_mt8,siva_mt9,siva_mt10,text_adv,mock_mt,pc_lbs_nst,pc_lbs_info_line,pc_lbs_info_pc_expand,bw_sublink_type_pc_expand,pc_ask_answer_pc_expand,pc_nature_long_sublink_pc_expand,text_nav_pc_expand,title_sublink_type_pc_expand,tag_sublink_style_pc_expand,attribute_style_pc_expand,dynamic_idea_word_pc_expand,free_callback_pc_expand,fc_third_comment_pc_expand,xj_pc_expand,baidu_reputation_pc_expand,social_info_pc_expand,pc_expandable_ad_control,pc_search_remarketing,fsg_edu_loan_sublink,fsg_edu_loan_img,pc_user_evaluate,pc_feed_mutli_pic,pc_feed_single_pic,pc_feed_brand_name,pc_ad_click_rs,left_pla_array,pc_pa_prod_test,pc_ai_cs_zixun_singleline_chain,pc_ai_cs_zixun_multiline_chain,strong_brand_style
+
+strong_exp_list : 9005=2999=2888=2145>1044=3007=1703=1704=3332=3331=3166=3167=3023=1045=9042=3122=3061=2085=3225=3226=3124=3120=3148=3036=3131=3196=2060=3126=3168=3027=3025=3029=3022=2090=3026=3142=1049=3125=2892=2052=2062=1046=1047=1031=2069=2070=3015=2015=2009=3016=1035=2002=3012=3002=3011=3003=1022=1032=2039=2042=1039=888=999=2080=9009=11020=11021=11022=11023=11024=11025=9030=9050
+
+# conditional样式可以和所有样式叠加，但最终展现与否取决于新样式队列中是否包
+# 含该样式下premise_mt_list中的至少一个mt。
+# 如果premise_mt_list为空，conditional样式一定能展现。
+# 注意不要引入依赖闭环。
+conditional_exp_list : 1033,5999,1018,3174,2146,2051,22504,3440,3601,8510,1023,8528,31511
+
+#需要打印json到asp日志的mt
+asp_log_json_mt : 3007,3196,3228,3120,3011,2039,3012,2052,3015,3003,2042,3002,3016,2062,3124,3125,3126,1047,1049,3136,3137,2089,3148,3166,2145,3026,1052,1046,2146,3036,3006,1061,3029,3225,3226,1044,2892,2999,3232,3231,11020,11021,11022,11023,11024,11025,9030,9005,9050
+ubmq_json_mt : 2052,2062,3003,3011,3015,3016
+
+image_nst_mt : 1046,3015,1024,3012,3002,3016,2052,2062,3120,3124,3126,2085,3122,1033,3131,3148,3166,3167,3036
+
+# PC showurl行口碑入口,即"评价"文案
+[@exp]
+mt : 1019
+exp_name : pc_user_evaluate
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@8,217@4,1@8,993@1
+multi_rule : 2051,3020
+
+[@exp]
+mt : 1026
+exp_name : mapstyle
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 213@20
+multi_rule : 1017,1028,1029,1019,2051,3020
+@flush_fields : name
+
+[@exp]
+mt : 1044
+exp_name : strong_super_nst
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@1,213@1
+multi_rule : 1025,1023,1015,1027,1013,1017,1012,1028,1029,1031,1019,2051,3020
+@link_fields:navigation_links.sublinks.url
+@link_fields:navigation_links.more_link
+@json_checkers:INT_EQ 1044 mt
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0
+multi_rule : 1025,1023,1015,1027,1013,1017,1012,1028,1029,1031,1019,2051,3020
+@link_fields:navigation_links.sublinks.url
+@link_fields:navigation_links.more_link
+@json_checkers:INT_EQ 1044 mt
+
+[@exp]
+mt:3011
+exp_name:pa_navigation
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule:204@4@0@1,213@20@0@2,217@4@0@1
+multi_rule:1017,1013,1012,1028,1029,1023,1019,2051,3020
+@link_fields:sublinks.sublink.link_url
+@link_fields:sublinks.more_link
+@json_checkers:INT_EQ 3011 mt
+@json_checkers:ARRSIZE_MAX 3 sublinks
+@json_checkers:ARRSIZE_MIN 2 sublinks
+[.@exper]
+exper_id:1
+src_rank_rule:204@0,213@0
+multi_rule:1017,1013,1012,1028,1029,1019,2051,3020
+@link_fields:sublinks.sublink.link_url
+@link_fields:sublinks.more_link
+@json_checkers:INT_EQ 3011 mt
+@json_checkers:ARRSIZE_MAX 3 sublinks
+@json_checkers:ARRSIZE_MIN 2 sublinks
+[.@exper]
+exper_id:2
+src_rank_rule:204@4@0@1,213@20@0@1
+multi_rule:1017,1013,1012,1028,1029,1019,2051,3020
+@link_fields:sublinks.sublink.link_url
+@link_fields:sublinks.more_link
+@json_checkers:INT_EQ 3011 mt
+@json_checkers:ARRSIZE_MAX 3 sublinks
+@json_checkers:ARRSIZE_MIN 2 sublinks
+[.@exper]
+exper_id:3
+src_rank_rule:204@0,213@20@0@2
+multi_rule:1017,1013,1012,1028,1029,1019,2051,3020
+@link_fields:sublinks.sublink.link_url
+@link_fields:sublinks.more_link
+@json_checkers:INT_EQ 3011 mt
+@json_checkers:ARRSIZE_MAX 3 sublinks
+@json_checkers:ARRSIZE_MIN 2 sublinks
+[.@exper]
+exper_id:4
+src_rank_rule:204@4@0@1,213@20@0@8
+multi_rule:1017,1013,1012,1028,1029,1019,2051,3020
+@link_fields:sublinks.sublink.link_url
+@link_fields:sublinks.more_link
+@json_checkers:INT_EQ 3011 mt
+@json_checkers:ARRSIZE_MAX 3 sublinks
+@json_checkers:ARRSIZE_MIN 2 sublinks
+[.@exper]
+exper_id:5
+src_rank_rule:204@4@0@1,213@20@0@2
+multi_rule:1017,1013,1012,1028,1029,3012,3002,1031,2039,1019,2051,3020
+@link_fields:sublinks.sublink.link_url
+@link_fields:sublinks.more_link
+@json_checkers:INT_EQ 3011 mt
+@json_checkers:ARRSIZE_MAX 3 sublinks
+@json_checkers:ARRSIZE_MIN 2 sublinks
+[.@exper]
+exper_id:6
+src_rank_rule:204@4@0@1,213@20@0@2
+multi_rule:1017,1013,1012,1028,1029,1019,2051,3020
+@link_fields:sublinks.sublink.link_url
+@link_fields:sublinks.more_link
+@flush_fields : sublinks.sublink.text
+@json_checkers:INT_EQ 3011 mt
+@json_checkers:ARRSIZE_MAX 3 sublinks
+@json_checkers:ARRSIZE_MIN 2 sublinks
+[.@exper]
+exper_id:7
+src_rank_rule:204@4@0@1,213@20@0@2,217@4@0@1
+multi_rule:1017,1013,1012,1028,1029,1019,2051,3020
+@link_fields:sublinks.sublink.link_url
+@link_fields:sublinks.more_link
+@flush_fields : sublinks.sublink.text
+@json_checkers:INT_EQ 3011 mt
+@json_checkers:ARRSIZE_MAX 3 sublinks
+@json_checkers:ARRSIZE_MIN 2 sublinks
+
+[@exp]
+mt : 11010
+exp_name : pc_pa_prod_test
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@0,213@0,217@0
+
+[@exp]
+mt : 3015
+exp_name : pa_pic_navigation
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@1
+multi_rule : 1017,1013,1012,1028,1029,1023,1019,2051,3020
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@json_checkers : INT_EQ 3015 mt
+@json_checkers : ARRSIZE_EQ 3 sublinks
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+multi_rule : 1017,1013,1012,1028,1029,1019,2051,3020
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@json_checkers : INT_EQ 3015 mt
+@json_checkers : ARRSIZE_EQ 3 sublinks
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@1,213@1,217@1
+multi_rule : 1017,1013,1012,1028,1029,1023,1019,2051,3020
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@json_checkers : INT_EQ 3015 mt
+@json_checkers : ARRSIZE_EQ 3 sublinks
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@5,213@5,217@1
+multi_rule : 1017,1013,1012,1028,1029,1023,1019,2051,3020
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@json_checkers : INT_EQ 3015 mt
+@json_checkers : ARRSIZE_EQ 3 sublinks
+
+[@exp]
+mt : 1024
+exp_name : local_branding
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 1@1,204@1,213@1,217@1
+multi_rule : 1017,1012,1023,1028,1029,1019,2051,3020
+@truncation_fields : item.title@1_26,204_40,213_40,217_40
+@truncation_fields : item.desc@1_52,204_70,213_120,217_70
+@truncation_fields : item.showurl@1_15,204_24,213_24,217_24
+@truncation_fields : item.address@1_16,204_40,213_40,217_40
+@truncation_fields : subchain_item.subchainTitle@1_10,204_10,213_10,217_10
+@flush_fields : item.title
+@flush_fields : item.desc
+@link_fields : item.link
+@link_fields : subchain_item.subchainLink
+
+[@exp]
+mt:1025
+exp_name:promise
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule:204@4,213@20,217@4,935@1
+multi_rule : 1017,3012,3002,1022,1013,3003,3011,2002,1023,1028,1029,1019,2051,3020
+@json_checkers:INT_EQ 1025 mt
+@json_checkers:ARRSIZE_MAX 5 item
+@json_checkers:ARRSIZE_MIN 1 item
+@json_checkers:STRLEN_MAX 90 item.*.desc
+
+[@exp]
+mt:1023
+exp_name:official_web
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule:204@4@0@1,213@20@0@1,993@1
+multi_rule : 1017,1012,3012,3002,1022,1013,3003,3011,2002,1025,1028,1029,1046,3125,3120,3148,1019,2051,3020
+[.@exper]
+exper_id:1
+src_rank_rule:204@4@0@1,213@20@0@1
+multi_rule : 1017,1012,3012,3002,1022,1013,3003,3011,2002,1025,1028,1029,3124,1046,1045,3125,3131,3148,3120,1019,2051,3020
+premise_mt_list : 
+
+[@exp]
+mt : 2013
+exp_name : med_query
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 213@4
+multi_rule : 1017,1012,3012,3002,1022,1013,1028,1029,1019,2051,3020
+@flush_fields : item.name
+
+[@exp]
+mt : 1017
+exp_name : v_certify
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,217@4,1@10,884@4,935@1,993@1
+multi_rule : 1013,1012,1022,3012,3002,3003,1028,1029,1018,1019,2051,3020
+@json_checkers : INT_EQ 1017 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MAX 40 item.*.name
+@json_checkers : STRLEN_MAX 1 item.*.level
+@json_checkers : STRLEN_MIN 4 item.*.link
+
+[@exp]
+mt : 1012
+exp_name : yh_discount
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@0,213@0,217@0,935@0
+multi_rule : 1017,1013,3012,3002,3003,1028,1029,1019,2051,3020
+@link_fields : item.link.url
+@json_checkers : INT_EQ 1012 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : ARRSIZE_EQ 2 item.*.link
+@json_checkers : STRLEN_MIN 4 item.*.link.*.url
+@json_checkers : STRLEN_MIN 4 item.*.title
+@json_checkers : STRLEN_MAX 38 item.*.title
+[.@exper]
+exper_id:1
+src_rank_rule : 204@4,213@20,217@4,935@1
+multi_rule : 1017,1013,3012,3002,3003,1028,1029,1019,2051,3020
+@link_fields : item.link.url
+@json_checkers : INT_EQ 1012 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : ARRSIZE_EQ 2 item.*.link
+@json_checkers : STRLEN_MIN 4 item.*.link.*.url
+@json_checkers : STRLEN_MIN 4 item.*.title
+@json_checkers : STRLEN_MAX 38 item.*.title
+
+[@exp]
+mt : 3012
+exp_name : fc_image
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0
+multi_rule : 1013,1017,1012,1028,1029,1031,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:2
+src_rank_rule : 204@1,213@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:3
+src_rank_rule : 204@2@1,213@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:4
+src_rank_rule : 204@1,213@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:5
+src_rank_rule : 204@2@1,213@2@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:6
+src_rank_rule : 204@1,213@1
+multi_rule : 1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:7
+src_rank_rule : 204@1,213@1
+multi_rule : 1013,1017,1012,1028,1029,1031,2039,2042,3003,3011,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:8
+src_rank_rule : 204@1,213@1,217@1
+multi_rule : 1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3012 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+
+[@exp]
+mt : 3228
+exp_name : pa_image_no_link
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,3029,1047,3025,2039
+@json_checkers : INT_EQ 3228 mt
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020
+@json_checkers : INT_EQ 3228 mt
+[.@exper]
+exper_id:2
+src_rank_rule : 204@5,213@5,217@5
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020
+@json_checkers : INT_EQ 3228 mt
+[.@exper]
+exper_id:3
+src_rank_rule : 204@1,213@1,217@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020
+@json_checkers : INT_EQ 3228 mt
+[.@exper]
+exper_id:4
+src_rank_rule : 204@5,213@5,217@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136
+@json_checkers : INT_EQ 3228 mt
+[.@exper]
+exper_id:5
+src_rank_rule : 204@5,213@5,217@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,3029,1047,3025
+@json_checkers : INT_EQ 3228 mt
+[.@exper]
+exper_id:6
+src_rank_rule : 204@5,213@5,217@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,3029,1047,3025,2039,3011,1061,3006,3196,3003,3007,2163
+@json_checkers : INT_EQ 3228 mt
+[.@exper]
+exper_id:7
+src_rank_rule : 204@5,213@5,217@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,3029,1047,3025,2039
+@json_checkers : INT_EQ 3228 mt
+[.@exper]
+exper_id:8
+src_rank_rule : 204@5@0@1,213@5@0@1,217@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,3029,1047,3025,2039,2130
+@json_checkers : INT_EQ 3228 mt
+
+[@exp]
+mt : 3002
+exp_name : pa_image
+similar_mt_list : 3012
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@1,993@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,1047,2039
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3002 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0
+multi_rule : 1013,1017,1012,1028,1029,1031,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3002 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:2
+src_rank_rule : 204@1,213@1,217@1,993@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3002 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:3
+src_rank_rule : 204@5,213@5,217@1,993@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3002 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:4
+src_rank_rule : 204@5,213@5,217@1,993@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,1047
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3002 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:5
+src_rank_rule : 204@5,213@5,217@1,993@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,1047,2039,3006
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3002 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+[.@exper]
+exper_id:6
+src_rank_rule : 204@5,213@5,217@1,993@1
+multi_rule : 1013,1017,1012,1028,1029,1031,1023,1019,2051,3020,3136,1047,2039
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@flush_fields : text_links.text
+@json_checkers : INT_EQ 3002 mt
+@json_checkers : ARRSIZE_MAX 5 text_links
+
+[@exp]
+mt : 3003
+exp_name : pa_category_page
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4@0@2,217@4@0@2,213@20@0@2
+multi_rule : 1013,1017,1012,1028,1029,1023,1019,2051,3020
+@link_fields : rows.cells.url
+@json_checkers : INT_EQ 3003 mt
+@json_checkers : ARRSIZE_MIN 3 rows
+@json_checkers : ARRSIZE_MAX 6 rows
+[.@exper]
+exper_id:1
+src_rank_rule : 204@4@0@2,217@4@0@2,213@20@0@2
+multi_rule : 1013,1017,1012,1028,1029,3012,3002,1031,2039,1019,2051,3020
+@link_fields : rows.cells.url
+@json_checkers : INT_EQ 3003 mt
+@json_checkers : ARRSIZE_MIN 3 rows
+@json_checkers : ARRSIZE_MAX 6 rows
+[.@exper]
+exper_id:2
+src_rank_rule : 204@0,217@0,213@0
+multi_rule : 1013,1017,1012,1028,1029,3012,3002,1031,2039,1019,2051,3020
+@link_fields : rows.cells.url
+@json_checkers : INT_EQ 3003 mt
+@json_checkers : ARRSIZE_MIN 3 rows
+@json_checkers : ARRSIZE_MAX 6 rows
+
+[@exp]
+mt : 3016
+exp_name : pa_pic_category_page
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5@0@1,213@5@0@1
+multi_rule : 1017,1013,1028,1029,1012,1023,1019,2051,3020
+@link_fields : rows.cells.url
+@json_checkers:INT_EQ 3016 mt
+@json_checkers:ARRSIZE_MIN 3 rows
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+multi_rule : 1017,1013,1012,1028,1029,1019,2051,3020
+@link_fields : rows.cells.url
+@json_checkers:INT_EQ 3016 mt
+@json_checkers:ARRSIZE_MIN 3 rows
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@1,213@1
+multi_rule : 1017,1013,1028,1029,1012,1023,1019,2051,3020
+@link_fields : rows.cells.url
+@json_checkers:INT_EQ 3016 mt
+@json_checkers:ARRSIZE_MIN 3 rows
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@5,213@5
+multi_rule : 1017,1013,1028,1029,1012,1023,1019,2051,3020
+@link_fields : rows.cells.url
+@json_checkers:INT_EQ 3016 mt
+@json_checkers:ARRSIZE_MIN 3 rows
+
+[@exp]
+mt : 1022
+exp_name : pa_video
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@1,217@1,1@1
+multi_rule : 1013,1017,1028,1029,1019,2051,3020
+@link_fields : url_video
+@link_fields : url_more
+
+
+[@exp]
+mt : 1015
+exp_name : tel_num
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@0,213@0
+multi_rule : 1012,1013,1017,3012,3002,3003,1028,1029,1019,2051,3020
+@json_checkers : INT_EQ 1015 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MIN 3 item.*.tel
+@json_checkers : STRLEN_MAX 20 item.*.tel
+[.@exper]
+exper_id:1
+src_rank_rule : 204@4,213@4
+multi_rule : 1012,1013,1017,3012,3002,3003,1028,1029,1019,2051,3020
+@json_checkers : INT_EQ 1015 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MIN 3 item.*.tel
+@json_checkers : STRLEN_MAX 20 item.*.tel
+
+[@exp]
+mt : 1013
+exp_name : favicon
+select_exp:0
+[.@exper]
+exper_id:0
+multi_rule : 1017,1012,1022,3012,3002,1028,1029,1046,3125,3120,3148,1019,2051,3020
+src_rank_rule : 204@4,213@20,217@4,884@4,935@1,993@1
+@json_checkers : INT_EQ 1013 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MIN 7 item.*.pic
+[.@exper]
+exper_id:1
+multi_rule : 1017,1012,1022,3012,3002,1028,1029,3124,1046,1045,3125,3131,3148,3120,1019,2051,3020
+src_rank_rule : 204@4,213@20,217@4,884@4,935@1
+@json_checkers : INT_EQ 1013 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MIN 7 item.*.pic
+
+[@exp]
+mt : 2002
+exp_name : ipad_app
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,217@4
+multi_rule : 1013,1012,1017,1028,1029,1019,2051,3020
+@link_fields : item.link
+@link_fields : item.app_icon_link
+@link_fields : item.app_detail_link
+@json_checkers : INT_EQ 2002 mt
+@json_checkers : STRLEN_MAX 22 item.*.desc
+@json_checkers : STRLEN_MIN 1 item.*.desc
+@json_checkers : STRLEN_MIN 1 item.*.app_icon_url
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1013,1012,1017,1028,1029,1019,2051,3020
+@link_fields : item.link
+@link_fields : item.app_icon_link
+@link_fields : item.app_detail_link
+@json_checkers : INT_EQ 2002 mt
+@json_checkers : STRLEN_MAX 22 item.*.desc
+@json_checkers : STRLEN_MIN 1 item.*.desc
+@json_checkers : STRLEN_MIN 1 item.*.app_icon_url
+
+[@exp]
+mt : 2009
+exp_name : pc_bridge
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 213@0
+multi_rule : 1013,1012,1017,1028,1029,2051,2001,2015,1019,2051,3020
+@link_fields : item.bridge_link
+@json_checkers : INT_EQ 2009 mt
+[.@exper]
+exper_id:1
+src_rank_rule : 213@20
+multi_rule : 1013,1012,1017,1028,1029,2051,2001,2015,1019,2051,3020
+@link_fields : item.bridge_link
+@json_checkers : INT_EQ 2009 mt
+
+[@exp]
+mt : 2001
+exp_name : tel_num_v2
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 213@0
+multi_rule : 1012,1013,1017,3012,3002,3003,1028,1029,2009,2015,1019,2051,3020
+@json_checkers : INT_EQ 2001 mt
+@json_checkers : STRLEN_MAX 30 phonenum
+[.@exper]
+exper_id:1
+src_rank_rule : 213@20
+multi_rule : 1012,1013,1017,3012,3002,3003,1028,1029,2009,2015,1019,2051,3020
+@json_checkers : INT_EQ 2001 mt
+@json_checkers : STRLEN_MAX 30 phonenum
+premise_mt_list:2009&-2051,2015&-2051
+
+[@exp]
+mt:1027
+exp_name:domain_name
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule:213@20
+multi_rule : 1026,1024,1023,1025,2002,1017,1012,3012,3002,3011,3003,1022,1013,1028,1029,3015,3016,3120,1019
+
+[@exp]
+mt : 5001
+exp_name : plus_v_to_left
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 1@1
+
+[@exp]
+mt : 5002
+exp_name : punish_ratio
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 1@1
+
+[@exp]
+mt :  6001
+exp_name :  siva_mt1
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6002
+exp_name :  siva_mt2
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6003
+exp_name :  siva_mt3
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6004
+exp_name :  siva_mt4
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6005
+exp_name :  siva_mt5
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6006
+exp_name :  siva_mt6
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6007
+exp_name :  siva_mt7
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6008
+exp_name :  siva_mt8
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6009
+exp_name :  siva_mt9
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt :  6010
+exp_name :  siva_mt10
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4,213@20,1@8
+
+[@exp]
+mt : 1028
+exp_name : medicine_icon
+select_exp:1
+[.@exper]
+exper_id:0
+src_rank_rule : 1@0,204@0,213@0,217@0
+multi_rule : 1013,1012,1017,1022,3012,3002,3003,1029,1031,1032,1019,2051,3020
+@json_checkers : INT_EQ 1028 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MIN 4 item.*.link
+@json_checkers : STRLEN_MIN 4 item.*.img
+[.@exper]
+exper_id:1
+src_rank_rule : 1@10,204@4,213@20,217@4,935@1
+multi_rule : 1013,1012,1017,1022,3012,3002,3003,1029,1031,1032,1019,2051,3020
+@json_checkers : INT_EQ 1028 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MIN 4 item.*.link
+@json_checkers : STRLEN_MIN 4 item.*.img
+
+[@exp]
+mt : 1029
+exp_name : airplane_icon
+select_exp:1
+[.@exper]
+exper_id:0
+src_rank_rule : 1@0,204@0,213@0,217@0
+multi_rule : 1013,1012,1017,1022,3012,3002,3003,1028,1031,1032,1019,2051,3020
+@json_checkers : INT_EQ 1029 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MIN 4 item.*.link
+@json_checkers : STRLEN_MIN 4 item.*.img
+[.@exper]
+exper_id:1
+src_rank_rule : 1@10,204@4,213@20,217@4,935@1
+multi_rule : 1013,1012,1017,1022,3012,3002,3003,1028,1031,1032,1019,2051,3020
+@json_checkers : INT_EQ 1029 mt
+@json_checkers : ARRSIZE_EQ 1 item
+@json_checkers : STRLEN_MIN 4 item.*.link
+@json_checkers : STRLEN_MIN 4 item.*.img
+
+[@exp]
+mt :  1031
+exp_name :  baidu_reputation
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,935@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2051,3020
+@json_checkers : INT_EQ 1031 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2051,3020
+@json_checkers : INT_EQ 1031 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@20
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3002,3012,2051,3020
+@json_checkers : INT_EQ 1031 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@4,213@20,217@4
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2051,3020
+@json_checkers : INT_EQ 1031 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@4,213@20,217@4
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3002,3012,3003,3011,2051,3020
+@json_checkers : INT_EQ 1031 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 5
+src_rank_rule : 213@20,204@4
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2051,3020
+@json_checkers : INT_EQ 1031 mt
+@json_checkers : ARRSIZE_EQ 1 item
+
+[@exp]
+mt :  1032
+exp_name :  social_info
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@0,935@0
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+@json_checkers : INT_EQ 1032 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+@json_checkers : INT_EQ 1032 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4,213@20,217@4
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+@json_checkers : INT_EQ 1032 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@20,204@4
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+@json_checkers : INT_EQ 1032 mt
+@json_checkers : ARRSIZE_EQ 1 item
+
+[@exp]
+mt : 888
+exp_name : text_adv
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4,1@10
+multi_rule : 1027,1024,1023,1025,1017,1028,1029,1012,1013,1031,1032,3006,1052,1053,1019,2051,3020,1061,3048
+
+[@exp]
+mt : 999
+exp_name : mock_mt
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4,1@10
+multi_rule : 1027,1024,1023,1025,1017,1028,1029,1012,1013,1031,1032,1019,2051,3020
+
+[@exp]
+mt :  1033
+exp_name :  fc_new_video
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1,993@1
+multi_rule : 1023,1024,1025,1026,1027,1028,1029,2002,1012,1013,1017,1022,1031,1032,1035,3002,3003,3011,3012,1019,2051,3020
+premise_mt_list : 3012,3002,2052,2062,3015,3016
+@link_fields : item.link_url
+@json_checkers : INT_EQ 1033 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+multi_rule : 1023,1024,1025,1026,1027,1028,1029,2002,1012,1013,1017,1022,1031,1032,1035,3002,3003,3011,3012,1019,2051,3020
+premise_mt_list : 3012,3002
+@link_fields : item.link_url
+@json_checkers : INT_EQ 1033 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@0,213@0
+multi_rule : 1023,1024,1025,1026,1027,1028,1029,2002,1012,1013,1017,1022,1031,1032,1035,3002,3003,3011,3012,1019,2051,3020
+premise_mt_list : 3012,3002
+@link_fields : item.link_url
+@json_checkers : INT_EQ 1033 mt
+@json_checkers : ARRSIZE_EQ 1 item
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@0,213@0
+multi_rule : 1023,1024,1025,1026,1027,1028,1029,2002,1012,1013,1017,1022,1031,1032,1035,3002,3003,3011,3012,1019,2051,3020
+premise_mt_list : 3012,3002,2052,2062
+@link_fields : item.link_url
+@json_checkers : INT_EQ 1033 mt
+@json_checkers : ARRSIZE_EQ 1 item
+
+[@exp]
+mt : 1035
+exp_name : fc_third_comment
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@0
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+@truncation_field : item.desc@213_50
+@truncation_field : item.info_src@213_20
+@json_checkers : INT_EQ 1035 mt
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+@truncation_field : item.desc@213_50
+@truncation_field : item.info_src@213_20
+@json_checkers : INT_EQ 1035 mt
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4,213@20,217@4
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+@truncation_field : item.desc@213_50
+@truncation_field : item.info_src@213_20
+@json_checkers : INT_EQ 1035 mt
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@20,204@4
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+@truncation_field : item.desc@213_50
+@truncation_field : item.info_src@213_20
+@json_checkers : INT_EQ 1035 mt
+
+[@exp]
+mt : 2042
+exp_name : tag_sublink_style
+select_exp : 5
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@20@0@3,935@1
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,3012,1019,2051,3020
+@link_fields : item.link
+@flush_fields : item.idea_desc
+@flush_fields : tag
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@1,213@20@0@3
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,1019,2051,3020
+@link_fields : item.link
+@flush_fields : item.idea_desc
+@flush_fields : tag
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4,213@20@0@3,217@4
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,1019,2051,3020
+@link_fields : item.link
+@flush_fields : item.idea_desc
+@flush_fields : tag
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@1,213@20@0@3
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,1019,2051,3020
+@link_fields : item.link
+@flush_fields : item.idea_desc
+@flush_fields : tag
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@1,213@20@0@3
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,3012,2039,1019,2051,3020
+@link_fields : item.link
+@flush_fields : item.idea_desc
+@flush_fields : tag
+[.@exper]
+exper_id : 5
+src_rank_rule : 204@1,213@20@0@3
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,3012,2039,1031,1019,2051,3020
+@link_fields : item.link
+@flush_fields : item.idea_desc
+@flush_fields : tag
+
+[@exp]
+mt : 2039
+exp_name : attribute_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@20@0@8,935@1
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,3012,1019,2051,3020
+@flush_fields : item.idea_desc
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@1,213@20@0@3
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,1019,2051,3020
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4,213@20@0@8,217@4
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,1019,2051,3020
+@flush_fields : item.idea_desc
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@1,213@20@0@8
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,1019,2051,3020
+@flush_fields : item.idea_desc
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@1,213@20@0@8
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,3012,2042,1019,2051,3020
+@flush_fields : item.idea_desc
+[.@exper]
+exper_id : 5
+src_rank_rule : 204@1,213@20@0@8
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,3002,3012,2042,3003,3011,1019,2051,3020
+@flush_fields : item.idea_desc
+
+[@exp]
+mt : 2052
+exp_name : pc_dynamic_pic
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1,217@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2039,1019,2051,3020
+allowed_adtype : 65536,131072,262144
+@flush_fields : sublink_item.text
+@link_fields : sublink_item.link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@1,213@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : sublink_item.text
+@link_fields : sublink_item.link
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@1,213@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : sublink_item.text
+@link_fields : sublink_item.link
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@1,213@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2039,3015,3016,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : sublink_item.text
+@link_fields : sublink_item.link
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@2@1,213@1,217@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : sublink_item.text
+@link_fields : sublink_item.link
+[.@exper]
+exper_id : 5
+src_rank_rule : 204@1,213@1,217@2@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : sublink_item.text
+@link_fields : sublink_item.link
+[.@exper]
+exper_id : 6
+src_rank_rule : 204@2@1,213@1,217@2@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : sublink_item.text
+@link_fields : sublink_item.link
+[.@exper]
+exper_id : 7
+src_rank_rule : 204@1,213@1,217@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : sublink_item.text
+@link_fields : sublink_item.link
+
+[@exp]
+mt : 1039
+exp_name : dc_single_sublink
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@20@0@3,935@1
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,1019,2051,3020
+@link_fields : item.link
+@flush_fields : tag
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@1,213@20@0@3
+multi_rule : 1013,1023,1025,1017,1012,1028,1029,1019,2051,3020
+@link_fields : item.link
+@flush_fields : item.idea_desc
+@flush_fields : tag
+
+[@exp]
+mt : 2015
+exp_name : free_callback
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20
+multi_rule : 1012,1017,1013,1023,1027,2001,2051,2009,1019,2051,3020
+@truncation_fields : item.callbackName@213_16
+@link_fields : item.spreadLink
+@encode_fields : item.callbackLink
+@encode_fields : item.callbackPara
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0
+multi_rule : 1012,1017,1013,1023,1027,1019,2051,3020
+@truncation_fields : item.callbackName@213_16
+@link_fields : item.spreadLink
+@encode_fields : item.callbackLink
+@encode_fields : item.callbackPara
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@20,204@4
+multi_rule : 1012,1017,1013,1023,1027,2001,2051,2009,1019,2051,3020
+@truncation_fields : item.callbackName@213_16
+@link_fields : item.spreadLink
+@encode_fields : item.callbackLink
+@encode_fields : item.callbackPara
+
+[@exp]
+mt : 2060
+exp_name : client_dynamic_idea
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@20,217@1
+multi_rule : 1013,1023,1025,1027,1028,1029,1017,1012,1019,2051,3020
+@link_fields : item.sublink.link
+@flush_fields : item.sublink.idea_desc
+
+[@exp]
+mt : 2062
+exp_name : pc_dynamic_pic_no_sublink
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5,213@5,217@5
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072,262144
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@5,213@5,217@5
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072,262144
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@1,213@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@1,213@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,3015,3016,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@0,213@0
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,3015,3016,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 5
+src_rank_rule : 204@2@1,213@1,217@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 6
+src_rank_rule : 204@1,213@1,217@2@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 7
+src_rank_rule : 204@2@1,213@1,217@2@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 8
+src_rank_rule : 204@1,213@10@0@2@3_0,217@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 9
+src_rank_rule : 204@1,213@10@0@2@4_0,217@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 10
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072
+[.@exper]
+exper_id : 11
+src_rank_rule : 204@1,213@1,217@1,993@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072,262144
+[.@exper]
+exper_id : 12
+src_rank_rule : 204@0,213@0,217@0,993@0
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072,262144
+[.@exper]
+exper_id : 13
+src_rank_rule : 204@5,213@5,217@5
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020
+allowed_adtype : 65536,131072,262144
+@link_fields : image_link_url
+[.@exper]
+exper_id : 14
+src_rank_rule : 204@5,213@5,217@5
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,3012,2039,1019,2051,3020,3011,3196,1031,3003,3125,2042,2015,8519,1033
+allowed_adtype : 65536,131072,262144
+
+[@exp]
+mt : 3048
+exp_name : pc_video_low_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@4,204@4
+multi_rule : 1017,1013,1023,1019,2062
+@link_fields : videos.linkUrl
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0,204@0
+multi_rule : 1017,1013,1023,1019
+@link_fields : videos.linkUrl
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@4,204@4
+multi_rule : 1017,1013,1023,1019
+@link_fields : videos.linkUrl
+
+[@exp]
+mt : 2051
+exp_name : pc_brand_name
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@20,213@20,217@20,1@10
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0
+
+[@exp]
+mt : 22504
+exp_name : pc_brand_name_new
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@20,213@20,217@20,1@10
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0
+
+[@exp]
+mt : 3120
+exp_name : left_multi_pla
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1,217@3@0@1,993@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,1019,2051,3020
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@json_checkers : INT_EQ 3120 mt
+@json_checkers : ARRSIZE_MAX 4 plas
+@json_checkers : ARRSIZE_MIN 3 plas
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+multi_rule : 1017,1013,1012,1028,1029,1052,1019,2051,3020
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@json_checkers : INT_EQ 3120 mt
+@json_checkers : ARRSIZE_MAX 4 plas
+@json_checkers : ARRSIZE_MIN 3 plas
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@1,213@1,217@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1019,2051,3020
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@json_checkers : INT_EQ 3120 mt
+@json_checkers : ARRSIZE_MAX 4 plas
+@json_checkers : ARRSIZE_MIN 3 plas
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@1,213@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1019,2051,3020
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@json_checkers : INT_EQ 3120 mt
+@json_checkers : ARRSIZE_MAX 4 plas
+@json_checkers : ARRSIZE_MIN 3 plas
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@4@0@1,213@3@0@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1019,2051,3020
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@json_checkers : INT_EQ 3120 mt
+@json_checkers : ARRSIZE_MAX 4 plas
+@json_checkers : ARRSIZE_MIN 3 plas
+[.@exper]
+exper_id : 5
+src_rank_rule : 204@4@0@1,213@20@0@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1019,2051,3020
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@json_checkers : INT_EQ 3120 mt
+@json_checkers : ARRSIZE_MAX 4 plas
+@json_checkers : ARRSIZE_MIN 3 plas
+[.@exper]
+exper_id : 6
+src_rank_rule : 204@0,213@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1019,2051,3020
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@json_checkers : INT_EQ 3120 mt
+@json_checkers : ARRSIZE_MAX 4 plas
+@json_checkers : ARRSIZE_MIN 3 plas
+
+[@exp]
+mt : 2069
+exp_name : pc_taobao_item
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20
+multi_rule : 1013,1023,1027,1017,1012,3002,3012,2052,2062,1019,2051,3020
+
+
+[@exp]
+mt : 2070
+exp_name : pc_taobao_shop
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20
+multi_rule : 1013,1023,1027,1017,1012,3002,3012,2052,2062,1019,2051,3020
+
+[@exp]
+mt : 1046
+exp_name : super_nst
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@5@0@1,213@5@0@1,993@1
+multi_rule : 1025,1023,1015,2001,1027,1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields:navigation_links.sublinks.url
+@link_fields:navigation_links.more_link
+@json_checkers:INT_EQ 1046 mt
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0
+multi_rule : 1025,1023,1015,2001,1027,1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields:navigation_links.sublinks.url
+@link_fields:navigation_links.more_link
+@json_checkers:INT_EQ 1046 mt
+[.@exper]
+exper_id:2
+src_rank_rule : 204@1,213@1,993@1
+multi_rule : 1025,1023,1015,2001,1027,1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields:navigation_links.sublinks.url
+@link_fields:navigation_links.more_link
+@json_checkers:INT_EQ 1046 mt
+[.@exper]
+exper_id:3
+src_rank_rule : 204@5,213@5,993@1
+multi_rule : 1025,1023,1015,2001,1027,1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields:navigation_links.sublinks.url
+@link_fields:navigation_links.more_link
+@json_checkers:INT_EQ 1046 mt
+
+[@exp]
+mt : 1047
+exp_name : title_sublink_type
+select_exp : 0
+@dynamic_idea_plan_exclude_words_fields : subtitles.title_text
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4@0@1,213@20@0@1,217@4@0@1
+multi_rule : 1012,1013,1017,1023,1027,2039,1031,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@20@0@1
+multi_rule : 1012,1013,1017,1023,1027,1032,1035,2015,2039,3002,3012,1031,2052,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4@0@1,213@20@0@1,217@4@0@1
+multi_rule : 1012,1013,1017,1023,1027,1032,1035,2015,2039,1031,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@4@0@1,213@20@0@1,217@4@0@1
+multi_rule : 1012,1013,1017,1023,1027,2039,1031,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@4@0@1,213@20@0@1,217@4@0@1
+multi_rule : 1012,1013,1017,1023,1027,1032,1035,2015,2039,3002,3012,1031,2052,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+
+[@exp]
+mt : 1049
+exp_name : bw_sublink_type
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4@0@1,213@20@0@1,217@4@0@1
+multi_rule : 1012,1013,1017,1023,1027,1032,1035,2015,2039,3002,3012,1031,2052,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@4@0@1,213@20@0@1,217@4@0@1
+multi_rule : 1012,1013,1017,1023,1027,1032,1035,2015,2039,1031,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1012,1013,1017,1023,1027,1032,1035,2015,2039,1031,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1012,1013,1017,1023,1027,2039,1031,2062,1019,2051,3020
+@link_fields : subtitles.title_url
+@flush_fields : subtitles.title_text
+
+[@exp]
+mt : 2080
+exp_name : icon_attribute_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@20@0@8
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,1047,1019,2051,3020
+
+[@exp]
+mt : 2085
+exp_name : huge_screen
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@0
+multi_rule : 1013,1023,1015,1017,1012,2001,1019,2051,3020
+@link_fields : image.link_url
+@link_fields : image_large.link_url
+@truncation_fields : image.img_text@213_16
+@truncation_fields : image_large.img_text@213_36
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@1,213@1
+multi_rule : 1013,1023,1015,1017,1012,2001,1019,2051,3020
+@link_fields : image.link_url
+@link_fields : image_large.link_url
+@truncation_fields : image.img_text@213_16,204_16
+@truncation_fields : image_large.img_text@213_36,204_36
+
+[@exp]
+mt : 3122
+exp_name : pc_pic_content_special
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1
+multi_rule : 1013,1017,1012,1015,1027,1023,1028,1029,1025,1019,2051,3020
+@truncation_fields : adinfo.phone@213_16
+@truncation_fields : adinfo.address@213_72
+@truncation_fields : adinfo.name@213_56
+@truncation_fields : abstract.text@213_100
+@flush_fields : abstract.text
+@flush_fields : adinfo.address
+@link_fields : adinfo.button_link
+@link_fields : dyn_links.url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0
+multi_rule : 1013,1017,1012,1015,1027,1023,1028,1029,1025,1019,2051,3020
+@truncation_fields : adinfo.phone@213_16
+@truncation_fields : adinfo.address@213_72
+@truncation_fields : adinfo.name@213_56
+@truncation_fields : abstract.text@213_100
+@flush_fields : abstract.text
+@flush_fields : adinfo.address
+@link_fields : adinfo.button_link
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@1
+multi_rule : 1013,1017,1012,1015,1027,1023,1028,1029,1025,1019,2051,3020
+@truncation_fields : adinfo.phone@213_16
+@truncation_fields : adinfo.address@213_72
+@truncation_fields : adinfo.name@213_56
+@truncation_fields : abstract.text@213_100
+@flush_fields : abstract.text
+@flush_fields : adinfo.address
+@link_fields : adinfo.button_link
+@link_fields : dyn_links.url
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@1,204@1
+multi_rule : 1013,1017,1012,1015,1027,1023,1028,1029,1025,1019,2051,3020
+@truncation_fields : adinfo.phone@213_16,204_16
+@truncation_fields : adinfo.address@213_72,204_72
+@truncation_fields : adinfo.name@213_56,204_56
+@truncation_fields : abstract.text@213_100,204_100
+@flush_fields : abstract.text
+@flush_fields : adinfo.address
+@link_fields : adinfo.button_link
+@link_fields : dyn_links.url
+[.@exper]
+exper_id : 4
+src_rank_rule : 213@1,204@1,217@1
+multi_rule : 1013,1017,1012,1015,1027,1023,1028,1029,1025,1019,2051,3020
+@truncation_fields : adinfo.phone@213_16
+@truncation_fields : adinfo.address@213_72
+@truncation_fields : adinfo.name@213_56
+@truncation_fields : abstract.text@213_100
+@flush_fields : abstract.text
+@flush_fields : adinfo.address
+@link_fields : adinfo.button_link
+@link_fields : dyn_links.url
+[.@exper]
+exper_id : 5
+src_rank_rule : 213@0,204@0,217@0
+multi_rule : 1013,1017,1012,1015,1027,1023,1028,1029,1025,1019,2051,3020
+@truncation_fields : adinfo.phone@213_16
+@truncation_fields : adinfo.address@213_72
+@truncation_fields : adinfo.name@213_56
+@truncation_fields : abstract.text@213_100
+@flush_fields : abstract.text
+@flush_fields : adinfo.address
+@link_fields : adinfo.button_link
+@link_fields : dyn_links.url
+
+[@exp]
+mt : 3124
+exp_name : hot_pla
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@1,213@1,217@3@0@1,993@1
+multi_rule : 1017,1013,1012,1028,1029,1023,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@json_checkers : INT_EQ 3124 mt
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0
+multi_rule : 1017,1013,1012,1028,1029,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@json_checkers : INT_EQ 3124 mt
+[.@exper]
+exper_id:2
+src_rank_rule : 204@1,213@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@json_checkers : INT_EQ 3124 mt
+[.@exper]
+exper_id:3
+src_rank_rule : 204@0,213@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1023,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : plas.product_name
+@link_fields : plas.link
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@json_checkers : INT_EQ 3124 mt
+
+[@exp]
+mt : 3125
+exp_name : text_nav
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule:204@4@0@1,213@8@0@2,217@4@0@1
+multi_rule:1017,1013,1015,1012,1019,2051,3020
+allowed_adtype : 65536,131072
+@link_fields:sublinks.sublink.link_url
+@json_checkers:INT_EQ 3125 mt
+[.@exper]
+exper_id:1
+src_rank_rule:204@0,213@0,217@0
+multi_rule:1017,1013,1015,1012,1019,2051,3020
+allowed_adtype : 65536,131072
+@link_fields:sublinks.sublink.link_url
+@json_checkers:INT_EQ 3125 mt
+[.@exper]
+exper_id:2
+src_rank_rule:204@4@0@1,213@8@0@2,217@4@0@1
+multi_rule:1017,1013,1015,1012,1019,2051,3020,1028,1029
+allowed_adtype : 65536,131072
+@link_fields:sublinks.sublink.link_url
+@json_checkers:INT_EQ 3125 mt
+
+[@exp]
+mt : 3126
+exp_name : pic_nav
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule:204@5@0@1,213@5@0@1,217@1,993@1
+multi_rule:1017,1013,1015,1012,1019,2051,3020
+allowed_adtype : 65536,131072
+@link_fields:sublinks.sublink.link_url
+@json_checkers:INT_EQ 3126 mt
+[.@exper]
+exper_id:1
+src_rank_rule:204@0,213@0,217@0
+multi_rule:1017,1013,1015,1012,1019,2051,3020
+allowed_adtype : 65536,131072
+@link_fields:sublinks.sublink.link_url
+@json_checkers:INT_EQ 3126 mt
+[.@exper]
+exper_id:2
+src_rank_rule:204@1,213@1,217@1,993@1
+multi_rule:1017,1013,1015,1012,1019,2051,3020
+allowed_adtype : 65536,131072
+@link_fields:sublinks.sublink.link_url
+@json_checkers:INT_EQ 3126 mt
+[.@exper]
+exper_id:3
+src_rank_rule:204@5,213@5,217@1,993@1
+multi_rule:1017,1013,1015,1012,1019,2051,3020
+allowed_adtype : 65536,131072
+@link_fields:sublinks.sublink.link_url
+@json_checkers:INT_EQ 3126 mt
+[.@exper]
+exper_id:4
+src_rank_rule:204@5@0@1,213@5@0@1,217@1,993@1
+multi_rule:1017,1013,1015,1012,1019,2051,3020,1028,1029
+allowed_adtype : 65536,131072
+@link_fields:sublinks.sublink.link_url
+@json_checkers:INT_EQ 3126 mt
+
+[@exp]
+mt : 3018
+exp_name : red_carpet_pastime
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule:884@4
+@link_fields:item.image_target_url
+@link_fields:item.title_target_url
+
+[@exp]
+mt : 3019
+exp_name : red_carpet_multi_pic
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule:217@1
+multi_rule:1017,1013,1019
+@flush_fields : ad_title
+@link_fields:item.image_target_url
+@link_fields:item.title_target_url
+@link_fields:link
+@truncation_fields : item.title@217_18
+@truncation_fields : ad_title@217_60
+
+[@exp]
+mt : 2090
+exp_name : pc_chexian_fuwuyuan
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0,204@0
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 4
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020,3002,3148,3015,3016,1061
+@link_fields : click_url
+@link_fields : detail_url
+
+[@exp]
+mt : 2145
+exp_name : pc_local_express
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@8,217@4
+@truncation_fields : item.activity@204_20,213_20,217_20
+@truncation_fields : item.organization@204_20,213_20,217_20
+@truncation_fields : item.address@204_20,213_20,217_20
+@flush_fields : item.activity
+@flush_fields : item.organization
+@flush_fields : item.feature
+@link_fields : item.tuan_link
+
+[@exp]
+mt : 2146
+exp_name : pc_local_express_bridge
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@8,217@4
+multi_rule : 2145,1019,2051,3020
+premise_mt_list : 2145
+@link_fields : link
+
+[@exp]
+mt : 3022
+exp_name : pc_loan_fuwuyuan
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0,204@0
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 4
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020,3002,3148,3015,3016,1061
+@link_fields : click_url
+@link_fields : detail_url
+
+[@exp]
+mt : 3131
+exp_name : pic_text_list
+select_exp : 1
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1
+allowed_adtype : 65536,131072
+multi_rule : 1012,1013,1017,1023,1025,1028,1029,2051,3020,1019
+@flush_fields : text_links.text
+@flush_fields : rows.cells.content
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@link_fields : rows.cells.url
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+allowed_adtype : 65536,131072
+multi_rule : 1012,1013,1017,1023,1025,1028,1029,2051,3020,1019
+@flush_fields : text_links.text
+@flush_fields : rows.cells.content
+@link_fields : image_link_url
+@link_fields : text_links.link_url
+@link_fields : rows.cells.url
+
+[@exp]
+mt : 8562
+exp_name : pc_aa_consult_double_sublinks_mt8562
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019,1013,2051,3020,1023,2062
+@link_fields : item.link
+@flush_fields : item.text
+@truncation_fields : item.text@204_36,213_36,217_36
+
+[@exp]
+mt : 8563
+exp_name : pc_aa_replace_dynamic_content_mt8563
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1031,1032,1035,2039,1019,2051,3020,3136
+@truncation_fields : link_item.link@204_28,213_28,217_28
+@link_fields : link_item.url
+@flush_fields : link_item.link
+premise_mt_list : 3136
+
+[@exp]
+mt : 8564
+exp_name : pc_aa_replace_dynamic_content_with_img_mt8564
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1031,1032,1035,2039,1019,2051,3020,2062,3136
+@truncation_fields : link_item.link@204_36,213_36,217_36
+@link_fields : link_item.url
+@flush_fields : link_item.link
+premise_mt_list : 2062,3136
+
+[@exp]
+mt : 3136
+exp_name : pc_nature_long_sublink
+select_exp : 0
+@dynamic_idea_plan_exclude_words_fields : link_item.link
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20@0@3,204@4@0@3,217@4@0@3
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1031,1032,1035,2039,2062,1019,2051,3020
+@truncation_fields : link_item.link@204_28,213_28,217_28
+@flush_fields : link_item.link
+@link_fields : link_item.url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@20@0@1,204@4@0@1,217@4@0@1
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1031,1032,1035,2039,2062,3122,1019,2051,3020
+@truncation_fields : link_item.link@204_28,213_28,217_28
+@flush_fields : link_item.link
+@link_fields : link_item.url
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@0,204@0,217@0
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1032,1035,2039,3002,3012,2052,2062,3122,1033,1019,2051,3020
+@truncation_fields : link_item.link@204_28,213_28,217_28
+@link_fields : link_item.url
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@20@0@2,204@4@0@2,217@4@0@2
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1031,1032,1035,2039,2062,1019,2051,3020
+@truncation_fields : link_item.link@204_28,213_28,217_28
+@flush_fields : link_item.link
+@link_fields : link_item.url
+[.@exper]
+exper_id : 4
+src_rank_rule : 213@0,204@0,217@0
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1031,1032,1035,2039,2062,1019,2051,3020
+@truncation_fields : link_item.link@204_28,213_28,217_28
+@flush_fields : link_item.link
+@link_fields : link_item.url
+[.@exper]
+exper_id : 5
+src_rank_rule : 213@20@0@1,204@4@0@1,217@4@0@1
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1031,1032,1035,2039,2062,1019,2051,3020
+@truncation_fields : link_item.link@204_28,213_28,217_28
+@flush_fields : link_item.link
+@link_fields : link_item.url
+
+[@exp]
+mt : 1045
+exp_name : pc_overall_strong_style
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4@0@1,213@20@0@1
+multi_rule : 1025,1023,1015,2001,1027,1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields:sub_links.link_url
+@link_fields:image_link_url
+@link_fields:navigation_links.sublinks.url
+@link_fields:navigation_links.more_link
+@json_checkers:INT_EQ 1045 mt
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0
+multi_rule : 1025,1023,1015,2001,1027,1013,1017,1012,1028,1029,1031,2039,2042,1019,2051,3020
+@link_fields:sub_links.link_url
+@link_fields:image_link_url
+@link_fields:navigation_links.sublinks.url
+@link_fields:navigation_links.more_link
+@json_checkers:INT_EQ 1045 mt
+
+[@exp]
+mt : 3137
+exp_name : pc_nature_ask_answer
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20@0@1,204@4@0@1,217@4@0@1
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1032,1035,2039,3002,3012,2052,2062,1033,1019,2051,3020
+@truncation_fields : ask_answer_item.ask@204_74,213_74,217_74
+@truncation_fields : ask_answer_item.answer@204_74,213_74,217_74
+@flush_fields : ask_answer_item.ask
+@flush_fields : ask_answer_item.answer
+@link_fields : ask_answer_item.ask_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@20@0@1,204@4@0@1,217@4@0@1
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1032,1035,2039,3002,3012,2052,2062,1033,1019,2051,3020
+@truncation_fields : ask_answer_item.ask@204_74,213_74,217_74
+@truncation_fields : ask_answer_item.answer@204_74,213_74,217_74
+@link_fields : ask_answer_item.ask_url
+
+[@exp]
+mt : 3020
+exp_name : showurl_bold
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@0,213@0,217@0,1@0
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@20,213@20,217@20,1@10
+
+# 3142的图太宽,不能叠加1019(评价)
+[@exp]
+mt : 3142
+exp_name : pc_focus_time_pic
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1,217@1,993@1
+multi_rule : 1017,2051,3020
+@truncation_fields : sublink_item.text@204_34,213_34,217_34,993_34
+@link_fields : pic_item.pic_link
+@link_fields : sublink_item.link
+@flush_fields : sublink_item.text
+
+[@exp]
+mt : 3148
+exp_name : holographic
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@0,993@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020
+@flush_fields : properties.content
+@flush_fields : properties.label
+[.@exper]
+exper_id:1
+src_rank_rule : 204@0,213@0,217@0
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1019,2051,3020
+[.@exper]
+exper_id:2
+src_rank_rule : 204@1,213@1,217@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020
+[.@exper]
+exper_id:3
+src_rank_rule : 204@4,213@1,217@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020
+@flush_fields : properties.content
+[.@exper]
+exper_id:4
+src_rank_rule : 204@1,213@4,217@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020
+@flush_fields : properties.content
+[.@exper]
+exper_id:5
+src_rank_rule : 204@4,213@20,217@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020
+@flush_fields : properties.content
+[.@exper]
+exper_id:6
+src_rank_rule : 204@5,213@5,217@0,993@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020
+@flush_fields : properties.content
+@flush_fields : properties.label
+[.@exper]
+exper_id:7
+src_rank_rule : 204@1,213@1,217@0,993@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020
+@flush_fields : properties.content
+@flush_fields : properties.label
+[.@exper]
+exper_id:8
+src_rank_rule : 204@5,213@5,217@0,993@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020
+@flush_fields : properties.content
+@flush_fields : properties.label
+[.@exper]
+exper_id:9
+src_rank_rule : 204@5@0@1,213@5@0@1,217@0,993@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1015,1012,1023,1019,2051,3020,1028,1029
+@flush_fields : properties.content
+@flush_fields : properties.label
+
+# lbs嵌入pc描述
+[@exp]
+mt : 2045
+exp_name :  pc_lbs_in_desc
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@20,213@20,217@20
+multi_rule : 1013,1017,1047,2042,3006,3007,3125,2062,2090,2888,3022,3025,3026,3027,3231,3232,3142,1046,3136,3002
+
+[@exp]
+mt :  2037
+exp_name :  pc_lbs_nst
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@20,213@20,217@20
+multi_rule : 1017,2001,1035,1019,2051,3020
+@flush_fields : item.lbs_info
+
+[@exp]
+mt :  9003
+exp_name :  pc_lbs_info_line
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@20,213@20,217@20
+multi_rule : 1017,1013,2015,1031,2039,1061,2062
+@link_fields : item.map_url
+@truncation_fields : item.lbs_info@204_46,213_46,217_46
+
+[@exp]
+mt : 3061
+exp_name : pc_ask_answer
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@10@0@2,204@4@0@1,217@4@0@1
+multi_rule : 1012,1013,1015,1017,1023,1025,1028,1029,1032,1035,2052,2062,1033,1047,1049,3136,1019,2051,3020
+@truncation_fields : ask_content@204_80,213_80,217_80
+@truncation_fields : answer_content@204_144,213_144,217_144
+@flush_fields : ask_content
+@flush_fields : answer_content
+@flush_fields : link_item.link
+@link_fields : ask_url
+@link_fields : link_item.url
+
+[@exp]
+mt : 3062
+exp_name : pc_pic_content_special_with_link
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1,217@1
+multi_rule : 1013,1017,1012,1015,1027,1023,1028,1029,1025,1019,2051,3020
+@truncation_fields : data_item.content@213_104,204_104,217_104
+@truncation_fields : desc@213_80,204_80,217_80
+@truncation_fields : hospital_name@213_80,204_80,217_80
+@flush_fields : data_item.content
+@flush_fields : desc
+@link_fields : data_item.url
+
+[@exp]
+mt : 3023
+exp_name : pc_lbs_info
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@20,213@20,217@20
+multi_rule: 1017,2001,1019,2051,3020
+@link_fields : item.map_url
+@truncation_fields : item.lbs_info@204_40,213_40,217_40
+
+[@exp]
+mt : 3166
+exp_name : holographic_list
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@1,213@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1012,1019,2051,3020
+@link_fields : rows.holography.click_url
+@link_fields : rows.holography.text_links.link_url
+@link_fields : rows.cells.url
+@json_checkers : ARRSIZE_MIN 3 rows
+@json_checkers : ARRSIZE_MAX 6 rows
+@flush_fields : rows.cells.content
+@flush_fields : rows.holography.text_links.text
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1012,1019,2051,3020
+@link_fields : rows.holography.click_url
+@link_fields : rows.holography.text_links.link_url
+@link_fields : rows.cells.url
+@json_checkers : ARRSIZE_MIN 3 rows
+@json_checkers : ARRSIZE_MAX 6 rows
+[.@exper]
+exper_id:2
+src_rank_rule : 204@1,213@1
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1012,1019,2051,3020
+@link_fields : rows.holography.click_url
+@link_fields : rows.holography.text_links.link_url
+@link_fields : rows.cells.url
+@json_checkers : ARRSIZE_MIN 3 rows
+@json_checkers : ARRSIZE_MAX 6 rows
+
+[@exp]
+mt : 3167
+exp_name : pc_strong_real_estate_forward
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@1,213@1,217@1
+multi_rule : 1013,1017,1012,1019,2051,3020
+@link_fields : image_url
+@link_fields : properties.url
+@link_fields : sublinks.url
+@link_fields : rows.cells.url
+
+[@exp]
+mt : 3168
+exp_name : pc_weak_real_estate_forward
+select_exp : 0
+[.@exper]
+exper_id:0
+src_rank_rule : 204@4@0@1,213@8@0@1,217@4@0@1
+multi_rule : 1013,1017,1012,1019,2051,3020
+@link_fields : rows.cells.url
+
+[@exp]
+mt : 3025
+exp_name : pc_qiche_fuwuyuan
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0,204@0
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 4
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020,3002,3148,3015,3016,1061
+@link_fields : click_url
+@link_fields : detail_url
+
+[@exp]
+mt : 3026
+exp_name : pc_jiaju_fuwuyuan
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0,204@0
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 4
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020,3002,3148,3015,3016,1061
+@link_fields : click_url
+@link_fields : detail_url
+
+[@exp]
+mt : 3027
+exp_name : pc_jiazhuang_fuwuyuan
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0,204@0
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 4
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020,3002,3148,3015,3016,1061
+@link_fields : click_url
+@link_fields : detail_url
+
+[@exp]
+mt : 3029
+exp_name : pc_generic_fuwuyuan
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020,3002,3148,3015,3016,1061
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0,204@0
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 2
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 3
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+[.@exper]
+exper_id : 4
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1023,2062,2039,1019,2051,3020
+@link_fields : click_url
+@link_fields : detail_url
+
+
+# {{{ ////////////////////// Begin expandable_ad //////////////////////
+[@exp]
+mt : 5132
+exp_name : social_info_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,5001,5032,5042,5047,5049,5136,5125,2042,1047,1049,3136,3125,1019,2051,3020
+
+[@exp]
+mt : 5031
+exp_name : baidu_reputation_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,5001,5032,5042,5047,5049,5136,5125,2042,1047,1049,3136,3125,1019,2051,3020
+
+[@exp]
+mt : 5035
+exp_name : fc_third_comment_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,5001,5032,5042,5047,5049,5136,5125,2042,1047,1049,3136,3125,1019,2051,3020
+
+[@exp]
+mt : 5039
+exp_name : attribute_style_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,5001,5032,5042,5047,5049,5136,5125,2042,1047,1049,3136,3125,3012,1019,2051,3020
+
+[@exp]
+mt : 5015
+exp_name : free_callback_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,5001,5032,5042,5047,5049,5136,5125,2042,1047,1049,3136,3125,1019,2051,3020
+
+[@exp]
+mt : 5023
+exp_name : pc_lbs_info_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,5001,5032,5042,5047,5049,5136,5125,2042,1047,1049,3136,3125,1019,2051,3020
+
+[@exp]
+mt : 5061
+exp_name : pc_ask_answer_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,5001,5032,5042,5047,5049,5136,5125,2042,1047,1049,3136,3125,1032,1031,1035,2039,2015,3023,5132,5031,5035,5039,5015,5023,2052,2062,1033,1019,2051,3020
+
+[@exp]
+mt : 5001
+exp_name : xj_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,1032,1031,1035,2039,2015,3023,3061,5132,5031,5035,5039,5015,5023,5061,1019,2051,3020
+
+[@exp]
+mt : 5032
+exp_name : dynamic_idea_word_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,1032,1031,1035,2039,2015,3023,3061,5132,5031,5035,5039,5015,5023,5061,3002,3012,1019,2051,3020
+
+[@exp]
+mt : 5042
+exp_name : tag_sublink_style_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,1032,1031,1035,2039,2015,3023,3061,5132,5031,5035,5039,5015,5023,5061,3012,1019,2051,3020
+
+[@exp]
+mt : 5047
+exp_name : title_sublink_type_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,1032,1031,1035,2039,2015,3023,3061,5132,5031,5035,5039,5015,5023,5061,3002,3012,2052,2062,1019,2051,3020
+
+[@exp]
+mt : 5049
+exp_name : bw_sublink_type_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,1032,1031,1035,2039,2015,3023,3061,5132,5031,5035,5039,5015,5023,5061,3002,3012,2052,2062,1019,2051,3020
+
+[@exp]
+mt : 5136
+exp_name : pc_nature_long_sublink_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,1032,1031,1035,2039,2015,3023,3061,5132,5031,5035,5039,5015,5023,5061,3002,3012,2052,2062,3122,1033,1019,2051,3020
+
+[@exp]
+mt : 5125
+exp_name : text_nav_pc_expand
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+multi_rule : 1012,1013,1015,1017,1023,1025,1027,1028,1029,1032,1031,1035,2039,2015,3023,3061,5132,5031,5035,5039,5015,5023,5061,1019,2051,3020
+
+[@exp]
+mt : 5999
+exp_name : pc_expandable_ad_control
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20@0@2,204@4@0@2,217@4@0@2
+premise_mt_list : 5132,5031,5035,5039,5015,5023,5061,5001,5032,5042,5047,5049,5136,5125
+
+[@exp]
+mt : 1018
+exp_name : production_safeguard
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@20,217@4,1@10,884@4,935@1
+@json_checkers : INT_EQ 1018 mt
+@json_checkers : ARRSIZE_EQ 1 item
+premise_mt_list : 1017
+
+# ////////////////////// end expandable_ad //////////////////////  }}}
+[@exp]
+mt : 3331
+exp_name : pc_nature_education
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1,217@1
+multi_rule : 1017,1031,1019,2051,3020
+@flush_fields: sublinks.sublink.text
+@link_fields: sublinks.sublink.link_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@8@0@1,204@10@0@1,217@10@0@1
+multi_rule : 1017,1031,1019,2051,3020
+@flush_fields: sublinks.sublink.text
+@link_fields: sublinks.sublink.link_url
+
+[@exp]
+mt : 3332
+exp_name : pc_nature_education_strong
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1,217@1
+multi_rule : 1017,1019,2051,3020
+@flush_fields: subtitles.title_text
+@flush_fields: sublinks.sublink.text
+@link_fields: subtitles.title_url
+@link_fields: sublinks.sublink.link_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@8@0@1,204@10@0@1,217@10@0@1
+multi_rule : 1017,1019,2051,3020
+@flush_fields: subtitles.title_text
+@flush_fields: sublinks.sublink.text
+@link_fields: subtitles.title_url
+@link_fields: sublinks.sublink.link_url
+
+[@exp]
+mt : 3174
+exp_name : pc_search_remarketing
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@4,217@4
+premise_mt_list : -1013&-1024&-2001&-2002&-2009&-2015&-2060&-2070&-2080&-3003&-3011&-3015&-3016&-3018&-3019&-3120&-3122&-3124&-3137&-3142&-3148&-1045&-1046&-2052&-2062&-3012&-2085&-3126&-2090&-3022
+
+[@exp]
+mt : 3006
+exp_name : pa_pc_navigation_sublink
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1,993@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2039,1031,2062
+allowed_adtype : 65536,131072
+@flush_fields : navigation.sublinks.text
+@link_fields : navigation.sublinks.link_url
+@json_checkers : INT_EQ 3006 mt
+@json_checkers : ARRSIZE_EQ 2 navigation
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1013,1017,1023,1019,2051,3020
+allowed_adtype : 65536,131072
+@flush_fields : navigation.sublinks.text
+@link_fields : navigation.sublinks.link_url
+@json_checkers : INT_EQ 3006 mt
+@json_checkers : ARRSIZE_EQ 2 navigation
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2039,1031
+allowed_adtype : 65536,131072
+@flush_fields : navigation.sublinks.text
+@link_fields : navigation.sublinks.link_url
+@json_checkers : INT_EQ 3006 mt
+@json_checkers : ARRSIZE_EQ 2 navigation
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1,993@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2039,1031,2062
+@flush_fields : navigation.sublinks.text
+@link_fields : navigation.sublinks.link_url
+@json_checkers : INT_EQ 3006 mt
+@json_checkers : ARRSIZE_EQ 2 navigation
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1,993@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2062
+allowed_adtype : 65536,131072
+@flush_fields : navigation.sublinks.text
+@link_fields : navigation.sublinks.link_url
+@json_checkers : INT_EQ 3006 mt
+@json_checkers : ARRSIZE_EQ 2 navigation
+[.@exper]
+exper_id : 5
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1,993@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061
+allowed_adtype : 65536,131072
+@flush_fields : navigation.sublinks.text
+@link_fields : navigation.sublinks.link_url
+@json_checkers : INT_EQ 3006 mt
+@json_checkers : ARRSIZE_EQ 2 navigation
+[.@exper]
+exper_id : 6
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1,993@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2039,1031,2062,1012,1028,1029
+allowed_adtype : 65536,131072
+@flush_fields : navigation.sublinks.text
+@link_fields : navigation.sublinks.link_url
+@json_checkers : INT_EQ 3006 mt
+@json_checkers : ARRSIZE_EQ 2 navigation
+
+[@exp]
+mt:1001
+exp_name:pc_sanjia_hospital
+select_exp:0
+[.@exper]
+exper_id:0
+src_rank_rule:213@20,204@10,217@10
+multi_rule : 1026,1024,1023,1025,2002,1017,1012,3012,3002,3011,3003,1022,1013,1028,1029,3015,3016,3120,1031,1032,888,999,1033,1035,2052,2015,2060,2062,2069,2070,1046,1047,1049,2080,3122,1045,2045,3062,5132,5031,5035,5039,5015,5023,5061,5001,5032,5042,5047,5049,5136,5125,1019
+
+[@exp]
+mt : 1052
+exp_name : gaia_shopping_service_tag
+select_exp : 1
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@20,217@4
+allowed_adtype : 65536
+multi_rule : 1013,1017,1023,1027,1025,1031,1032,1019,2051,3020
+@link_fields : sublinks.link_url
+@json_checkers : INT_EQ 1052 mt
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0,217@0
+allowed_adtype : 65536
+multi_rule : 1013,1017,1023,1027,1025,1031,1032,1019,2051,3020
+@link_fields : sublinks.link_url
+@json_checkers : INT_EQ 1052 mt
+
+[@exp]
+mt : 1053
+exp_name : gaia_direct_mail_tag
+select_exp : 1
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@20,217@4
+allowed_adtype : 65536
+multi_rule : 2039,1046,1013,1017,1023,2062,3126,3120,2042,3125,1047,1032,1031,1049,3020,1035,2052,3006,3002,1019,2051,3020
+@json_checkers : INT_EQ 1053 mt
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0,217@0
+allowed_adtype : 65536
+multi_rule : 2039,1046,1013,1017,1023,2062,3126,3120,2042,3125,1047,1032,1031,1049,3020,1035,2052,3006,3002,1019,2051,3020
+@json_checkers : INT_EQ 1053 mt
+
+[@exp]
+mt : 2162
+exp_name : fsg_edu_loan_img
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1,217@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2042,1047,3136,3020,1033,2163,1019,2051,3020
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@1,204@1,217@1
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2042,1047,3136,3020,1033,2163,1019,2051,3020,1061,3006
+
+[@exp]
+mt : 2163
+exp_name : fsg_edu_loan_sublink
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20,204@10,217@10
+multi_rule : 1012,1013,1017,1023,1025,1027,1028,1029,2042,1047,3136,3020,1033,2062,3002,1046,2162,3006,1019,2051,3020
+@link_fields : item.link
+
+[@exp]
+mt : 3186
+exp_name : pc_jingxiu
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 993@1,213@1,204@1
+@link_fields : brand_link
+@link_fields : item.link_url
+@link_fields : item.item_list.link_url
+@link_fields : brand_list.url
+@flush_fields : brand_title
+@truncation_fields : brand_title@993_56,213_56
+@truncation_fields : item.name@993_26,213_26
+@truncation_fields : item.item_list.name@993_16,213_16
+@truncation_fields : brand_list_title@993_30,213_30
+@truncation_fields : brand_list.text@993_14,213_14
+
+[@exp]
+mt : 3440
+exp_name : pc_sponsor_ads
+select_exp : 1
+[.@exper]
+exper_id : 0
+src_rank_rule : 993@1,213@1,204@1,217@1
+premise_mt_list :
+[.@exper]
+exper_id : 1
+src_rank_rule : 993@1,213@1,204@1,217@1
+multi_rule : 1013,2062,3006,3120,3002,1046,3148,3124,1023,1033,3126,3036,2888
+premise_mt_list :
+
+[@exp]
+mt : 3036
+exp_name : pc_pla_multi_pic
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1,217@3@0@1,993@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@link_fields : link_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@link_fields : link_url
+
+[@exp]
+mt : 1061
+exp_name : pa_pc_holographic_abstract
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@20,217@0
+allowed_adtype : 65536,131072
+multi_rule : 1017,1013,1023,1019,1046,3002,1045,2051,3136,1029,2042,3029,3026,1033,2163,3196,1028,3025,2015,3027,2090,3022,2062
+@json_checkers : INT_EQ 1061 mt
+@json_checkers : ARRSIZE_MIN 2 properties
+@flush_fields : properties.content
+@flush_fields : properties.label
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0,217@0
+allowed_adtype : 65536,131072
+multi_rule : 1017,1013,1023,1019
+@json_checkers : INT_EQ 1061 mt
+@json_checkers : ARRSIZE_MIN 2 properties
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4,213@20,217@4
+allowed_adtype : 65536,131072
+multi_rule : 1017,1013,1023,1019,1046,3002,1045,2051,3136,1029,2042,3029,3026,1033,2163,3196,1028,3025,2015,3027,2090,3022
+@json_checkers : INT_EQ 1061 mt
+@json_checkers : ARRSIZE_MIN 2 properties
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@4,213@20,217@4
+allowed_adtype : 65536,131072
+multi_rule : 1017,1013,1023,1019,1046,3002,1045,2051,3136,1029,2042,3029,3026,1033,2163,3196,1028,3025,2015,3027,2090,3022
+@json_checkers : INT_EQ 1061 mt
+@json_checkers : ARRSIZE_MIN 2 properties
+@flush_fields : properties.content
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@4,213@20,217@0
+allowed_adtype : 65536,131072
+multi_rule : 1017,1013,1023,1019,1046,3002,1045,2051,3136,1029,2042,3029,3026,1033,2163,3196,1028,3025,2015,3027,2090,3022
+@json_checkers : INT_EQ 1061 mt
+@json_checkers : ARRSIZE_MIN 2 properties
+@flush_fields : properties.content
+@flush_fields : properties.label
+[.@exper]
+exper_id : 5
+src_rank_rule : 204@4,213@20,217@0
+allowed_adtype : 65536,131072
+multi_rule : 1017,1013,1023,1019,1046,3002,1045,2051,3136,1029,2042,3029,3026,1033,2163,3196,1028,3025,2015,3027,2090,3022,2062,1047,2130,8511
+@json_checkers : INT_EQ 1061 mt
+@json_checkers : ARRSIZE_MIN 2 properties
+@flush_fields : properties.content
+@flush_fields : properties.label
+[.@exper]
+exper_id : 6
+src_rank_rule : 204@4,213@20,217@0
+allowed_adtype : 65536,131072
+multi_rule : 1017,1013,1023,1019,1046,3002,1045,2051,3136,1029,2042,3029,3026,1033,2163,3196,1028,3025,2015,3027,2090,3022,2062,1012,3020
+@json_checkers : INT_EQ 1061 mt
+@json_checkers : ARRSIZE_MIN 2 properties
+@flush_fields : properties.content
+@flush_fields : properties.label
+
+[@exp]
+mt : 3196
+exp_name : pc_promotion_summary
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@8,217@4
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1019
+@link_fields : sublinks.sublink.link_url
+@flush_fields : sublinks.sublink.text
+@flush_fields : sublinks.label
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0,217@0
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1019
+@link_fields : sublinks.sublink.link_url
+@flush_fields : sublinks.sublink.text
+@flush_fields : sublinks.label
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4,213@8,217@4
+allowed_adtype : 65536,131072
+multi_rule : 1013,1017,1019,1012,1028,1029,3020
+@link_fields : sublinks.sublink.link_url
+@flush_fields : sublinks.sublink.text
+@flush_fields : sublinks.label
+
+[@exp]
+mt : 1703
+exp_name : pc_style_strength_vertical
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1025,1019,1018,1023
+@truncation_fields : item.link@213_42,204_42
+@flush_fields : item.link
+@link_fields : item.url
+
+[@exp]
+mt : 1704
+exp_name : pc_style_strength_horizontal
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1013,1025,1019,1018,1023
+@truncation_fields : item.link@213_24,204_24
+@flush_fields : item.link
+@link_fields : item.url
+
+[@exp]
+mt : 2888
+exp_name : pc_generic_brand_style
+select_exp : 1
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1019
+@link_fields : title_link
+@link_fields : sublinks_info.sublinks.link
+@flush_fields : sublinks_info.sublinks.text
+@json_checkers : INT_EQ 2888 mt
+@json_checkers : ARRSIZE_EQ 2 sublinks_info
+@truncation_fields : title@204_52,213_52
+@truncation_fields : idea@204_224,213_224
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@1,204@1,993@1
+multi_rule : 1017,1019
+@link_fields : title_link
+@link_fields : sublinks_info.sublinks.link
+@flush_fields : sublinks_info.sublinks.text
+@json_checkers : INT_EQ 2888 mt
+@json_checkers : ARRSIZE_EQ 2 sublinks_info
+@truncation_fields : title@204_52,213_52
+@truncation_fields : idea@204_224,213_224
+@flush_fields : title
+@flush_fields : idea
+
+[@exp]
+mt : 2999
+exp_name : pc_generic_brand_new_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1019
+@link_fields : sublinks_info.sublinks.link
+@flush_fields : sublinks_info.sublinks.text
+@json_checkers : INT_EQ 2999 mt
+@json_checkers : ARRSIZE_EQ 2 sublinks_info
+
+[@exp]
+mt : 22526
+exp_name : pc_jingxiu_brand_new_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1019
+@link_fields : sublinks_info.sublinks.link
+@flush_fields : sublinks_info.sublinks.text
+@json_checkers : INT_EQ 22526 mt
+@json_checkers : ARRSIZE_EQ 2 sublinks_info
+
+[@exp]
+mt : 2308
+exp_name : ps_search_feed_multi_pic_with_link
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 217@1
+wpt_rule : 2,7
+multi_rule : 1017,1019
+@link_fields : images.link
+@flush_fields : images.image_desc
+@truncation_fields : images.image_desc@217_20
+
+[@exp]
+mt : 3225
+exp_name : rank_pla
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+wpt_rule : 2
+@flush_fields : plas.product_name
+@link_fields : plas.link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@1,213@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+wpt_rule : 2
+@flush_fields : plas.product_name
+@link_fields : plas.link
+
+[@exp]
+mt : 3226
+exp_name : rank_text_pla
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@3@0@1,213@3@0@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+wpt_rule : 2
+@link_fields : rows.cells.url
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@3@0@1,213@3@0@1,217@3@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+wpt_rule : 2
+@link_fields : rows.cells.url
+
+[@exp]
+mt : 4002
+exp_name : pc_navigation_mining
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@20@0@1,204@20@0@1
+wpt_rule : 2
+multi_rule : 1017,1019
+@link_fields : item.url
+@flush_fields : item.link
+
+[@exp]
+mt : 3231
+exp_name : pc_jingxiu_gen
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 993@1,213@1,204@1
+multi_rule : 1017,1019
+@link_fields : image_link
+@link_fields : item.content.url
+@link_fields : item.detail_url
+@truncation_fields : item.content.text@204_12,213_12
+
+[@exp]
+mt : 3007
+exp_name : pa_nav_no_label
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2039,1031,2062
+allowed_adtype : 65536,131072
+@flush_fields : text_links.text
+@link_fields : text_links.link_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@0,204@0
+multi_rule : 1017,1019
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2039,1031
+allowed_adtype : 65536,131072
+@flush_fields : text_links.text
+@link_fields : text_links.link_url
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2039,1031,2062
+@flush_fields : text_links.text
+@link_fields : text_links.link_url
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@4@0@1,213@20@0@2,217@4@0@1
+multi_rule : 1013,1017,1023,1019,2051,3020,1061,2039,1031,2062,1012,1028,1029
+allowed_adtype : 65536,131072
+@flush_fields : text_links.text
+@link_fields : text_links.link_url
+
+[@exp]
+mt : 3232
+exp_name : pc_jingxiu_strong
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 993@1,213@1,204@1
+multi_rule : 1017,1019
+@link_fields : image_link
+@link_fields : sub_title_link
+@link_fields : item.image_link
+@truncation_fields : sub_title@204_28,213_28
+@truncation_fields : image_tag@204_36,213_36
+@truncation_fields : item.image_tag@204_16,213_16
+
+[@exp]
+mt : 2130
+exp_name : pc_action_ads_ncl_mt2130
+select_exp : 4
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019,1013,2051,3020,1023,2062,2039
+@link_fields : item.sublink.link
+@flush_fields : item.sublink.content
+@truncation_fields : item.sublink.content@204_20,213_20,217_20
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019,1013,2051,3020,1023
+@link_fields : item.sublink.link
+@flush_fields : item.sublink.content
+@truncation_fields : item.sublink.content@204_20,213_20,217_20
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019,1013,2051,3020,1023,2062,2039,3228
+@link_fields : item.sublink.link
+@flush_fields : item.sublink.content
+@truncation_fields : item.sublink.content@204_20,213_20,217_20
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019,1013,2051,3020,1023,2062,2039,1061
+@link_fields : item.sublink.link
+@flush_fields : item.sublink.content
+@truncation_fields : item.sublink.content@204_20,213_20,217_20
+[.@exper]
+exper_id : 4
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019,1013,2051,3020,1023,2062,2039,3228,1044,3011
+@link_fields : item.sublink.link
+@flush_fields : item.sublink.content
+@truncation_fields : item.sublink.content@204_20,213_20,217_20
+
+[@exp]
+mt : 8532
+exp_name : pc_action_ads_ncl_mt8532
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019,1013,2051,3020,1023,2062,2039
+@link_fields : item.sublink.link
+@link_fields : item.button.link
+@flush_fields : item.sublink.content
+@truncation_fields : item.sublink.content@204_20,213_20,217_20
+
+[@exp]
+mt : 3601
+exp_name: pc_ad_click_rs
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@20,213@20,217@20,993@20
+premise_mt_list :
+
+[@exp]
+mt : 3510
+exp_name : pc_feed_brand_name
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 1086@2
+multi_rule : 3514,3515
+
+[@exp]
+mt : 3514
+exp_name : pc_feed_mutli_pic
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 1086@2
+
+[@exp]
+mt : 3515
+exp_name : pc_feed_single_pic
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 1086@2
+
+[@exp]
+mt : 31161
+exp_name : left_pla_array
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@0,213@0
+
+# 动态创意短子链
+[@exp]
+mt : 9005
+exp_name : pc_dynamic_idea_shortlink
+select_exp : 0
+@dynamic_idea_plan_exclude_words_fields : sublink.item.text
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4@0@3,213@4@0@3
+multi_rule:1013,1017,1019,1023,1028,1029,1033,1061,2045,2051,2062,2162,3002,3601,2039,1031
+@link_fields : sublink.item.link
+@flush_fields: sublink.item.text
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+multi_rule:1013,1017,1019,1023,1028,1029,1033,1061,2045,2051,2062,2162,3002,3601,2039,1031
+@link_fields : sublink.item.link
+@flush_fields: sublink.item.text
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@4,213@4
+multi_rule:1013,1017,1019,1023,1028,1029,1033,1061,2045,2051,2062,2162,3002,3601,2039,1031
+@link_fields : sublink.item.link
+@flush_fields: sublink.item.text
+
+[@exp]
+mt : 9009
+exp_name : pc_navigation_sublink
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4@0@2,213@4@0@2
+multi_rule : 1025,1023,1015,1027,1013,1017,1012,1028,1029,1031,1019,2051,3020,2062
+@link_fields : sublinks.sublink.link_url
+@link_fields : sublinks.more_link
+@flush_fields: sublinks.sublink.text
+
+[@exp]
+mt : 4060
+exp_name : ps_aa_freeform_one_widget
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1019,1061,1013,1023,2039,2051,2062,3002,3015,3020,3148
+@link_fields : button_link
+[.@exper]
+exper_id : 1
+src_rank_rule : 213@4@0@1,204@4@0@1
+multi_rule : 1017,1019,1061,1013,1023,2039,2051,2062,3002,3015,3020,3148
+@link_fields : button_link
+
+[@exp]
+mt : 4061
+exp_name : ps_aa_freeform_two_widgets
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1019,1061,1013,1023,2039,2051,2062,3002,3015,3020,3148
+@link_fields : button_link
+
+[@exp]
+mt : 4062
+exp_name : ps_aa_freeform_three_widgets
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 213@1,204@1
+multi_rule : 1017,1019,1061,1013,1023,2039,2051,2062,3002,3015,3020,3148
+@link_fields : button_link
+
+[@exp]
+mt : 8510
+exp_name : pc_zixun_diejia
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+premise_mt_list : 1047,3196
+@link_fields : item.link
+   
+[@exp]
+mt : 8528
+exp_name : pc_action_ads_long_sublink
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+premise_mt_list : 2130
+@flush_fields : item.content
+   
+[@exp]
+mt : 8511
+exp_name : pc_zixun_subchain
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,217@4,213@4
+multi_rule : 1017,1019,2062,2039
+@link_fields : item.sublink.link
+@flush_fields: item.sublink.content
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@4,217@4,213@4
+@link_fields : item.sublink.link
+@flush_fields: item.sublink.content
+[@exp]
+mt : 8518
+exp_name : pc_ai_cs_zixun_singleline_chain
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019
+@link_fields : item.sublink.link
+@flush_fields : item.sublink.content
+[@exp]
+mt : 8519
+exp_name : pc_ai_cs_zixun_multiline_chain
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@4,217@4
+multi_rule : 1017,1019
+@link_fields : sublinks.sublink.link_url
+@link_fields : item.link
+@flush_fields : sublinks.sublink.text
+
+[@exp]
+mt : 2892
+exp_name : pc_tuji
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1,217@1
+multi_rule : 1013,1017,1019,1027,1023,3601
+@link_fields : pic_url_items.lp_url
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1013,1017,1019,1027,1023,3601
+@link_fields : pic_url_items.lp_url
+
+[@exp]
+mt : 9031
+exp_name : pc_tongtai_sublink_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5,213@5
+multi_rule:1017,1019,2051,2062
+wpt_rule : 2
+@flush_fields : item.adv_title
+@truncation_fields : item.adv_title@204_50,213_50
+
+[@exp]
+mt : 31511
+exp_name : pc_hover_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5,213@5
+@link_fields : hover.contenta.link
+@link_fields : hover.contentb.link
+@link_fields : hover.contentc.link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@5,213@5
+allowed_adtype : 65536,131072
+@link_fields : hover.contenta.link
+@link_fields : hover.contentb.link
+@link_fields : hover.contentc.link
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@5,213@5
+allowed_adtype : 65536
+@link_fields : hover.contenta.link
+@link_fields : hover.contentb.link
+@link_fields : hover.contentc.link
+
+[@exp]
+mt : 9042
+exp_name : pc_pic_content_new
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5,213@5,217@5
+multi_rule : 1013,1017,1012,1015,1027,1023,1028,1029,1025,1019,2051,3020
+@flush_fields : tag_text.item.text
+@link_fields : tag_text.link
+
+[@exp]
+mt : 9047
+exp_name : strong_brand_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@4,213@8
+multi_rule : 1013,1023,1015,1017,1019,2062,3136,3228,8511,3196,3006,3007
+
+[@exp]
+mt : 11020
+exp_name : pc_product_pla
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+
+[@exp]
+mt : 11021
+exp_name : pc_single_pla
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@link_fields : plas.link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@link_fields : plas.link
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@link_fields : plas.link
+
+[@exp]
+mt : 11022
+exp_name : pc_product_jinxuan
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+
+[@exp]
+mt : 11023
+exp_name : pc_pic_text_product_list
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+
+[@exp]
+mt : 11024
+exp_name : pc_product_list
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@0,213@0
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.product_title
+@link_fields : plas.link
+@link_fields : plas.product_link
+
+[@exp]
+mt : 11025
+exp_name : pc_holophyly
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.value1
+@flush_fields : plas.value2
+@link_fields : plas.link
+[.@exper]
+exper_id : 1
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.value1
+@flush_fields : plas.value2
+@link_fields : plas.link
+[.@exper]
+exper_id : 2
+src_rank_rule : 204@5@0@1,213@5@0@1,217@5@0@1
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@link_fields : plas.link
+[.@exper]
+exper_id : 3
+src_rank_rule : 204@0,213@0,217@0
+multi_rule : 1017,1013,1012,1028,1029,1052,1023,2051,3020
+@flush_fields : plas.title
+@flush_fields : plas.desc
+@flush_fields : plas.value1
+@flush_fields : plas.value2
+@link_fields : plas.link
+
+
+[@exp]
+mt : 9030
+exp_name : pc_big_image
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1
+multi_rule : 1013,1017,1019,1023,2051,3136,3601
+
+[@exp]
+mt : 9050
+exp_name : pc_multi_pic_style
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 204@1,213@1
+multi_rule : 1013,1017,1019,1023
+@link_fields : items.link
+@flush_fields : items.desc

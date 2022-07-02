@@ -1,0 +1,2957 @@
+[GLOBAL]
+@weak_ct : 105
+@weak_ct : 123
+@weak_ct : 130
+@weak_ct : 131
+@weak_ct : 144
+@weak_ct : 300
+@weak_ct : 301
+@weak_ct : 302
+@weak_ct : 303
+@weak_ct : 304
+@weak_ct : 305
+
+[default_trunc]
+[.desc_trunc]
+grid_num : 12
+row_num : 2
+chinese_pixel : 14
+[.desc_trunc_expand]
+grid_num : 12
+row_num : 3
+chinese_pixel : 14
+
+[@ct_occupy_trunc]
+ct_id : 109
+[.occupy_trunc]
+grid_num : 2
+row_num : 1
+
+[strategy]
+max_templ_per_adv : 100
+max_candi_per_templ : 30
+max_candi_per_adv : 1000
+@comp_src : 160
+@comp_src : 111
+
+
+############################## 空模板 ##############################
+[@templ]
+template_id : 100
+template_name : empty
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+
+
+############################## 普通模板 ##############################
+[@templ]
+template_id : 101
+template_name : multi_img_three_top
+@ct : 148
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 102
+template_name : grid_list
+@ct : 157
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 103
+template_name : list_img_scroll
+@ct : 167
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 104
+template_name : custom_form
+@ct : 153
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 105
+template_name : moreinfo
+@ct : 154
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 106
+template_name : banner_carousel
+@ct : 166
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 107
+template_name : label_text
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 108
+template_name : link_price
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 109
+template_name : shop_lbs
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 110
+template_name : shop_lbs+label_text
+@ct : 116
+@ct : 117
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 111
+template_name : multi_text
+@ct : 108
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 112
+template_name : multi_text+multi_img_three_top
+@ct : 108
+@ct : 148
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 113
+template_name : tag_text
+@ct : 114
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 114
+template_name : tag_text+link_price
+@ct : 114
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 115
+template_name : info+label_text
+@ct : 115
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 116
+template_name : icon_info
+@ct : 119
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 117
+template_name : icon_info+label_text
+@ct : 117
+@ct : 119
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 118
+template_name : icon_info+link_price
+@ct : 119
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 119
+template_name : icon_info+shop_lbs
+@ct : 116
+@ct : 119
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 120
+template_name : link
+@ct : 133
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 121
+template_name : link+multi_img_three_top
+@ct : 133
+@ct : 148
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 122
+template_name : link+label_text
+@ct : 117
+@ct : 133
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 123
+template_name : link+shop_lbs
+@ct : 116
+@ct : 133
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 124
+template_name : link+multi_text
+@ct : 108
+@ct : 133
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 125
+template_name : tag_sublink
+@ct : 111
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 126
+template_name : tag_sublink+multi_img_three_top
+@ct : 111
+@ct : 148
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 127
+template_name : tag_sublink+label_text
+@ct : 111
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 128
+template_name : tag_sublink+shop_lbs
+@ct : 111
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 129
+template_name : tag_sublink+shop_lbs+label_text
+@ct : 111
+@ct : 116
+@ct : 117
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 130
+template_name : tag_sublink+multi_text
+@ct : 108
+@ct : 111
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 131
+template_name : sublink
+@ct : 110
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 132
+template_name : sublink+multi_img_three_top
+@ct : 110
+@ct : 148
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 133
+template_name : sublink+label_text
+@ct : 110
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 134
+template_name : sublink+shop_lbs
+@ct : 110
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 135
+template_name : sublink+shop_lbs+label_text
+@ct : 110
+@ct : 116
+@ct : 117
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 136
+template_name : sublink+multi_text
+@ct : 108
+@ct : 110
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 137
+template_name : sublink+multi_text+multi_img_three_top
+@ct : 108
+@ct : 110
+@ct : 148
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 138
+template_name : sublink+tag_text
+@ct : 110
+@ct : 114
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+[@templ]
+template_id : 139
+template_name : icon_link
+@ct : 112
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+
+[@templ]
+template_id : 140
+template_name : icon_link+multi_img_three_top
+@ct : 112
+@ct : 148
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 141
+template_name : icon_link+grid_list
+@ct : 112
+@ct : 157
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 142
+template_name : icon_link+shop_lbs
+@ct : 112
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 143
+template_name : icon_link+multi_text
+@ct : 108
+@ct : 112
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 144
+template_name : img_wall
+@ct : 139
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 145
+template_name : multi_img+label_text
+@ct : 117
+@ct : 121
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+
+
+
+############################## 左侧模板 ##############################
+[@templ]
+template_id : 146
+template_name : left_img
+@ct : 102
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 147
+template_name : left_img+label_text
+@ct : 102
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 148
+template_name : left_img+link_price
+@ct : 102
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 149
+template_name : left_img+link_price+label_text
+@ct : 102
+@ct : 117
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 150
+template_name : left_img+shop_lbs
+@ct : 102
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 151
+template_name : left_img+shop_lbs+label_text
+@ct : 102
+@ct : 116
+@ct : 117
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 152
+template_name : left_img+multi_text
+@ct : 102
+@ct : 108
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 153
+template_name : left_img+tag_text
+@ct : 102
+@ct : 114
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 154
+template_name : left_img+tag_text+link_price
+@ct : 102
+@ct : 114
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 155
+template_name : left_img+info
+@ct : 102
+@ct : 115
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 156
+template_name : left_img+info+label_text
+@ct : 102
+@ct : 115
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 157
+template_name : left_img+info+shop_lbs
+@ct : 102
+@ct : 115
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 158
+template_name : left_img+icon_info
+@ct : 102
+@ct : 119
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 159
+template_name : left_img+icon_info+label_text
+@ct : 102
+@ct : 117
+@ct : 119
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 160
+template_name : left_img+icon_info+link_price
+@ct : 102
+@ct : 119
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 161
+template_name : left_img+icon_info+shop_lbs
+@ct : 102
+@ct : 116
+@ct : 119
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 162
+template_name : left_img+link
+@ct : 102
+@ct : 133
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 163
+template_name : left_img+link+shop_lbs
+@ct : 102
+@ct : 116
+@ct : 133
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 164
+template_name : left_img+link+multi_text
+@ct : 102
+@ct : 108
+@ct : 133
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 165
+template_name : left_img+tag_sublink
+@ct : 102
+@ct : 111
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 166
+template_name : left_img+tag_sublink+shop_lbs
+@ct : 102
+@ct : 111
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 167
+template_name : left_img+tag_sublink+multi_text
+@ct : 102
+@ct : 108
+@ct : 111
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 168
+template_name : left_img+sublink
+@ct : 102
+@ct : 110
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 169
+template_name : left_img+sublink+shop_lbs
+@ct : 102
+@ct : 110
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 170
+template_name : left_img+sublink+multi_text
+@ct : 102
+@ct : 108
+@ct : 110
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 4
+
+[@templ]
+template_id : 171
+template_name : left_img+sublink+tag_text
+@ct : 102
+@ct : 110
+@ct : 114
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 4
+
+[@templ]
+template_id : 172
+template_name : left_img+icon_link
+@ct : 102
+@ct : 112
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 173
+template_name : left_img+icon_link+shop_lbs
+@ct : 102
+@ct : 112
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 174
+template_name : left_img+icon_link+multi_text
+@ct : 102
+@ct : 108
+@ct : 112
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 175
+template_name : left_img+icon_link+tag_text
+@ct : 102
+@ct : 112
+@ct : 114
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+
+
+############################## 右侧模板 ##############################
+[@templ]
+template_id : 176
+template_name : button
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 177
+template_name : button+label_text
+@ct : 117
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 178
+template_name : button+link_price
+@ct : 118
+@ct : 122
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 179
+template_name : button+link_price+label_text
+@ct : 117
+@ct : 118
+@ct : 122
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 180
+template_name : button+shop_lbs
+@ct : 116
+@ct : 118
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 181
+template_name : button+shop_lbs+label_text
+@ct : 116
+@ct : 117
+@ct : 118
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 182
+template_name : button+multi_text
+@ct : 108
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 183
+template_name : button+tag_text
+@ct : 114
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 184
+template_name : button+tag_text+link_price
+@ct : 114
+@ct : 118
+@ct : 122
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 185
+template_name : button+info
+@ct : 115
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 186
+template_name : button+info+shop_lbs
+@ct : 115
+@ct : 116
+@ct : 118
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 187
+template_name : button+icon_info
+@ct : 118
+@ct : 119
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 188
+template_name : button+icon_info+label_text
+@ct : 117
+@ct : 118
+@ct : 119
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 189
+template_name : button+icon_info+link_price
+@ct : 118
+@ct : 119
+@ct : 122
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 190
+template_name : button+icon_info+shop_lbs
+@ct : 116
+@ct : 118
+@ct : 119
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 191
+template_name : button+link
+@ct : 118
+@ct : 133
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 192
+template_name : button+link+label_text
+@ct : 117
+@ct : 118
+@ct : 133
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 193
+template_name : button+link+shop_lbs
+@ct : 116
+@ct : 118
+@ct : 133
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 194
+template_name : button+link+multi_text
+@ct : 108
+@ct : 118
+@ct : 133
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 195
+template_name : button+tag_sublink
+@ct : 111
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 196
+template_name : button+tag_sublink+shop_lbs
+@ct : 111
+@ct : 116
+@ct : 118
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 197
+template_name : button+tag_sublink+multi_text
+@ct : 108
+@ct : 111
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 198
+template_name : button+sublink
+@ct : 110
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 199
+template_name : button+sublink+label_text
+@ct : 110
+@ct : 117
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 200
+template_name : button+sublink+shop_lbs
+@ct : 110
+@ct : 116
+@ct : 118
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 201
+template_name : button+sublink+multi_text
+@ct : 108
+@ct : 110
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 1
+
+[@templ]
+template_id : 202
+template_name : button+sublink+tag_text
+@ct : 110
+@ct : 114
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+
+
+############################## 三列模板 ##############################
+[@templ]
+template_id : 203
+template_name : button+left_img
+@ct : 102
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 3
+
+[@templ]
+template_id : 204
+template_name : button+left_img+label_text
+@ct : 102
+@ct : 117
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 3
+
+[@templ]
+template_id : 205
+template_name : button+left_img+appinfo
+@ct : 102
+@ct : 118
+@ct : 127
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 3
+
+[@templ]
+template_id : 206
+template_name : button+left_img+appinfo+star
+@ct : 102
+@ct : 118
+@ct : 127
+@ct : 132
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 3
+
+[@templ]
+template_id : 207
+template_name : button+left_img+tag_text
+@ct : 102
+@ct : 114
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 3
+
+[@templ]
+template_id : 208
+template_name : button+left_img+icon_info
+@ct : 102
+@ct : 118
+@ct : 119
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 2
+
+[@templ]
+template_id : 209
+template_name : button+left_img+icon_info+label_text
+@ct : 102
+@ct : 117
+@ct : 118
+@ct : 119
+@opt_ct: 109
+@opt_ct: 141
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 2
+
+
+
+############################## 首位模板 ##############################
+[@templ]
+template_id : 210
+template_name : list
+@ct : 120
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 211
+template_name : list+label_text
+@ct : 117
+@ct : 120
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 212
+template_name : list+shop_lbs
+@ct : 116
+@ct : 120
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 213
+template_name : list+multi_text
+@ct : 108
+@ct : 120
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 214
+template_name : info+shop_lbs+label_text
+@ct : 115
+@ct : 116
+@ct : 117
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+fixed_trunc_num : 1
+[..desc_trunc_expand]
+fixed_trunc_num : 1
+
+[@templ]
+template_id : 215
+template_name : icon_info+shop_lbs+label_text
+@ct : 116
+@ct : 117
+@ct : 119
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+fixed_trunc_num : 1
+[..desc_trunc_expand]
+fixed_trunc_num : 1
+
+[@templ]
+template_id : 216
+template_name : multi_img_three
+@ct : 147
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 217
+template_name : multi_img_three+label_text
+@ct : 117
+@ct : 147
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 218
+template_name : multi_img_three+multi_text
+@ct : 108
+@ct : 147
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 219
+template_name : multi_img_four
+@ct : 146
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 220
+template_name : multi_img_four+label_text
+@ct : 117
+@ct : 146
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 221
+template_name : multi_img_four+link_price
+@ct : 122
+@ct : 146
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 222
+template_name : multi_img_four+shop_lbs
+@ct : 116
+@ct : 146
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 223
+template_name : multi_img_four+multi_text
+@ct : 108
+@ct : 146
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 224
+template_name : multi_img
+@ct : 121
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 225
+template_name : multi_img+link_price
+@ct : 121
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 226
+template_name : multi_img+shop_lbs
+@ct : 116
+@ct : 121
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 227
+template_name : multi_img+multi_text
+@ct : 108
+@ct : 121
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 228
+template_name : banner
+@ct : 145
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 3
+
+[@templ]
+template_id : 229
+template_name : banner+link
+@ct : 133
+@ct : 145
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 230
+template_name : banner+tag_sublink
+@ct : 111
+@ct : 145
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 231
+template_name : banner+sublink
+@ct : 110
+@ct : 145
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 232
+template_name : banner+icon_link
+@ct : 112
+@ct : 145
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 233
+template_name : left_img+drop_down_btn+label_text
+@ct : 102
+@ct : 117
+@ct : 138
+@opt_ct: 126
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 234
+template_name : left_img+link+label_text
+@ct : 102
+@ct : 117
+@ct : 133
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 4
+
+[@templ]
+template_id : 235
+template_name : left_img+link+shop_lbs+label_text
+@ct : 102
+@ct : 116
+@ct : 117
+@ct : 133
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 236
+template_name : left_img+tag_sublink+link_price
+@ct : 102
+@ct : 111
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 237
+template_name : left_img+tag_sublink+tag_text
+@ct : 102
+@ct : 111
+@ct : 114
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 238
+template_name : left_img+tag_sublink+tag_text+link_price
+@ct : 102
+@ct : 111
+@ct : 114
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 239
+template_name : left_img+sublink+label_text
+@ct : 102
+@ct : 110
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 240
+template_name : left_img+sublink+link_price
+@ct : 102
+@ct : 110
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 241
+template_name : left_img+sublink+shop_lbs+label_text
+@ct : 102
+@ct : 110
+@ct : 116
+@ct : 117
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 242
+template_name : left_img+sublink+tag_text+link_price
+@ct : 102
+@ct : 110
+@ct : 114
+@ct : 122
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 243
+template_name : left_img+sublink+info
+@ct : 102
+@ct : 110
+@ct : 115
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 244
+template_name : left_img+sublink+info+label_text
+@ct : 102
+@ct : 110
+@ct : 115
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 245
+template_name : left_img+sublink+info+shop_lbs
+@ct : 102
+@ct : 110
+@ct : 115
+@ct : 116
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 246
+template_name : left_img+icon_link+label_text
+@ct : 102
+@ct : 112
+@ct : 117
+@opt_ct: 109
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 247
+template_name : left_img+icon_link+shop_lbs+label_text
+@ct : 102
+@ct : 112
+@ct : 116
+@ct : 117
+@opt_ct: 126
+@opt_ct: 141
+@opt_ct: 134
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 3
+
+[@templ]
+template_id : 248
+template_name : button+left_img+link
+@ct : 102
+@ct : 118
+@ct : 133
+@opt_ct: 109
+@opt_ct: 141
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 4
+
+[@templ]
+template_id : 249
+template_name : button+left_img+link+label_text
+@ct : 102
+@ct : 117
+@ct : 118
+@ct : 133
+@opt_ct: 109
+@opt_ct: 141
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 4
+
+[@templ]
+template_id : 250
+template_name : button+left_img+link+multi_text
+@ct : 102
+@ct : 108
+@ct : 118
+@ct : 133
+@opt_ct: 109
+@opt_ct: 141
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 3
+
+[@templ]
+template_id : 251
+template_name : button+left_img+tag_sublink
+@ct : 102
+@ct : 111
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 4
+
+[@templ]
+template_id : 252
+template_name : button+left_img+tag_sublink+tag_text
+@ct : 102
+@ct : 111
+@ct : 114
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 4
+
+[@templ]
+template_id : 253
+template_name : button+left_img+sublink
+@ct : 102
+@ct : 110
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 4
+
+[@templ]
+template_id : 254
+template_name : button+left_img+sublink+label_text
+@ct : 102
+@ct : 110
+@ct : 117
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 4
+
+[@templ]
+template_id : 255
+template_name : button+left_img+sublink+tag_text
+@ct : 102
+@ct : 110
+@ct : 114
+@ct : 118
+@opt_ct: 109
+@opt_ct: 141
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 6
+row_num : 4
+[..desc_trunc_expand]
+grid_num : 6
+row_num : 4
+
+
+
+############################## 特殊模板 ##############################
+[@templ]
+template_id : 500
+template_name : special_2189
+@ct : 328
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 10
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 10
+row_num : 3
+
+[@templ]
+template_id : 501
+template_name : special_2188
+@ct : 327
+@opt_ct: 126
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 10
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 10
+row_num : 3
+
+[@templ]
+template_id : 502
+template_name : special_2188+icon_link
+@ct : 112
+@ct : 327
+@opt_ct: 126
+@opt_ct: 134
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 10
+row_num : 3
+[..desc_trunc_expand]
+grid_num : 10
+row_num : 3
+
+[@templ]
+template_id : 503
+template_name : special_zhanwang_9014
+@ct : 325
+@opt_ct: 126
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 504
+template_name : special_zhanwang_9012
+@ct : 324
+@opt_ct: 126
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 505
+template_name : special_chujing
+@ct : 314
+@weak_ct_blacklist: 131
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 506
+template_name : special_youxuan
+@ct : 312
+@opt_ct: 126
+@opt_ct: 151
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 507
+template_name : special_ztc
+@ct : 311
+@weak_ct_blacklist: 131
+
+[@templ]
+template_id : 508
+template_name : special_xunke_video
+@ct : 308
+
+[@templ]
+template_id : 509
+template_name : special_xunke_video+left_img
+@ct : 102
+@ct : 308
+[.trunc]
+[..desc_trunc]
+grid_num : 9
+row_num : 2
+[..desc_trunc_expand]
+grid_num : 9
+row_num : 2
+
+[@templ]
+template_id : 510
+template_name : special_xunke
+@ct : 307
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+
+[@templ]
+template_id : 511
+template_name : special_fuwuyuan_oneline
+@ct : 326
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+[.trunc]
+[..desc_trunc]
+grid_num : 12
+row_num : 1
+[..desc_trunc_expand]
+grid_num : 12
+row_num : 1
+
+[@templ]
+template_id : 512
+template_name : special_fuwuyuan
+@ct : 306
+[.showrule]
+[..@src_rank_rule]
+src : 160
+rank : 1
+[..@src_rank_rule]
+src : 111
+rank : 1
+

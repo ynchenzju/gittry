@@ -1,0 +1,71 @@
+# node和opera的规则说明                                         
+#   node规则用于非opera托管模块的diffgen规则定义                
+#   opera规则用于opera托管模块的diffgen规则定义                 
+#   两者的定义的正则表达格式一致, 沿用node的正则定义模式        
+                                                                
+# NOTICE: <IMPORTANT>                                           
+#   node定义的语句在opera部署时, 不会生效; 同样地, opera定义的语句 
+#   在非opera部署时, 不会生效                                   
+ 
+# opera平台默认规则                                             
+# @isp, @platform 是opera平台默认维护的内置变量                 
+# 表示当前实例所在的逻辑机房和平台名字 
+# 它和 __group_index 的使用方法一致 
+# 因此用户自定义的变量不要和内置变量冲突                        
+# 所以下边许多规则全部可以删除,收敛到这一条默认规则中           
+# 也即ranker默认连接本机房/本平台的下游 
+# 这样能简化diffgen的写法,自适应离线的qa测试环境搭建
+# 也方便后续扩展新机房的时候不用再修改diffgen
+
+all do
+    @use_chunhua = 1
+    @use_urlserver = 1
+    @use_nks = 1
+    @use_esproxy = 1
+    @use_dmp = 1
+    @use_feed_bs = 0
+    @use_kaiwu_ei = 0
+    @use_snas = 1
+    @ranker_default_platform = 'n'
+    @upin_default_platform = 'n'
+    @snas_default_platform = 'n'
+end
+
+##### ranker diff ############
+opera 'd' do
+    @ranker_default_platform = @platform
+end
+
+
+##### esproxy e5 diff #############
+opera 'e5' do
+    @use_esproxy = 1
+end
+
+opera 'd8' do
+    @use_esproxy = 1
+end
+
+##### esproxy d8 diff #############
+opera 'e9' do
+    @use_esproxy = 1
+end
+
+##### snas diff ############
+opera 'd3' do
+    @snas_default_platform = 'd0'
+end
+
+##### upin diff ##################
+opera 'd2' do
+    @upin_default_platform = 'd0'
+end
+
+all do 
+  @hfbs_default_platform = 'd0'
+end
+
+opera 'bp' do
+  @hfbs_default_platform = 'n'
+end 
+

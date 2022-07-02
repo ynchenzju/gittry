@@ -1,0 +1,38 @@
+#medical mid page product plugin after mnerge
+[@feed_product_stra_desc]
+@product_name:medical_mid_page
+alive:1
+
+#计算sortscore  不用关心bsq这个名字... 不用管这个名字... 不用... 
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:bsq_bid_mt_ratio_sort
+alive:1
+[..plugin_params]
+[...bsq_bid_mt_ratio_for_sort]
+default_ratio:1.0
+
+#同台展现控制 userid级别控制
+[.@plugin_desc]
+plugin_instance_id:2
+plugin_name:advlist_id_dedup
+alive:1
+[..plugin_params]
+adv_level_key_name:user_id
+
+#二价计费
+[.@plugin_desc]
+plugin_instance_id:3
+plugin_name:gsp_calc_price
+alive:1
+[..plugin_params]
+default_min_price : 1
+
+#广告队列截断
+[.@plugin_desc]
+plugin_instance_id:4
+plugin_name:truncate_advlist_general
+alive:1
+[..plugin_params]
+truncate_adv_num:24
+#end medical mid page product

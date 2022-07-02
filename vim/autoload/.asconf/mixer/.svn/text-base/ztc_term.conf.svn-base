@@ -1,0 +1,3 @@
+ztcterm_max_dict_size : 100000
+ztcterm_dm_pack_size : 2048
+ztc_term_file : ./data/pl/a_comm/ztc_term.txt

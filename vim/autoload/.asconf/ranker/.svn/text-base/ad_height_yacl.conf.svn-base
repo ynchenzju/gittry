@@ -1,0 +1,298 @@
+@ignore_mts: 1001
+@ignore_mts: 1019
+@ignore_mts: 1058
+@ignore_mts: 3020
+@ignore_mts: 3174
+@ignore_mts: 3400
+@ignore_mts: 3410
+@ignore_mts: 3509
+@ignore_mts: 3601
+@ignore_mts: 99999
+@ignore_mts: 99999
+@ignore_mts: 99999
+@ignore_mts: 99999
+@ignore_mts: 2023
+@ignore_mts: 2033
+@ignore_mts: 3162
+@ignore_mts: 2015
+@ignore_mts: 2001
+@ignore_mts: 2009
+@ignore_mts: 2038
+@ignore_mts: 1017
+@ignore_mts: 1013
+@ignore_mts: 2011
+@ignore_mts: 2045
+@ignore_mts: 2051
+@ignore_mts: 2055
+@ignore_mts: 2056
+@ignore_mts: 2064
+@ignore_mts: 2082
+@ignore_mts: 2083
+@ignore_mts: 3135
+@ignore_mts: 2139
+@ignore_mts: 2158
+@ignore_mts: 2159
+
+
+
+[height_ctrl]
+@take_effect_asn_list : 1
+@take_effect_asn_list : 2
+@take_effect_asn_list : 3
+screen_height_occupy_pixel : 111
+screen_height_occupy_pixel_baiduapp : 19
+screen_height_occupy_pixel_baidubws : 52
+@cuttable_mts : 3037
+@cuttable_mts : 3034
+@cuttable_mts : 3035
+@cuttable_mts : 2163
+@cuttable_mts : 1060
+@cuttable_mts : 2165
+@cuttable_mts : 3335
+@cuttable_mts : 3221
+@cuttable_mts : 3223
+@cuttable_mts : 3224
+@cuttable_mts : 3017
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 3151
+@cuttable_mts : 3152
+@cuttable_mts : 3142
+@cuttable_mts : 1047
+@cuttable_mts : 3122
+@cuttable_mts : 3160
+@cuttable_mts : 3136
+@cuttable_mts : 2034
+@cuttable_mts : 3138
+@cuttable_mts : 3039
+@cuttable_mts : 3021
+@cuttable_mts : 3149
+@cuttable_mts : 2063
+@cuttable_mts : 2088
+@cuttable_mts : 2086
+@cuttable_mts : 2093
+@cuttable_mts : 2092
+@cuttable_mts : 2091
+@cuttable_mts : 2102
+@cuttable_mts : 2103
+@cuttable_mts : 2104
+@cuttable_mts : 2138
+@cuttable_mts : 2096
+@cuttable_mts : 3141
+@cuttable_mts : 3128
+@cuttable_mts : 3010
+@cuttable_mts : 3008
+@cuttable_mts : 3051
+@cuttable_mts : 3004
+@cuttable_mts : 3540
+@cuttable_mts : 3227
+@cuttable_mts : 3229
+@cuttable_mts : 11013
+@cuttable_mts : 11016
+@cuttable_mts : 11019
+@cuttable_mts : 11026
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+@cuttable_mts : 99999
+cpm_reduce_thresh_percent : 2.0
+default_height_limit : 327
+min_height_limit : 200
+height_limit_ratio : 1.0
+check_best_cpm : 0
+using_bid_for_cpm : 1
+@avoid_mt_list : 3175
+@avoid_mt_list : 3180
+@avoid_mt_list : 3199
+@avoid_mt_list : 22506
+@avoid_mt_list : 22510
+@avoid_mt_list : 22511
+@avoid_mt_list : 31508
+@avoid_mt_list : 3430
+@avoid_mt_list : 31509
+@avoid_mt_list : 31503
+@avoid_mt_list : 31504
+@avoid_mt_list : 31507
+@avoid_mt_list : 31513
+@avoid_src_list : 828
+@avoid_src_list : 830
+@avoid_src_list : 99999
+@avoid_src_list : 99999
+@avoid_src_list : 99999
+@avoid_src_list : 99999
+@avoid_src_list : 99999
+@avoid_src_list : 99999
+@avoid_src_list : 99999
+@avoid_src_list : 99999
+@clearup_src_list : 872
+@clearup_src_list : 878
+@clearup_src_list : 876
+@clearup_src_list : 877
+@clearup_src_list : 926
+@clearup_src_list : 927
+@clearup_src_list : 99999
+@clearup_src_list : 99999
+@clearup_src_list : 99999
+@clearup_src_list : 99999
+cpm_reduce_thresh_num : 12
+screen_height_delta_pixel : 0
+height_limit_delta_pixel_before_apr : 6
+height_limit_delta_pixel_after_apr : 0
+card_space_pixel : 10
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 0
+@bws_occupy_pixel : 33
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@bws_occupy_pixel : 92
+@uncuttable_src_list : 99999
+@uncuttable_src_list : 99999
+@uncuttable_src_list : 963
+@uncuttable_src_list : 964
+@up_src_list : 160
+@up_src_list : 872
+@up_src_list : 876
+@up_src_list : 828
+@up_src_list : 926
+@up_src_list : 963
+@up_src_list : 867
+@up_src_list : 869
+@up_src_list : 1013
+@up_src_list : 1020
+@up_src_list : 1017
+@up_src_list : 1019
+@up_src_list : 111
+@up_src_list : 878
+@up_src_list : 877
+@up_src_list : 830
+@up_src_list : 927
+@up_src_list : 964
+@up_src_list : 1260
+@up_src_list : 1261
+@up_src_list : 99999
+@up_src_list : 99999
+@up_src_list : 99999
+@up_src_list : 99999
+cutmt_adhq_decay : 0.9
+cpm_reduce_thresh_num_asq : 12
+@avoid_mt_list_v2 : 99999
+@avoid_src_list_v2 : 1129
+@avoid_src_list_v2 : 1130
+@avoid_src_list_v2 : 99999
+screen_rotation_thres : 1
+max_msa_pbt : 120
+screen_height_limit_lower : 300
+screen_height_limit_upper : 900
+normal_msa_zoom_lower : 900
+normal_msa_zoom_upper : 1200
+
+random_cut_youxuan : 0
+random_cut_youxuan_ratio : 0
+@ppim_asn_cpm_reduce_thr_ubmq : 12
+@ppim_asn_cpm_reduce_thr_ubmq : 18
+@ppim_asn_cpm_reduce_thr_ubmq : 6
+@ppim_asn_cpm_reduce_thr_ubmq : 6
+@ppim_asn_cpm_reduce_thr_asq : 12
+@ppim_asn_cpm_reduce_thr_asq : 18
+@ppim_asn_cpm_reduce_thr_asq : 6
+@ppim_asn_cpm_reduce_thr_asq : 6
+@up_asn_cpm_reduce_thr_ubmq : 12
+@up_asn_cpm_reduce_thr_ubmq : 18
+@up_asn_cpm_reduce_thr_ubmq : 6
+@up_asn_cpm_reduce_thr_ubmq : 6
+@up_asn_cpm_reduce_thr_asq : 12
+@up_asn_cpm_reduce_thr_asq : 18
+@up_asn_cpm_reduce_thr_asq : 6
+@up_asn_cpm_reduce_thr_asq : 6
+[basic_height]
+basic_ad_height : 118
+title_height : 26
+desc_height : 22
+sublink_height : 18
+
+[apr_ctrl]
+apr_thr : 0.99
+
+[prod_height]
+@youxuan_card_height : 140
+@youxuan_card_height : 122
+@youxuan_card_height : 41
+@youxuan_card_height : 122
+@youxuan_card_height : 122
+youxuan_card_cpm_ratio_asq : 0.000001
+youxuan_card_cpm_ratio_ubmq : 0.000001
+youxuan_card_cpm_min : 0.1
+youxuan_card_cpm_max : 10
+@ubmq_src_white_list : 160
+@ubmq_src_white_list : 111
+@ubmq_src_white_list : 99001
+
+[@share_card_mt_weight]
+mt_id : 3158
+@weight : 0.5
+@weight : 0.25
+@weight : 0.15
+@weight : 0.1
+[@share_card_mt_weight]
+mt_id : 2141
+@weight : 0.5
+@weight : 0.3
+@weight : 0.2
+[@share_card_mt_weight]
+mt_id : 11003
+@weight : 0.5
+@weight : 0.3
+@weight : 0.2
+[@share_card_mt_weight]
+mt_id : 22505
+@weight : 0.5
+@weight : 0.3
+@weight : 0.2
+[@share_card_mt_weight]
+mt_id : 22507
+@weight : 0.5
+@weight : 0.3
+@weight : 0.2
+[@share_card_mt_weight]
+mt_id : 22514
+@weight : 0.5
+@weight : 0.3
+@weight : 0.2
+
+[@share_card_mt_weight]
+mt_id : 9999
+@weight : 0.5
+@weight : 0.3
+@weight : 0.2
+[@share_card_mt_weight]
+mt_id : 9999
+@weight : 0.5
+@weight : 0.3
+@weight : 0.2
+
+[cut_premium_mt_info]
+cut_premium_mt_truncate_bid_type : 0
+cut_premium_mt_price_truncate_ratio : 1.0
+cut_premium_mt_badcase_ratio : 1.0
+cut_premium_mt_badcase_thr : 0

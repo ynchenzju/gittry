@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/app/ecom/im/!svn/ver/438940/trunk/production/prod/mixer/conf/mixer
+END
+xiaoming_stable.conf
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/app/ecom/im/!svn/ver/156993/trunk/production/prod/mixer/conf/mixer/xiaoming_stable.conf
+END
+xiaoming_bak.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/156993/trunk/production/prod/mixer/conf/mixer/xiaoming_bak.conf
+END
+mixer_cuxuan_log.conf
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/app/ecom/im/!svn/ver/437704/trunk/production/prod/mixer/conf/mixer/mixer_cuxuan_log.conf
+END
+ac_component_config.conf
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/app/ecom/im/!svn/ver/258765/trunk/production/prod/mixer/conf/mixer/ac_component_config.conf
+END
+action_ads_htk.conf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/app/ecom/im/!svn/ver/233398/trunk/production/prod/mixer/conf/mixer/action_ads_htk.conf
+END
+xiaoming.conf
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/app/ecom/im/!svn/ver/208863/trunk/production/prod/mixer/conf/mixer/xiaoming.conf
+END
+medical_adv_config.conf
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/438940/trunk/production/prod/mixer/conf/mixer/medical_adv_config.conf
+END
+ub_monitor.conf
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/app/ecom/im/!svn/ver/180129/trunk/production/prod/mixer/conf/mixer/ub_monitor.conf
+END
+action_ads_doctor.conf
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/app/ecom/im/!svn/ver/186526/trunk/production/prod/mixer/conf/mixer/action_ads_doctor.conf
+END
+sf_monitor.conf
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/app/ecom/im/!svn/ver/208845/trunk/production/prod/mixer/conf/mixer/sf_monitor.conf
+END
+comlog.conf
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/app/ecom/im/!svn/ver/297623/trunk/production/prod/mixer/conf/mixer/comlog.conf
+END
+generic_brand.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/app/ecom/im/!svn/ver/285716/trunk/production/prod/mixer/conf/mixer/generic_brand.conf
+END
+action_ads_plastic.conf
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/169290/trunk/production/prod/mixer/conf/mixer/action_ads_plastic.conf
+END

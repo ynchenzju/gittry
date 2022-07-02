@@ -1,0 +1,12 @@
+max_session_query_num : 10
+session_query_thres : 0.0
+max_bidword_num : 20
+dft_unit_thres : 0.5
+spear_bidwords_xbox_table_name : spear-bidwords
+spear_bidwords_key_prefix : spear
+nt_bidwords_key_prefix : nt
+dft_inceptionq_factor : 1.5
+dft_clickq_thres : 0.68
+session_filter_thres : 0.6
+insight_age_weight_thr : 50
+insight_gender_weight_thr : 50

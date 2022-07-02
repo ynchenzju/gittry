@@ -1,0 +1,87 @@
+# node和opera的规则说明                                         
+#   node规则用于非opera托管模块的diffgen规则定义                
+#   opera规则用于opera托管模块的diffgen规则定义                 
+#   两者的定义的正则表达格式一致, 沿用node的正则定义模式        
+                                                                
+# NOTICE: <IMPORTANT>                                           
+#   node定义的语句在opera部署时, 不会生效; 同样地, opera定义的语句 
+#   在非opera部署时, 不会生效                                   
+ 
+# opera平台默认规则                                             
+# @isp, @platform 是opera平台默认维护的内置变量                 
+# 表示当前实例所在的逻辑机房和平台名字 
+# 它和 __group_index 的使用方法一致 
+# 因此用户自定义的变量不要和内置变量冲突                        
+# 所以下边许多规则全部可以删除,收敛到这一条默认规则中           
+# 也即ranker默认连接本机房/本平台的下游 
+# 这样能简化diffgen的写法,自适应离线的qa测试环境搭建
+# 也方便后续扩展新机房的时候不用再修改diffgen
+
+all do
+  @retras_isp = @isp
+  @retras_platform = @platform
+end 
+
+###### retras diff ########
+opera 'gzns' do
+  @retras_isp = 'gzhxy'
+end
+
+opera 'ecj' do
+  @retras_isp = 'nj'
+end
+
+opera 'img+ecj' do
+  @retras_isp = 'ecj'
+end
+
+opera '[n,d]' do
+  @retras_platform = 'd4'
+end
+
+opera '[n,d]+[cu,cm]' do
+  @retras_isp = 'ct'
+end
+
+opera 'e' do
+  @retras_platform = 'ps'
+end
+
+
+opera 'e5' do
+  @retras_platform = 'e5'
+end
+
+opera 'e5+[cu,cm]' do
+  @retras_isp = 'ct'
+end
+
+
+opera '[bp,bpoff]' do
+  @retras_isp = 'bj'
+end
+
+opera 'syssurvey' do
+  @retras_isp = 'bj'
+  @retras_platform = 'bpoff'
+end
+
+opera '[deptest]' do
+  @retras_isp = 'bj'
+  @retras_platform = 'bp'
+end
+
+opera 'adsbp,bid' do
+  @retras_platform = 'ads'
+end
+
+opera 'img+ct' do
+  @retras_isp = 'cm'
+end
+
+
+node 'bpoff' do
+  @retras_isp = 'bj'
+  @retras_platform = 'bpoff'
+end
+

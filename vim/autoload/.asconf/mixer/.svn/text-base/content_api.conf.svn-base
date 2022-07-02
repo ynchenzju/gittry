@@ -1,0 +1,55 @@
+max_pack_memory_cost : 409600
+is_log_process_time : 1
+default_response_timeout : 100000
+max_pack_size : 10
+max_item_num_per_pack : 60
+max_worker_num : 0
+max_pack_in_call_thread : 10
+
+[ContentApi]
+GSTRANSPORT_CONFFILE : ./conf/content_api_gstransport.conf
+[.@COS]
+name : contentadu
+communication_name : imas2contentadu
+platform_tag : exp_platform
+default_platform : n
+[..@Service]
+service_name : fc_pic_single
+[..@Service]
+service_name : fc_pic_multi
+[..@Service]
+service_name : content_server_prospect_wise
+[..@Service]
+service_name : content_server_jingxiu
+[..@Service]
+service_name : content_server_pre_knowledge
+
+[.@COS]
+name : contentactionads
+communication_name : imas2contentactionads
+platform_tag : exp_platform
+default_platform : n
+[..@Service]
+service_name : action_ads_medical
+[..@Service]
+service_name : action_ads_process
+
+[.@COS]
+name : contentztc
+communication_name : imas2contentztc
+platform_tag : exp_platform
+default_platform : n
+[..@Service]
+service_name : ztc_content
+
+[.@COS]
+name : contentpa
+communication_name : imas2contentpa
+platform_tag : exp_platform
+default_platform : n
+[..@Service]
+service_name : content_server_pa_xbox_material
+[..@Service]
+service_name : content_server_pa_newstyle_material
+[..@Service]
+service_name : content_server_pa_product_material

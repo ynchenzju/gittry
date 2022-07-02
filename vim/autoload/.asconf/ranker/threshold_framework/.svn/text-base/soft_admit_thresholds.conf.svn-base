@@ -1,0 +1,635 @@
+[@soft_thrs]
+strategy_name : rigq_soft_admit_filter
+[.@adpos_thrs]
+ad_pos : WISE_PPIM
+remit_q : 0.295
+k : 2000
+[..@adv_thrs]
+key : STRICT_MEDICAL_ADV
+adv_tag : STRICT_MEDICAL_ADV
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+
+key : WISE_PPIM_UNION_LU
+flow_src_type : UNION
+adv_tag : LU
+ratio : 1.0
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_HIGH_QUALITY_ADV
+flow_src_type : BAIDU
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_HIGH_QUALITY_ADV
+flow_src_type : UNION
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0.0
+bias : 0.0
+[..@adv_thrs]
+
+key : BAIDU_PPIM_CHUNHUA
+flow_src_type : BAIDU
+adv_tag : CHUNHUA
+ratio : 0.2
+bias : -5.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+
+key : UNION_PPIM_CHUNHUA
+flow_src_type : UNION
+adv_tag : CHUNHUA
+ratio : 0.3
+bias : -5.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+
+key : BAIDU_PPIM_WATER_DROP
+flow_src_type : BAIDU
+adv_tag : WATER_DROP
+ratio : 1
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+
+key : UNION_PPIM_WATER_DROP
+flow_src_type : UNION
+adv_tag : WATER_DROP
+ratio : 1
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PPIM_PLA
+flow_src_type : BAIDU
+adv_tag : PLA
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PPIM_PLA
+flow_src_type : UNION
+adv_tag : PLA
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PPIM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PPIM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[.@adpos_thrs]
+ad_pos : PC_PPIM
+remit_q : 0.27
+k : 750
+[..@adv_thrs]
+
+key : PC_PPIM_UNION_LU
+flow_src_type : UNION
+adv_tag : LU
+ratio : 0.073333
+bias : 0.2751
+is_calc_reserve_price : 1
+[..@adv_thrs]
+
+key : BAIDU_PC_PPIM_WATER_DROP
+flow_src_type : BAIDU
+adv_tag : WATER_DROP
+ratio : 1
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+
+key : UNION_PC_PPIM_WATER_DROP
+flow_src_type : UNION
+adv_tag : WATER_DROP
+ratio : 1
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PC_PPIM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PC_PPIM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 0.073333
+bias : 0.2751
+is_calc_reserve_price : 1
+[.@adpos_thrs]
+ad_pos : PC_PP
+remit_q : 0.27
+k : 750
+[..@adv_thrs]
+
+key : PC_PP_UNION_LU
+flow_src_type : UNION
+adv_tag : LU
+ratio : 0.073333
+bias : 0.2751
+is_calc_reserve_price : 1
+[..@adv_thrs]
+
+key : BAIDU_PC_PP_WATER_DROP
+flow_src_type : BAIDU
+adv_tag : WATER_DROP
+ratio : 1
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+
+key : UNION_PC_PP_WATER_DROP
+flow_src_type : UNION
+adv_tag : WATER_DROP
+ratio : 1
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PC_PP_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PC_PP_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 0.073333
+bias : 0.2751
+is_calc_reserve_price : 1
+[.@adpos_thrs]
+ad_pos : WISE_MIXADS
+remit_q : 0.26
+k : 200
+[..@adv_thrs]
+key : HIGH_QUALITY_FENGCHAO
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : MIX_HIGH_QUALITY_FENGCHAO
+adv_tag : MIX_HIGH_QUALITY_ADV
+ratio : 0
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_MIXADS_FENGCHAO
+adv_tag : FENGCHAO
+flow_src_type : BAIDU
+ratio : 1
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_MIXADS_FENGCHAO
+adv_tag : FENGCHAO
+flow_src_type : UNION
+ratio : 0.55
+bias : 8.65
+is_calc_reserve_price : 1
+[@soft_thrs]
+strategy_name : ubmq_soft_admit_filter
+[.@adpos_thrs]
+ad_pos : WISE_PPIM
+remit_q : 0.06
+k : 400
+[..@adv_thrs]
+key : STRICT_MEDICAL_ADV
+adv_tag : STRICT_MEDICAL_ADV
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+
+key : WISE_PPIM_UNION_LU
+flow_src_type : UNION
+adv_tag : LU
+ratio : 0.175
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_HIGH_QUALITY_ADV
+flow_src_type : BAIDU
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_HIGH_QUALITY_ADV
+flow_src_type : UNION
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0.0
+bias : 0.0
+[..@adv_thrs]
+
+key : BAIDU_PPIM_CHUNHUA
+flow_src_type : BAIDU
+adv_tag : CHUNHUA
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+
+key : UNION_PPIM_CHUNHUA
+flow_src_type : UNION
+adv_tag : CHUNHUA
+ratio : 0.175
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PPIM_PLA
+flow_src_type : BAIDU
+adv_tag : PLA
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PPIM_PLA
+flow_src_type : UNION
+adv_tag : PLA
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PPIM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PPIM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 0.175
+bias : 0.0
+is_calc_reserve_price : 1
+[.@adpos_thrs]
+ad_pos : PC_PPIM
+remit_q : 0.03
+k : 80
+[..@adv_thrs]
+
+key : PC_PPIM_UNION_LU
+flow_src_type : UNION
+adv_tag : LU
+ratio : 0.625
+bias : -0.5
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PC_PPIM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PC_PPIM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 0.625
+bias : -0.5
+is_calc_reserve_price : 1
+[.@adpos_thrs]
+ad_pos : PC_PP
+remit_q : 0.03
+k : 80
+[..@adv_thrs]
+
+key : PC_PP_UNION_LU
+flow_src_type : UNION
+adv_tag : LU
+ratio : 0.625
+bias : -0.5
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PC_PP_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PC_PP_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 0.625
+bias : -0.5
+is_calc_reserve_price : 1
+[.@adpos_thrs]
+ad_pos : WISE_MIXADS
+remit_q : 0.048
+k : 85
+[..@adv_thrs]
+key : HIGH_QUALITY_FENGCHAO
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : MIX_HIGH_QUALITY_FENGCHAO
+adv_tag : MIX_HIGH_QUALITY_ADV
+ratio : 0
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_MIXADS_FENGCHAO
+adv_tag : FENGCHAO
+flow_src_type : BAIDU
+ratio : 1
+bias : 0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_MIXADS_FENGCHAO
+adv_tag : FENGCHAO
+flow_src_type : UNION
+ratio : 0.94
+bias : -0.72
+is_calc_reserve_price : 1
+[@soft_thrs]
+strategy_name : clickq_soft_admit_filter
+[.@adpos_thrs]
+ad_pos : WISE_PPIM
+remit_q : 0.51
+k : 1720
+[..@adv_thrs]
+key : STRICT_MEDICAL_ADV
+adv_tag : STRICT_MEDICAL_ADV
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+
+key : WISE_PPIM_UNION_LU
+flow_src_type : UNION
+adv_tag : LU
+ratio : 0.454
+bias : 16.2
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_HIGH_QUALITY_ADV
+flow_src_type : BAIDU
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_HIGH_QUALITY_ADV
+flow_src_type : UNION
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0.0
+bias : 0.0
+[..@adv_thrs]
+key : BAIDU_PPIM_CHUNHUA
+flow_src_type : BAIDU
+adv_tag : CHUNHUA
+ratio : 1
+bias : 0.5
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PPIM_CHUNHUA
+flow_src_type : UNION
+adv_tag : CHUNHUA
+ratio : 0.453
+bias : 23.55
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PPIM_PLA
+flow_src_type : BAIDU
+adv_tag : PLA
+ratio : 1
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PPIM_PLA
+flow_src_type : UNION
+adv_tag : PLA
+ratio : 1.0
+bias : 0.0
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PPIM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.1
+bias : 0.5
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PPIM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 0.6
+bias : 16.2
+is_calc_reserve_price : 1
+[.@adpos_thrs]
+ad_pos : PC_PPIM
+remit_q : 0.68
+k : 735
+[..@adv_thrs]
+
+key : PC_PPIM_UNION_LU
+flow_src_type : UNION
+adv_tag : LU
+ratio : 0.469
+bias : 0.5
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : BAIDU_PPIM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.5
+is_calc_reserve_price : 1
+[..@adv_thrs]
+key : UNION_PPIM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 0.469
+bias : 0.5
+is_calc_reserve_price : 1
+[@soft_thrs]
+strategy_name : qlq_soft_admit_minbid_filter
+[.@adpos_thrs]
+ad_pos : WISE_PPIM
+remit_q : 0.65
+k : 2450
+[..@adv_thrs]
+key : STRICT_MEDICAL_ADV
+adv_tag : STRICT_MEDICAL_ADV
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : BAIDU_HIGH_QUALITY_ADV
+flow_src_type : BAIDU
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_HIGH_QUALITY_ADV
+flow_src_type : UNION
+adv_tag : HIGH_QUALITY_ADV
+ratio : 0.0
+bias : 0.0
+[..@adv_thrs]
+key : BAIDU_WISE_PPIM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_WISE_PPIM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 1.020408
+bias : -275
+[..@adv_thrs]
+key : BAIDU_WISE_PPIM_PLA
+flow_src_type : BAIDU
+adv_tag : PLA
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_WISE_PPIM_PLA
+flow_src_type : UNION
+adv_tag : PLA
+ratio : 1.0
+bias : 0.0
+[.@adpos_thrs]
+ad_pos : WISE_IM
+remit_q : 0.56
+k : 2450
+[..@adv_thrs]
+key : STRICT_MEDICAL_ADV
+adv_tag : STRICT_MEDICAL_ADV
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : BAIDU_WISE_IM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_WISE_IM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 1.428571
+bias : -210
+[.@adpos_thrs]
+ad_pos : WISE_PPIM_PV
+remit_q : 0.65
+k : 800
+[..@adv_thrs]
+key : STRICT_MEDICAL_ADV
+adv_tag : STRICT_MEDICAL_ADV
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : BAIDU_WISE_PPIM_PV_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_WISE_PPIM_PV_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 0.0
+bias : 0.0
+[.@adpos_thrs]
+ad_pos : WISE_IM_PV
+remit_q : 0.0
+k : 0.1
+[..@adv_thrs]
+key : STRICT_MEDICAL_ADV
+adv_tag : STRICT_MEDICAL_ADV
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : BAIDU_WISE_IM_PV_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_WISE_IM_PV_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0
+[.@adpos_thrs]
+ad_pos : PC_PPIM
+remit_q : 0.0
+k : 0.1
+[..@adv_thrs]
+key : BAIDU_PC_PPIM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_PC_PPIM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[.@adpos_thrs]
+ad_pos : PC_IM
+remit_q : 0.0
+k : 0.1
+[..@adv_thrs]
+key : BAIDU_PC_IM_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_PC_IM_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[.@adpos_thrs]
+ad_pos : PC_PPIM_PV
+remit_q : 0.0
+k : 0.1
+[..@adv_thrs]
+key : BAIDU_PC_PPIM_PV_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_PC_PPIM_PV_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[.@adpos_thrs]
+ad_pos : PC_IM_PV
+remit_q : 0.0
+k : 0.1
+[..@adv_thrs]
+key : BAIDU_PC_IM_PV_FENGCHAO
+flow_src_type : BAIDU
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0.0
+[..@adv_thrs]
+key : UNION_PC_IM_PV_FENGCHAO
+flow_src_type : UNION
+adv_tag : FENGCHAO
+ratio : 1.0
+bias : 0

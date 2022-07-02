@@ -1,0 +1,24 @@
+[@trade23_filter_control_conf]
+src_id : 920
+is_use_trade2_filter : 1
+is_use_trade3_filter : 1
+trade2_blacklist_id : 1
+trade3_blacklist_id : 1
+[@trade23_filter_control_conf]
+src_id : 921
+is_use_trade2_filter : 1
+is_use_trade3_filter : 1
+trade2_blacklist_id : 1
+trade3_blacklist_id : 1
+[@trade23_filter_control_conf]
+src_id : 1033
+is_use_trade2_filter : 1
+is_use_trade3_filter : 1
+trade2_blacklist_id : 1
+trade3_blacklist_id : 1
+[@trade23_filter_control_conf]
+src_id : 1034
+is_use_trade2_filter : 1
+is_use_trade3_filter : 1
+trade2_blacklist_id : 1
+trade3_blacklist_id : 1

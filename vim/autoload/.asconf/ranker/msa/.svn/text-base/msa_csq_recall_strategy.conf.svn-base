@@ -1,0 +1,5 @@
+[@strategies]
+ad_type : 131072
+
+rigq_filtered_ratio_thrd : 0.10
+csq_thrd : 0.8

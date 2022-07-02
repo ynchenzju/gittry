@@ -1,0 +1,22 @@
+@midwayads_pic_mt : 3176
+@midwayads_pic_mt : 3177
+@midwayads_pic_mt : 3511
+midwayads_min_title_len : 10
+midwayads_max_title_len : 80
+midwayads_pic_url_perfix : -.baidu.com
+midwayads_title_similarity_thr : 0.9
+midwayads_im_mincpm_thr : 4.5
+
+# 中途岛广告强样式排序加权
+[@midwayads_mt_ratio]
+mt : 3176
+ratio : 1.5
+[@midwayads_mt_ratio]
+mt : 3177
+ratio : 1.2
+[@midwayads_mt_ratio]
+mt : 3511
+ratio : 1.2
+[@midwayads_mt_ratio]
+mt : 3510
+ratio : 1.0

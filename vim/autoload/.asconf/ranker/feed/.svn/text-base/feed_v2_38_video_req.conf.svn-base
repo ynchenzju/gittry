@@ -1,0 +1,46 @@
+#first page
+[@fsdv2]
+@cond_qm_gids:1010000
+@cond_qm_gids:1010001
+@cond_qm_gids:1010002
+@cond_qm_gids:1010003
+@cond_qm_gids:1010004
+@cond_qm_gids:1010005
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:juping_budget_control
+alive:0
+[..plugin_params]
+[...juping_bgtctl_cont]
+budget_control_strategy : 0
+shown_info_allow_lefts : 0
+juping_random_filter_prob : 0
+juping_sigmod_k : 1
+offline_stat : 0
+
+[.@plugin_desc]
+plugin_instance_id:2
+plugin_name:nst_admit_adv_filter
+alive:1
+[..plugin_params]
+admit_mt_list:9036,9040
+
+[.@plugin_desc]
+plugin_instance_id:3
+plugin_name:adv_bid_sort
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:4
+plugin_name:cpm_calc_price
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:5
+plugin_name:truncate_advlist_general
+alive:1
+[..plugin_params]
+truncate_adv_num:1
+

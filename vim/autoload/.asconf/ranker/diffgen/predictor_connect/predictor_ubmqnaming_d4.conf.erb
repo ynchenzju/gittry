@@ -1,0 +1,37 @@
+[UbClientConfig]
+[.Naming]
+
+[..@Service]
+Name :  d4_ubmq_group0
+WebfootServiceName: group.opera-<%= @platform %>-ubmq-000-<%= @isp %>.IM.all
+GroupNum : 1
+GroupIdx : 0
+PlatformName : d4_ubmq
+
+SendBuf : -1
+RecvBuf : -1
+ConnectAll :0
+DefaultPort :5382
+DefaultConnectTimeOut  :10
+DefaultReadTimeOut  :120
+DefaultWriteTimeOut  :30
+DefaultMaxConnect  :  50
+DefaultRetry  :  5
+#DefaultFetchConnMaxTime : 0
+#LONG / SHORT
+DefaultConnectType  :  LONG
+DefaultLinger  :  1
+ReqBuf  :  10000
+ResBuf  :  10000
+DefaultAsyncWaitingNum  :  100
+# predictor-api自定义健康检查策略
+[...CurrStrategy]
+ClassName : PredictorApiHealthStrategy
+MinBlackListTime : 3
+MaxBlackListTime : 15
+CheckInterval : 3
+FailTimes : 200
+CheckRequestNum : 500
+
+[...CurrHealthy]
+ClassName  :UbClientHealthyChecker

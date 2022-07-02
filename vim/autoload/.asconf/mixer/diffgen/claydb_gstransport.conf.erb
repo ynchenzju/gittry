@@ -1,0 +1,41 @@
+# 全局健康探测周期
+HealthyCheckInterval : 1
+# 全局连接池更新reload周期
+TransportReloadInterval : 5
+# 物理Server交互失败历史记录队列长度
+ServerHistorySize : 1000
+# 物理Server的Alive超时设置
+ServerAliveTimeout : 60
+
+# 全局默认配置
+[DefaultConfig]
+# 交互相关配置
+[.Connection]
+ConnectTimeout : 15
+ReadTimeout : 100
+WriteTimeout : 50
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 600
+# Hedge的时候，多次获取HedgeServer，保证和之前Server不同
+HedgeFetchRetryCount : 3
+
+# 集群划分tag配置
+[.TagDescription]
+# 分库标识tag
+PartitionTag : shard
+
+# 各个下游服务相关配置
+[Services]
+# 连接配置和Tag都默认使用全局
+[.NewStyle]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.opera-<%= @claydb_platform %>-newstyleserver-all-<%= @claydb_isp %>.<%= __product %>.all
+
+[.Curest]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.opera-<%= @curest_platform %>-curestserver-all-<%= @claydb_isp %>.<%= __product %>.all

@@ -1,0 +1,53 @@
+# 全局健康探测周期
+HealthyCheckInterval : 1
+# 全局连接池更新reload周期
+TransportReloadInterval : 30
+# 物理Server交互失败历史记录队列长度
+ServerHistorySize : 10
+# 物理Server的Alive超时设置
+ServerAliveTimeout : 60
+
+# 全局默认配置
+[DefaultConfig]
+# 交互相关配置
+# 这一部分根据budget server lib引入GST之前的
+# IP,PORT配置文件中对应的值来设置
+[.Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 3
+MaxConnectionPerHost : 35
+# 关闭 hedge request
+HedgeRequestTimeout : 50
+
+# 发送hedge request的时候, 需要尝试获取目标实例
+# 而HedgeFetchRetryCount限定了尝试的次数
+HedgeFetchRetryCount : 3
+
+# hedge request的模式
+# 1. 默认模式
+#    相对于还未响应的首次request, 不选择相同的实例(即,相同的ip:port)发送hedge request
+# 2. 单实例模式
+#    在只有单一实例的情况下, 允许hedge request发往该唯一实例
+# 备注:
+#    上述的实例, 限定指: 在同一分组(相同tags)下同一分库(相同partition)的
+#    的多个实例
+#    不同分组, 或同一分组但不同分库的实例之间的hedge request没有任何关系
+HedgeRequestMode : 1
+
+# 集群划分tag配置
+[.TagDescription]
+# 分库标识tag
+PartitionTag : partition
+# 集群划分tag列
+# @SplitTag : xxxx
+# 可以没有
+
+# 各个下游服务相关配置
+[Services]
+[.BudgetRpc]
+[..NamingInfo]
+ConfType : bns
+ServiceName : group.opera-<%= @budget_control_platform %>-budgetrpc-000-<%= @budget_control_isp %>.<%= __product %>.all
+TagSource : bns

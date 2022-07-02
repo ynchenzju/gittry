@@ -1,0 +1,122 @@
+get_cr_from_conf_switch : 1
+get_cr_from_dict_switch : 1
+[@mt_default_cr]
+mt : 2001
+conversion_ratio : 13
+[@mt_default_cr]
+mt : 2002
+conversion_ratio : 5
+[@mt_default_cr]
+mt : 2015
+conversion_ratio : 11
+[@mt_default_cr]
+mt : 2027
+conversion_ratio : 5
+[@mt_default_cr]
+mt : 2028
+conversion_ratio : 3
+[@mt_default_cr]
+mt : 2111
+conversion_ratio : 3.5
+[@mt_default_cr]
+mt : 2114
+conversion_ratio : 8
+[@mt_default_cr]
+mt : 2126
+conversion_ratio : 6
+[@mt_default_cr]
+mt : 2164
+conversion_ratio : 11
+[@mt_default_cr]
+mt : 2165
+conversion_ratio : 9
+[@mt_default_cr]
+mt : 2182
+conversion_ratio : 6
+[@mt_default_cr]
+mt : 2183
+conversion_ratio : 4
+[@mt_default_cr]
+mt : 4070
+conversion_ratio : 14
+[@mt_default_cr]
+mt : 4071
+conversion_ratio : 15
+[@mt_default_cr]
+mt : 4072
+conversion_ratio : 16
+[@mt_default_cr]
+mt : 8529
+conversion_ratio : 5
+[@mt_default_cr]
+mt : 8530
+conversion_ratio : 5
+[@mt_default_cr]
+mt : 8531
+conversion_ratio : 5
+[@mt_default_cr]
+mt : 8537
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8543
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8538
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8544
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8545
+conversion_ratio : 6
+[@mt_default_cr]
+mt : 8539
+conversion_ratio : 6
+[@mt_default_cr]
+mt : 8552
+conversion_ratio : 6
+[@mt_default_cr]
+mt : 8546
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8547
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8548
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8549
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8560
+conversion_ratio : 4
+[@mt_default_cr]
+mt : 8561
+conversion_ratio : 4
+[@mt_default_cr]
+mt : 8556
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8558
+conversion_ratio : 6
+[@mt_default_cr]
+mt : 8559
+conversion_ratio : 6
+[@mt_default_cr]
+mt : 8550
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8551
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8557
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8562
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8563
+conversion_ratio : 1
+[@mt_default_cr]
+mt : 8564
+conversion_ratio : 1

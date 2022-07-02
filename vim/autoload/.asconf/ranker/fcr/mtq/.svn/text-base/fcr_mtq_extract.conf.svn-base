@@ -1,0 +1,10 @@
+## model.conf
+#特征配置文件
+feature_conf : ./fcr_mtq_feature_list.conf
+#线下log和线上拼接的shcema
+SCHEMA : show,clk,query,cookieid,display,cmatch,cn,session_seq,userid,winfoid,ideaid,unitid,planid,rank,wmatch,qleft,qleft_conf,title_hilight_len,desc_hilight_len,mt_id,wordid
+#是否打印输出Fea，线下开启，线上关闭
+IS_DUMP_FEA : 0
+#是否打印输出Ins，线下开启，线上关闭
+IS_DUMP_INS : 0
+

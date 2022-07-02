@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/app/ecom/im/!svn/ver/439616/trunk/production/prod/ranker/conf/actionads
+END
+material_framework.conf
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/439616/trunk/production/prod/ranker/conf/actionads/material_framework.conf
+END
+action_ads_phone_close_loop_conf.conf
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/app/ecom/im/!svn/ver/392194/trunk/production/prod/ranker/conf/actionads/action_ads_phone_close_loop_conf.conf
+END
+bidding_config.conf
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/app/ecom/im/!svn/ver/438380/trunk/production/prod/ranker/conf/actionads/bidding_config.conf
+END
+tools_config.conf
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/app/ecom/im/!svn/ver/321192/trunk/production/prod/ranker/conf/actionads/tools_config.conf
+END

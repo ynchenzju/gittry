@@ -1,0 +1,59 @@
+# 需要计算平均值的监控项的计算间隔时间，不配置时默认是5000ms；
+## 针对监控项的类型和配置代表的意思对照如下：
+###        前ubmonitor_compute_time_ms内的监控项之和除以秒数（ubmonitor_compute_time_ms/1000），即取这个时间段内的平均值，文件输出或socket查询就是返回此平均值；
+###        平均值是精确到秒级别，当ubmonitor_compute_time_ms配置小于1s时，比如你设置500ms，那么前500ms不会计算平均值，等下次1s时间到时再计算平均值；对应监控项类型为NUM_LEAF_TIME = 0,
+###        前ubmonitor_compute_time_ms内的监控项之和除以addpath次数，即按次数取的平均值，文件输出或socket查询就是返回此平均值；对应监控项类型为NUM_LEAF_COUNT,
+###       前ubmonitor_compute_time_ms内的监控项总和；文件输出或socket查询时就是返回此阶段总和；对应监控项类型为NUM_LEAF_SUM_PERIOD,
+ubmonitor_compute_time_ms : 5000
+### 监控项的文件输出间隔时间，设置为 60000 比较合适；不配置时默认是60000ms；
+ubmonitor_monitor_time_ms : 60000
+
+# 如下两个配置是public/ub 1.2.19.2以上版本支持的配置
+## 是否使用sse优化过的strcmp，默认是1，即使用，建议也是使用
+#ubmonitor_strcmp_sse_use : 1
+## 是否支持ubmonitor.run之后或多线程register注册监控项或服务，默认是0即不支持;
+## 当产品线有需求ubmonitor run之后或多线程register注册监控项或服务时，请务必设置此配置为1，否则结果无法预知～～
+ubmonitor_dynamic_register_enable : 1
+ 
+# 此ubmonitor提供几种监控信息查询方式
+ubmonitor_output_num : 2
+
+# 第一个监控信息查询方式，SOCKET即表示此ubmonitor支持socket查询 
+ubmonitor_device0 : SOCKET
+# 当打开SOCKET查询时，请务必配置监听端口 
+ubmonitor_socket_port : 2012
+# SOCKET查询本质是ubmonitor启动一个ubserver，配置含义与ubserver一致；
+# 如下是ubserver的名字，不配置时默认是NONE；
+ubmonitor_socket_name : ranker_ub_monitor 
+# ubserver的servertype，不配置时默认是2即eppool模型；
+ubmonitor_socket_servertype : 2
+# ubserver工作线程数，设置为1足矣
+ubmonitor_socket_threadnum : 1
+# ubserver 读buffer大小
+ubmonitor_socket_read_bufsize : 1048576
+# ubserver 写buffer大小
+ubmonitor_socket_write_bufsize : 1048576
+# 用户使用的buffer大小
+ubmonitor_socket_userbufsize : 1048576
+# ubserver链接超时
+ubmonitor_socke_connecttimeout : 500
+# ubserver 读超时
+ubmonitor_socket_readtimeout : 500
+# ubserver 写超时
+ubmonitor_socket_writetimeout : 500
+# ubserver链接类型，0是短链接，1是长连接
+ubmonitor_socket_connecttype : 0
+# ubserver 可读链接队列长度
+ubmonitor_socket_quenesize : 1024
+# ubserver 维持的最大连接数
+ubmonitor_socket_socksize : 100
+
+#ubmonitor_socket_auth : 
+#server其余配置，参考ub_server 
+#文件输出 
+ubmonitor_device1 : FILE
+## 文件输出的路径名字
+ubmonitor_file_path : ./data/ub_mornitor_out
+ubmonitor_file_name : ranker_ub_monitor.info
+## 文件大小
+ubmonitor_single_monitor_size : 1024000

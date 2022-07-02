@@ -1,0 +1,10 @@
+## model.conf
+#特征配置文件
+feature_conf : ./msa_ubm_feature_list.conf
+#线下log和线上拼接的shcema
+SCHEMA : show,clk,query,cn,cookieid,display,cmatch,wmatch,winfoid,rank,ideaid,unitid,planid,userid,wordid,qleft,title_flush_len,desc_flush_len,qleft_conf,mt_id,wosid,wbwsid,session_seq,wpt,speed,ua,sz,wnettype,innerWidth,innerHeight,msa_ubmq,wmatch_up,ideaid_up,userid_up,wordid_up,qleft_up,title_flush_len_up,desc_flush_len_up,qleft_conf_up,mt_id_up,msa_ubmq_up,wmatch_down,ideaid_down,userid_down,wordid_down,qleft_down,title_flush_len_down,desc_flush_len_down,qleft_conf_down,mt_id_down,msa_ubmq_down
+#是否打印输出Fea，线下开启，线上关闭
+IS_DUMP_FEA : 0
+#是否打印输出Ins，线下开启，线上关闭
+IS_DUMP_INS : 0
+

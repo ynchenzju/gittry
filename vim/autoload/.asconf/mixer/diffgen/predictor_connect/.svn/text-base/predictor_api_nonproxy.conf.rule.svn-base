@@ -1,0 +1,161 @@
+# node和opera的规则说明                                        
+#   node规则用于非opera托管模块的diffgen规则定义               
+#   opera规则用于opera托管模块的diffgen规则定义                
+#   两者的定义的正则表达格式一致, 沿用node的正则定义模式       
+                                                               
+# NOTICE: <IMPORTANT>                                          
+#   node定义的语句在opera部署时, 不会生效; 同样地, opera定义的语句
+#   在非opera部署时, 不会生效                                  
+
+# opera平台默认规则                                            
+# @isp, @platform 是opera平台默认维护的内置变量                
+# 表示当前实例所在的逻辑机房和平台名字
+# 它和 __group_index 的使用方法一致
+# 因此用户自定义的变量不要和内置变量冲突                       
+# 所以下边许多规则全部可以删除,收敛到这一条默认规则中          
+# 这样能简化diffgen的写法,自适应离线的qa测试环境搭建
+# 也方便后续扩展新机房的时候不用再修改diffgen
+
+all do
+  #全流量,e平台,bp,bpoff等的isp
+  @default_qname_isp = @isp
+  @qname_isp = {}
+  #d平台流量的isp
+  @data_isp = @isp
+  @flow = 'ps'
+  @backup_flow = 'ps'
+  @ratio1 = 1000 
+  @ratio2 = 15
+
+  #是否只有d平台，而没有全流量平台，应对特殊需求
+  @qname_only_exps = {}
+
+  @qname_read_timeouts = {}
+
+  @no_flow_properties = {}
+  @default_response_timeout = 50000
+
+  @qname_flows = {}
+  #用来描述默认的下游平台, 与@flow变量解耦
+  @default_qname_flow = 'ps'
+  @qname_strategy = {}
+
+  #默认的连下游的超时时间
+  @default_read_timeout = 40
+  #默认的ubclient连接配置参数
+  @default_ub_param = "
+DefaultRetry:5
+DefaultConnectTimeOut:10
+DefaultWriteTimeOut:30
+DefaultMaxConnect:500
+DefaultConnectType:LONG
+DefaultLinger:1"
+
+  #是否有实验平台，如果没有真正的d平台，所有d平台的流量都复用到一个，例如bpd0~bpd10的asq都复用到bpasq
+  @has_exp = false
+  #q的名称和对应的d平台列表，今后添加q和对应的d平台易如反掌
+  @qname_exps = {}
+  @qname_exps["wctrxuserq"] = ['d0', 'd1', 'd2', 'd3', 'd4']
+  @qname_exps["ctrxuserq"] = ['d0']
+  @qname_exps["dwctrxuserq"] = []
+  @qname_exps["dctrxuserq"] = []
+end
+
+opera '[e1]+[cm,ct,cu]' do 
+  @qname_isp["wctrxuserq"] = 'ct'
+end
+
+opera '[e1]+[ecj,hd,nj]' do 
+  @qname_isp["wctrxuserq"] = 'nj'
+end
+
+opera '[e1]+[gzhxy,gzns,nmg]' do 
+  @qname_isp["wctrxuserq"] = 'gzhxy'
+end
+
+['e1','e6'].each do |e_flow|
+  opera "#{e_flow}" do
+    @qname_flows["wctrxuserq"] = "#{e_flow}"
+  end
+end
+
+opera '[cu,ct,cm]' do 
+  @data_isp = 'bj'
+end
+
+opera 'hd' do 
+  @data_isp = 'hd'
+end
+
+opera '[nj,ecj]' do 
+  @data_isp = 'nj'
+end
+
+opera '[gzns,gzhxy]' do
+  @data_isp = 'gzhxy'
+end
+
+opera 'n' do 
+  @has_exp = true
+end
+
+opera 'd' do 
+  @has_exp = true
+end
+
+opera 'e' do 
+  @ratio1 = 5000
+  @ratio2 = 2000
+end
+
+opera '[e6.e7]' do
+    @qname_flows["ctrxuserq"] = "ps"
+    @qname_flows["dctrxuserq"] = "ps"
+    @qname_flows["wctrxuserq"] = "ps"
+    @qname_flows["dwctrxuserq"] = "ps"
+end
+
+opera 'bp' do 
+  @flow = 'bp'
+  @backup_flow = 'bp'
+  @default_qname_flow = 'bp'
+  @default_qname_isp = 'gzns'
+end
+
+opera 'ads' do 
+  @flow = 'ads'
+  @backup_flow = 'ads'
+  @default_qname_flow = 'ads'
+  @qname_flows["wctrxuserq"] = 'ps'
+  @qname_flows["ctrxuserq"] = "ps"
+  @qname_flows["dwctrxuserq"] = 'ps'
+  @qname_flows["dctrxuserq"] = "ps"
+end
+
+opera 'bid' do 
+  @flow = 'bid'
+  @backup_flow = 'bid'
+  @default_qname_flow = 'bid'
+  @qname_flows["wctrxuserq"] = 'ps'
+  @qname_flows["ctrxuserq"] = "ps"
+  @qname_flows["dwctrxuserq"] = 'ps'
+  @qname_flows["dctrxuserq"] = "ps"
+end
+
+opera 'img' do 
+  @flow = 'img'  
+  @backup_flow = 'img'
+  @default_qname_flow = 'img'
+  @qname_flows["wctrxuserq"] = 'ps'
+  @qname_flows["ctrxuserq"] = "ps"
+  @qname_flows["dwctrxuserq"] = 'ps'
+  @qname_flows["dctrxuserq"] = "ps"
+end
+
+node 'bpoff' do 
+  @flow = 'bpoff'
+  @backup_flow = 'bpoff'
+  @default_qname_flow = 'bpoff'
+end
+
+

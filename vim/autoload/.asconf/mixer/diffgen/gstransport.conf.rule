@@ -1,0 +1,404 @@
+# node和opera的规则说明                                        
+#   node规则用于非opera托管模块的diffgen规则定义               
+#   opera规则用于opera托管模块的diffgen规则定义                
+#   两者的定义的正则表达格式一致, 沿用node的正则定义模式       
+                                                               
+# NOTICE: <IMPORTANT>                                          
+#   node定义的语句在opera部署时, 不会生效; 同样地, opera定义的语句
+#   在非opera部署时, 不会生效                                  
+
+# opera平台默认规则                                            
+# @isp, @platform 是opera平台默认维护的内置变量                
+# 表示当前实例所在的逻辑机房和平台名字
+# 它和 __group_index 的使用方法一致
+# 因此用户自定义的变量不要和内置变量冲突                       
+# 所以下边许多规则全部可以删除,收敛到这一条默认规则中          
+# 也即ranker默认连接本机房/本平台的下游
+# 这样能简化diffgen的写法,自适应离线的qa测试环境搭建
+# 也方便后续扩展新机房的时候不用再修改diffgen
+
+region_map = {
+  'cm' => 'bj',
+  'ct' => 'bj',
+  'cu' => 'bj',
+  'gzns' => 'guangzhou',
+  'gzhxy' => 'guangzhou',
+  'nj' => 'nanjing',
+  'ecj' => 'nanjing',
+  'hd' => 'hd'
+}
+
+all do
+    ############# nks base #############
+    @nks_isp = @isp
+    @nks_platform = @platform
+
+    ############# upin base ############
+    @upin_isp = @isp
+    @upin_platform = 'fcim'
+    @upin_opera_platform = 'ps'
+    @upin_contimeout= '20'
+    @upin_writetimeout = '20'
+    @upin_readtimeout = '130'
+
+    @prefetcher_isp = region_map[@isp]
+    @prefetcher_opera_platform = 'ps'
+    @prefetcher_contimeout = @upin_contimeout
+    @prefetcher_writetimeout = @upin_writetimeout
+    @prefetcher_readtimeout = @upin_readtimeout
+
+    ############# upin simpledb base ############
+    @upin_simpledb_isp = @isp
+    @use_upin_simpledb = 1
+    @use_upin_simpledb_test = 0
+    
+    ############# kaiwuei base ##########
+    #@kaiwuei_isp = @isp
+    #@kaiwuei_platform = 'ps'
+    #@kaiwuei_contimeout= '20'
+    #@kaiwuei_writetimeout = '20'
+    #@kaiwuei_readtimeout = '80'
+
+    ############# ranker base ##########
+    @ranker_isp = @isp
+    @ranker_platform = @platform
+    @ranker_conf_type = 'bns'
+    @ranker_hedge_time = 400
+    @ranker_peerclose_retry = 20
+    @ranker_random_shuffle = 1
+
+    ############# chunhua base #########
+    @use_chunhua = 1
+    @chunhua_isp = @isp
+    @use_chunhua_bpoff = 0
+
+    ############# imbsproxy base #######
+    @imbsproxy_isp = @isp
+    @imbsproxy_platform = @platform
+
+    ############# hfbs base #######
+    @hfbs_isp = @isp
+
+    ############# urlserver base #######
+    @use_urlserver = 1
+    @urlserver_isp = @isp
+    @urlserver_platform = 'ps'
+
+    ############# esproxy base #######
+    @use_esproxy = 1
+    @esproxy_isp = @isp
+    @esproxy_platform = 'psdata'
+
+    ############# dmp base #######
+    @use_dmp = 1
+    @dmp_isp = @isp
+    @use_dmp_bpoff = 0
+
+    ############# ztc base #############
+    @ztc_isp = 'ecj'
+    @ztc_platform = 'ps'
+
+    ############# snas base #######
+    @use_snas = 1
+    @snas_isp = @isp
+    @snas_platform = 'ps' 
+end
+
+opera 'dr' do
+   @urlserver_platform = 'dr'
+   @ztc_platform = 'dr'
+end
+
+
+
+############# img diff #############
+opera 'img' do
+   @urlserver_platform = 'img'
+end
+
+#opera 'img+ct' do
+#  @kaiwuei_isp = 'cm'
+#end
+
+############ nks diff #################
+opera '[n,d,e,ads,img,adsbp,deptest]' do
+    @nks_platform = 'ps'
+end
+
+opera "[deptest,bpoff]" do
+  @nks_isp = 'ct'
+end
+
+opera 'syssurvey' do
+  @nks_isp = 'ct'
+  @nks_platform = "bpoff"
+end
+
+opera 'img+ct' do
+  @nks_isp = 'cm'
+end
+
+
+node "bpoff" do
+    @nks_platform = "bpoff"
+    @nks_isp = 'ct'
+    @upin_platform = 'bpoff'
+    @upin_isp = "ct"
+    @ranker_isp = 'bpoff'
+end
+
+
+
+############# upin diff #############
+opera 'bp' do
+    @upin_platform = 'bp'
+    @upin_opera_platform = 'bp'
+end
+
+opera 'bpoff' do
+    @upin_platform = 'bpoff'
+end
+
+opera 'syssurvey' do
+    @upin_platform = 'bpooff'
+end
+
+############# ranker diff #############
+opera 'ads+cm' do
+    @ranker_isp = 'ct'
+end
+
+opera 'bpoff' do
+    @ranker_isp = 'bpoff'
+end
+
+node 'mixer+bpoff' do
+    @ranker_platform = 'bpoff'
+    @ranker_isp = 'bpoff'
+end
+
+
+############ chunhua diff #################
+opera "bpoff" do
+    @use_chunhua_bpoff = 1
+end
+
+opera "syssurvey" do
+  @use_chunhua_bpoff = 1
+end
+
+
+
+node 'mixer+bpoff' do
+    @chunhua_isp = 'bj'
+    @use_chunhua_bpoff = 1
+end
+
+
+
+opera 'bid+nj' do
+  @imbsproxy_isp = 'ecj'
+end
+
+opera '[bpoff,deptest]' do
+  @imbsproxy_isp = 'cu'
+end
+
+opera '[e5]' do
+  @use_esproxy = 1
+  @esproxy_platform = 'e5'
+end
+
+opera 'bp' do
+  @use_esproxy = 1
+  @esproxy_platform = 'bp'
+end
+
+opera "syssurvey" do
+  @imbsproxy_isp = 'cu'
+  @imbsproxy_platform = 'bpoff'
+end
+
+#for d/n mixer => imbsproxy
+# n mixer => n+d imbsproxy(same isp n + all d)
+# d mixer => n+d imbsproxy(same isp n + all d)
+opera '[n,d]' do
+    @imbsproxy_platform = 'psdata'
+    @hfbsproxy_platform = 'psdata'
+end
+
+opera '[ads,adsbp]' do
+  @imbsproxy_platform = 'bid'
+end
+
+opera '[deptest]' do
+  @imbsproxy_platform = 'psdata'
+end
+
+opera '[e1]' do
+    @imbsproxy_platform = 'e1'
+end
+
+opera '[e3]' do
+    @imbsproxy_platform = 'e3'
+end
+
+opera '[e6]' do
+    @imbsproxy_platform = 'e6'
+end
+
+opera '[e7]' do
+    @imbsproxy_platform = 'ps'
+end
+
+opera '[cm,ct,cu]' do
+    @hfbs_isp = 'ct'
+end
+
+opera '[nj,ecj]' do
+    @hfbs_isp = 'nj'
+end
+
+opera '[gzns,gzhxy]' do
+    @hfbs_isp = 'gzns'
+end
+
+all do 
+  @hfbs_platform = 'd0'
+end
+
+opera 'bp' do
+  @hfbs_platform = 'bp'
+end 
+
+node '[bpoff+imas]' do
+  @imbsproxy_isp = 'cu'
+  @imbsproxy_platform = 'bpoff'
+end
+
+opera 'img+ct' do
+  @imbsproxy_isp = 'cm'
+end
+
+############ urlserver diff #################
+opera 'bpoff' do
+    #bpoff use "bpoff", please not change
+    @urlserver_isp = 'bpoff'
+    @urlserver_platform = 'bpoff'
+end
+
+opera "syssurvey" do
+  @urlserver_isp = 'bpoff'
+  @urlserver_platform = 'bpoff'
+end
+
+opera 'deptest' do
+    @urlserver_isp = 'cm'
+    @urlserver_platform = 'bp'
+end
+
+opera 'bp+gzns' do
+    @urlserver_platform = 'bp'
+end
+
+opera '[n,d]' do
+    @urlserver_platform = 'psdata'
+end
+
+opera '[ct,cu,cm]' do
+    @chunhua_isp = 'bj'
+end
+
+
+node 'mixer+bpoff' do
+    @urlserver_platform = 'bpoff'
+    #bpoff use "bpoff", please not change
+    @urlserver_isp = 'bpoff'
+end
+
+opera 'img+ct' do
+    @urlserver_isp = 'cm'
+end
+
+
+############ vs-bs diff #################
+vs_bs_plat_mapping = {"cu"=>"yf","ct"=>"yf","cm"=>"cq02","hd"=>"hz","nj"=>"nj02","ecj"=>"nj02","gzhxy"=>"gzhxy","gzns"=>"gzhxy"}
+['ct','cu','cm','hd','nj','ecj','gzhxy','gzns'].each do |isp_name|
+    opera "#{isp_name}" do
+        @vs_bs_isp = vs_bs_plat_mapping["#{isp_name}"]
+    end 
+end
+
+vs_bs_plat_mapping = {"cu"=>"yf","ct"=>"yf","cm"=>"cq02","hd"=>"hz","nj"=>"nj02","ecj"=>"nj02","gzhxy"=>"gzhxy","gzns"=>"gzhxy"}
+['ct','cu','cm','hd','nj','ecj','gzhxy','gzns'].each do |isp_name|
+    node "#{isp_name}" do
+        @vs_bs_isp = vs_bs_plat_mapping["#{isp_name}"]
+    end 
+end
+
+############ ztc diff #################
+opera '[ct,cu,cm]' do
+    @ztc_isp = 'ct'
+end
+
+opera '[hd]' do
+    @ztc_isp = 'hd'
+end
+
+opera '[nj,ecj]' do
+    @ztc_isp = 'ecj'
+end
+
+opera '[gzhxy,gzns]' do
+    @ztc_isp = 'gzhxy'
+end
+
+############ snas diff ################
+opera 'd3' do
+    @snas_platform = 'd0'
+end
+
+
+############ dmp diff ################
+opera '[cm,cu]' do
+    @dmp_isp = 'yf'
+end
+
+opera '[ct]' do
+    @dmp_isp = 'tc'
+end
+
+opera '[nj,ecj]' do
+    @dmp_isp = 'nj'
+end
+
+opera '[hd]' do
+    @dmp_isp = 'hz'
+end
+
+opera '[bpoff]' do
+    @use_dmp_bpoff = 1
+end
+
+############ upin diff ################
+opera 'd13' do
+    @use_upin_simpledb_test = 1
+    @use_upin_simpledb = 1
+end
+
+opera 'd13+[cm,ct]' do
+    @upin_simpledb_isp = 'ct'
+end
+
+opera 'd13+[ecj,nj]' do
+    @upin_simpledb_isp = 'ecj'
+end
+
+opera 'd13+[hd]' do
+    @upin_simpledb_isp = 'hd'
+end
+
+opera 'd13+[gzhxy,gzns]' do
+    @upin_simpledb_isp = 'gzhxy'
+end
+############ end upin diff ################

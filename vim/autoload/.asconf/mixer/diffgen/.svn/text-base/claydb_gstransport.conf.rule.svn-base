@@ -1,0 +1,70 @@
+all do
+  @claydb_isp = @isp
+  @claydb_platform = @platform
+  @curest_platform = @platform
+end
+
+####### claydb diff ##########
+opera '[n,d,e,bp]' do
+  @claydb_platform = 'ps'
+  @curest_platform = 'ps'
+end
+
+#opera '[e1,e7]+ct' do
+#  @claydb_isp = 'cu'
+#end
+
+opera 'e7' do
+  @claydb_platform = 'e7'
+  @curest_platform = 'ps'
+end
+
+opera '[e6]' do
+  @claydb_platform = 'ps'
+  @curest_platform = 'ps'
+end
+
+#opera 'e9' do
+#  @claydb_platform = 'e9'
+#  @curest_platform = 'e9'
+#end
+
+#opera 'e9+ct' do
+#  @claydb_isp = 'cu'
+#end
+
+opera '[ads,adsbp]' do
+  @claydb_platform = 'bid'
+  @curest_platform = 'bid'
+end
+
+opera 'deptest' do
+  @claydb_isp = 'cu'
+  @claydb_platform = 'ps'
+  @curest_platform = 'ps'
+end
+
+opera 'bpoff' do
+  @claydb_isp = 'bpoff'
+  @claydb_platform = 'bpoff'
+  @curest_platform = 'bpoff'
+end
+
+opera 'syssurvey' do
+  @claydb_isp = 'bpoff'
+  @claydb_platform = 'bpoff'
+  @curest_platform = 'bpoff'
+end
+
+opera 'img+ct' do
+  @claydb_isp = 'cm'
+end
+
+
+
+node '[bpoff+imas]' do
+  @claydb_isp = 'bpoff'
+  @claydb_platform = 'bpoff'
+  @curest_platform = 'bpoff'
+end
+

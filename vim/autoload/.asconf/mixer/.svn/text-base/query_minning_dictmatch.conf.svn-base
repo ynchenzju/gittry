@@ -1,0 +1,14 @@
+max_dict_size : 10000
+dm_pack_size : 2048
+black_query_filter_file : ./data/pl/a_comm/query_minning_black_query_filter.txt
+query_region_search_file : ./data/pl/a_comm/query_minning_query_region_search.txt
+recom_query_contain_filter_file : ./data/pl/a_comm/query_minning_recom_query_contain_filter.txt
+src_recom_query_contain_filter_file : ./data/pl/a_comm/src_query_minning_recom_query_contain_filter.txt
+@checked_srcid : 1057
+@checked_srcid : 1026
+@checked_srcid : 969
+@checked_srcid : 1108
+@checked_srcid : 1103
+@checked_srcid : 1102
+@checked_srcid : 1105
+@checked_srcid : 912

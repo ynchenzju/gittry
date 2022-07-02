@@ -1,0 +1,30 @@
+[@feed_product_stra_desc]
+@product_name:juping_ads_req
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id : 4
+plugin_name : do_juping_ads_material_filter
+alive : 1
+
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:adv_bid_sort
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id : 5
+plugin_name : adv_random_sort
+alive : 1
+
+[.@plugin_desc]
+plugin_instance_id:2
+plugin_name:cpm_calc_price
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:3
+plugin_name:truncate_advlist
+alive:1
+[..plugin_params]
+truncate_adv_num:1

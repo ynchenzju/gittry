@@ -1,0 +1,512 @@
+
+
+########################################################################################
+##  格式，每一个数据源一个mixer_src_conf,切勿重复，也别修改别人的src_id
+##  可配内容见mixer/proto/src_individual.proto
+##  src_id : 必配，不可重复，绝对不要通过实验参数修改src_id
+##  need_req_XXX :  可选配，不配则默认为1，需要请求
+##  bs_truncate_num: 可选配，不可为负，不配默认为DEFAULT_BS_TRUNCATE_NUM
+##  做实验时候，请同步打开 DYNC_src_individual_conf 开关，使其生效
+##
+##  TRICK_1 : 只有该条流量携带的所有数据源都配置了need_req_xxx:0，才会真正跳过请求
+##  TRICK_2 : 没有再此文件中配置的数据源，一律使用默认值，全请求，320截断
+##  TRICK_3 : 如果该条流量所有数据源都配置了bs_truncate_num（没配则默认），最后实际取最大值来截断
+########################################################################################
+###  不要用此配置做全流量实验！！！！！！！#######
+#默认的截断数
+DEFAULT_BS_TRUNCATE_NUM : 320
+
+DEFAULT_CS_FEA_LIMIT : 10000
+[@mixer_src_conf] 
+src_id : 1
+need_req_upin : 1
+need_req_qms : 1
+need_req_vs : 1
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 204
+need_req_upin : 1
+need_req_vs : 1
+
+[@mixer_src_conf]
+src_id : 213
+need_req_upin : 1
+need_req_cs : 1
+
+[@mixer_src_conf]
+src_id : 217
+need_req_upin : 1
+need_req_qms : 1
+need_req_vs : 1
+
+[@mixer_src_conf]
+src_id : 601
+need_req_qms : 1
+need_req_vs : 1
+
+[@mixer_src_conf]
+src_id : 920
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 40
+feedbs_truncate_num : 320
+cs_rfea_limit : 5
+cs_dqfea_limit : 0
+cs_bmmfea_limit : 5
+
+[@mixer_src_conf]
+src_id : 921
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 40
+feedbs_truncate_num : 320
+cs_rfea_limit : 5
+cs_dqfea_limit : 0
+cs_bmmfea_limit : 5
+
+[@mixer_src_conf]
+src_id : 981
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 80
+
+
+[@mixer_src_conf]
+src_id : 969
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+feedbs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1026
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 128
+feedbs_truncate_num : 40
+
+[@mixer_src_conf]
+src_id : 1035
+need_req_upin : 1
+need_req_cs : 1 
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 10
+feedbs_truncate_num : 320
+cs_rfea_limit : 5
+cs_dqfea_limit : 0
+cs_bmmfea_limit : 5
+
+[@mixer_src_conf]
+src_id : 1036
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 10
+feedbs_truncate_num : 320
+cs_rfea_limit : 5
+cs_dqfea_limit : 0
+cs_bmmfea_limit : 5
+
+[@mixer_src_conf]
+src_id : 1033
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+feedbs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1034
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+feedbs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1047
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 10
+feedbs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1048
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 10
+feedbs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1057
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 70
+feedbs_truncate_num : 40
+
+[@mixer_src_conf]
+src_id : 1066
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1023
+need_req_upin : 1
+need_req_cs : 0
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1073
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1076
+need_req_upin : 1
+need_req_cs : 0
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1078
+need_req_upin : 1
+need_req_cs : 0
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1080
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1081
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1086
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+feedbs_truncate_num : 320
+
+[@mixer_src_conf] 
+src_id : 1092
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0 
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 40
+feedbs_truncate_num : 40
+
+[@mixer_src_conf] 
+src_id : 1093
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0 
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+feedbs_truncate_num : 320
+
+[@mixer_src_conf] 
+src_id : 895
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0 
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+feedbs_truncate_num : 320
+
+[@mixer_src_conf] 
+src_id : 896
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0 
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+feedbs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1108
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 70
+feedbs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1102
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1105
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1103
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 70
+feedbs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1120
+need_req_upin : 1
+need_req_cs : 0
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 40
+
+[@mixer_src_conf]
+src_id : 912
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 128
+feedbs_truncate_num : 40
+
+[@mixer_src_conf]
+src_id : 982
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1131
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 40
+
+[@mixer_src_conf]
+src_id : 1133
+need_req_upin : 1
+need_req_cs : 1 
+need_req_qs : 0 
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1125
+need_req_upin : 1
+need_req_cs : 1 
+need_req_qs : 0 
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 20
+
+[@mixer_src_conf]
+src_id : 1149
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1146
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 80
+
+[@mixer_src_conf]
+src_id : 1161
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 80
+
+[@mixer_src_conf]
+src_id : 1162
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 80
+
+[@mixer_src_conf]
+src_id : 1157
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 80
+
+[@mixer_src_conf]
+src_id : 1158
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 80
+
+[@mixer_src_conf]
+src_id : 1095
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 40
+
+[@mixer_src_conf]
+src_id : 1173
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1182
+need_req_upin : 0
+need_req_cs : 0
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+need_req_adrest : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1204
+need_req_upin : 0
+need_req_cs : 0
+need_req_qs : 0
+need_req_qms : 0
+need_req_vs : 0
+need_req_adrest : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1235
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1236
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1237
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320
+
+[@mixer_src_conf]
+src_id : 1238
+need_req_upin : 1
+need_req_cs : 1
+need_req_qs : 1
+need_req_qms : 0
+need_req_vs : 0
+bs_truncate_num : 320

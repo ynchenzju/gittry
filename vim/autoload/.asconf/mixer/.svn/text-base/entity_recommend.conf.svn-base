@@ -1,0 +1,75 @@
+
+
+[@entity_recommend]
+[.card_info_condition]
+resource_id : 4129 
+card_type : fin_stock_ad
+[.entity_output_list]
+[..@entity_output]
+entity_value: columbus_stock_1      
+entity_type:  ad
+[..@entity_output]
+entity_value: columbus_stock_2  
+entity_type: ad
+
+
+
+[@entity_recommend]
+[.card_info_condition]
+resource_id : 4138          
+card_type : 大衣
+[.entity_output_list]
+[..@entity_output]
+entity_value :    服装        
+entity_type:  ad    
+[..@entity_output]
+entity_value :    服装衣服        
+entity_type:  ad     
+
+
+[@entity_recommend]
+[.card_info_condition]
+resource_id : 4138  
+card_id : 112       
+card_type : 大衣    
+[.user_profile_condition]
+user_age_id : 2
+user_gender_id : 1
+[.entity_output_list]
+[..@entity_output]
+entity_value :    女装新款        
+entity_type:  ad     
+[..@entity_output]
+entity_value :    女装新款夏装        
+entity_type:  ad 
+
+
+
+[@entity_recommend]
+[.card_info_condition]
+resource_id : 4138      
+card_id : 113           
+card_type : 周边景点    
+
+[.entity_output_list]
+[..@entity_output]
+entity_value :    自驾游      
+entity_type:  ad
+
+
+
+[@entity_recommend]
+[.card_info_condition]
+resource_id : 4138      
+card_id : 114           
+card_type : 雾霾
+
+[.entity_output_list]
+[..@entity_output]
+entity_value :    净化器        
+entity_type:  ad        
+
+
+
+
+

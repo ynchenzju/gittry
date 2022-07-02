@@ -1,0 +1,32 @@
+[UbClientConfig]
+[.UbClient]
+
+[.Naming]
+
+[..@Service]
+Name : d5_retras_group0
+WebfootServiceName:group.opera-<%= @retras_platform %>-retras-000-<%= @retras_isp %>.<%= __product %>.all
+DefaultConnectTimeOut : 10
+DefaultReadTimeOut : 230
+DefaultWriteTimeOut : 20
+DefaultConnectType : LONG
+DefaultMaxConnect : 50
+DefaultLinger : 0
+DefaultAsyncWaitingNum : 0
+DefaultRetry : 2
+DefaultFetchConnMaxTime : 0
+ConnectAll : 0
+[...CurrHealthy]
+ClassName : UbClientHealthyChecker
+[...CurrStrategy]
+ClassName : imLbStrategy
+RatioPrecision : 10000
+MaxServerNum : 1024
+FailQueueLen : 256
+QueueBufLen : 2
+[....@Point]
+x : 160
+y : 2000
+[....@Point]
+x : 250
+y : 40

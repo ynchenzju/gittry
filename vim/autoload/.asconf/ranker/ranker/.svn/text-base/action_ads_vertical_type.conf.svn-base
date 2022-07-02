@@ -1,0 +1,36 @@
+@general_dynamic_title_insert_title_wildcard_arr : {dytitle_40_52_1}_免费咨询
+@general_dynamic_title_insert_title_wildcard_arr : 免费咨询:{dytitle_40_52_1}
+[general_config]
+general_title_insert_title_wildcard : {title_40_52_1}_免费咨询
+@general_title_insert_title_wildcard_arr : {title_40_52_1}_免费咨询
+@general_title_insert_title_wildcard_arr : 免费咨询_{title_40_52_1}
+general_title_insert_title_wildcard_index : 0
+general_expert_type_multi_text_separator : dot
+general_expert_type_pic_tag_content : 向Ta咨询
+general_expert_type_profession_age_text1 : 从业
+general_expert_type_profession_age_text2 : 年
+general_expert_type_skilled_text_tag : 擅长
+general_expert_type_skilled_text_end : ，
+general_counsel_link_domain : http://linking.baidu.com/actionads/industryall?
+general_bussines_type_pic_tag_content : 咨询详情
+general_bussines_type_course_tag : 课程
+general_bussines_type_coursefeature_tag : 特色
+general_bussines_type_courseprice_tag : 价格
+general_bussines_type_introduction_tag : 简介
+general_bussines_type_courseprice_unit_tag : 元
+general_bussines_type_courseprice_now_tag : 现价
+general_bussines_type_courseprice_old_tag : 原价
+general_bussines_type_forpeople_tag : 适用人群
+general_expert_basic_type_introduction_num : 4
+general_bussines_basic_type_introduction_num1 : 3
+general_bussines_basic_type_introduction_num2 : 4
+general_bussines_sublink_type_introduction_num1 : 3
+general_bussines_sublink_type_introduction_num2 : 4
+[medical_config]
+medical_title_insert_title_wildcard : {title_40_52_1}_在线答疑
+medical_link_domain : http://linking.baidu.com/actionads/newmedical?
+medical_strong_style_tag_content : 免费服务
+medical_strong_style_after_content : 导诊助理
+medical_weak_style_before_content : 免费咨询-
+medical_weak_style_after_content : 导诊助理
+medical_hospital_style_before_content : 医院

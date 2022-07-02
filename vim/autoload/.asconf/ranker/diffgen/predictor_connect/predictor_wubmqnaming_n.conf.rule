@@ -1,0 +1,88 @@
+all do
+  @platform = ''
+  @isp = ''
+end
+
+node '[cu]' do 
+  @isp = 'cu'
+end
+
+node '[ct]' do 
+  @isp = 'ct'
+end
+
+node '[cm]' do 
+  @isp = 'cm'
+end
+
+node '[hd]' do 
+  @isp = 'hd'
+end
+
+node '[nj]' do 
+  @isp = 'nj'
+end
+
+node '[ecj]' do 
+  @isp = 'ecj'
+end
+
+node '[gzhxy]' do 
+  @isp = 'gzhxy'
+end
+
+node '[n+imas]' do
+  @platform = 'ps'
+end
+
+node '[bp+imas]' do
+  @platform = 'bp'
+  @isp = 'bj'
+end
+
+node '[bpoff+imas]' do
+  @platform = 'bpoff'
+  @isp = 'bpoff'
+end
+
+node '[bid+imas]' do
+  @platform = 'bid'
+end
+
+node '[ads+imas]' do
+  @platform = 'ads'
+end
+
+node '[adsbp+imas]' do
+  @platform = 'ads'
+end
+
+node '[d+imas]' do
+  @platform = 'ps'
+end
+
+node '[e0~9+imas]' do
+  @platform = 'ps'
+end
+
+node '[e4+imas]' do
+  @platform = 'e4'
+end
+
+node '[e1+imas]' do
+  @platform = 'e1'
+end
+
+node '[e6+imas]' do
+  @platform = 'e6'
+end
+
+node '[e5+imas]' do
+  @platform = 'e5'
+end
+
+node '[deptest+imas]' do
+  @platform = 'bp'
+  @isp = 'bj'
+end
+

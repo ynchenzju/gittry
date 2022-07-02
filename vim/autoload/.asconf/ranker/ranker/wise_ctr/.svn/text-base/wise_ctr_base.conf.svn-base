@@ -1,0 +1,6 @@
+wise_ppim_thr_b_prec_c0 : 0.01
+wise_ppim_thr_b_prec_c1 : 0.01
+wise_ppim_thr_b_phra_c0 : 0.01
+wise_ppim_thr_b_phra_c1 : 0.01
+wise_ppim_thr_b_extd_c0 : 0.01
+wise_ppim_thr_b_extd_c1 : 0.01

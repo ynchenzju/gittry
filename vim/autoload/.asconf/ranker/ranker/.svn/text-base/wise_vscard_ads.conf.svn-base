@@ -1,0 +1,36 @@
+#ctr门限
+wise_vscard_ctr_thr_b_prec_c0 : 0.01
+wise_vscard_ctr_thr_b_prec_c1 : 0.01
+wise_vscard_ctr_thr_b_phra_c0 : 0.01
+wise_vscard_ctr_thr_b_phra_c1 : 0.01
+wise_vscard_ctr_thr_b_extd_c0 : 0.01
+wise_vscard_ctr_thr_b_extd_c1 : 0.01
+
+#mincpm门限
+wise_vscard_ads_mincpm_value : 8 
+
+#rig门限
+wise_vscard_rig_thr_b_prec : 0.2
+wise_vscard_rig_thr_b_phra : 0.2
+wise_vscard_rig_thr_b_extd : 0.2
+#riq-asq门限
+wise_vscard_rig_asq_thr_b_prec : 300000
+wise_vscard_rig_asq_thr_b_phra : 1000000
+wise_vscard_rig_asq_thr_b_extd : 1000000
+
+# 广告截断数
+wise_vscard_ads_num : 3
+#vscard 准入mt
+wise_med_card_need_mt : 3161,3136 
+
+wise_vscard_zhixin_ctr_thr_b_prec_c0 : 0.01
+wise_vscard_zhixin_ctr_thr_b_prec_c1 : 0.01
+wise_vscard_zhixin_ctr_thr_b_phra_c0 : 0.01
+wise_vscard_zhixin_ctr_thr_b_phra_c1 : 0.01
+wise_vscard_zhixin_ctr_thr_b_extd_c0 : 0.01
+wise_vscard_zhixin_ctr_thr_b_extd_c1 : 0.01
+wise_vscard_zhixin_ads_mincpm_value : 8 
+wise_vscard_org_show_mt_list : 1017,2011,2001,2009
+wise_vscard_know_show_mt_list : 1017,2011,3161,3136
+wise_vscard_prod_show_mt_list : 1017,2011,2001,2009
+wise_vscard_title_adv_len : 26

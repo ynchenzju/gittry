@@ -1,0 +1,58 @@
+10
+
+dir
+441272
+https://svn.baidu.com/app/ecom/im/trunk/production/prod/ranker/conf/bidders
+https://svn.baidu.com/app/ecom/im
+
+
+
+2017-12-27T04:34:54.653936Z
+438458
+sundaren
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e3b41110-2515-456f-954c-48b0ae168b4c
+
+ChunhuaSmartBidder
+dir
+
+ChunhuaAutoBidder
+dir
+
+WiseLuRadioBidder
+dir
+
+ZtcSmartBidder
+dir
+
+AutoBidder
+dir
+
+EcpaBidder
+dir
+
+TgskBidder
+dir
+
+AtSmartbidBidder
+dir
+
+NsRoiBidder
+dir
+
+CreditPunishBidder
+dir
+

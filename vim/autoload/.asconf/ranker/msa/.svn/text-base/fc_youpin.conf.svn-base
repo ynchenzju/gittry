@@ -1,0 +1,48 @@
+zx_query_prefix : REMODEL_query_user_case_
+qc_query_prefix : DEALER_query_
+qc_brand_prefix : DEALER_branduser_
+qc_brand_id_prefix : DEALER_series_
+qc_user_prefix : DEALER_dealerids_
+qc_showurl_text : 百度甄选
+qc_url_prefix1 : https://sp0.baidu.com/5bgWsjip0QIZ8tyhnq/car?
+qc_url_prefix2 : https://sp0.baidu.com/5bgWsjip0QIZ8tyhnq/car/form?
+youpin_card_adv_bid_ratio : 1.0
+youpin_card_adv_default_rigq : 0.9
+youpin_card_adv_default_click_q : 100000
+zx_query_title_prefix : REMODEL_query_title_
+zx_default_title : {query}_百度优品
+zx_user_case_prefix : REMODEL_user_case_
+zx_xbox_case_prefix : REMODEL_case_
+zx_asn_thr : 3
+fc_youpin_v2_bid_ratio : 1.0
+zx_url_prefix : https://sp0.baidu.com/5bgWsjip0QIZ8tyhnq/remodel/index?
+zx_showurl_text : 百度优品
+@youpin_vads_filter_favor_card_type : 3
+@youpin_vads_filter_favor_card_type : 5
+[@query_category_mt]
+query_category : 1
+mt : 9039
+real_adv_mt : 9033
+[@query_category_mt]
+query_category : 2
+mt : 9034
+real_adv_mt : 9035
+[@query_category_truncate_num]
+query_category : 1
+truncate_num : 9
+[@query_category_truncate_num]
+query_category : 2
+truncate_num : 1
+[@youpin_vads_mtpk_favor]
+card_type : 3
+@mt_id : 9034
+@mt_id : 9039
+[@youpin_vads_mtpk_favor]
+card_type : 5
+@mt_id : 9041
+[@youpin_vads_psa_favor]
+card_type : 3
+score_factor : 2
+[@youpin_vads_psa_favor]
+card_type : 5
+score_factor : 2

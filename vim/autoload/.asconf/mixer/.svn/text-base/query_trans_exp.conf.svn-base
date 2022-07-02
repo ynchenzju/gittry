@@ -1,0 +1,1113 @@
+exp_num : 26
+
+# 基线, 以url为key查询
+[@exp]
+exp_id : 0
+[.@exper]
+# 知道url->query,query->query
+tag : 0
+# 知道wise内容页下方广告位, cmatch:289,294
+src : 775
+[.@exper]
+tag : 0
+# 无线拇指医生qb页, cmatch:432
+src : 985
+[.@exper]
+# 经验,文库url->query
+tag : 9
+# 经验wise内容页（qb页）下方, cmatch:445
+src : 990
+[.@exper]
+tag : 9
+# 无线文库阅读页一跳, cmatch:540
+src : 1088
+[.@exper]
+tag : 0
+# 无线宝宝知道qb页中部, cmatch:561
+src : 1118
+
+# 基线, 以title为key查询
+[@exp]
+exp_id : 1
+[.@exper]
+# 知道的title->query
+tag : 1
+src : 775
+[.@exper]
+# 拇指医生和文库的title->query
+tag : 2
+src : 985
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+
+# tag14升级预留实验, query换oriquery
+[@exp]
+exp_id : 2
+[.@exper]
+# query去查询更新的query->query字典
+tag : 22
+src : 775
+[.@exper]
+# query去查询title-base表
+tag : 1
+src : 775
+[.@exper]
+# qurey去查询title-delta表
+tag : 2
+src : 775
+[.@exper]
+# query去查询query->title表
+tag : 7
+src : 775
+[.@exper]
+# query去查询query->title表
+tag : 21
+src : 775
+[.@exper]
+tag : 22
+src : 985
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 7
+src : 985
+[.@exper]
+tag : 21
+src : 985
+[.@exper]
+tag : 22
+src : 1088
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 7
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+[.@exper]
+tag : 22
+src : 1118
+
+[@exp]
+exp_id : 3
+[.@exper]
+tag : 3
+src : 775
+[.@exper]
+tag : 3
+src : 985
+[.@exper]
+tag : 3
+src : 990
+[.@exper]
+tag : 3
+src : 1088
+
+[@exp]
+exp_id : 4
+[.@exper]
+tag : 0
+src : 775
+[.@exper]
+tag : 7
+src : 775
+[.@exper]
+tag : 0
+src : 985
+[.@exper]
+tag : 0
+src : 990
+[.@exper]
+tag : 0
+src : 1088
+[.@exper]
+tag : 0
+src : 988
+[.@exper]
+tag : 1
+src : 775
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 1
+src : 990
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 1
+src : 988
+
+[@exp]
+exp_id : 5
+[.@exper]
+tag : 1
+src : 775
+[.@exper]
+tag : 5
+src : 775
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 5
+src : 985
+
+[@exp]
+exp_id : 6
+[.@exper]
+tag : 0
+src : 775
+[.@exper]
+tag : 0
+src : 1118
+[.@exper]
+tag : 0
+src : 985
+
+[@exp]
+exp_id : 7
+[.@exper]
+tag : 3
+src : 775
+[.@exper]
+tag : 7
+src : 775
+[.@exper]
+tag : 0
+src : 985
+[.@exper]
+tag : 7
+src : 985
+[.@exper]
+tag : 7
+src : 990
+[.@exper]
+tag : 7
+src : 1088
+
+[@exp]
+exp_id : 8
+[.@exper]
+tag : 2
+src : 775
+[.@exper]
+tag : 5
+src : 775
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 5
+src : 985
+[.@exper]
+tag : 9
+src : 988
+
+[@exp]
+exp_id : 9
+[.@exper]
+tag : 9
+src : 775
+
+[@exp]
+exp_id : 10
+[.@exper]
+tag : 0
+src : 775
+[.@exper]
+tag : 11
+src : 775
+
+[@exp]
+exp_id : 11
+[.@exper]
+tag : 11
+src : 775
+
+# tag0升级预留实验, url
+# tag=0->20
+[@exp]
+exp_id : 12
+[.@exper]
+tag : 20
+src : 775
+[.@exper]
+tag : 20
+src : 985
+[.@exper]
+tag : 9
+src : 990
+[.@exper]
+tag : 9
+src : 1088
+[.@exper]
+tag : 20
+src : 1118
+
+# tag0升级预留实验, title
+[@exp]
+exp_id : 13
+[.@exper]
+# title去查询query->query字典
+tag : 20
+src : 775
+[.@exper]
+# title去查询base表
+tag : 1
+src : 775
+[.@exper]
+# title去查询之前更新过的表
+tag : 2
+src : 775
+[.@exper]
+# title去查询query->title表
+tag : 7
+src : 775
+[.@exper]
+tag : 20
+src : 985
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 7
+src : 985
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 7
+src : 1088
+
+# tag0升级预留实验, query, 配置设置得和title相同
+[@exp]
+exp_id : 14
+[.@exper]
+# query去查询更新的query->query字典
+tag : 20
+src : 775
+[.@exper]
+# query去查询title-base表
+tag : 1
+src : 775
+[.@exper]
+# qurey去查询title-delta表
+tag : 2
+src : 775
+[.@exper]
+# query去查询query->title表
+tag : 7
+src : 775
+[.@exper]
+tag : 20
+src : 985
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 7
+src : 985
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 7
+src : 1088
+
+# tag1(title->query)升级预留实验, title
+# tag=1->21
+[@exp]
+exp_id : 15
+[.@exper]
+tag : 1
+src : 775
+[.@exper]
+tag : 21
+src : 775
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+
+### query_trans,title_trans策略合并 &
+### 拇指医生、宝宝知道添加query_trans、title_trans实验
+[@exp]
+exp_id : 16
+######  src:775 cmatch:289,294 知道频道 ##### 
+# query,title去查询query->query字典
+[.@exper]
+tag : 20
+src : 775
+# query,title去查询base title2query表
+[.@exper]
+tag : 1
+src : 775
+# query,title去查询之前更新过的title2query表
+[.@exper]
+tag : 2
+src : 775
+# query,title去查询query->title表
+[.@exper]
+tag : 7
+src : 775
+# query,title去查询增量更新过的title2query表
+[.@exper]
+tag : 21
+src : 775
+######  src:985 cmatch:432 拇指医生频道 ##### 
+[.@exper]
+tag : 20
+src : 985
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 7
+src : 985
+[.@exper]
+tag : 21
+src : 985
+##### src:1118 cmatch:561 宝宝知道频道 #####
+[.@exper]
+tag : 20
+src : 1118
+[.@exper]
+tag : 1
+src : 1118
+[.@exper]
+tag : 2
+src : 1118
+[.@exper]
+tag : 7
+src : 1118
+[.@exper]
+tag : 21
+src : 1118
+##### src:990 cmatch:445 经验频道  #####
+[.@exper]
+tag : 20
+src : 990
+[.@exper]
+tag : 1
+src : 990
+[.@exper]
+tag : 2
+src : 990
+[.@exper]
+tag : 7
+src : 990
+[.@exper]
+tag : 21
+src : 990
+##### src:1088 cmatch:540 文库频道  #####
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 7
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+
+### query_trans策略各频道补充tag &
+### 宝宝知道,经验 添加query_trans策略
+[@exp]
+exp_id : 17
+######  src:775 cmatch:289,294 知道频道 ##### 
+# query去查询query->query字典
+[.@exper]
+tag : 20
+src : 775
+# query去查询base title2query表
+[.@exper]
+tag : 1
+src : 775
+# query去查询之前更新过的title2query表
+[.@exper]
+tag : 2
+src : 775
+# query去查询query->title表
+[.@exper]
+tag : 7
+src : 775
+# query去查询增量更新过的title2query表
+[.@exper]
+tag : 21
+src : 775
+######  src:985 cmatch:432 拇指医生频道 ##### 
+[.@exper]
+tag : 20
+src : 985
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 7
+src : 985
+[.@exper]
+tag : 21
+src : 985
+##### src:1118 cmatch:561 宝宝知道频道 #####
+[.@exper]
+tag : 20
+src : 1118
+[.@exper]
+tag : 1
+src : 1118
+[.@exper]
+tag : 2
+src : 1118
+[.@exper]
+tag : 7
+src : 1118
+[.@exper]
+tag : 21
+src : 1118
+##### src:990 cmatch:445 经验频道  #####
+[.@exper]
+tag : 20
+src : 990
+[.@exper]
+tag : 1
+src : 990
+[.@exper]
+tag : 2
+src : 990
+[.@exper]
+tag : 7
+src : 990
+[.@exper]
+tag : 21
+src : 990
+##### src:1088 cmatch:540 文库频道  #####
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 7
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+
+### title_trans策略各频道补充tag &
+### 宝宝知道,经验 添加title_trans实验
+[@exp]
+exp_id : 18
+######  src:775 cmatch:289,294 知道频道 ##### 
+# title去查询base title2query表
+[.@exper]
+tag : 1
+src : 775
+# title去查询之前更新过的title2query表
+[.@exper]
+tag : 2
+src : 775
+# title去查询增量更新过的title2query表
+[.@exper]
+tag : 21
+src : 775
+######  src:985 cmatch:432 拇指医生频道 ##### 
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 21
+src : 985
+##### src:1118 cmatch:561 宝宝知道频道 #####
+[.@exper]
+tag : 1
+src : 1118
+[.@exper]
+tag : 2
+src : 1118
+[.@exper]
+tag : 21
+src : 1118
+##### src:990 cmatch:445 经验频道  #####
+[.@exper]
+tag : 1
+src : 990
+[.@exper]
+tag : 2
+src : 990
+[.@exper]
+tag : 21
+src : 990
+##### src:1088 cmatch:540 文库频道  #####
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+
+# 经验、文库url升级预留实验, url_trans
+[@exp]
+exp_id : 19
+[.@exper]
+# src775 知道
+tag : 20
+src : 775
+# src1118 宝宝知道
+[.@exper]
+tag : 20
+src : 1118
+# src1118 拇指医生
+# 新增
+[.@exper]
+tag : 20
+src : 985
+# src990经验 
+[.@exper]
+tag : 9
+src : 990
+# 新增url2query数据
+[.@exper]
+tag : 30
+src : 990
+# src988经验
+# 新增
+[.@exper]
+tag : 9
+src : 988
+# 新增url2query数据
+[.@exper]
+tag : 30
+src : 988
+# src1088文库
+[.@exper]
+tag : 9
+src : 1088
+# 新增url2query数据
+[.@exper]
+tag : 30
+src : 1088
+
+### query_trans策略各频道补充tag &
+### 宝宝知道,经验 添加query_trans策略
+### 引入经验、文库数据源
+[@exp]
+exp_id : 20
+######  src:775 cmatch:289,294 知道频道 ##### 
+# query去查询query->query字典
+[.@exper]
+tag : 20
+src : 775
+# query去查询base title2query表
+[.@exper]
+tag : 1
+src : 775
+# query去查询之前更新过的title2query表
+[.@exper]
+tag : 2
+src : 775
+# query去查询query->title表
+[.@exper]
+tag : 7
+src : 775
+# query去查询增量更新过的title2query表
+[.@exper]
+tag : 21
+src : 775
+######  src:985 cmatch:432 拇指医生频道 ##### 
+[.@exper]
+tag : 20
+src : 985
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 7
+src : 985
+[.@exper]
+tag : 21
+src : 985
+##### src:1118 cmatch:561 宝宝知道频道 #####
+[.@exper]
+tag : 20
+src : 1118
+[.@exper]
+tag : 1
+src : 1118
+[.@exper]
+tag : 2
+src : 1118
+[.@exper]
+tag : 7
+src : 1118
+[.@exper]
+tag : 21
+src : 1118
+##### src:990 cmatch:445 经验频道  #####
+[.@exper]
+tag : 20
+src : 990
+[.@exper]
+tag : 1
+src : 990
+[.@exper]
+tag : 2
+src : 990
+[.@exper]
+tag : 7
+src : 990
+[.@exper]
+tag : 21
+src : 990
+[.@exper]
+tag : 31
+src : 990
+[.@exper]
+tag : 32
+src : 990
+##### src:988 cmatch:444 经验频道 步骤页  #####
+[.@exper]
+tag : 20
+src : 988
+[.@exper]
+tag : 1
+src : 988
+[.@exper]
+tag : 2
+src : 988
+[.@exper]
+tag : 7
+src : 988
+[.@exper]
+tag : 21
+src : 988
+[.@exper]
+tag : 31
+src : 988
+[.@exper]
+tag : 32
+src : 988
+##### src:1088 cmatch:540 文库频道  #####
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 7
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+[.@exper]
+tag : 31
+src : 1088
+[.@exper]
+tag : 32
+src : 1088
+
+### title_trans策略各频道补充tag &
+### 宝宝知道,经验 添加title_trans实验
+### 引入经验、文库数据源
+[@exp]
+exp_id : 21
+######  src:775 cmatch:289,294 知道频道 ##### 
+# title去查询base title2query表
+[.@exper]
+tag : 1
+src : 775
+# title去查询之前更新过的title2query表
+[.@exper]
+tag : 2
+src : 775
+# title去查询增量更新过的title2query表
+[.@exper]
+tag : 21
+src : 775
+# title去查询新增title2query直连表owner:tiantian06
+[.@exper]
+tag : 23
+src : 775
+######  src:985 cmatch:432 拇指医生频道 ##### 
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 21
+src : 985
+[.@exper]
+tag : 23
+src : 985
+##### src:1118 cmatch:561 宝宝知道频道 #####
+[.@exper]
+tag : 1
+src : 1118
+[.@exper]
+tag : 2
+src : 1118
+[.@exper]
+tag : 21
+src : 1118
+[.@exper]
+tag : 23
+src : 1118
+##### src:990 cmatch:445 经验频道  #####
+[.@exper]
+tag : 1
+src : 990
+[.@exper]
+tag : 2
+src : 990
+[.@exper]
+tag : 21
+src : 990
+[.@exper]
+tag : 32
+src : 990
+##### src:988 cmatch:444 经验频道 步骤页  #####
+[.@exper]
+tag : 1
+src : 988
+[.@exper]
+tag : 2
+src : 988
+[.@exper]
+tag : 21
+src : 988
+[.@exper]
+tag : 32
+src : 988
+##### src:1088 cmatch:540 文库频道  #####
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+[.@exper]
+tag : 32
+src : 1088
+
+### query_trans策略各频道补充tag &
+### 宝宝知道,经验 添加query_trans策略&
+### 引入经验、文库数据源&
+### query使用timeline_recall召回扩展querys
+[@exp]
+exp_id : 22
+######  src:775 cmatch:289,294 知道频道 ##### 
+[.@exper]
+tag : 20
+src : 775
+[.@exper]
+tag : 1
+src : 775
+[.@exper]
+tag : 2
+src : 775
+[.@exper]
+tag : 7
+src : 775
+[.@exper]
+tag : 21
+src : 775
+[.@exper]
+tag : 33
+src : 775
+######  src:985 cmatch:432 拇指医生频道 ##### 
+[.@exper]
+tag : 20
+src : 985
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 7
+src : 985
+[.@exper]
+tag : 21
+src : 985
+[.@exper]
+tag : 33
+src : 985
+##### src:1118 cmatch:561 宝宝知道频道 #####
+[.@exper]
+tag : 20
+src : 1118
+[.@exper]
+tag : 1
+src : 1118
+[.@exper]
+tag : 2
+src : 1118
+[.@exper]
+tag : 7
+src : 1118
+[.@exper]
+tag : 21
+src : 1118
+[.@exper]
+tag : 33
+src : 1118
+##### src:990 cmatch:445 经验频道  #####
+[.@exper]
+tag : 20
+src : 990
+[.@exper]
+tag : 1
+src : 990
+[.@exper]
+tag : 2
+src : 990
+[.@exper]
+tag : 7
+src : 990
+[.@exper]
+tag : 21
+src : 990
+[.@exper]
+tag : 31
+src : 990
+[.@exper]
+tag : 32
+src : 990
+##### src:988 cmatch:444 经验频道 步骤页  #####
+[.@exper]
+tag : 20
+src : 988
+[.@exper]
+tag : 1
+src : 988
+[.@exper]
+tag : 2
+src : 988
+[.@exper]
+tag : 7
+src : 988
+[.@exper]
+tag : 21
+src : 988
+[.@exper]
+tag : 31
+src : 988
+[.@exper]
+tag : 32
+src : 988
+##### src:1088 cmatch:540 文库频道  #####
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 7
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+[.@exper]
+tag : 31
+src : 1088
+[.@exper]
+tag : 32
+src : 1088
+
+
+### 新基线 ###
+# url2query
+[@exp]
+exp_id : 23
+[.@exper]
+# src775 知道
+tag : 20
+src : 775
+# src1118 宝宝知道
+[.@exper]
+tag : 20
+src : 1118
+# src1118 拇指医生
+[.@exper]
+tag : 20
+src : 985
+# src990经验 
+[.@exper]
+tag : 9
+src : 990
+# src1088文库
+[.@exper]
+tag : 9
+src : 1088
+[.@exper]
+tag : 30
+src : 1088
+
+### 新基线 ###
+# query2query
+[@exp]
+exp_id : 24
+######  src:775 cmatch:289,294 知道频道 ##### 
+[.@exper]
+tag : 20
+src : 775
+[.@exper]
+tag : 1
+src : 775
+[.@exper]
+tag : 2
+src : 775
+[.@exper]
+tag : 7
+src : 775
+######  src:985 cmatch:432 拇指医生频道 ##### 
+[.@exper]
+tag : 20
+src : 985
+[.@exper]
+tag : 1
+src : 985
+[.@exper]
+tag : 2
+src : 985
+[.@exper]
+tag : 7
+src : 985
+##### src:1118 cmatch:561 宝宝知道频道 #####
+##### src:1088 cmatch:540 文库频道  #####
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 7
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+[.@exper]
+tag : 31
+src : 1088
+[.@exper]
+tag : 32
+src : 1088
+
+### 新基线 ###
+# title2query
+[@exp]
+exp_id : 25
+######  src:775 cmatch:289,294 知道频道 ##### 
+[.@exper]
+tag : 1
+src : 775
+[.@exper]
+tag : 21
+src : 775
+######  src:985 cmatch:432 拇指医生频道 ##### 
+[.@exper]
+tag : 2
+src : 985
+##### src:1118 cmatch:561 宝宝知道频道 #####
+##### src:1088 cmatch:540 文库频道  #####
+[.@exper]
+tag : 1
+src : 1088
+[.@exper]
+tag : 2
+src : 1088
+[.@exper]
+tag : 20
+src : 1088
+[.@exper]
+tag : 21
+src : 1088
+[.@exper]
+tag : 32
+src : 1088

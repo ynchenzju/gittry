@@ -1,0 +1,8 @@
+msa_uv_minbid_use_bid : 0
+msa_uv_minbid_use_wmatch : 1
+msa_uv_minbid_use_userid : 1
+msa_uv_minbid_use_default : 0
+msa_uv_minbid_default_value : 0
+msa_uv_minbid_min : 10
+msa_uv_minbid_max : 10000
+msa_uv_minbid_use_entity : 0

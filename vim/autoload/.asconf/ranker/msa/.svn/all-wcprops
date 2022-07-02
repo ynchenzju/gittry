@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/app/ecom/im/!svn/ver/441028/trunk/production/prod/ranker/conf/msa
+END
+msa_strategy.conf
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/app/ecom/im/!svn/ver/440978/trunk/production/prod/ranker/conf/msa/msa_strategy.conf
+END
+msa_ubm_model.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/127438/trunk/production/prod/ranker/conf/msa/msa_ubm_model.conf
+END
+msa_auto_bid.conf
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/msa/msa_auto_bid.conf
+END
+material_score.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/app/ecom/im/!svn/ver/318075/trunk/production/prod/ranker/conf/msa/material_score.conf
+END
+msa_landingpage_model.conf
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/msa/msa_landingpage_model.conf
+END
+msa_search_quality_id_model.conf
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/app/ecom/im/!svn/ver/151051/trunk/production/prod/ranker/conf/msa/msa_search_quality_id_model.conf
+END
+msa_csq_recall_strategy.conf
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/app/ecom/im/!svn/ver/371013/trunk/production/prod/ranker/conf/msa/msa_csq_recall_strategy.conf
+END
+fc_youpin.conf
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/app/ecom/im/!svn/ver/399590/trunk/production/prod/ranker/conf/msa/fc_youpin.conf
+END
+image_wise_strategy.conf
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/221809/trunk/production/prod/ranker/conf/msa/image_wise_strategy.conf
+END
+msa_wenda.conf
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/app/ecom/im/!svn/ver/441028/trunk/production/prod/ranker/conf/msa/msa_wenda.conf
+END

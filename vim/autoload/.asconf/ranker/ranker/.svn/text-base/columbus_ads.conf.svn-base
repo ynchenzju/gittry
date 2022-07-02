@@ -1,0 +1,28 @@
+[@columbus_resource_card_confs]
+columbus_resource_id : 4129
+columbus_card_type : fin_stock_ad
+columbus_main_ctr_soft_thr : 0.5
+columbus_main_ctr_hard_thr : 0.6
+columbus_main_rig_soft_thr : 0.5
+columbus_main_rig_hard_thr : 0.6
+columbus_main_mincpm_soft_thr : 0.7
+columbus_main_mincpm_hard_thr : 0.8
+columbus_ads_min_res_num : 1
+columbus_ads_max_res_num : 4
+columbus_type : finance_columbus
+columbus_detail_page_ads_min_num : 3
+columbus_detail_page_ads_max_num : 6
+columbus_detail_page_ads_thr_num : 6
+[.@columbus_resource_card_mt_info]
+could_show_mtid : 3501
+title_effect_bytes_len : 20
+title_effect_wide_screen_bytes_len : 30
+desc_effect_bytes_len : 40
+desc_effect_wide_screen_bytes_len : 50
+[.@columbus_resource_card_mt_info]
+could_show_mtid : 3503
+title_effect_bytes_len : 20
+title_effect_wide_screen_bytes_len : 30
+desc_effect_bytes_len : 40
+desc_effect_wide_screen_bytes_len : 50
+

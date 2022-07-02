@@ -1,0 +1,4 @@
+[@host_re_pattern]
+index : 1
+pattern : ^(http|https)://(www|m|3g)(\..*?.(com|cn))
+pos : 3

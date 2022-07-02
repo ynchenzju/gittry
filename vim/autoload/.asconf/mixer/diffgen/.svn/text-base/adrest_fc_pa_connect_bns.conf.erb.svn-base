@@ -1,0 +1,94 @@
+RESOURCE_POOL_SIZE : 40
+<% %>
+[ArapiConfig]
+healthycheck_time : 5000
+max_packet_key_num : 400
+req_buf_len : 1000000 
+res_buf_len : 2097152
+adrest_group_num : <%= @adrest_shard_num %>
+pa_group_num : <%= @paadrest_shard_num %>
+backup_platform :<%= @adrest_platform %>
+
+hash_file_name:./data/pl/a_comm/xhash_mapper_base.xdict
+hash_reload_interval:3 
+hash_bucket_num:10000
+
+[UbClientConfig]
+
+#0:Prefer Galileo
+#1:Prefer Local Conf
+ConfType  : 10
+
+[.Reactor]
+ThreadNum  :  8
+CheckTime : 1
+
+[.Naming]
+DIR : ./conf/
+FILE : naming_back.conf
+WebfootQueryTimeout: 30000
+SeviceSynInterval : 10
+IsUseBnsBackupConf : 1
+
+<% 0.upto(@adrest_shard_num - 1) do |shard_id| %>
+[..@Service]
+
+module_name : adrest
+Name : adrest<%= "%02d" % shard_id %>
+WebfootServiceName: group.opera-<%= @adrest_platform %>-adrest-<%=  "%03d" % shard_id %>-<%= @adrest_isp %>.<%= __product %>.all
+
+group_idx : <%= shard_id %>
+platform : <%= @adrest_platform %>
+
+SendBuf : -1
+RecvBuf : -1
+ConnectAll : 0
+DefaultPort : 6688
+DefaultConnectTimeOut  : 20 
+DefaultReadTimeOut  : 100
+DefaultWriteTimeOut  : 20 
+DefaultMaxConnect  :  20
+DefaultRetry  : 5
+DefaultConnectType  :  LONG
+DefaultLinger : 1
+ReqBuf  :  10000
+ResBuf  :  10000
+DefaultAsyncWaitingNum  : 100 
+#
+[...CurrStrategy]
+ClassName : UbClientStrategyWithHealthy 
+
+[...CurrHealthy]
+ClassName  :UbClientHealthyChecker
+<% end %>
+
+<% 0.upto(@paadrest_shard_num - 1) do |shard_id| %>
+[..@Service]
+module_name : paadrest
+Name : paadrest<%= "%02d" % shard_id %>
+WebfootServiceName: group.opera-<%= @paadrest_platform %>-paadrest-<%=  "%03d" % shard_id %>-<%= @paadrest_isp %>.<%= __product %>.all
+
+group_idx : <%= shard_id %>
+platform : <%= @paadrest_platform %>
+
+SendBuf : -1
+RecvBuf : -1
+ConnectAll : 0
+DefaultPort : 6688
+DefaultConnectTimeOut  : 30
+DefaultReadTimeOut  : 100
+DefaultWriteTimeOut  : 40
+DefaultMaxConnect  :  20
+DefaultRetry  : 5
+DefaultConnectType  :  LONG
+DefaultLinger : 1
+ReqBuf  :  10000
+ResBuf  :  10000
+DefaultAsyncWaitingNum  : 100
+#
+[...CurrStrategy]
+ClassName : UbClientStrategyWithHealthy
+
+[...CurrHealthy]
+ClassName  :UbClientHealthyChecker
+<% end %>

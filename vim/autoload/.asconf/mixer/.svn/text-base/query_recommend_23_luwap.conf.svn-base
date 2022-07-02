@@ -1,0 +1,41 @@
+[@query_recommend_description]
+alive : 0
+[.post_process_random_select]
+random_num : 0
+[.recommend_condition]
+src_id : 1102
+
+[.@recommend_output_product]
+alive : 1
+recommend_output_product_name: query_mining
+qry_dedup : 1
+dedup_time_interval : 3600
+@dedup_src : 1026
+@select_result_set_fild_name : 
+qry_sim_dedup : 1
+qry_sim_thr : 0.85
+feed_pvrq_thr_cut_query_num : 0
+feed_pvrq_thr : 0.3
+qm_multi_queries_use_original_query : 1  
+qm_max_multi_queries_num : 2
+qm_multi_queries_product_tag : 1
+qm_original_query_weight : 0
+multi_queries_sim_thr : 0.7
+query_mining_mingshi : 0
+is_need_query_trade_filter : 1
+qm_original_query_global_id:700
+[..ctr]
+alive:1
+cut_alive:0
+ctr_thr:0
+uqueryq_replace_xqueryq : 1
+recom_query_qm_ctr1_alpha : 3
+recom_query_qm_ctr1_beta :  0.0002
+recom_query_qm_ctr1_gamma : 0.02
+ori_query_qm_ctr1_alpha: 0
+ori_query_qm_ctr1_beta: 0
+ori_query_qm_ctr1_gamma: 0
+recom_query_qm_ctr1_cpmq_weight : 0 
+ori_query_qm_ctr1_cpmq_weight : 0 
+
+

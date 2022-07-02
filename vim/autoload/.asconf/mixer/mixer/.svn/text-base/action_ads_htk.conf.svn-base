@@ -1,0 +1,50 @@
+[@htk_mt_conf]
+mt : 2111
+clk_type : 1
+ki_level : 0-0,2-2,3-2,4-3
+
+[@htk_mt_conf]
+mt : 2114
+clk_type : 1
+ki_level : 0-0,1-3
+
+[@htk_mt_conf]
+mt : 2129
+clk_type : 1
+ki_level : 0-0,2-2,3-2,4-3
+
+[@htk_mt_conf]
+mt : 2001
+clk_type : 1
+ki_level : 0-0,1-3
+
+[@htk_mt_conf]
+mt : 2027
+clk_type : 1
+ki_level : 0-0,1-3
+
+[@htk_mt_conf]
+mt : 2156
+clk_type : 1
+ki_level : 0-0,1-2,2-2,3-3
+
+[@htk_mt_conf]
+mt : 2165
+clk_type : 1
+ki_level : 0-0,1-3
+
+[@htk_mt_conf]
+mt : 2181
+clk_type : 1
+ki_level : 0-0,1-3
+
+[@htk_mt_conf]
+mt : 2015
+clk_type : 1
+ki_level : 0-0,1-3
+
+[@htk_mt_conf]
+mt : 3127
+clk_type : 1
+ki_level : 0-0,1-3
+

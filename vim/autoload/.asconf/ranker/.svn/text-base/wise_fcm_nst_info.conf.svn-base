@@ -1,0 +1,56 @@
+# 1. 无线配置@link_fields时，对于不过tc的链接需要明确指明，对于需要过tc的可以不特别指明，默认即过tc
+#    对于不过tc的链接, @link_fields 需要在正常的配置后加"@no_tc"进行指明，例如：item.link@no_tc
+# 2. 对于电话拨打链接，需要加配置@phone_link_fields，指明需要加密的link域以及其对应的电话号码
+#    @phone_link_fields 格式为: 需要加密的域@对应电话号码的域, 例如直航的为: item.link@item.phone
+# 3. 无线样式叠加multi_rule支持按版式叠加，如果无版式要求，直接写mt即可；如果有版式要求，在mt后面@上以'_'连接的版式id即可。
+#    例如样式a如果可以与1017、2009叠加，与1017叠加无版式要求，与2009只在iphone版式和高端简版上叠加，
+#    则其叠加规则写为：multi_rule : 1017,2009@2_7
+# 4. truncation_fields 按数据源截断配置, 格式: field@srcid_limit,srcid_limit
+exp_list : wise_fcm_pa_pic, wise_fcm_dynamic_idea_word, wise_fcm_direct_tel 
+
+# conditional样式可以和所有样式叠加，但最终展现与否取决于广告新样式队列中是否包含该样式premise_mt_list中的至少一个mt
+# premise_mt_list为空，conditional样式一定能展现。
+# conditional_exp_list :
+
+#结构化图文
+[@exp]
+mt:3009
+exp_name:wise_fcm_pa_pic
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule:824@1
+wpt_rule : 2
+multi_rule : 2001, 2032
+@flush_fields:item.line
+@encode_fields:item.icon_link
+@encode_fields:item.line_add
+@encode_fields:image_item.image_link
+@json_checkers:INT_EQ 3009 mt
+@json_checkers:ARRSIZE_EQ 1 image_item
+@json_checkers:STRLEN_MIN 4 image_item.*.image_link
+
+#动态创意文字链样式
+[@exp]
+mt : 2032
+exp_name : wise_fcm_dynamic_idea_word
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 824@1
+wpt_rule : 2,7
+multi_rule : 2001,3009
+@link_fields   :  item.link
+@flush_fields : item.idea_desc
+
+#直航
+[@exp]
+mt : 2001
+exp_name : wise_fcm_direct_tel
+select_exp : 0
+[.@exper]
+exper_id : 0
+src_rank_rule : 824@1 
+wpt_rule : 0,1,2,3,4,6,7
+multi_rule : 3009,2032
+@phone_link_fields : item.link@item.phone

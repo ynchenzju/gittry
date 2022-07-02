@@ -1,0 +1,131 @@
+
+
+############################################
+# 实验全局基本信息
+############################################
+#1. 蹊径商用阶段(走ems)
+[@experiment]
+exp_id :  1
+exp_name :  xj_official
+@link_fields   :  item.link
+@flush_fields  :  item.title
+
+#2. 先知广告(走ems)
+[@experiment]
+exp_id :  1002
+exp_name :  xianzhi
+@link_fields   :  item.link
+
+@flush_fields  :  item.desc1
+@flush_fields  :  item.desc2
+
+
+#3. 电话号码(走ems)
+[@experiment]
+exp_id : 1015
+exp_name :  tel_num
+
+[@experiment]
+exp_id : 1009
+exp_name:video_adv
+@flush_fields : item.title
+@link_fields : item.link.url
+
+[@experiment]
+exp_id : 2
+exp_name : xz_plusbox_productads
+@link_fields : item.products.link
+@flush_fields : item.products.price
+
+[@experiment]
+exp_id : 1010
+exp_name:zhaopai_image
+
+[@experiment]
+exp_id : 1012
+exp_name:yh_discount
+@link_fields : item.link.url
+
+#favicon
+[@experiment]
+exp_id : 1013
+exp_name : favicon
+
+#3. 蹊径孵化阶段（走imas规则）
+[@experiment]
+exp_id :  1001
+exp_name :  xijing
+@link_fields   :  item.link
+@title_fields  :  item.title
+@flush_fields  :  item.title
+
+[@experiment]
+exp_id : 3002
+exp_name : pa_image
+@flush_fields : text_links.text
+@link_fields : text_links.link_url
+
+[@experiment]
+exp_id : 3003
+exp_name : pa_category_page
+@flush_fields : rows.cells.content
+@flush_fields : foldmsg
+@flush_fields : unfoldmsg
+@link_fields : rows.cells.url
+
+#v身份
+[@experiment]
+exp_id :  1017
+exp_name :  v_certify
+
+#微地标
+[@experiment]
+exp_id : 1018
+exp_name : load_mark
+@link_fields : item.more_info.url
+
+#reputation
+[@experiment]
+exp_id:1011
+exp_name:reputation
+
+#整合
+[@experiment]
+exp_id:1020
+exp_name:integration
+@link_fields:item.url1
+@link_fields:item.url3
+@flush_fields:item.name1
+@flush_fields:item.name3
+
+[@experiment]
+exp_id:2013
+exp_name:med_query
+@flush_fields:item.name
+
+############################################
+# 数据源级别的实验规则
+############################################
+# 213 pp数据源
+[@src_rule]
+src_id  :  213
+[.@exp]
+exp_id : 1001
+priority  :  1   
+rank_region : 1
+len_limit       :  70
+item_num_limit  :  5
+need_consistent : 1 
+
+
+# 204 ppim数据源
+[@src_rule]
+src_id  :  204
+[.@exp]
+exp_id : 1001
+priority  :  1  
+rank_region  : 1
+len_limit       :  70
+item_num_limit  :  5
+need_consistent : 1
+

@@ -1,0 +1,334 @@
+[lp_forward]
+[.lianjia]
+wise_switch_on: 1
+ps_switch_on: 0
+use_cor_buf: 1
+@correct_query_seg_word_rsp_index: 0
+@correct_query_seg_word_rsp_index: 1
+@correct_query_seg_word_rsp_index: 2
+@correct_query_seg_word_rsp_index: 3
+
+[rs_prod]
+youxuan_card_rs_prefix_px : 49
+youxuan_card_rs_delim_px : 28
+youxuan_card_rs_max_num : 3
+youxuan_card_rs_score_alpha : 100
+youxuan_card_rs_score_beta : 0
+youxuan_card_rs_score_gamma : 0
+youxuan_card_rs_thr_ratio : 0.5
+youxuan_card_rs_thr_num : 2
+youxuan_card_rs_similarity_thr : 0.7
+
+[duxin_youxuan]
+duxin_adnum_thr : 2
+duxin_adnum_limit : 2
+duxin_adnum_final_limit : 1 
+duxin_adnum_final_limit_ztc_bonus : 1
+[eglb]
+eglb_vs_mixads_priority_mode : 0
+[sponsor_ads]
+sponsor_ads_wise_minbid : 200
+sponsor_ads_ps_minbid : 200
+sponsor_ads_mt : 3440
+
+[zhongxiu]
+print_shift_log : 0
+zhongxiu_plan_product_id : 13
+min_adv_num : 1
+max_adv_num : 10
+zhongxiu_query_black_match_dict_filename : ./data/pl/a_comm/zhongxiu_query_black_match_dict.txt
+zhongxiu_query_black_match_dict_size : 1000000
+zhongxiu_headline : 该行业相关其他商家
+zhongxiu_brand_match_dict_filename : ./data/pl/a_comm/zhongxiu_brand_normalize.txt
+zhongxiu_brand_match_dict_size : 1000000
+query_match_mode : 1
+@qbrand_owner_mts : 2199
+@material_key_levels : 9
+@material_key_levels : 7
+@material_key_levels : 1
+@material_key_levels : 2
+@material_key_levels : 9999
+@black_key_levels : 9
+@black_key_levels : 7
+@black_key_levels : 1
+@black_key_levels : 2
+@black_key_levels : 9999
+@brand_key_levels : 9
+@brand_key_levels : 7
+@brand_key_levels : 1
+@brand_key_levels : 2
+@brand_key_levels : 9999
+zhongxiu_cond_platform : 1
+zhongxiu_desc_row_num : 2
+zhongxiu_ppim_competitor_forward : 0
+zhongxiu_mt : 22505
+zhongxiu_mcid : 123
+filter_ztc : 1
+filter_chunhua : 0
+source_pic_mt : 22516
+source_mt_field_bigpic : img_src_big
+zhongxiu_cond5_ppim_num_min : 1
+zhongxiu_cond5_ppim_num_max : 1
+zhongxiu_trade_mode : 1
+zhongxiu_trade_allow_empty : 1
+exclusive_use_dict : 0
+zhongxiu_adv_mode : 0
+zhongxiu_no_keyword_insert : 1
+zhongxiu_no_flush : 1
+zhongxiu_no_expand_area : 1
+@zhongxiu_clear_src : 872
+@zhongxiu_clear_src : 878
+@zhongxiu_clear_src : 876
+@zhongxiu_clear_src : 877
+@zhongxiu_clear_src : 828
+@zhongxiu_clear_src : 830
+@zhongxiu_clear_src : 926
+@zhongxiu_clear_src : 927
+@zhongxiu_clear_src : 1013
+@zhongxiu_clear_src : 1020
+@zhongxiu_clear_src : 1017
+@zhongxiu_clear_src : 1019
+@zhongxiu_clear_src : 100001
+bidword_revert_check : 0
+zhongxiu_advlist_dedup_original_advlist : 0
+zhongxiu_dedup_im : 1
+zhongxiu_jp_mode : 0
+zhongxiu_qbrand_mode : 1
+zhongxiu_cond3_ppim_num_thr : 1
+zhongxiu_cond4_ppim_num_thr : 1
+zhongxiu_brand_replace_title : 0
+zhongxiu_final_check_max_ppim_adv : 2
+zhongxiu_brand_title_use_orig : 1
+flush_headline_mode : 0
+
+
+zhongxiu_title_prefix:【
+zhongxiu_title_postfix:】
+zhongxiu_title_insert_brand : 0
+zhongxiu_change_mt_ad_num : 1
+zhongxiu_min_adv_num_mt : 22514
+zhongxiu_max_adv_num_mt : 22505
+zhongxiu_midpage_max_adv_num : 15
+zhongxiu_midpage_mt : 22521
+zhongxiu_sublink_max_num : 3
+zhongxiu_mp_title : 相关商家
+# cat zx.txt | sed -e 's/^/\[\.\@zhongxiu_trade_headline\]\ntrade_id1 : /' -e 's/\t/\nheadline : /'
+# cat zx.txt | awk 'BEGIN{a=0}{print "\[\.\@zhongxiu_trade_headline\] #"a"\ntrade_id1 :"$0; a+=1}' | sed  's/\t/\nheadline : /'
+# 生成原文
+# cat zx.txt | awk 'BEGIN{a=0}{print "[.@zhongxiu_trade_headline] #"a"\ntrade_id1 :"$0; a+=1}' | sed -e 's/\t/\nheadline : /' -e 's/\r//'
+# 生成测试
+# cat zx.txt | awk 'BEGIN{a=0}{print "[.@zhongxiu_trade_headline] #"a"\ntrade_id1 :"$0; a+=1}' | sed -e 's/\t/\nheadline : /' -e 's/\r//' | sed 's/trade_id1.*/trade_id1 :9999/'
+[.@zhongxiu_trade_headline] #0
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #1
+trade_id:9999
+headline : 办公用品_热门相关搜索结果
+[.@zhongxiu_trade_headline] #2
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #3
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #4
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #5
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #6
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #7
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #8
+trade_id:9999
+headline : 房产行业_热门相关搜索
+[.@zhongxiu_trade_headline] #9
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #10
+trade_id:9999
+headline : 服装鞋帽_热门相关商家
+[.@zhongxiu_trade_headline] #11
+trade_id:9999
+headline : 箱包饰品_热门相关商家
+[.@zhongxiu_trade_headline] #12
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #13
+trade_id:9999
+headline : 该行业热门相关设备厂商
+[.@zhongxiu_trade_headline] #14
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #15
+trade_id:9999
+headline : 家用电器_热门相关商家
+[.@zhongxiu_trade_headline] #16
+trade_id:9999
+headline : 教育培训_热门相关机构
+[.@zhongxiu_trade_headline] #17
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #18
+trade_id:9999
+headline : 金融行业_热门相关机构
+[.@zhongxiu_trade_headline] #19
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #20
+trade_id:9999
+headline : 旅游住宿_热门相关搜索
+[.@zhongxiu_trade_headline] #21
+trade_id:9999
+headline : 美容化妆_热门相关搜索
+[.@zhongxiu_trade_headline] #22
+trade_id:9999
+headline : 母婴护理_热门相关搜索
+[.@zhongxiu_trade_headline] #23
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #24
+trade_id:9999
+headline : 该行业热门相关软件
+[.@zhongxiu_trade_headline] #25
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #26
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #27
+trade_id:9999
+headline : 食品保健_热门相关搜索
+[.@zhongxiu_trade_headline] #28
+trade_id:9999
+headline : 手机数码_热门相关搜索
+[.@zhongxiu_trade_headline] #29
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #30
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #31
+trade_id:9999
+headline : 医疗服务_热门相关搜索
+[.@zhongxiu_trade_headline] #32
+trade_id:9999
+headline : 游戏_热门相关搜索
+[.@zhongxiu_trade_headline] #33
+trade_id:9999
+headline : 休闲娱乐_热门相关搜索
+[.@zhongxiu_trade_headline] #34
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #35
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #36
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #37
+trade_id:9999
+headline : 该行业热门书籍文档相关搜索
+[.@zhongxiu_trade_headline] #38
+trade_id:9999
+headline : 该行业热门资讯相关搜索
+[.@zhongxiu_trade_headline] #39
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #40
+trade_id:9999
+headline : 该行业热门相关搜索
+[.@zhongxiu_trade_headline] #41
+trade_id:9999
+headline : 该行业热门相关搜索
+
+[.@zhongxiu_mt_source]
+mt_id : 22516
+field_bigpic : img_src_big
+pic_field : img_src_big
+
+#[.@zhongxiu_mt_source]
+#mt_id : 2062
+#field_bigpic : pic_url
+#pic_field : pic_url
+[.@zhongxiu_mt_rollback]
+mt_id : 22516
+pic_field : img_src_big
+
+[.@zhongxiu_sublink_item]
+mt_id : 9005
+text_field : sublink.item.text
+link_field : sublink.item.link
+[.@zhongxiu_sublink_item]
+mt_id : 2032
+text_field : item.idea_desc
+link_field : item.link
+
+[.@zhongxiu_midpage_mt_source]
+mt_id : 9025
+pic_field : pic
+[.@zhongxiu_midpage_mt_source]
+mt_id : 2052
+pic_field : pic_url
+
+[zhongxiu_strategy]
+zhongxiu_multi_thr_wise_baidu_ctrq_boundary : 400
+zhongxiu_multi_thr_wise_other_ctrq_boundary : 70
+zhongxiu_multi_thr_wise_baidu_clickq_boundary : 1700
+zhongxiu_multi_thr_wise_other_clickq_boundary : 700
+zhongxiu_multi_thr_wise_baidu_rigq_boundary : 700
+zhongxiu_multi_thr_wise_other_rigq_boundary : 50
+zhongxiu_multi_thr_wise_baidu_ctrq_base : -0.06
+zhongxiu_multi_thr_wise_other_ctrq_base : -0.06
+zhongxiu_multi_thr_wise_baidu_clickq_base : -0.6
+zhongxiu_multi_thr_wise_other_clickq_base : -0.56
+zhongxiu_multi_thr_wise_baidu_rigq_base : -0.285
+zhongxiu_multi_thr_wise_other_rigq_base : -0.26
+zhongxiu_wise_baidu_rigq_thr : 1000
+zhongxiu_wise_other_rigq_thr : 1000
+zhongxiu_wise_baidu_wasq_thr : 1000
+zhongxiu_wise_other_wasq_thr : 1000
+zhongxiu_use_q_trans : 1
+zhongxiu_wise_left_t_default : 1.0
+zhongxiu_wise_p_value : 1
+zhongxiu_max_ppim_shift_total_cpm:10000
+zhongxiu_max_ppim_shift_single_cpm:1000
+zhongxiu_max_ppim_shift_num:10
+
+[generic_brand_ue]
+trade_mode : 2
+platform_check_trade : 1
+use_query_trade : 1
+adv_style_mod : 1
+fc_adv_brandq : 1
+platform_adv_brandq : 1
+other_adv_brandq : 0
+w_brandq : 1
+@limit_mts : 3224
+@limit_mts : 3004
+@limit_mts : 8541
+@limit_mts : 9004
+@limit_mts : 3128
+@limit_mts : 9022
+@limit_mts : 11007
+@limit_mts : 1040
+@limit_mts : 11009
+@limit_mts : 11014
+@limit_mts : 3540
+@limit_mts : 11015
+@limit_mts : 2062
+@limit_mts : 11026
+@limit_mts : 99999
+@limit_mts : 99999
+@limit_mts : 99999
+@limit_mts : 99999
+@limit_mts : 99999
+@ue_brand_key_levels : 10
+@ue_brand_key_levels : 9
+@ue_brand_key_levels : 7
+@platform_key_levels : 10
+@platform_key_levels : 9
+@platform_key_levels : 7

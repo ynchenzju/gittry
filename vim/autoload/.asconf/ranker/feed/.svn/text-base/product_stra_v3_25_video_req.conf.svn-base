@@ -1,0 +1,11 @@
+[@feed_product_stra_desc]
+@product_name:video_ads_req
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:nst_admit_adv_filter
+alive:1
+[..plugin_params]
+admit_mt_list:9036,9040
+

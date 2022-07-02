@@ -1,0 +1,9 @@
+msa_q_cali_mapping : ./data/pl/a_comm/wise_q_calibration_dict.txt
+wise_union_rightq_t : 1.3
+wise_union_leftq_t : 0.927171
+wise_baidu_rightq_t : 1.3
+wise_baidu_leftq_t : 0.927171
+wise_q_right_default_t : 1.3
+wise_q_left_default_t : 1.4
+q_pp_default_t : 0.7
+youxuan_q_left_default_t : 1.4

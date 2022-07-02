@@ -1,0 +1,73 @@
+[car_official_account_show_case_company_conf]
+desc : 购车即享1.99%优惠 首付仅需20%
+link : https://www.baidu.com
+third_id : 1577135064833396
+brand_name : 官方号
+[.title_params]
+title : 梅赛德斯-奔驰
+tag : 官方号
+logo : https://ss0.baidu.com/9rkZbjCn1Ah3osul8IqW0jdnxx1xbK/v1/baitong/upload/file/source/3fa9b550579c88202499a2a7f0da598716f85911150545322324779.jpg
+desc : 心所向 持所恒
+[.item_1]
+name : GLA天生无谓
+image_url : https://ss0.baidu.com/9rkZbjCn1Ah3osul8IqW0jdnxx1xbK/v1/baitong/upload/file/source/529b0e474952df7f8048a1936bb8a2705e4c027c150545345230541.jpg
+[.item_2]
+name : GLC敢为英雄
+image_url : https://ss0.baidu.com/9rkZbjCn1Ah3osul8IqW0jdnxx1xbK/v1/baitong/upload/file/source/c9b81660bee571cb5aa88f2c48beec11fe20efba150545347373257.jpg
+[.item_3]
+name : GLE全领域 尽纵横
+image_url : https://ss0.baidu.com/9rkZbjCn1Ah3osul8IqW0jdnxx1xbK/v1/baitong/upload/file/source/f7cd95e0c96cd3c847e35a115e7140a28dfd3a14150545349785739.jpg
+
+# 经销商
+[car_official_account_show_case_seller_conf]
+title : 梅赛德斯-奔驰4s店[北京]热门授权经销商
+link : www.baidu.com
+brand_name : 官方号
+[.seller_1]
+img_url : https://www.baidu.com/
+name : 北京鹏龙瑞星1
+link : www.baidu.com
+addr_name : 北京市朝阳区来广营西路
+tele_num : 028-7876232
+third_id : 1577135064833396 
+tag : 官方号
+[.seller_2]
+img_url : https://www.baidu.com/
+name : 北京鹏龙瑞星2
+link : www.baidu.com
+addr_name : 北京市朝阳区来广营西路
+tele_num : 028-7876232
+third_id : 1577135064833396
+tag : 官方号
+[.seller_3]
+img_url : https://www.baidu.com/
+name : 北京鹏龙瑞星3
+link : www.baidu.com
+addr_name : 北京市朝阳区来广营西路
+tele_num : 028-7876232
+third_id : 1577135064833396
+tag : 官方号
+[.seller_4]
+img_url : https://www.baidu.com/
+name : 北京鹏龙瑞星4
+link : www.baidu.com
+addr_name : 北京市朝阳区来广营西路
+tele_num : 028-7876232
+third_id : 1577135064833396
+tag : 官方号
+[.seller_5]
+img_url : https://www.baidu.com/ 
+name : 北京鹏龙瑞星5
+link : www.baidu.com
+addr_name : 北京市朝阳区来广营西路
+tele_num : 028-7876232
+third_id : 1577135064833396
+tag : 官方号
+[.seller_6]
+img_url : https://www.baidu.com/ 
+name : 北京鹏龙瑞星6
+link : www.baidu.com
+addr_name : 北京市朝阳区来广营西路
+tele_num : 028-7876232
+third_id : 1577135064833396
+tag : 官方号

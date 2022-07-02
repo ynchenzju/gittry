@@ -1,0 +1,7 @@
+[Service]
+ServerCount : 1
+
+[.@Server]
+host_ip : 127.0.0.1
+port : 4878
+tag : part:0

@@ -1,0 +1,59 @@
+## model.conf
+[@MODEL]
+#模型文件路径
+MODEL_PATH: ./data/ubm
+#模型文件名
+MODEL_FILE: ubm.204
+#模型一致性校验的文件名
+MODEL_VERIFY_FILE: success.flag 
+#模型名字，cmd与模型名的映射关系就需要使用这个名字，备用模型名字的配置中也使用这个名字
+MODEL_NAME : MODEL204
+#模型类型，用于加载模型时选择不同的类型工厂函数，支持自定义（与结点读取id号复用）
+MODEL_TYPE : 0
+#计算公式函数的id号，支持自定义
+EQUATION_TYPE : 1
+#对应一致性模型name; 标识同套 基准&增量 模型的关系；可为空
+CONSIST_MODEL_NAME : 
+#开关; reload时是否校验对应一致性模型版本; 1校验、0不校验
+IF_RELOAD_CHECK : 0
+IS_CACHE : 0
+CACHE_SIZE : 21
+#重载方式：0，普通双buffer；1，借用buffer，且重载时可用；2，借用buffer，且重载时不可用。
+RELOAD_TYPE : 0
+#重载模型的名字
+RELOAD_EXCHANGE_MODEL_NAME : MODEL204 
+#用户可以自定义配置需要检验的特证名，例如对于PS_BASIC，可以配置为belta0，这项配置可以为空
+[.CHECK_FEATURE]
+[.PV_THRESHOLD]
+@VALUE : 0
+@VALUE : 0
+
+[@MODEL]
+#模型文件路径
+MODEL_PATH: ./data/ubm
+#模型文件名
+MODEL_FILE: ubm.225 
+#模型一致性校验的文件名
+MODEL_VERIFY_FILE: success.flag 
+#模型名字，cmd与模型名的映射关系就需要使用这个名字，备用模型名字的配置中也使用这个名字
+MODEL_NAME : MODEL225
+#模型类型，用于加载模型时选择不同的类型工厂函数，支持自定义（与结点读取id号复用）
+MODEL_TYPE : 0
+#计算公式函数的id号，支持自定义
+EQUATION_TYPE : 1
+#对应一致性模型name; 标识同套 基准&增量 模型的关系；可为空
+CONSIST_MODEL_NAME : 
+#开关; reload时是否校验对应一致性模型版本; 1校验、0不校验
+IF_RELOAD_CHECK : 0
+IS_CACHE : 0
+CACHE_SIZE : 21
+#重载方式：0，普通双buffer；1，借用buffer，且重载时可用；2，借用buffer，且重载时不可用。
+RELOAD_TYPE : 0
+#重载模型的名字
+RELOAD_EXCHANGE_MODEL_NAME : MODEL225
+#用户可以自定义配置需要检验的特证名，例如对于PS_BASIC，可以配置为belta0，这项配置可以为空
+[.CHECK_FEATURE]
+[.PV_THRESHOLD]
+@VALUE : 0
+@VALUE : 0
+

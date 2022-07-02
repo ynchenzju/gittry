@@ -1,0 +1,107 @@
+HealthyCheckInterval : 1
+ServerHistorySize : 10
+TransportReloadInterval : 30
+ServerAliveTimeout : 1000
+
+[DefaultConfig]
+[.Connection]
+ConnectTimeout : 30
+ReadTimeout : 100
+WriteTimeout : 20
+ConnectRetryCount : 2
+MaxConnectionPerHost : 500
+HedgeRequestTimeout : 20
+HedgeFetchRetryCount : 4
+
+# 概率选择配置
+[..ImLbStrategy]
+# 选择概率精度
+RatioPrecision : 1000
+[...@Point]
+x : 6
+y : 700
+[...@Point]
+x : 10
+y : 5
+
+# 集群划分tag配置
+[.TagDescription]
+# 分库标识tag
+PartitionTag : partition
+
+# 集群划分tag配置
+[Services]
+[.ranker]
+[..NamingInfo]
+ConfType : file
+ServiceName : group.qaoff--ranker-all-.IM.all
+ConfDir : ./conf
+ConfFile : ranker_connection.conf
+TagSource : bns
+TestMode : 1
+[..Connection]
+ConnectTimeout : 300
+ReadTimeout : 250
+WriteTimeout : 400
+ConnectRetryCount : 3
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 320
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : platform
+PartitionTag : partition
+
+[.imbs]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.ecom-im-11883-1-imbsproxy.IM.all
+DumpBnsToLocal:1
+ConfBakDir:./ff_test
+ConfDir : ./conf
+ConfFile : imbsproxy_local_connection.conf
+TestMode : 0
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 240
+WriteTimeout : 20
+ConnectRetryCount : 3
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 300
+HedgeFetchRetryCount : 2
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard
+
+[.upin]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : qa-work-ecom-im-ASNB-UG.IM.all
+[..Connection]
+ConnectTimeout : 300
+ReadTimeout : 250
+WriteTimeout : 400
+ConnectRetryCount : 3 
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 250
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : platform
+PartitionTag : partition
+
+
+[.qms]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : qa-zhangxiaojie01sub1-ecom-im-ASNB-QMS.IM.all
+[..Connection]
+ConnectTimeout : 20
+ReadTimeout : 200
+WriteTimeout : 20
+ConnectRetryCount : 3
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 250
+HedgeFetchRetryCount : 2 
+

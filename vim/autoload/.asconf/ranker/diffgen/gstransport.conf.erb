@@ -1,0 +1,66 @@
+HealthyCheckInterval : 1
+ServerHistorySize : 10
+TransportReloadInterval : 30
+ServerAliveTimeout : 1000
+
+[DefaultConfig]
+[.Connection]
+ConnectTimeout : 10
+ReadTimeout : 100
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 500
+HedgeRequestTimeout : 20
+HedgeFetchRetryCount : 4
+
+# 概率选择配置
+[..ImLbStrategy]
+# 选择概率精度
+RatioPrecision : 1000
+[...@Point]
+x : 6
+y : 700
+[...@Point]
+x : 10
+y : 5
+
+# 集群划分tag配置
+[.TagDescription]
+# 分库标识tag
+PartitionTag : partition
+
+[Services]
+[.vcsvr_read]
+[..NamingInfo]
+ConfType : bns
+ServiceName : group.opera-<%= @vcsvr_read_platform%>-vcharge-all-<%= @vcsvr_read_isp %>.<%= __product %>.all:read
+TagSource : bns
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 35
+WriteTimeout : 10
+ConnectRetryCount : 3 
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 50
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : platform
+PartitionTag : partition
+
+[Services]
+[.vcsvr_write]
+[..NamingInfo]
+ConfType : bns
+ServiceName : group.opera-<%= @vcsvr_write_platform%>-vcharge-all-<%= @vcsvr_write_isp %>.<%= __product %>.all:write
+TagSource : bns
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 10
+WriteTimeout : 20
+ConnectRetryCount : 3 
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 20
+HedgeFetchRetryCount : 0
+[..TagDescription]
+@SplitTag : platform
+PartitionTag : partition

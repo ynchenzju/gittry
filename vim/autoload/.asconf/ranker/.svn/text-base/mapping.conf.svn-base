@@ -1,0 +1,151 @@
+###############################
+[@communication]
+communication_name : imas2imbs
+default_path : bsn
+
+[.@platform]
+route_path_name : bsn
+@service_name : n_imbsproxy_group0
+
+[.@platform]
+route_path_name : bsd0
+@service_name : d0_imbsproxy_group0
+
+[.@platform]
+route_path_name : bsd1
+@service_name : d1_imbsproxy_group0
+
+[.@platform]
+route_path_name : bsd2
+@service_name : d2_imbsproxy_group0
+
+[.@platform]
+route_path_name : bsd3
+@service_name : d3_imbsproxy_group0
+
+#[.@platform]
+#route_path_name : bsd4
+#@service_name : d4_imbsproxy_group0
+
+###############################
+[@communication]
+communication_name : imas2asq
+default_path : qsn
+[.@platform]
+route_path_name : qsn
+@service_name : n_asq_group0
+@service_name : n_wasq_group0
+[.@platform]
+route_path_name : qsd0
+@service_name : d0_asq_group0
+@service_name : n_wasq_group0
+[.@platform]
+route_path_name : qsd1
+@service_name : d1_asq_group0
+@service_name : n_wasq_group0
+[.@platform]
+route_path_name : qsd2
+@service_name : d2_asq_group0
+@service_name : n_wasq_group0
+[.@platform]
+route_path_name : qsd3
+@service_name : d3_asq_group0
+@service_name : n_wasq_group0
+[.@platform]
+route_path_name : qsd4
+@service_name : d4_asq_group0
+@service_name : n_wasq_group0
+[.@platform]
+route_path_name : wqsd0
+@service_name : n_asq_group0
+@service_name : d0_wasq_group0
+###############################
+[@communication]
+communication_name : imas2ras
+default_path : rasn
+[.@platform]
+route_path_name : rasn
+@service_name : n_retras_group0
+[.@platform]
+route_path_name : rasd0
+@service_name : d0_retras_group0
+[.@platform]
+route_path_name : rasd1
+@service_name : d1_retras_group0
+[.@platform]
+route_path_name : rasd2
+@service_name : d2_retras_group0
+[.@platform]
+route_path_name : rasd3
+@service_name : d3_retras_group0
+[.@platform]
+route_path_name : rasd4
+@service_name : d4_retras_group0
+[.@platform]
+route_path_name : rasd5
+@service_name : d5_retras_group0
+###############################
+[@communication]
+communication_name : imbs2bsq
+default_path : qsn
+[.@platform]
+route_path_name : qsn
+@service_name : n_qs_group0
+@service_name : n_qs_group1
+@service_name : n_qs_group2
+@service_name : n_qs_group3
+@service_name : n_qs_group4
+@service_name : n_qs_group5
+@service_name : n_qs_group6
+@service_name : n_qs_group7
+[.@platform]
+route_path_name : qsd0
+@service_name : d0_qs_group0
+@service_name : d0_qs_group1
+@service_name : d0_qs_group2
+@service_name : d0_qs_group3
+@service_name : d0_qs_group4
+@service_name : d0_qs_group5
+@service_name : d0_qs_group6
+@service_name : d0_qs_group7
+[.@platform]
+route_path_name : qsd1
+@service_name : d1_qs_group0
+@service_name : d1_qs_group1
+@service_name : d1_qs_group2
+@service_name : d1_qs_group3
+@service_name : d1_qs_group4
+@service_name : d1_qs_group5
+@service_name : d1_qs_group6
+@service_name : d1_qs_group7
+[.@platform]
+route_path_name : qsd2
+@service_name : d2_qs_group0
+@service_name : d2_qs_group1
+@service_name : d2_qs_group2
+@service_name : d2_qs_group3
+@service_name : d2_qs_group4
+@service_name : d2_qs_group5
+@service_name : d2_qs_group6
+@service_name : d2_qs_group7
+[.@platform]
+route_path_name : qsd3
+@service_name : d3_qs_group0
+@service_name : d3_qs_group1
+@service_name : d3_qs_group2
+@service_name : d3_qs_group3
+@service_name : d3_qs_group4
+@service_name : d3_qs_group5
+@service_name : d3_qs_group6
+@service_name : d3_qs_group7
+[.@platform]
+route_path_name : qsd4
+@service_name : d4_qs_group0
+@service_name : d4_qs_group1
+@service_name : d4_qs_group2
+@service_name : d4_qs_group3
+@service_name : d4_qs_group4
+@service_name : d4_qs_group5
+@service_name : d4_qs_group6
+@service_name : d4_qs_group7
+

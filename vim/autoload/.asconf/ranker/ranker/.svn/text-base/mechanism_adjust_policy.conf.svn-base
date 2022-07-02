@@ -1,0 +1,14 @@
+is_word_in_xbox_key : 1
+is_wmatch_in_xbox_key : 1
+is_query_in_xbox_key : 1
+is_trade_in_xbox_key : 1
+is_entity_in_xbox_key : 1
+uv_minbid : 1
+wise_algo_price : 2
+pc_algo_price : 3
+wise_opt_shw_reserve : 4
+pc_opt_shw_reserve : 5
+wise_myerson_rp_pre_psa : 6
+wise_myerson_rp_psa : 7
+pc_myerson_rp_pre_psa : 8
+pc_myerson_rp_psa : 9

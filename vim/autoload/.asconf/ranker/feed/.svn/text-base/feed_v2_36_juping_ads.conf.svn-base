@@ -1,0 +1,24 @@
+#first page
+[@fsdv2]
+@cond_qm_gids:1000001
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:4
+plugin_name:nst_admit_adv_filter
+alive:1
+[..plugin_params]
+admit_mt_list:15001
+
+[.@plugin_desc]
+plugin_instance_id:3
+plugin_name:juping_budget_control
+alive:1
+[..plugin_params]
+[...juping_bgtctl_cont]
+budget_control_strategy : 0
+shown_info_allow_lefts : 100
+juping_random_filter_prob : 0
+juping_sigmod_k : 1
+offline_stat : 5
+

@@ -1,0 +1,5 @@
+url_head : http://api.map.baidu.com/staticimage/v2
+url_ak : o2fw7B0lGE6PF9NnHQzOKVQAXnhdnHxx
+addr_width : 120
+addr_height : 120
+url_zoom : 12

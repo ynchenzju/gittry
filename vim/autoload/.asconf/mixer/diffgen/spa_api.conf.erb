@@ -1,0 +1,30 @@
+[SPA_API]
+max_request_num_in_one_batch_request:100
+max_request_num_in_one_packet:10
+gst_transport_conf_path:./conf/spa_gstransport.conf
+conf_type : 2
+
+[PbrpcConfig]
+HealthDetectorInterval:10
+ResourceLocatorInterval:10
+net_threads_num:2
+worker_threads_num:8
+keepalive_timeout_second:600
+tranbuf_size_in_bytes:1024
+tranbuf_num:20048576
+connect_timeout_ms:100
+once_talk_timeout_ms:100
+session_timeout_ms:200
+
+[.@Service]
+ServiceName: spa
+[..LoadBalancer]
+LoadBalancerName: LoadBalancer
+
+[..ResourceLocator]
+ResourceLocatorName: BnsResourceLocator
+WebfootServiceName: group.opera-<%= @spa_platform %>-spa-all-<%= @spa_isp %>.<%= __product %>.all
+SeviceSynInterval : 3000 
+
+[..HealthDetector]
+HealthDetectorName:HealthDetector

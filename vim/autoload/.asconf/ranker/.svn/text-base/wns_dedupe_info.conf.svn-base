@@ -1,0 +1,30 @@
+[@dedupe_conf]
+platform : 0
+@dedupe_src_id : 920
+@dedupe_src_id : 921
+@dedupe_src_id : 1035
+@dedupe_src_id : 1036
+is_dedupe : 1
+time_interval : 3600
+dedupe_type : 1
+dedupe_adv_size : 10
+[@dedupe_conf]
+platform : 1
+@dedupe_src_id : 1033
+@dedupe_src_id : 1034
+@dedupe_src_id : 1047
+@dedupe_src_id : 1048
+is_dedupe : 0
+time_interval : 3600
+dedupe_type : 1
+dedupe_adv_size : 10
+[@dedupe_conf]
+platform : 2
+@dedupe_src_id : 804
+@dedupe_src_id : 1071
+@dedupe_src_id : 1056
+@dedupe_src_id : 1060
+is_dedupe : 0
+time_interval : 3600
+dedupe_type : 1
+dedupe_adv_size : 10

@@ -1,0 +1,75 @@
+[lead_card_conf]
+medical_lead_card_replenish_on : 1
+medical_lead_card_replac_on : 1
+medical_lead_card_ppim_advnum_thr : 3
+[.flow_type]
+symptom_flow_type_on : 0
+disease_flow_type_on : 0
+departments_flow_type_on : 0
+hospitals_flow_type_on : 0
+cosmetic_secondary_classification_flow_type_on : 0
+cosmetic_specific_item_flow_type_on : 0
+inspection_item_flow_type_on : 0
+[.content_conf]
+has_pic : 1
+medical_lead_card_name : 健康贴士
+symptom_tag_str : 相关症状
+disease_tag_str : 相关疾病
+departments_tag_str : 相关科室
+hospitals_tag_str : 相关医院
+title_length_replace_type2 : 12
+symptom_title_joint_1 : 可能是什么病?
+symptom_title_joint_2 : 应该看什么科?
+symptom_title_type2_joint : _知识介绍
+disease_title_joint_1 : 有什么症状?
+disease_title_joint_2 : 应该看什么科?
+disease_title_type2_joint : _知识介绍
+title_type2_truncate_limit : 20
+sublinks_num_limit : 0
+sublinks_length_limit : 1
+common_sublink_disease_text : 疾病描述
+common_sublink_symptom_text : 症状描述
+common_sublink_text2 : 相关医院
+common_sublink_text3 : 就诊科室
+lead_words : 相关检查和治疗
+cosmetic_secondary_classification_title_joint_1 : 有哪些技术方法?
+cosmetic_secondary_classification_title_joint_2 : 都怎么做?
+cosmetic_secondary_classification_title_type2_joint : _知识介绍
+common_sublinks_cosmetic_secondary_classification_text1 : 方法介绍
+common_sublinks_cosmetic_secondary_classification_text2 : 相关医院
+common_sublinks_cosmetic_secondary_classification_text3 : 热门项目
+cosmetic_specific_item_title_joint_1 : 的效果怎么样?
+cosmetic_specific_item_title_joint_2 : 是什么?
+cosmetic_specific_item_title_type2_joint : _知识介绍
+common_sublinks_cosmetic_specific_item_text1 : 方法介绍
+common_sublinks_cosmetic_specific_item_text2 : 相关医院
+common_sublinks_cosmetic_specific_item_text3 : 热门项目
+inspection_item_title_joint_1 : 是什么原理?
+inspection_item_title_joint_2 : 怎么做?
+inspection_item_title_type2_joint : _知识介绍
+common_sublinks_inspection_item_text1 : 项目介绍
+common_sublinks_inspection_item_text2 : 相关医院
+common_sublinks_inspection_item_text3 : 相关检查
+cosmetic_specific_item_tag_str : 常见项目
+cosmetic_specific_item_tag_str_self : 相关项目
+inspection_item_tag_str : 常见检查
+[..style_pic_conf]
+max_widescreen_sublinks_num : 3
+max_widescreen_sublinks_length : 18
+max_lowscreen_sublinks_num : 3
+max_lowscreen_sublinks_length : 14
+has_sublinks2 : 0
+[..style_nopic_conf]
+max_widescreen_sublinks_num : 4
+max_widescreen_sublinks_length : 28
+max_lowscreen_sublinks_num : 4
+max_lowscreen_sublinks_length : 24
+has_sublinks2 : 1
+[.flush_conf]
+use_cs_flush_term : 1
+flush_syn_term : 1
+flush_segword_boundary_check : 1
+flush_color : CC0000
+[mid_page_conf]
+medical_mid_page_nopersonal_q_transform : 0
+max_medical_mid_page_adv_num : 24

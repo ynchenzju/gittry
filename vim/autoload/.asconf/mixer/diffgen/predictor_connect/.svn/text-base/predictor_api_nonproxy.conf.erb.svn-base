@@ -1,0 +1,167 @@
+# 开启观星服务化新路由
+enable_opera : 1
+is_log_process_time : 0 
+default_response_timeout : <%= @default_response_timeout %> 
+
+[Predictor]
+[.@Application]
+name : wctrxuserq
+[..@Command]
+cmd : /wctrx/wise/user
+max_pack_size : 10
+
+[.@Application]
+name : ctrxuserq
+[..@Command]
+cmd : /ctrx/pc/user
+max_pack_size : 10
+
+[.@Application]
+name : dwctrxuserq
+[..@Command]
+cmd : /dwctrx/wise/user
+max_pack_size : 10
+
+[.@Application]
+name : dctrxuserq
+[..@Command]
+cmd : /dctrx/pc/user
+max_pack_size : 10
+
+<% @qname_exps.each do |qname, qexps| %>
+<% if @qname_only_exps.has_key?(qname) %> 
+<% else %>
+[.@Platform]
+name : <%= @flow %>_<%= qname%>
+application : <%= qname%> 
+tag : <%= @flow %>
+backup_name : <%= @backup_flow %>_<%= qname%>
+shard_num : 1
+shard_type : 0
+@shard_name : <%= @flow %>_<%= qname%>_group0
+<% end %>
+
+<% qexps.each do |exp| %>
+[.@Platform]
+name : <%= @flow %><%= exp %>_<%= qname%>
+application :  <%= qname%>
+<% if @no_flow_properties.has_key?(qname) %>
+tag : <%= exp %> 
+<% else %>
+tag : <%= @flow %><%= exp %> 
+<% end %>
+<% if @qname_only_exps.has_key?(qname) %> 
+backup_name : <%= @flow %><%= exp %>_<%= qname%> 
+<% else %>
+backup_name : <%= @flow %>_<%= qname%>
+<% end %>
+shard_num : 1 
+shard_type : 0 
+<% if @has_exp %>
+@shard_name : <%= exp %>_<%= qname%>_group0
+<% else %>
+@shard_name : <%= @flow %>_<%= qname%>_group0
+<% end %>
+<% end %>
+<% end %>
+
+####################################################################
+###       ubclient config: mapping of service/platform mapping info#
+####################################################################
+
+[UbClientConfig]
+ConfType  : 10
+[.Reactor]
+ThreadNum  :  20
+CheckTime : 1
+
+[.Naming]
+DIR : ./conf/
+FILE : naming_back.conf
+WebfootQueryTimeout: 30000
+SeviceSynInterval : 10
+IsUseBnsBackupConf : 1
+
+[.UbClient]
+<% @qname_exps.each do |qname, qexps| %>
+<% if @qname_only_exps.has_key?(qname) %>
+<% else %>
+[UbClientConfig]
+[.Naming]
+[..@Service]
+Name :  <%= @flow %>_<%= qname%>_group0
+<% if @qname_flows.has_key?(qname) %>
+<% if @qname_isp.has_key?(qname) %>
+WebfootServiceName: group.opera-<%= @qname_flows[qname] %>-<%= qname%>-000-<%= @qname_isp[qname] %>.<%= __product %>.all 
+<% else %>
+WebfootServiceName: group.opera-<%= @qname_flows[qname] %>-<%= qname%>-000-<%= @default_qname_isp %>.<%= __product %>.all 
+<% end %>
+<% else %>
+<% if @qname_isp.has_key?(qname) %>
+WebfootServiceName: group.opera-<%= @default_qname_flow %>-<%= qname%>-000-<%= @qname_isp[qname] %>.<%= __product %>.all
+<% else %>
+WebfootServiceName: group.opera-<%= @default_qname_flow %>-<%= qname%>-000-<%= @default_qname_isp %>.<%= __product %>.all
+<% end %>
+<% end %>
+<% if @qname_read_timeouts.has_key?(qname) %> 
+DefaultReadTimeOut : <%= @qname_read_timeouts[qname] %> 
+<% else %>
+DefaultReadTimeOut : <%= @default_read_timeout %>
+<% end %>
+<%= @default_ub_param %>
+[...CurrStrategy]
+<% if @qname_strategy.has_key?(qname) %>
+ClassName: <%= @qname_strategy[qname] %>
+RatioPrecision  :   10000
+MaxServerNum    :   1024
+FailQueueLen    :   2000
+QueueBufLen :   2
+[....@Point]
+x : 5 
+y : <%= @ratio1 %> 
+[....@Point]
+x : 10
+y : <%= @ratio2 %>
+<% else %>
+ClassName: UbClientStrategyWithHealthy
+<% end %>
+[...CurrHealthy]
+ClassName:UbClientHealthyChecker
+<% end %>
+
+<% if @has_exp %>
+<% qexps.each do |exp| %>
+[UbClientConfig]
+[.Naming]
+[..@Service]
+Name :  <%= exp %>_<%= qname%>_group0
+WebfootServiceName: group.opera-<%= exp %>-<%= qname%>-000-<%= @data_isp %>.<%= __product %>.all
+<% if @qname_read_timeouts.has_key?(qname) %> 
+DefaultReadTimeOut : <%= @qname_read_timeouts[qname] %> 
+<% else %>
+DefaultReadTimeOut : <%= @default_read_timeout %>
+<% end %>
+<%= @default_ub_param %>
+[...CurrStrategy]
+<% if @qname_strategy.has_key?(qname) %>
+ClassName: <%= @qname_strategy[qname] %>
+RatioPrecision  :   10000
+MaxServerNum    :   1024
+FailQueueLen    :   2000
+QueueBufLen :   2
+[....@Point]
+x : 5 
+y : <%= @ratio1 %> 
+[....@Point]
+x : 10 
+y : <%= @ratio2 %>
+<% else %>
+ClassName: UbClientStrategyWithHealthy
+<% end %>
+[...CurrHealthy]
+ClassName:UbClientHealthyChecker
+
+<% end %>
+<% end %>
+<% end %>
+

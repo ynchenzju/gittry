@@ -1,0 +1,46 @@
+max_pack_memory_cost : 409600
+is_log_process_time : 1
+default_response_timeout : 100000
+max_pack_size : 10
+max_pack_in_call_thread : 10
+max_item_num_per_pack : 60
+max_worker_num : 60
+[UbClientConfig]
+ConfType : 10
+[.Reactor]
+ThreadNum : 20
+CheckTime : 1
+
+[.Naming]
+DIR : ./conf/
+FILE : naming_back.conf
+WebfootQueryTimeout: 30000
+SeviceSynInterval : 1000
+IsUseBnsBackupConf : 1
+
+[.UbClient]
+[UbClientConfig]
+[.Naming]
+[..@Service]
+Name : image_server
+WebfootServiceName : group.opera-<%= @imageserver_platform %>-imageserver-all-<%= @imageserver_isp %>.<%= __product %>.all
+SendBuf : -1
+RecvBuf : -1
+ConnectAll : 0
+DefaultPort : 5837
+DefaultConnectTimeOut : 10
+DefaultReadTimeOut : 80
+DefaultWriteTimeOut : 60
+DefaultMaxConnect : 40
+DefaultRetry : 5
+DefaultConnectType  :  LONG
+DefaultLinger  :  1
+ReqBuf  :  13107200
+ResBuf  :  13107200
+DefaultAsyncWaitingNum  :  100
+
+[...CurrStrategy]
+ClassName : UbClientStrategy
+
+[...CurrHealthy]
+ClassName : UbClientHealthyChecker

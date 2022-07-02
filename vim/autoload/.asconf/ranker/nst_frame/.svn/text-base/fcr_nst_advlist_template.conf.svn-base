@@ -1,0 +1,47 @@
+#####################################################################################################
+#*** 新样式框架主配置文件说明
+#
+#1、src_list:列举需要加载的数据源级别新样式队列信息标签，例如src_list:src_213如果只有src_213，那么
+#src_204即使在下面配置，也不会加载内存，只会加载src_213标签对应的内容；
+#
+#2、src_213：该标签表明是数据源对应配置标签
+#2-1、src_id：当前数据源标签下对应的srcid
+#2-2、$include："./conf/nst_frame/213_nst_advlist_base.conf" ：当前数据源下对应的base级别新样式广告队列
+#配置，如果配了213_nst_advlist_base.conf，但没有include相应标签下，将不会被加载到内存。（base必须配）
+#2-3、$include："./conf/nst_frame/213_nst_advlist_exp_idx.conf" : 当前数据源下对应的实验级别的配置，同样
+#如果配了213_nst_advlist_exp_idx.conf，但没有include相应标签下，将不会被加载到内存。（exp可以不配）
+#
+####################################################################################################
+
+src_list:src_213,src_204
+
+[src_213]
+src_id : 213
+$include : "./conf/nst_frame/213_nst_advlist_base.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_2.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_3.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_4.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_5.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_6.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_7.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_8.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_9.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_10.conf"
+$include : "./conf/nst_frame/213_nst_advlist_exp_11.conf"
+
+
+[src_204]
+src_id : 204
+$include : "./conf/nst_frame/204_nst_advlist_base.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_1.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_2.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_3.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_4.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_5.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_6.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_7.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_8.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_9.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_10.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_11.conf"
+$include : "./conf/nst_frame/204_nst_advlist_exp_12.conf"

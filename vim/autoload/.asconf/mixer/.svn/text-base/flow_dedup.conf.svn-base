@@ -1,0 +1,409 @@
+[@flow_conf]
+flow_type : 801
+src_id : 1026
+@dedup_src : 1026
+time_interval : 300
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+[@flow_conf]
+flow_type : 803
+src_id : 1057
+@dedup_src : 1057
+time_interval : 300
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+
+[@flow_conf]
+flow_type : 4
+src_id : 969
+@dedup_src : 969
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+ 
+[@flow_conf]
+flow_type : 1
+src_id : 1026
+@dedup_src : 1026
+@dedup_src : 1093
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 811
+src_id : 1026
+@dedup_src : 1026
+@dedup_src : 1093
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 401
+src_id : 969
+@dedup_src : 969
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 402
+src_id : 969
+@dedup_src : 969
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+ 
+[@flow_conf]
+flow_type : 3
+src_id : 1057
+@dedup_src : 1057
+@dedup_src : 1092
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 301
+src_id : 1057
+@dedup_src : 1057
+@dedup_src : 1092
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 302
+src_id : 1057
+@dedup_src : 1057
+@dedup_src : 1092
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 303
+src_id : 1057
+@dedup_src : 1057
+@dedup_src : 1092
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 101
+src_id : 1026
+@dedup_src : 1026
+@dedup_src : 1093
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 102
+src_id : 1026
+@dedup_src : 1026
+@dedup_src : 1093
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 103
+src_id : 1026
+@dedup_src : 1026
+@dedup_src : 1093
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 104
+src_id : 1026
+@dedup_src : 1026
+@dedup_src : 1093
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 12
+src_id : 601
+@dedup_src : 601
+time_interval : 0
+winfoid_dedup : 1
+userid_dedup : 0
+shown_info_userid_dedup : 0
+ 
+[@flow_conf]
+flow_type : 12
+src_id : 602
+@dedup_src : 602
+time_interval : 0
+winfoid_dedup : 1
+userid_dedup : 0
+shown_info_userid_dedup : 0
+ 
+[@flow_conf]
+flow_type : 0
+src_id : 601
+@dedup_src : 601
+time_interval : 0
+winfoid_dedup : 1
+userid_dedup : 0
+shown_info_userid_dedup : 0
+ 
+[@flow_conf]
+flow_type : 0
+src_id : 602
+@dedup_src : 602
+time_interval : 0
+winfoid_dedup : 1
+userid_dedup : 0
+shown_info_userid_dedup : 0
+
+[@flow_conf]
+flow_type : 500
+src_id : 1086
+@dedup_src : 1086
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 600
+src_id : 1108
+@dedup_src : 1108
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 0
+
+[@flow_conf]
+flow_type : 700
+src_id : 1102
+@dedup_src : 1102
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 701
+src_id : 1105
+@dedup_src : 1105
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 601
+src_id : 1103
+@dedup_src : 1103
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 0
+
+[@flow_conf]
+flow_type : 606
+src_id : 912
+@dedup_src : 912
+time_interval : 28800
+winfoid_dedup : 1
+userid_dedup : 1
+shown_info_userid_dedup : 1
+
+[@flow_conf]
+flow_type : 900
+src_id : 1191
+@dedup_src : 1191
+time_interval : 300
+winfoid_dedup : 1
+
+[@flow_conf]
+flow_type : 900
+src_id : 1192
+@dedup_src : 1192
+time_interval : 300
+winfoid_dedup : 1
+
+[@flow_conf]
+flow_type : 901
+src_id : 1192
+@dedup_src : 1192
+time_interval : 300
+winfoid_dedup : 1
+
+[@flow_conf]
+flow_type : 910
+src_id : 1220
+@dedup_src : 1220
+time_interval : 300
+winfoid_dedup : 1
+
+[@flow_conf]
+flow_type : 910
+src_id : 1221
+@dedup_src : 1221
+time_interval : 300
+winfoid_dedup : 1
+
+[@flow_conf]
+flow_type : 911
+src_id : 1221
+@dedup_src : 1221
+time_interval : 300
+winfoid_dedup : 1
+
+[@freqency_ctrl_v2]
+src_id : 969
+#1=baiduid,2=cuid
+ksarch_key_type : 1
+[.@query_frequency_ctrl_items]
+type : query
+alive : 1
+[..params]
+time_interval : 3600
+query_sim_thr : 0.7
+[.@adv_frequency_ctrl_items]
+type : user_id
+alive : 1
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : winfo_id
+alive : 0
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : idea_id
+alive : 0
+[..params]
+time_interval : 28800
+
+[@freqency_ctrl_v2]
+src_id : 1026
+#1=baiduid,2=cuid
+ksarch_key_type : 1
+[.@query_frequency_ctrl_items]
+type : query
+alive : 1
+[..params]
+time_interval : 3600
+query_sim_thr : 0.7
+[.@adv_frequency_ctrl_items]
+type : user_id
+alive : 1
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : winfo_id
+alive : 0
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : idea_id
+alive : 0
+[..params]
+time_interval : 28800
+
+[@freqency_ctrl_v2]
+src_id : 1057
+#1=baiduid,2=cuid
+ksarch_key_type : 2
+alive : 1
+[.@query_frequency_ctrl_items]
+type : query
+alive : 1
+[..params]
+time_interval : 3600
+query_sim_thr : 0.7
+[.@adv_frequency_ctrl_items]
+type : user_id
+alive : 1
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : winfo_id
+alive : 0
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : idea_id
+alive : 0
+[..params]
+time_interval : 28800
+
+[@freqency_ctrl_v2]
+src_id : 1102
+#1=baiduid,2=cuid
+ksarch_key_type : 1
+[.@query_frequency_ctrl_items]
+type : query
+alive : 1
+[..params]
+time_interval : 3600
+query_sim_thr : 0.7
+[.@adv_frequency_ctrl_items]
+type : user_id
+alive : 1
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : winfo_id
+alive : 0
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : idea_id
+alive : 0
+[..params]
+time_interval : 28800
+
+[@freqency_ctrl_v2]
+src_id : 1105
+#1=baiduid,2=cuid
+ksarch_key_type : 1
+[.@query_frequency_ctrl_items]
+type : query
+alive : 1
+[..params]
+time_interval : 3600
+query_sim_thr : 0.7
+[.@adv_frequency_ctrl_items]
+type : user_id
+alive : 1
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : winfo_id
+alive : 0
+[..params]
+time_interval : 28800
+[.@adv_frequency_ctrl_items]
+type : idea_id
+alive : 0
+[..params]
+time_interval : 28800
+
+

@@ -1,0 +1,1077 @@
+# reload时间跟ranker reload时间相同
+# 以下两个时间单位为秒
+TransportReloadInterval : 3
+HealthyCheckInterval : 1
+ServerHistorySize : 256
+ServerAliveTimeout : 60
+
+# 全局默认配置
+[DefaultConfig]
+# 交互相关配置
+# 时间单位为毫秒
+[.Connection]
+ConnectTimeout : 10
+ReadTimeout : 20
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 20
+HedgeFetchRetryCount : 2
+
+[.TagDescription]
+@SplitTag : revision
+@SplitTag : table
+@SplitTag : dying
+# 分库标识tag
+PartitionTag : partition
+
+[Services]
+
+[.mob_cookie_table]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-mob-cookie-table.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.disgsp_dic]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-disgsp-dic.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.new_style_info]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-new-style-info.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.new_style_exp]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-new-style-exp.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.title_query_dict]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.xbox-title-query-dict.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.dynamic_ads_tag_style_info]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-dynamic-ads-tag-style-info.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.msa_ssm_query_dict]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-msa-ssm-query-dict.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.shantou_dynamic_idea]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-shantou-dynamic-idea.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.msa_wise_disgsp_dict]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-msa-wise-disgsp-dict.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.msa_cta_tag]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-msa-cta-tag.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_doctor]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-doctor.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_hospital]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-hospital.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_courseq]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-courseq.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.dynamic_ads_style_info_withgroup]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-dynamic-ads-style-info-withgroup.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.dynamic_title_info]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-dynamic-title-info.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.dsa_url_title]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-dsa-url-title.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pluto_title_optim]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pluto-title-optim.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_title_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-title-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_title_query_ps]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-title-query-ps.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.lbxx_query_extend]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-lbxx-query-extend.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ps_lbxx_query_extend]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ps-lbxx-query-extend.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.e6_lbxx_ps_query_extend]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-e6-lbxx-ps-query-extend.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.e6_lbxx_query_extend]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-e6-lbxx-query-extend.IM.<%= @logic_data_center %>:xbox_mapper
+
+
+[.action_ads_xiafang_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-xiafang-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_xiafang_query_exp_1]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-xiafang-query-exp-1.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_xiafang_query_exp_2]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-xiafang-query-exp-2.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_query_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-query-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_sim_dense_vector_exp]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-sim-dense-vector-exp.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_sim_sparse_vector]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-sim-sparse-vector.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_title_query_exp]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-title-query-exp.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_user_query_passport]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-user-query-passport.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.required_query_float]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-required-query-float.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_url_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-url-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.iknow_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.xbox-iknow-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_cuid]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.xbox-feed-cuid.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.term2query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-term2query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_history]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-history.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rec_app_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.xbox-rec-app-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_sim]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-sim.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_query_lv]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-query-lv.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_trade]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-trade.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.exp]
+[..NamingInfo]
+ConfType : bns
+ServiceName : group.xbox-module-ranker-exp.IM.<%= @logic_data_center %>:xbox_mapper
+TagSource : bns
+
+AllowEmptyList : 1
+
+[.query_recom]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-recom.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pluto_urls_correlation]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pluto-urls-correlation.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.zhitongche_dynamic_ads]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ztc-dynamic-ads-full.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.zhitongche_dynamic_ads_pc]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ztc-dynamic-ads-pc.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ztc_dynamic_ads]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ztc-dynamic-ads.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.nature_sublink_xbox]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-nature-sublink-info.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_dynamic_question]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-dynamic-question.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_dynamic_title_info]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-dynamic-title-info.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_dynamic_long_sublink_info]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-dynamic-sublink-info.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.action_ads_keywords_dynamic_sublink]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-keywords-dynamic-sublink.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ztc_recom_query_cuid]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ztc-recom-query-cuid.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pluto_url_wordvec]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pluto-url-wordvec.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.word_to_vector]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-word-to-vector.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.insight_cookie_user]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-insight-cookie-user.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.scenarized_url_recommand]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-scenarized-url-recommand.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_trans_table]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-trans-table.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.le_retail_store_dync_ads]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-le-retail-store-dync-ads.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pluto_url_idea]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pluto-url-idea.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query2requery]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query2requery.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_query_entertainment]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-query-entertainment.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_star_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-star-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_plsa_sparse]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-plsa-sparse.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.dynamic_mtid_wise]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-dynamic-mt.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_user_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-user-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_feed_float]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-feed-float.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.intent_model_passport_exp]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-intent-model-passport-exp.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.intent_model_passport]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-intent-model-passport.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.intent_model_passport2]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-intent-model-passport2.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.intent_model_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-intent-model-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.intent_index_shoubai]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-intent-index-shoubai.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_user_query_2]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-user-query-2.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.wise_dynamic_expand_title]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-wise-dynamic-expand-title.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_plsa_sparse_optimize]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-plsa-sparse-optimize.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_zhidao_term_title_url]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-zhidao-term-title-url.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_sim_dense_vector]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-sim-dense-vector.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_qa_up]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-qa-up.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.CPM_Server]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-CPM-Server.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.CPM_Sever_coverage]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-CPM-Sever-coverage.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pc_cpm_server]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pc-cpm-server.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feedpvr]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feedpvr.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.chargeq_acp]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-chargeq-acp.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_query_tag]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-query-tag.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_news_title_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-news-title-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.fcpic_zone_material]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-fcpic-zone-material.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pluto_expand_url]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pluto-expand-url.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_query_stats]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-query-stats.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_query_stats]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-query-stats.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_channel_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-channel-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_multi_channel_new]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-multi-channel-new.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.intent_model2_express]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-intent-model2-express.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.intent_model_shoubai]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-intent-model-shoubai.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.dynamic_ads_material_library]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ad-style-library-picture.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.dynamic_ads_material_library_xbox]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-dynamic-ads-material-library.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.adstyle_lib_pic_bind_update_1]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-adstyle-lib-pic-bind-update-1.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.adstyle_lib_pic_bind_update_2]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-adstyle-lib-pic-bind-update-2.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.adstyle_lib_pic_bind_update_3]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-adstyle-lib-pic-bind-update-3.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.ad_style_library_picture_repair]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ad-style-library-picture-repair.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.dynamic_idea_exp_1]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-dynamic-idea-exp-1.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.dynamic_idea_exp_2]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-dynamic-idea-exp-2.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.passport_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-passport-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.tieba_title_tm]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-tieba-title-tm.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.wise_midway_feed_multi]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-wise-midway-feed-multi.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.spear_bidwords]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-spear-bidwords.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.cs_qa_query_table]
+[..NamingInfo]
+ConfType : bns
+TagSource: <%= @xbox_tag_type %>
+ServiceName : group.xbox-cs-qa-query-table.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.cs_feed_baiduid_query_table]
+[..NamingInfo]
+ConfType : bns
+TagSource: <%= @xbox_tag_type %>
+ServiceName : group.xbox-cs-feed-baiduid-query-table.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.gs3_ubm]
+[..NamingInfo]
+ConfType : bns
+TagSource: <%= @xbox_tag_type %>
+ServiceName : group.xbox-gs3-ubm.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pluto_feed_optim_query]
+[..NamingInfo]
+ConfType : bns 
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pluto-feed-optim-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.wers_exp_new]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-wers-exp-new.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.wise_midway_feed_single]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-wise-midway-feed-single.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_decay]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-decay.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_query_decay]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-query-decay.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_news_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-news-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.fc_kno_bida]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-fc-kno-bida.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.fc_kno_bida_material]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-fc-kno-bida-material.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.night_append_cookieid_wordid]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-night-append-cookieid-wordid.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.oral_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-oral-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_cpm_server]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-cpm-server.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_package]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-package.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.repeated_float_test]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-repeated-float-test.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.seq2query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-seq2query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ad_style_library_expand_title]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ad-style-library-expand-title.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ad_style_library_dynamic_title]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ad-style-library-dynamic-title.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.KGquery]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-KGquery.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ad_style_library_longsublink]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ad-style-library-longsublink.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.ad_style_library_longsublink_exp]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ad-style-library-longsublink-exp.IM.<%= @logic_data_center %>:xbox_mapper
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 50
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 10
+HedgeFetchRetryCount : 2
+
+[.ad_style_library_shortsublink]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ad-style-library-shortsublink.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ad_style_library_shortsublink_exp]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ad-style-library-shortsublink-exp.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ori_query_rewt_query_table]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ori-query-rewt-query-table.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pure_location_multi_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pure-location-multi-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_asn]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-asn.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.test_plsa_sparse_optimize]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-test-plsa-sparse-optimize.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.feed_title_context]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-feed-title-context.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.test_rtp_title_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-test-rtp-title-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.chunya_cs_query_expand]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-chunya-cs-query-expand.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.intent_multi_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-intent-multi-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.query_intent_trigger_exp]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-query-intent-trigger-exp.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.rtp_title_query_lowpvr]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-rtp-title-query-lowpvr.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.fcpic_zone_material_diff]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-fcpic-zone-material-diff.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.na_question_answer]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-na-question-answer.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.ald_recom_query]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ald-recom-query.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.pluto_idea_optim]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pluto-idea-optim.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.jv_query_like_list]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-jv-query-like-list.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.cold_exact_winfo]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-cold-exact-winfo.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.viewspot_trigger_hotel]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-ztc-viewspot-trigger-hotel-creative.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.high_quality_adv_adu]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-adu.IM.<%= @logic_data_center%>:xbox_mapper
+
+[.high_quality_adv_pa]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-pa.IM.<%= @logic_data_center%>:xbox_mapper
+
+[.high_quality_adv_adu_jingxiu]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-adu-jingxiu.IM.<%= @logic_data_center%>:xbox_mapper
+
+[.high_quality_adv_adu_duxiu]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-adu-duxiu.IM.<%= @logic_data_center%>:xbox_mapper
+
+[.action_ads_tianwen_dynamic_long_sublink_info]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-action-ads-tianwen-dynamic-sublink-info.IM.<%= @logic_data_center %>:xbox_mapper
+
+[.high_quality_adv_ztc_wedding_new]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-ztc-wedding-new.IM.<%= @logic_data_center%>:xbox_mapper
+
+[.high_quality_adv_ztc_trip]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-ztc-trip.IM.<%= @logic_data_center%>:xbox_mapper
+
+[.high_quality_adv_paexp]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-paexp.IM.<%= @logic_data_center%>:xbox_mapper
+[.pa_prod_opt]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pa-prod-opt.IM.<%= @logic_data_center%>:xbox_mapper
+[.pa_bsku_info]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pa-bsku-info.IM.<%= @logic_data_center %>:xbox_mapper
+[.shantou_structured_prods]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-shantou-nvwa-prods.IM.<%= @logic_data_center%>:xbox_mapper
+
+[.high_quality_adv_adu_add]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-adu-add.IM.<%= @logic_data_center%>:xbox_mapper
+[.pluto_session_url]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-pluto-session-url.IM.<%= @logic_data_center%>:xbox_mapper
+[.high_quality_adv_adu_query_winfo]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-adu-query-winfo.IM.<%= @logic_data_center%>:xbox_mapper
+[.recom_query_pictures]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-recom-query-pictures.IM.<%= @logic_data_center%>:xbox_mapper
+
+[.high_quality_adv_adu_norank]
+[..NamingInfo]
+ConfType : bns
+TagSource : <%= @xbox_tag_type %>
+ServiceName : group.xbox-high-quality-adv-adu-norank.IM.<%= @logic_data_center%>:xbox_mapper

@@ -1,0 +1,170 @@
+PENDINGPOOL_CONF : ./conf/imas.conf
+
+
+# unit: s
+POOL_ALIVE_TIMEOUT : 1200
+# unit: ms
+POOL_SELECT_TIMEOUT : 1
+
+READ_TIMEOUT : 160000
+WRITE_TIMEOUT : 20000
+
+#TAG
+IMAS_TAG :                   IMAS
+
+
+AS_LISTEN_PORT                : 2009
+
+#active monitoring
+AM_PORT                       : 2013
+AM_REQ_TIMES                  : 10
+AM_REQ_TIMEOUT                : 5
+AM_IO_TIMEOUT                 : 100
+
+# socket相关配置 time(ms)
+QUEUE_NUM :			256
+SOCKET_NUM :                    1500
+
+# 检测线程配置 time(s)
+DETECT_SLEEP_TIME :             1000
+DETECT_QUERY_SAMPLE : 	 	mp3
+
+
+
+FUNC_ASPIF_CONF : ./conf/imas.conf
+FUNC_PREPROC_CONF : ./conf/imas_common.conf
+FUNC_BSIF_CONF : ./conf/imas.conf
+FUNC_SELECTPP_CONF : ./conf/imas_strategy.conf
+FUNC_SELECTPPIM_CONF : ./conf/imas_strategy.conf
+FUNC_SELECTIM_CONF : ./conf/imas_strategy.conf
+FUNC_CALCPRICE_CONF : ./conf/imas_strategy.conf
+FUNC_ADTYPECOMPETE_CONF : ./conf/imas_strategy.conf
+FUNC_COMPLETEADV_CONF : ./conf/imas_common.conf
+FUNC_FCRPREPROC_CONF : ./conf/imas_strategy.conf
+FUNC_FCRPOSTPROC_CONF : ./conf/imas_strategy.conf
+#图片广告的展现样式
+SHOW_PIC_OPTION : 0
+FUNC_ADVNEWSTYLE_CONF : ./conf/imas_newstyle.conf
+FUNC_DRMCIF_CONF : ./conf/imas_newstyle.conf
+FUNC_PACKSTYLE_CONF : ./conf/imas_newstyle.conf
+FUNC_SSSVR_CONF : ./conf/imas_common.conf
+REQ_QS_SWITCH : 1
+FUNC_QSPREPROC_CONF : ./conf/imas_common.conf
+FUNC_QSIF_CONF : ./conf/imas_common.conf
+SP_CONN_CONF : ./conf/imas_spconnect.conf
+REQ_NKS_SWITCH : 1
+FUNC_NKSIF_CONF : ./conf/imas_common.conf
+FUNC_FCR_CONF : ./conf/imas_strategy.conf
+FUNC_RECALCPRICE_CONF : ./conf/imas_strategy.conf
+EMSLIB_CONN_CONF : ./conf/emslib_conn.conf
+EMSLIB_RULE_CONF : ./conf/emslib_rule.conf
+MOB_REQ_QS_SWITCH : 1
+MOB_REQ_NKS_SWITCH : 1
+FUNC_MSA_CONF : ./conf/msa/msa_strategy.conf
+FUNC_COMMADMIT_CONF : ./conf/imas_common.conf
+IMAS2RETRAS_REQ_BLOCK : 0
+IMAS2SP_REQ_BLOCK : 0
+IMAS2ASQ_REQ_BLOCK : 0
+IMAS2EMS_XJ_REQ_BLOCK : 0
+IMAS2EMS_EXP_REQ_BLOCK : 0
+
+# comlog日志配置
+COMLOG_PROCNAME : imas
+COMLOG_LEVEL : 4
+COMLOG_LOGLENGTH : 10240
+COMLOG_SELFDEFINE : NOTSHOWN_ADV,QUERY_PATH
+
+COMLOG_DEVICE_NUM : 4
+COMLOG_DEVICE0 : NOTICE
+COMLOG_DEVICE1 : WF
+COMLOG_DEVICE3 : QUERY_PATH
+
+NOTICE_OPEN : 1
+NOTICE_TYPE : FILE
+NOTICE_PATH : ./log
+NOTICE_NAME : imas.log
+NOTICE_SYSLEVEL : 0
+NOTICE_SELFLEVEL : NOTICE
+NOTICE_SIZE : 8192
+NOTICE_SPLITE_TYPE : SIZECUT
+
+WF_OPEN : 1
+WF_TYPE : FILE
+WF_PATH : ./log
+WF_NAME : imas.log.wf
+WF_SYSLEVEL : 0
+WF_SELFLEVEL : FATAL,WARNING,TRACE,DEBUG
+WF_SIZE : 8192
+WF_SPLITE_TYPE : SIZECUT
+
+QUERY_PATH_OPEN : 0 
+QUERY_PATH_TYPE : FILE 
+QUERY_PATH_PATH : ./log 
+QUERY_PATH_NAME : query_path.log 
+QUERY_PATH_SYSLEVEL : 0 
+QUERY_PATH_SELFLEVEL : QUERY_PATH 
+QUERY_PATH_SIZE : 8192 
+QUERY_PATH_SPLITE_TYPE : SIZECUT 
+
+OVLEXP_LIST_OUTPUT_FILE : ./data/ovlexp_list.txt
+COMLOG_DEVICE2 : NOTSHOWN_ADV
+NOTSHOWN_ADV_OPEN : 1
+NOTSHOWN_ADV_TYPE : FILE
+NOTSHOWN_ADV_PATH : ./notshown_adv_log
+NOTSHOWN_ADV_NAME : notshown_adv_log.log
+NOTSHOWN_ADV_SYSLEVEL : 0
+NOTSHOWN_ADV_SELFLEVEL : NOTSHOWN_ADV
+NOTSHOWN_ADV_SIZE : 8192
+NOTSHOWN_ADV_SPLITE_TYPE : SIZECUT
+REQ_XBOX_SWITCH : 1
+USE_LOCAL_LEN_LIMIT : 0
+LOCAL_PP_TITLE_LEN_LIMIT : 50
+LOCAL_PP_DESC1_LEN_LIMIT : 160
+LOCAL_PP_DESC2_LEN_LIMIT : 36
+LOCAL_PPIM_TITLE_LEN_LIMIT : 50
+LOCAL_PPIM_DESC1_LEN_LIMIT : 80
+LOCAL_PPIM_DESC2_LEN_LIMIT : 36
+LOCAL_IM_TITLE_LEN_LIMIT : 28
+LOCAL_IM_DESC1_LEN_LIMIT : 80
+LOCAL_IM_DESC2_LEN_LIMIT : 40
+PRINT_TITLE_TYPE : 0
+
+DICT_CONF : ./conf/dict.conf
+WISE_PP_TRUNCATE_TITLE : 32
+WISE_PP_TRUNCATE_DESC : 76
+MAX_SIVA_ADS_NUM : 16
+PARALLEL_INIT_THREAD_NUMBER : 4
+
+#ranker函数的配置文件
+FUNC_RANKER_PREPROC_CONF : ./conf/ranker/preproc.conf
+FUNC_DATA_PREPARE_CONF : ./conf/ranker/data_prepare.conf
+ADSERVER_MOB_PTID : 0
+EXIT_TIMEOUT_MS : 60000
+FUNC_LU_CONF : ./conf/lu.conf
+ADSERVER_MOB_SRCID_IM : 601
+PC_BS_TRUNCATE_NUM : 320
+WISE_BS_TRUNCATE_NUM : 320
+FUNC_CALCPRICEPREPROC_CONF : ./conf/imas_strategy.conf
+OUTFLOW_SEARCH_KEY_NUM : 4
+OUTFLOW_SEARCH_KEY_1 : kw=
+OUTFLOW_SEARCH_KEY_2 : key[0-9]*=
+OUTFLOW_SEARCH_KEY_3 : [?&][sq]=
+OUTFLOW_SEARCH_KEY_4 : [?/-_]%[0-9a-zA-Z]+
+TITLE_QRY_TABLE_NAME : title-query-dict
+LBT_GPS_TIMESTAMP_THR : 1.0
+WISE_FCM_NST_BASIC_INFO_FILE : ./conf/wise_fcm_nst_info.conf
+AGE_WEIGHT_THR : 0
+GENDER_WEIGHT_THR : 0
+FUNC_QMSIF_CONF : ./conf/imas_common.conf
+WISE_ASYN_BS_TRUNCATE_NUM : 320
+DEFAULT_CTA_ICON_URL : http://ms.bdimg.com/mobcard-upload-image-to-bcs/mobipic54ae491aba0f6181007.png
+DEFAULT_CTA_TYPE : 0
+ACTION_ADS_MT_LIST : 2057,2058,2070,2890,2891,2087,2094,2095,2096,2097,2098,2099,2101,2105,2106,2161
+FUNC_VIRTUALCHARGE_CONF : ./conf/imas_common.conf
+FUNC_NFW_CONF : conf/ranker_nfw.conf
+FUNC_FEED_CONF : ./conf/feed.conf
+SLP_URL_PREFIX_REC_1 : https://sp0.baidu.com/5bgWsjip0QIZ8tyhnq
+SLP_URL_PREFIX_REC_2 : http://slp.baidu.com
+ZTC_STATIC_CARD_URL : http://ztc-sip.baidu.com/page/trade/wedding/4_93?trade_id=770503&source=feed
+SLP_URL_PREFIX_REC_3 : https://slp.aipage.com
+SLP_URL_PREFIX_REC_4 : http://slp.aipage.com

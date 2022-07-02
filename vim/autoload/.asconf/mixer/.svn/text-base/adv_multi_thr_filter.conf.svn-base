@@ -1,0 +1,9 @@
+[multi_thr_clickq]
+multi_thr_clickq_boundary : 0
+multi_thr_clickq_base : 0
+multi_thr_clickq_boundary_nonbaidu : 0
+multi_thr_clickq_base_nonbaidu : 0
+[multi_thr_qlq]
+multi_thr_qlq_boundary : 0
+multi_thr_qlq_base : 0
+multi_thr_qlq_upper_bound : 0

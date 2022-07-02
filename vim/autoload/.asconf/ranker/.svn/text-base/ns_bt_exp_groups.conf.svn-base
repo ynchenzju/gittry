@@ -1,0 +1,21 @@
+[NS_BTEXP]
+
+[.budget_id_0] 
+IS_SHOW_SUGGEST_BY_CN:0
+BT_SHOW_SUGGEST_BY_CN_DICT_PATH : ./data/auction/bt/ns_show_suggest_by_cn_bi.data
+SHOW_SUGGEST_BY_CN_MIN_SHARE_RATIO:0.01
+SHOW_SUGGEST_BY_CN_GENERAL_THRESHOLD:-1.0
+
+[.budget_id_2000]
+
+[.budget_id_2001]
+
+[.budget_id_2002]
+
+[.budget_id_2003]
+
+[.budget_id_2004]
+IS_SHOW_SUGGEST_BY_CN:1
+SHOW_SUGGEST_BY_CN_GENERAL_THRESHOLD:0.85
+
+[.budget_id_2005]

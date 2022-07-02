@@ -1,0 +1,94 @@
+all do
+  #全流量,e平台,bp,bpoff等的isp
+  @isp = ''
+  #d平台流量的isp
+  @data_isp = ''
+  @flow = 'ps'
+  @backup_flow = 'ps'
+  @use_thin_api = '1'
+
+  #是否有实验平台，如果没有真正的d平台，所有d平台的流量都复用到一个，例如bpd0~bpd10的asq都复用到bpasq
+  @has_exp = false 
+  #q的名称和对应的d平台列表，今后添加q和对应的d平台易如反掌
+  @qname_exps = {"asq" => ['d0', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10'],
+           "wasq" => ['d0', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8'],
+           "rigq" => ['d3', 'd4', 'd5'],
+           "clkqs" => ['d0', 'd1'],
+           "convq" => [],
+           "wconvq" => ['d0', 'd1'],
+           "samq" => ['d0', 'd1'],
+           "wcardq" => [],
+           "ubmq" => ['d3'],
+           "wubmq" => ['d0', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6'],
+           "adaptuiq" => [],
+           "daq" => [],
+           "wnsq" => [],
+           "wiseq" => [],
+           "wpriceq" => [],
+           "wnewasq" => [],
+           "wsmartbidq" => []
+           }
+  #是否只有d平台，而没有全流量平台，应对特殊需求
+  @qname_only_exps = {"simq" => 1,
+                      "rsq" => 1}
+  @replace_qnames = {}
+  @qname_read_timeouts = {"rigq" => 90,
+                          "simq" => 20,
+                          "rsq" => 20}
+  @qname_strategy = {"wasq" => "PredictorProxyHealthStrategy",
+                    "wubmq" => "PredictorProxyHealthStrategy"}
+  @wconvq_max_pack_size = 40
+  @default_response_timeout = 120000
+
+  #由于资源问题，e平台很可能没有该平台的q，所以用以下两个变量来控制生成的bns
+  @qname_flows = {}
+  @qs_flow = 'ps'
+  #分库数
+  @qs_shard_num = 16
+  #对有分库的qs特化
+  @qs_exps = ['d0','d1'] 
+  @wubmq_dispatch_level = '' 
+  @asq_dispatch_level = '' 
+  @asq_dispatch_schemas = ''
+  @rigq_dispatch_level = '' 
+  @rigq_dispatch_schemas = ''
+  #默认的连下游的超时时间
+  @default_read_timeout = 110
+  #默认的ubclient连接配置参数
+  @default_ub_param = "
+DefaultRetry:5
+DefaultConnectTimeOut:10
+DefaultWriteTimeOut:30
+DefaultMaxConnect:500
+DefaultConnectType:LONG
+DefaultLinger:1"
+end
+
+
+node '[bpoff+imas]' do
+  @use_thin_api = '1'
+end
+
+
+# img platform begin by xiedeping01
+opera 'img' do
+  @flow = 'ps'
+  @use_thin_api = '1'
+end
+
+opera 'img+cm' do
+    @isp = 'cm'
+end
+
+opera 'img+ct' do
+    @isp = 'cm'
+end
+
+opera 'img+ecj' do
+    @isp = 'ecj'
+end
+
+opera 'img+gzhxy' do
+    @isp = 'gzhxy'
+end
+# img platform end

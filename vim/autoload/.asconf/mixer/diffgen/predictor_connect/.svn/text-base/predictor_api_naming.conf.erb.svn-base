@@ -1,0 +1,399 @@
+# 是否使用观星thin-api连接proxy
+use_thin_api : <%= @use_thin_api %>
+# thin-api连接配置文件地址 
+thin_conf_dir : ./conf/predictor_thin_connect
+# 开启观星服务化新路由
+enable_opera : 1
+is_log_process_time : 0 
+default_response_timeout : 120000
+
+[Predictor]
+#asq
+[.@Application]
+name : asq
+[..@Command]
+cmd : /asq/ps/ctr/predict
+dispatch_level : <%= @asq_dispatch_level %> 
+dispatch_schemas_str :<%= @asq_dispatch_schemas %> 
+max_pack_size : 20
+[..@Command]
+cmd : /asq/ps/ctr/dumpfea
+max_pack_size : 40
+[..@Command]
+cmd : /asq/bid/ctr/predict
+max_pack_size : 20
+
+# wasq
+[.@Application]
+name : wasq
+[..@Command]
+cmd : /asq/wise/ctr
+max_pack_size : 30 
+[..@Command]
+cmd : /asq/wise/relevance-q 
+max_pack_size : 40
+# wiseq
+[.@Application]
+name : wiseq
+[..@Command]
+cmd : /wlpq/wise/highend
+max_pack_size : 40
+[..@Command]
+cmd : /wlpq/wise/lowend
+max_pack_size : 40
+[..@Command]
+cmd : /phq/wise/phone
+max_pack_size : 40
+[..@Command]
+cmd : /adaq/wise/predict
+max_pack_size : 40
+
+#rigq 
+[.@Application]
+name : rigq 
+[..@Command]
+cmd : /rigq/wise/relevance
+max_pack_size : 40
+dispatch_level : <%= @rigq_dispatch_level %> 
+dispatch_schemas_str :<%= @rigq_dispatch_schemas %> 
+[..@Command]
+cmd : /rigq/ps/relevance
+max_pack_size : 40
+dispatch_level : <%= @rigq_dispatch_level %> 
+dispatch_schemas_str :<%= @rigq_dispatch_schemas %> 
+
+# clkqs
+[.@Application]
+name : clkqs
+[..@Command]
+cmd : /clkq/ps/predict
+max_pack_size : 40
+[..@Command]
+cmd : /lpq/ps/predict
+max_pack_size : 40
+[..@Command]
+cmd : /clkq/wise/predict
+max_pack_size : 40
+
+# adsqs
+[.@Application]
+name : adsqs
+[..@Command]
+cmd : /imas/adserver/predict
+max_pack_size : 40
+
+# convq
+[.@Application]
+name : convq
+[..@Command]
+cmd : /convq/ps/predict
+max_pack_size : 40
+
+# wconvq
+[.@Application]
+name : wconvq
+[..@Command]
+cmd : /convq/wise/predict
+max_pack_size : <%= @wconvq_max_pack_size %>   
+
+# samq
+[.@Application]
+name : samq
+[..@Command]
+cmd : /samq/ps/ctr/predict
+max_pack_size : 40 
+[..@Command]
+cmd : /wsmq/ps/ctr/predict
+max_pack_size : 40
+
+# extq
+[.@Application]
+name : extq
+[..@Command]
+cmd : /asp/ps/ctr/predict
+max_pack_size : 40
+
+# wcardq
+[.@Application]
+name : wcardq
+[..@Command]
+cmd : /wcardq/wise/precies
+max_pack_size : 30
+[..@Command]
+cmd : /wcardq/wise/extend
+max_pack_size : 30
+
+#wdtitleq
+
+#ubmq 
+[.@Application]
+name : ubmq 
+[..@Command]
+cmd : /ubmq/ps/predict
+max_pack_size : 30
+
+#wubmq
+[.@Application]
+name : wubmq
+[..@Command]
+cmd : /ubmq/wise/predict
+max_pack_size : 40
+dispatch_level : <%= @wubmq_dispatch_level %> 
+
+# adaptuiq
+[.@Application]
+name : adaptuiq
+[..@Command]
+cmd : /uiq/ps/predictor
+max_pack_size : 30
+
+# daq 
+[.@Application]
+name : daq 
+[..@Command]
+cmd : /daq/wise/predict
+max_pack_size : 30
+
+# wnsq
+[.@Application]
+name : wnsq
+[..@Command]
+cmd : /asq/wise-ns/ctr
+max_pack_size : 40
+
+# wsmartbidq
+[.@Application]
+name : wsmartbidq
+[..@Command]
+cmd : /smartbidq/wise/lu
+max_pack_size : 40
+
+# rsq
+[.@Application]
+name : rsq
+[..@Command]
+cmd : /wise/rsq/wrsclickq
+max_pack_size : 20
+dispatch_level : query
+dispatch_schemas_str : query
+[..@Command]
+cmd : /wise/rsq/wrschargeq
+max_pack_size : 20
+dispatch_level : query
+dispatch_schemas_str : query
+
+# simq
+[.@Application]
+name : simq
+[..@Command]
+cmd : /simq/ps/predictor
+max_pack_size : 20
+dispatch_level : query
+dispatch_schemas_str : query
+
+# wpriceq
+[.@Application]
+name : wpriceq
+[..@Command]
+cmd : /wpriceq/wise/predict
+max_pack_size : 20
+
+#wnewasq
+[.@Application]
+name : wnewasq
+[..@Command]
+cmd : /asq/wise/newctr
+max_pack_size : 40
+
+# qs
+[.@Application]
+name : qs
+[..@Command]
+cmd : /nks/ps/predict
+max_pack_size : 100
+[..@Command]
+cmd : /nks/wise/nonprecise
+max_pack_size : 100
+[..@Command]
+cmd : /nks/wise/precise
+max_pack_size : 100
+
+<% @qname_exps.each do |qname, qexps| %>
+<% if @qname_only_exps.has_key?(qname) %> 
+<% else %>
+[.@Platform]
+name : <%= @flow %>_<%= qname%>
+application : <%= qname%> 
+tag : <%= @flow %>
+backup_name : <%= @backup_flow %>_<%= qname%>
+shard_num : 1
+shard_type : 0
+@shard_name : <%= @flow %>_<%= qname%>_group0
+<% end %>
+
+<% qexps.each do |exp| %>
+[.@Platform]
+name : <%= @flow %><%= exp %>_<%= qname%>
+application :  <%= qname%>
+<% if @qname_flows.has_key?(qname) %>
+tag : <%= @qname_flows[qname] %><%= exp %> 
+<% else %>
+tag : <%= @flow %><%= exp %> 
+<% end %> 
+<% if @qname_only_exps.has_key?(qname) %> 
+backup_name : <%= @flow %><%= exp %>_<%= qname%> 
+<% else %>
+backup_name : <%= @flow %>_<%= qname%>
+<% end %>
+shard_num : 1 
+shard_type : 0 
+<% if @has_exp %>
+@shard_name : <%= exp %>_<%= qname%>_group0
+<% else %>
+@shard_name : <%= @flow %>_<%= qname%>_group0
+<% end %>
+<% end %>
+<% end %>
+
+[.@Platform]
+name : <%= @flow %>_qs
+application : qs 
+tag : <%= @flow %>
+backup_name : <%= @backup_flow %>_qs
+shard_num : <%= @qs_shard_num %>
+shard_type : 1
+<% 0.upto(@qs_shard_num - 1) do |shard_id| %>
+@shard_name : <%= @flow %>_qs_group<%= shard_id %>
+<% end %>
+
+<% @qs_exps.each do |exp| %>
+[.@Platform]
+name : <%= @flow %><%= exp %>_qs
+application : qs
+tag : <%= @flow %><%= exp %>
+backup_name : <%= @flow %>_qs
+shard_num : <%= @qs_shard_num %>
+shard_type : 1
+<% 0.upto(@qs_shard_num - 1) do |shard_id| %>
+<% if @has_exp %>
+@shard_name : <%= exp %>_qs_group<%= shard_id %>
+<% else %>
+@shard_name : <%= @flow %>_qs_group<%= shard_id %>
+<% end %>
+<% end %>
+<% end %>
+
+####################################################################
+###       ubclient配置:自定义platform与service的对应关系       ###
+####################################################################
+
+[UbClientConfig]
+ConfType  : 10
+[.Reactor]
+ThreadNum  :  20
+CheckTime : 1
+
+[.Naming]
+DIR : ./conf/
+FILE : naming_back.conf
+WebfootQueryTimeout: 30000
+SeviceSynInterval : 1000
+IsUseBnsBackupConf : 1
+
+[.UbClient]
+<% @qname_exps.each do |qname, qexps| %>
+<% if @qname_only_exps.has_key?(qname) %>
+<% else %>
+[UbClientConfig]
+[.Naming]
+[..@Service]
+Name :  <%= @flow %>_<%= qname%>_group0
+<% if @qname_flows.has_key?(qname) %>
+
+<% if @replace_qnames.has_key?(qname) %> 
+WebfootServiceName: group.opera-<%= @qname_flows[qname] %>-<%= @replace_qnames[qname] %>-000-<%= @isp %>.IM.all 
+<% else %>
+WebfootServiceName: group.opera-<%= @qname_flows[qname] %>-<%= qname%>-000-<%= @isp %>.IM.all 
+<% end %>
+
+<% else %>
+WebfootServiceName: group.opera-<%= @flow %>-<%= qname%>-000-<%= @isp %>.IM.all
+<% end %>
+<% if @qname_read_timeouts.has_key?(qname) %> 
+DefaultReadTimeOut : <%= @qname_read_timeouts[qname] %> 
+<% else %>
+DefaultReadTimeOut : <%= @default_read_timeout %>
+<% end %>
+<%= @default_ub_param %>
+[...CurrStrategy]
+<% if @qname_strategy.has_key?(qname) %>
+ClassName: <%= @qname_strategy[qname] %>
+<% else %>
+ClassName: UbClientStrategyWithHealthy
+<% end %>
+[...CurrHealthy]
+ClassName:UbClientHealthyChecker"
+<% end %>
+
+<% if @has_exp %>
+<% qexps.each do |exp| %>
+[UbClientConfig]
+[.Naming]
+[..@Service]
+Name :  <%= exp %>_<%= qname%>_group0
+WebfootServiceName: group.opera-<%= exp %>-<%= qname%>-000-<%= @data_isp %>.IM.all
+<% if @qname_read_timeouts.has_key?(qname) %> 
+DefaultReadTimeOut : <%= @qname_read_timeouts[qname] %> 
+<% else %>
+DefaultReadTimeOut : <%= @default_read_timeout %>
+<% end %>
+<%= @default_ub_param %>
+[...CurrStrategy]
+<% if @qname_strategy.has_key?(qname) %>
+ClassName: <%= @qname_strategy[qname] %>
+<% else %>
+ClassName: UbClientStrategyWithHealthy
+<% end %>
+[...CurrHealthy]
+ClassName:UbClientHealthyChecker"
+
+<% end %>
+<% end %>
+<% end %>
+
+[UbClientConfig]
+[.Naming]
+<% 0.upto(@qs_shard_num - 1) do |shard_id| %>
+[..@Service]
+Name :  <%= @flow %>_qs_group<%= shard_id %>
+<% if shard_id < 10 %>
+WebfootServiceName: group.opera-<%= @qs_flow %>-qs-00<%= shard_id %>-<%= @isp %>.IM.all
+<%= @default_ub_param %>
+<% else %>
+WebfootServiceName: group.opera-<%= @qs_flow %>-qs-0<%= shard_id %>-<%= @isp %>.IM.all
+DefaultReadTimeOut : <%= @default_read_timeout %>
+<%= @default_ub_param %>
+<% end %>
+<% end %>
+
+<% if @has_exp %>
+<% @qs_exps.each do |exp| %>
+[UbClientConfig]
+[.Naming]
+<% 0.upto(@qs_shard_num - 1) do |shard_id| %>
+[..@Service]
+Name :  <%= exp %>_qs_group<%= shard_id %>
+<% if shard_id < 10 %>
+WebfootServiceName: group.opera-<%= exp %>-qs-00<%= shard_id %>-<%= @data_isp %>.IM.all
+DefaultReadTimeOut : <%= @default_read_timeout %>
+<%= @default_ub_param %>
+<% else %>
+WebfootServiceName: group.opera-<%= exp %>-qs-0<%= shard_id %>-<%= @data_isp %>.IM.all
+DefaultReadTimeOut : <%= @default_read_timeout %>
+<%= @default_ub_param %>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+
+

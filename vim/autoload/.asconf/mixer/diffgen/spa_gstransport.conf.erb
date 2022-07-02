@@ -1,0 +1,29 @@
+HealthyCheckInterval : 1
+ServerHistorySize : 10
+TransportReloadInterval : 30
+ServerAliveTimeout : 600
+
+
+[DefaultConfig]
+[.Connection]
+ConnectTimeout : 100
+ReadTimeout : 45
+WriteTimeout : 100
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 600
+HedgeFetchRetryCount : 4
+NeedKeepAlive : 1
+
+[.TagDescription]
+PartitionTag : shard
+
+[Services]
+[.SpaService]
+[..NamingInfo]
+TagSource : bns
+ConfType : bns
+ServiceName : group.opera-<%= @spa_platform %>-spa-all-<%= @spa_isp %>.<%= __product %>.all
+
+
+

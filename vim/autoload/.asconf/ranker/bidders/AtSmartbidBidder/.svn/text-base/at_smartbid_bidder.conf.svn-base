@@ -1,0 +1,12 @@
+fcr_at_smartbid_param_beta : 1.0
+msa_at_smartbid_param_beta : 1.0
+fcr_at_smartbid_param_gamma : 1.0
+msa_at_smartbid_param_gamma : 1.0
+fcr_at_smartbid_default_lq : 100000
+msa_at_smartbid_default_lq : 100000
+fcr_at_smartbid_param_t : 1.0
+msa_at_smartbid_param_t : 1.0
+fcr_at_smartbid_bid_ratio_thres : 1.0
+msa_at_smartbid_bid_ratio_thres : 1.0
+fcr_at_smartbid_bid_ratio_discount : 1.0
+msa_at_smartbid_bid_ratio_discount : 1.0

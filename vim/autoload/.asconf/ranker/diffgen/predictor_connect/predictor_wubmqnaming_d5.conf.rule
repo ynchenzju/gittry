@@ -1,0 +1,42 @@
+all do
+  @platform = 'd5'
+  @isp = ''
+end
+
+node '[ct+imas]' do
+  @isp = 'bj'
+end
+
+node '[cu+imas]' do
+  @isp = 'bj'
+end
+
+node '[cm+imas]' do
+  @isp = 'bj'
+end
+
+node '[hd+imas]' do
+  @isp = 'hd'
+end
+
+node '[nj+imas]' do
+  @isp = 'nj'
+end
+
+node '[ecj+imas]' do
+  @isp = 'nj'
+end
+
+node '[gzhxy+imas]' do
+  @isp = 'gzhxy'
+end
+
+node '[bp+imas]' do
+  @platform = 'bp'
+  @isp = 'bj'
+end
+
+node '[bpoff+imas]' do
+  @platform = 'bpoff'
+  @isp = 'bj'
+end

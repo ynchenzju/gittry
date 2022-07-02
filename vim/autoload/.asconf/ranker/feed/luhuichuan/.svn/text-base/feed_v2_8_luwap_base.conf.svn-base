@@ -1,0 +1,150 @@
+#lu 中间页feed
+[@fsdv2]
+@cond_qm_gids:700
+@cond_qm_gids:70001
+@cond_qm_gids:70002
+@cond_qm_gids:70003
+@cond_qm_gids:70004
+@cond_qm_gids:70005
+alive:1
+
+#黑名单过滤[1,20]
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:query_black_list
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:2
+plugin_name:query_trade2_black_list
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:3
+plugin_name:user_id_black_list
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:4
+plugin_name:user_trade2_black_list
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:5
+plugin_name:winfo_id_black_list
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:6
+plugin_name: target_url_black_list
+alive:0
+
+#打折 门槛过滤[21,40]
+[.@plugin_desc]
+plugin_instance_id : 25
+plugin_name : bid_discount
+alive : 1
+[..plugin_params]
+discount : 0.85
+
+[.@plugin_desc]
+plugin_instance_id:42
+plugin_name: calc_utq
+alive:0
+[..plugin_params]
+features_list : userid-term_list,ip,day_hour,user_tag-gender,cmatch-page_no,cuid,query,userid-age,userid-long_term_query,userid-gender,userid-wise_interest_list,planid,user_tag-age,holiday,user_tradeid_2-long_term_query,userid-holiday,winfoid,cmatch-mt_id,term_list,gender,age,userid,cookieid,ideaid,weekday,user_tradeid_1-long_term_query,cmatch-query_minning_strategy,query-query_minning_strategy
+model_data_dict_name : utq_model_dict_exp
+stro_mtid_list : 3176,3177
+
+[.@plugin_desc]
+plugin_instance_id:23
+plugin_name: update_sortq_with_utq
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id : 32
+plugin_name : ctr_thr_filter
+alive : 1
+[..plugin_params]
+ctr_thr : 0
+
+[.@plugin_desc]
+plugin_instance_id : 33
+plugin_name : mincpm_thr_filter
+alive : 1
+[..plugin_params]
+mincpm_thr : 0
+
+[.@plugin_desc]
+plugin_instance_id:24
+plugin_name:minbid_thr_filter
+alive:1
+[..plugin_params]
+minbid_thr:30
+
+[.@plugin_desc]
+plugin_instance_id:11
+plugin_name:bsq_bid_mt_ratio_sort
+alive:1
+[..plugin_params]
+[...bsq_bid_mt_ratio_for_sort]
+default_ratio:1.0
+[....@mt_ratio]
+mt:3176
+ratio:1.5
+[....@mt_ratio]
+mt:3177
+ratio:1.3
+
+#样式物料处理[41,60]
+[.@plugin_desc]
+plugin_instance_id : 43
+plugin_name : title_opt_from_xbox
+alive : 0
+
+[.@plugin_desc]
+plugin_instance_id : 22
+plugin_name : title_length_limit
+alive : 0
+[..plugin_params]
+min_title_len : 10
+max_title_len : 80
+pic_mt_list : 
+
+[.@plugin_desc]
+plugin_instance_id : 51
+plugin_name : title_bw_core_fitler
+alive : 0
+[..plugin_params]
+@bw_core_check_mt : 3176
+@bw_core_check_mt : 3177
+
+[.@plugin_desc]
+plugin_instance_id:19
+plugin_name:nst_admit_adv_filter
+alive:0
+[..plugin_params]
+admit_mt_list:3176,3177
+
+[.@plugin_desc]
+plugin_instance_id:49
+plugin_name: pic_csid_dedup
+alive:1
+[..plugin_params]
+@need_dedup_mt : 3176
+@need_dedup_mt : 3177
+
+[.@plugin_desc]
+plugin_instance_id:57
+plugin_name:title_sensitive_words_filter
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id : 58
+plugin_name : title_opt_symbol
+alive : 0
+[.plugin_params]
+need_replace_symbols :
+need_replace_gbk_symbols :
+
+

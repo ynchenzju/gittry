@@ -1,0 +1,347 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/app/ecom/im/!svn/ver/441157/trunk/production/prod/ranker/conf/ranker
+END
+flow_quality_opt_tool.conf
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/411016/trunk/production/prod/ranker/conf/ranker/flow_quality_opt_tool.conf
+END
+action_ads_vertical_type.conf
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/app/ecom/im/!svn/ver/396433/trunk/production/prod/ranker/conf/ranker/action_ads_vertical_type.conf
+END
+form_action.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/app/ecom/im/!svn/ver/196736/trunk/production/prod/ranker/conf/ranker/form_action.conf
+END
+myerson_conf.conf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/app/ecom/im/!svn/ver/402625/trunk/production/prod/ranker/conf/ranker/myerson_conf.conf
+END
+jingxiu_ads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/app/ecom/im/!svn/ver/421509/trunk/production/prod/ranker/conf/ranker/jingxiu_ads.conf
+END
+xiaoming_stable.conf
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ranker/xiaoming_stable.conf
+END
+ac_component.conf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/app/ecom/im/!svn/ver/429726/trunk/production/prod/ranker/conf/ranker/ac_component.conf
+END
+cop_config.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/429732/trunk/production/prod/ranker/conf/ranker/cop_config.conf
+END
+app_ads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/app/ecom/im/!svn/ver/210211/trunk/production/prod/ranker/conf/ranker/app_ads.conf
+END
+trade23_filter_control.conf
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/app/ecom/im/!svn/ver/361138/trunk/production/prod/ranker/conf/ranker/trade23_filter_control.conf
+END
+comm_admit.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/400610/trunk/production/prod/ranker/conf/ranker/comm_admit.conf
+END
+preproc.conf
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/app/ecom/im/!svn/ver/441028/trunk/production/prod/ranker/conf/ranker/preproc.conf
+END
+ad_general_data.conf
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/app/ecom/im/!svn/ver/432513/trunk/production/prod/ranker/conf/ranker/ad_general_data.conf
+END
+action_ads_htk.conf
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/app/ecom/im/!svn/ver/295265/trunk/production/prod/ranker/conf/ranker/action_ads_htk.conf
+END
+query2user_rigq_ranker.conf
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/app/ecom/im/!svn/ver/296617/trunk/production/prod/ranker/conf/ranker/query2user_rigq_ranker.conf
+END
+xiaoming.conf
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/app/ecom/im/!svn/ver/208872/trunk/production/prod/ranker/conf/ranker/xiaoming.conf
+END
+wise_tieba.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/375653/trunk/production/prod/ranker/conf/ranker/wise_tieba.conf
+END
+ranker_common_strategy.conf
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/app/ecom/im/!svn/ver/441157/trunk/production/prod/ranker/conf/ranker/ranker_common_strategy.conf
+END
+brand_ads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/app/ecom/im/!svn/ver/333744/trunk/production/prod/ranker/conf/ranker/brand_ads.conf
+END
+ub_monitor.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/189255/trunk/production/prod/ranker/conf/ranker/ub_monitor.conf
+END
+sf_monitor.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/205529/trunk/production/prod/ranker/conf/ranker/sf_monitor.conf
+END
+fcr_conversion_premium_ratio_conf.conf
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/app/ecom/im/!svn/ver/433596/trunk/production/prod/ranker/conf/ranker/fcr_conversion_premium_ratio_conf.conf
+END
+columbus_ads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/app/ecom/im/!svn/ver/198957/trunk/production/prod/ranker/conf/ranker/columbus_ads.conf
+END
+action_ads_plastic.conf
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/app/ecom/im/!svn/ver/358026/trunk/production/prod/ranker/conf/ranker/action_ads_plastic.conf
+END
+mirror_flow_display.conf
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/app/ecom/im/!svn/ver/439616/trunk/production/prod/ranker/conf/ranker/mirror_flow_display.conf
+END
+taiyi_yacl.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/434422/trunk/production/prod/ranker/conf/ranker/taiyi_yacl.conf
+END
+action_ads_finance.conf
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/app/ecom/im/!svn/ver/377763/trunk/production/prod/ranker/conf/ranker/action_ads_finance.conf
+END
+feeds_midway_ads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/406682/trunk/production/prod/ranker/conf/ranker/feeds_midway_ads.conf
+END
+xbox_tablename.conf
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/app/ecom/im/!svn/ver/421509/trunk/production/prod/ranker/conf/ranker/xbox_tablename.conf
+END
+ps_url_ads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/159086/trunk/production/prod/ranker/conf/ranker/ps_url_ads.conf
+END
+non_closed_loop_style.conf
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/438453/trunk/production/prod/ranker/conf/ranker/non_closed_loop_style.conf
+END
+new_production_expand.conf
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/345763/trunk/production/prod/ranker/conf/ranker/new_production_expand.conf
+END
+action_ads_education.conf
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/app/ecom/im/!svn/ver/340748/trunk/production/prod/ranker/conf/ranker/action_ads_education.conf
+END
+qlq_split_flow.conf
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/app/ecom/im/!svn/ver/433894/trunk/production/prod/ranker/conf/ranker/qlq_split_flow.conf
+END
+wise_vscard_ads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/app/ecom/im/!svn/ver/423860/trunk/production/prod/ranker/conf/ranker/wise_vscard_ads.conf
+END
+wise_zhixin.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/app/ecom/im/!svn/ver/423860/trunk/production/prod/ranker/conf/ranker/wise_zhixin.conf
+END
+adaptive_auction_mechanism.conf
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/app/ecom/im/!svn/ver/418196/trunk/production/prod/ranker/conf/ranker/adaptive_auction_mechanism.conf
+END
+slp_cpa_mt_config.conf
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/app/ecom/im/!svn/ver/439616/trunk/production/prod/ranker/conf/ranker/slp_cpa_mt_config.conf
+END
+ztc_nst_mts.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/app/ecom/im/!svn/ver/409503/trunk/production/prod/ranker/conf/ranker/ztc_nst_mts.conf
+END
+local_style.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/app/ecom/im/!svn/ver/440984/trunk/production/prod/ranker/conf/ranker/local_style.conf
+END
+xbox_newstyle.conf
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/app/ecom/im/!svn/ver/434492/trunk/production/prod/ranker/conf/ranker/xbox_newstyle.conf
+END
+wise_mixads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/app/ecom/im/!svn/ver/441028/trunk/production/prod/ranker/conf/ranker/wise_mixads.conf
+END
+action_ads_doctor.conf
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/app/ecom/im/!svn/ver/377763/trunk/production/prod/ranker/conf/ranker/action_ads_doctor.conf
+END
+generic_brand_premium.conf
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/370185/trunk/production/prod/ranker/conf/ranker/generic_brand_premium.conf
+END
+mt_show_control.conf
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/app/ecom/im/!svn/ver/435863/trunk/production/prod/ranker/conf/ranker/mt_show_control.conf
+END
+comlog.conf
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/app/ecom/im/!svn/ver/297629/trunk/production/prod/ranker/conf/ranker/comlog.conf
+END
+action_ads_framework.conf
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/app/ecom/im/!svn/ver/394747/trunk/production/prod/ranker/conf/ranker/action_ads_framework.conf
+END
+generic_brand.conf
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/app/ecom/im/!svn/ver/422104/trunk/production/prod/ranker/conf/ranker/generic_brand.conf
+END
+bz_yacl.conf
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/app/ecom/im/!svn/ver/311440/trunk/production/prod/ranker/conf/ranker/bz_yacl.conf
+END
+web_union.conf
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/app/ecom/im/!svn/ver/435821/trunk/production/prod/ranker/conf/ranker/web_union.conf
+END
+data_prepare.conf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/app/ecom/im/!svn/ver/440330/trunk/production/prod/ranker/conf/ranker/data_prepare.conf
+END
+closedloop_config.conf
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/app/ecom/im/!svn/ver/439616/trunk/production/prod/ranker/conf/ranker/closedloop_config.conf
+END
+xiaoming_bak.conf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ranker/xiaoming_bak.conf
+END
+material_score.conf
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/app/ecom/im/!svn/ver/318075/trunk/production/prod/ranker/conf/ranker/material_score.conf
+END
+medical_struct_ads.conf
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/app/ecom/im/!svn/ver/441028/trunk/production/prod/ranker/conf/ranker/medical_struct_ads.conf
+END
+pluto_rigq_thres.conf
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/309223/trunk/production/prod/ranker/conf/ranker/pluto_rigq_thres.conf
+END
+mechanism_adjust_policy.conf
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/app/ecom/im/!svn/ver/267031/trunk/production/prod/ranker/conf/ranker/mechanism_adjust_policy.conf
+END

@@ -1,0 +1,7 @@
+[Service]
+ServerCount : 1
+[.@Server]
+host_ip : 10.99.34.60 
+port : 8206 
+tag : partition:0,platform:n
+offset : 0

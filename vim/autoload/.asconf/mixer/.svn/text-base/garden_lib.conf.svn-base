@@ -1,0 +1,34 @@
+#***************************知道问题页************************************
+#>>>>refer_query 相关
+SEQUERY_NUM : 17
+SEQUERY_0 : http://www.baidu.com/s? wd=,w=,word= ie= gb2312 GB2312 GB2312
+SEQUERY_1 : http://www.baidu.com/s? none none utf-8 UTF8 none
+SEQUERY_2 : http://zhidao.baidu.com/search? word=,w= none= none GB2312 GB2312
+SEQUERY_3 : http://post.baidu.com/f? word=,w= none= none GB2312 GB2312
+SEQUERY_4 : http://www.google.com.hk/ q=,query= ie= gb2312 GB2312 UTF8
+SEQUERY_5 : http://www.google.com.hk/ none none utf-8 UTF8 none
+SEQUERY_6 : http://www.soso.com/q? w= none= none GB2312 GB2312
+SEQUERY_7 : http://search.cn.yahoo.com/search? p= ei= gbk GB2312 GB2312
+SEQUERY_8 : http://search.cn.yahoo.com/search? none none utf-8 UTF8 none
+SEQUERY_9 : http://cn.bing.com/ q= ie= utf-8 UTF8 UTF8
+SEQUERY_10 : http://www.bing.com/ q= ie= utf-8 UTF8 UTF8
+SEQUERY_11 : http://www.sogou.com/ query= ie= gb2312 GB2312 UTF8
+SEQUERY_12 : http://www.sogou.com/ none none utf8 UTF8 none
+SEQUERY_13 : http://www.baidu.com/search/ressafe.html? q= none utf-8 UTF8 UTF8
+SEQUERY_14 : http://zhishi.sogou.com/zhishi? query= ie= utf8 UTF8 GB2312
+SEQUERY_15 : http://www.google.com/ q= ie= utf-8 UTF8 UTF8
+SEQUERY_16 : http://www.youdao.com/search? q= ue= utf8 UTF8 UTF8
+
+CCODE_PATH : ./data/pl/ccode
+
+#>>>>qid_query 相关
+USE_REFER_QUERY : 1
+
+IKNOW_QID_QUERY_COFF  :  1.0
+
+XBOX_CLIENT : ./conf/imas_xbmap_gst.conf
+XBOX_TABLE : iknow-query
+
+#>>>>qid黑名单词表
+IKNOW_BLACK_QID_LIST : ./data/pl/a_comm/iknow_qid_black.txt
+

@@ -1,0 +1,22 @@
+#分词词典路径
+seg_dict_path : ./data/adr/conflict_checker/worddict/
+#词性标注词典路径
+tag_dict_path : ./data/adr/conflict_checker/tagdict
+#地域识别数据路径
+region_dict_path : ./data/adr/conflict_checker/region
+#品牌词识别数据路径
+worder_dict_path : ./data/adr/conflict_checker/nedict/
+#品牌保护和同义数据路径
+brand_path : ./data/adr/conflict_checker/brand
+#品牌词同义词典文件
+brand_std_fname : brand_std
+#保护品牌词列表文件
+brand_protect_fname : brand_protect
+#地域相关过滤信息的路径
+region_path : ./data/adr/conflict_checker/region_checker
+#需要忽略的term文件
+region_ignore_term_fname : ignore_term
+#地域保护的黑名单文件
+region_black_list_fname : black_list
+region_brand_path : ./data/adr/conflict_checker/region_checker
+region_brand_fname : region_brand_term

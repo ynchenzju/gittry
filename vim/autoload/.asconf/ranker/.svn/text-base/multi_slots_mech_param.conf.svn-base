@@ -1,0 +1,39 @@
+max_height_type_num : 3 
+max_ad_num : 3
+max_mt_combs_num : 100
+max_advlist_num : 600
+precut_num : 7
+max_mt_num_in_mts : 50
+
+@rank_bias : 0.709 
+@rank_bias : 0.516 
+
+@white_mt : 22513
+@white_mt : 22510
+@white_mt : 22506 
+@white_mt : 3199
+@white_mt : 3175 
+
+@pet_mt : 1017
+@pet_mt : 1019 
+@pet_mt : 2159
+@pet_mt : 2011
+@pet_mt : 2051
+@pet_mt : 3601
+@pet_mt : 5007
+
+use_rank_bias_dict : 0
+use_clickq_reserve_price : 0
+use_disaster_multi_ubmq : 0
+max_number_ubmq : 1200
+max_advlist_mts_num : 14
+max_ad_mts_num : 2
+advlist_pruning_type : 0
+default_min_page_cpm : 0.0
+min_page_cpm_ratio : 0.0
+min_page_cpm_pricing_ratio : 0.0
+use_mua_json_debug_log : 0
+use_psa_json_debug_log : 0
+global_minbid : 30
+blank_value_discount_factor : 0.0
+height_mincpm_discount_factor : 0.0

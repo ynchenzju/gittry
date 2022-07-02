@@ -1,0 +1,47 @@
+HealthyCheckInterval : 1
+ServerHistorySize : 10
+TransportReloadInterval : 30
+ServerAliveTimeout : 1000
+RunInAsyncMode : 1
+
+[DefaultConfig]
+[.Connection]
+ConnectTimeout : 15
+ReadTimeout : 100
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 20
+HedgeFetchRetryCount : 4
+
+# 概率选择配置
+[..ImLbStrategy]
+# 选择概率精度
+RatioPrecision : 1000
+[...@Point]
+x : 3
+y : 400
+[...@Point]
+x : 10
+y : 5
+
+# 集群划分tag配置
+[.TagDescription]
+# 分库标识tag
+PartitionTag : partition
+
+# 集群划分tag配置
+[Services]
+[.PredictorService]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.opera-<%= @predictorproxy_platform %>-predictorproxy-all-<%= @predictorproxy_isp %>.<%= __product %>.all
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 145
+WriteTimeout : 30
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 300
+HedgeFetchRetryCount : 2 

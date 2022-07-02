@@ -1,0 +1,98 @@
+HealthyCheckInterval : 1
+TransportReloadInterval : 30
+ServerHistorySize : 10
+ServerAliveTimeout : 1000
+RunInAsyncMode : 1
+
+[DefaultConfig]
+[.Connection]
+ConnectTimeout : 15
+ReadTimeout : 100
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 100
+HedgeRequestTimeout : 20
+HedgeFetchRetryCount : 4
+
+# 概率选择配置
+[..ImLbStrategy]
+# 选择概率精度
+RatioPrecision : 1000
+[...@Point]
+x : 3
+y : 400
+[...@Point]
+x : 10
+y : 5
+
+[.TagDescription]
+PartitionTag : shard
+
+[Services]
+[.contentadu]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.opera-<%= @contentadu_platform %>-contentadu-all-<%= @contentadu_isp %>.<%= __product %>.all
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 80
+WriteTimeout : 60
+ConnectRetryCount : 1 
+MaxConnectionPerHost : 100
+HedgeRequestTimeout : 100
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard
+
+[.contentactionads]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.opera-<%= @contentactionads_platform %>-contentactionads-all-<%= @contentactionads_isp %>.<%= __product %>.all
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 80
+WriteTimeout : 60
+ConnectRetryCount : 1 
+MaxConnectionPerHost : 100
+HedgeRequestTimeout : 100
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard
+
+[.contentztc]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.opera-<%= @contentztc_platform %>-contentztc-all-<%= @contentztc_isp %>.<%= __product %>.all
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 80
+WriteTimeout : 60
+ConnectRetryCount : 1 
+MaxConnectionPerHost : 100
+HedgeRequestTimeout : 100
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard
+
+[.contentpa]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.opera-<%= @contentpa_platform %>-contentpa-all-<%= @contentpa_isp %>.<%= __product %>.all
+[..Connection]
+ConnectTimeout : 10
+ReadTimeout : 80
+WriteTimeout : 60
+ConnectRetryCount : 1 
+MaxConnectionPerHost : 100
+HedgeRequestTimeout : 100
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard

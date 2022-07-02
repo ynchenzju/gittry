@@ -1,0 +1,87 @@
+[@feed_src_conf]
+src_id : 969 
+is_need_keyword_targeting : 1
+is_need_user_targeting : 1
+is_need_req_feed_bs : 0
+flow_type : 3
+
+[@feed_src_conf]
+src_id : 601
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_query_winfo_filter : 1
+
+[@feed_src_conf]
+src_id : 602
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_query_winfo_filter : 1
+
+[@feed_src_conf]
+src_id : 1057
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_req_feed_bs : 0
+flow_type : 3
+
+[@feed_src_conf]
+src_id : 1026
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_userid_control : 0
+is_need_req_feed_bs : 0
+flow_type : 3
+
+[@feed_src_conf]
+src_id : 1086
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_userid_control : 0
+
+[@feed_picmt_conf]
+mtid : 3176
+xbox_tablename : wise-midway-feed-multi
+feed_sort_ratio : 1.5
+
+[@feed_picmt_conf]
+mtid : 3177
+xbox_tablename : wise-midway-feed-single
+feed_sort_ratio : 1.2
+
+[@feed_src_conf]
+src_id : 895
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_req_feed_bs : 0
+
+[@feed_src_conf]
+src_id : 896
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_req_feed_bs : 0
+
+[@feed_src_conf]
+src_id : 1108
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_userid_control : 0
+is_need_req_feed_bs : 0
+flow_type : 3
+
+[@feed_src_conf]
+src_id : 1103
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_userid_control : 0
+is_need_req_feed_bs : 0
+flow_type : 3
+
+[@feed_src_conf]
+src_id : 912
+is_need_keyword_targeting : 1
+is_need_user_targeting : 0
+is_need_userid_control : 0
+is_need_req_feed_bs : 0
+flow_type : 3
+
+

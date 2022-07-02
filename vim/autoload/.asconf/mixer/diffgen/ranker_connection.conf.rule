@@ -1,0 +1,177 @@
+all do
+  @plat_list = {}
+  @server_count = 0
+  @stage_isp = "nj"
+end
+
+######### NOTICE #################
+##线上mixer->ranker的列表获取不通过此文件，而是通过bns的方式
+##此文件仅用于线下测试环境
+######### NOTICE #################
+
+#n
+%w[ct cu cm hd nj ecj gzhxy gzns].each do |isp|
+  node "n+imas+#{isp}" do
+    %w[n].each do |plat|
+      @plat_list[plat] = __nodes_expand("n+#{isp}+imas")
+    end
+
+    @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+  end
+end
+
+#e
+['[ct,cu,cm]','nj','ecj','gzhxy'].each do |isp|
+  %w[e0 e1 e2 e3 e4 e5 e6 e7 e9].each do |plat_id|
+    node "#{plat_id}+imas+#{isp}" do
+      %w[n].each do |plat|
+        @plat_list[plat] = __nodes_expand("#{plat_id}+imas+#{isp}")
+      end
+  
+      @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+    end
+  end
+end
+
+#data
+%w[ct cu cm hd nj ecj gzhxy gzns].each do |isp|
+  %w[d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 d10 d11 d12 d13 d14].each do |plat_id|
+    node "#{plat_id}+imas+#{isp}" do
+      @plat_list = {}
+      %w[n].each do |plat|
+          @plat_list[plat] = __nodes_expand("#{plat_id}+#{isp}+imas")
+      end
+
+      @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+    end
+  end
+end
+
+#ads-ct/cu
+%w[ct cu cm].each do |isp|
+  node "ads+imas+#{isp}" do
+    %w[n].each do |plat|
+      @plat_list[plat] = __nodes_expand("ads+#{isp}+imas")
+    end
+
+    @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+  end
+end
+
+#ads-hd0/hd1
+%w[hd].each do |isp|
+  %w[0 1].each do |group|
+    node "ads#{group}+imas+#{isp}" do
+      %w[n].each do |plat|
+        @plat_list[plat] = __nodes_expand("ads#{group}+#{isp}+imas")
+      end
+
+      @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+    end
+  end
+end
+
+#bid-ct/cu cm
+%w[ct cu cm ecj gzhxy gzns].each do |isp|
+  node "bid+imas+#{isp}" do
+    %w[n].each do |plat|
+      @plat_list[plat] = __nodes_expand("bid+#{isp}+imas")
+    end
+
+    @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+  end
+end
+
+#bid-hd0/hd1
+%w[hd].each do |isp|
+  %w[0 1].each do |group|
+    node "bid#{group}+imas+#{isp}" do
+      %w[n].each do |plat|
+        @plat_list[plat] = __nodes_expand("bid#{group}+#{isp}+imas")
+      end
+
+      @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+    end
+  end
+end
+
+#bp
+node "bp+imas" do
+  %w[n].each do |plat|
+    @plat_list[plat] = __nodes_expand("bp+imas")
+  end
+
+  @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+end
+
+#adsbp
+node "adsbp+imas" do
+  %w[n].each do |plat|
+    @plat_list[plat] = __nodes_expand("adsbp+imas")
+  end
+
+  @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+end
+
+
+#bpoff
+node "bpoff+imas" do
+  %w[n].each do |plat|
+    @plat_list[plat] = __nodes_expand("bpoff+imas")
+  end
+  @stage_isp = "bpoff"
+
+  @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+end
+
+#deptest
+node "deptest+imas" do
+  %w[n].each do |plat|
+    @plat_list[plat] = __nodes_expand("deptest+imas")
+  end
+
+  @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+end
+
+
+## nsmixer begin
+# l
+%w[ct cu cm hd nj ecj].each do |isp|
+  node "l+nsmixer+#{isp}" do
+    %w[n].each do |plat|
+      @plat_list[plat] = __nodes_expand("l+#{isp}+nsranker")
+    end
+
+    @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+  end
+end
+# f
+['ct'].each do |isp|
+  %w[f0 f1].each do |plat_id|
+    node "#{plat_id}+nsmixer+#{isp}" do
+      %w[n].each do |plat|
+        @plat_list[plat] = __nodes_expand("#{plat_id}+nsranker+#{isp}")
+      end
+  
+      @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+    end
+  end
+end
+# nsbp
+node "nsbp+nsmixer" do
+  %w[n].each do |plat|
+    @plat_list[plat] = __nodes_expand("nsbp+nsranker")
+  end
+
+  @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+end
+
+# deptest
+node "deptest+nsmixer" do
+  %w[n].each do |plat|
+    @plat_list[plat] = __nodes_expand("deptest+nsranker")
+  end
+
+  @server_count = @plat_list.values.map{|v| v.size}.reduce(:+)
+end
+## nsmixer end

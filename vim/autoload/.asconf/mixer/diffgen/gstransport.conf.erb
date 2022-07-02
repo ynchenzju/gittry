@@ -1,0 +1,321 @@
+HealthyCheckInterval : 1
+ServerHistorySize : 10
+TransportReloadInterval : 30
+ServerAliveTimeout : 1000
+
+[DefaultConfig]
+[.Connection]
+ConnectTimeout : 15
+ReadTimeout : 100
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 20
+HedgeFetchRetryCount : 4
+
+# 概率选择配置
+[..ImLbStrategy]
+# 选择概率精度
+RatioPrecision : 1000
+[...@Point]
+x : 3
+y : 400
+[...@Point]
+x : 10
+y : 5
+
+# 集群划分tag配置
+[.TagDescription]
+# 分库标识tag
+PartitionTag : partition
+
+# 集群划分tag配置
+[Services]
+[.ranker]
+[..NamingInfo]
+# 是否开启random shuffle
+RandomShuffle : <%= @ranker_random_shuffle %>
+ConfType : <%= @ranker_conf_type %>
+ServiceName : group.opera-<%= @ranker_platform%>-ranker-all-<%= @ranker_isp %>.<%= __product %>.all
+ConfDir : ./conf
+ConfFile : ranker_connection.conf
+TagSource : bns
+TestMode : 0
+StageIsp : <%= @ranker_isp %>
+# for bns
+DumpBnsToLocal : 1
+ConfBakDir : ./conf/connection_bak 
+ConfBakFilePrefix : ranker_conn_bak.conf
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 570
+WriteTimeout : 40
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : <%= @ranker_hedge_time %>
+HedgeFetchRetryCount : 2 
+PeerCloseRetryTmo : <%= @ranker_peerclose_retry %>
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : partition
+
+[.imbs]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.opera-<%= @imbsproxy_platform %>-imbsproxy-all-<%= @imbsproxy_isp %>.<%= __product %>.all
+ConfDir : ./conf
+ConfFile : imbsproxy_local_connection.conf
+TestMode : 0
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 240
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 300
+HedgeFetchRetryCount : 2
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard
+
+[.hfbs]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.opera-<%= @hfbs_platform %>-hfbs-all-<%= @hfbs_isp %>.IM.all
+TestMode : 0
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 240
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 300
+HedgeFetchRetryCount : 2
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard
+
+[.prefetcher]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.opera-<%= @prefetcher_opera_platform %>-prefetcher-000-<%= @prefetcher_isp %>.<%= __product %>.all
+GenerateOrderedInstanceView : 1
+[..Connection]
+ConnectTimeout : <%= @prefetcher_contimeout %>
+ReadTimeout : <%= @prefetcher_readtimeout %>
+WriteTimeout : <%= @prefetcher_writetimeout %>
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 250
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : partition
+
+
+[.upin]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+<% if @use_upin_simpledb > 0 %>
+<% if @use_upin_simpledb_test > 0 %>
+ServiceName : SmartBns#@group.simpledb-fs-fc-test.ups.<%= @upin_simpledb_isp %>
+<% else %>
+ServiceName : SmartBns#@group.simpledb-fs-fc.ups.<%= @upin_simpledb_isp %>
+<% end %>
+<% else %>
+ServiceName : group.opera-<%= @upin_opera_platform %>-ugate-000-<%= @upin_isp %>.<%= __product %>.all
+<% end %>
+[..Connection]
+ConnectTimeout : <%= @upin_contimeout %>
+ReadTimeout : <%= @upin_readtimeout %>
+WriteTimeout : <%= @upin_writetimeout %>
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 250
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : partition
+
+<% if @use_chunhua > 0 %>
+[.chunhua]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+<% if @use_chunhua_bpoff > 0 %>
+ServiceName : group.bpoff-adapp-nfc-mixer.<%= __product %>.<%= @chunhua_isp %>
+<% else %>
+ServiceName : group.adappnfc-adappmixer.ECOMWISE.<%= @chunhua_isp %>
+<% end %>
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 200
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 200
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : platform
+PartitionTag : partition
+
+[.chunhua_opera]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+<% if @use_chunhua_bpoff > 0 %>
+ServiceName : group.bpoff-adapp-nfc-mixer.<%= __product %>.<%= @chunhua_isp %>
+<% else %>
+ServiceName : group.opera-adappnfc-adappmixer-all-<%= @chunhua_isp %>.ADAPP.all
+<% end %>
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 200
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 200
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : platform
+PartitionTag : shard
+<% end %>
+
+<% if @use_urlserver > 0 %>
+[.urlserver]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.opera-<%= @urlserver_platform %>-urlserver-all-<%= @urlserver_isp %>.<%= __product %>.all
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 70
+WriteTimeout : 10
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 100
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard
+<% end %>
+
+[.nks]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.opera-<%= @nks_platform %>-nks-000-<%= @nks_isp %>.<%= __product %>.all 
+ConfDir : ./conf
+ConfFile : gst_nks_connection.conf
+TestMode : 0
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 200
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 60
+HedgeRequestTimeout : 300
+HedgeFetchRetryCount : 1
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard 
+
+#[.kaiwu_ei]
+#[..NamingInfo]
+#ConfType : bns 
+#TagSource : bns
+#ServiceName : group.opera-<%= @kaiwuei_platform %>-nadkaiwu-all-<%= @kaiwuei_isp %>.<%= __product %>.all 
+#[..Connection]
+#ConnectTimeout : <%= @kaiwuei_contimeout %>
+#ReadTimeout : <%= @kaiwuei_readtimeout %>
+#WriteTimeout : <%= @kaiwuei_writetimeout %>
+#ConnectRetryCount : 1
+#MaxConnectionPerHost : 20
+#HedgeRequestTimeout : 120
+#HedgeFetchRetryCount : 1 
+#[..TagDescription]
+#@SplitTag : platform
+#PartitionTag : partition
+
+[.ztc]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.opera-psztce-ztcas-all-<%= @ztc_isp %>.IM.all
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 200
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 250
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : platform
+PartitionTag : shard
+
+<% if @use_esproxy> 0 %>
+[.esproxy]
+[..NamingInfo]
+ConfType : bns 
+TagSource : bns
+ServiceName : group.opera-<%= @esproxy_platform %>-esproxy-all-<%= @esproxy_isp %>.<%= __product %>.all
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 60
+WriteTimeout : 10
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 100
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : shard
+<% end %>
+
+<% if @use_dmp> 0 %>
+[.dmp]
+[..NamingInfo]
+TagSource : bns
+TestMode : 0
+<% if @use_dmp_bpoff> 0 %>
+ConfType : file 
+ConfDir : ./conf
+ConfFile : dmp_connection.conf
+<% else %>
+ConfType : bns 
+ServiceName :  SEARCH-MATRIX.NOVA.<%= @dmp_isp %>
+<% end %>
+[..Connection]
+ConnectTimeout : 15 
+ReadTimeout : 100
+WriteTimeout : 10
+ConnectRetryCount : 1 
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 100
+HedgeFetchRetryCount : 2 
+<% end %>
+
+<% if @use_snas> 0 %>
+[Services]
+[.snas]
+[..NamingInfo]
+ConfType : bns
+TagSource : bns
+ServiceName : group.opera-<%= @snas_platform %>-snas-all-<%= @snas_isp %>.<%= __product %>.all
+[..Connection]
+ConnectTimeout : 15
+ReadTimeout : 200
+WriteTimeout : 20
+ConnectRetryCount : 1
+MaxConnectionPerHost : 50
+HedgeRequestTimeout : 100
+HedgeFetchRetryCount : 2 
+[..TagDescription]
+@SplitTag : exp_platform
+PartitionTag : partition
+<% end %>

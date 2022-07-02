@@ -1,0 +1,7 @@
+fea_data_dir : ./data/ubm_feadata
+
+fe_conf_path : ./conf/ubm
+
+max_term_num_ctr : 20
+
+plsa_dict_path : ./data

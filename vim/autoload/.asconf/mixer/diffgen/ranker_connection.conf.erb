@@ -1,0 +1,13 @@
+[Service]
+ServerCount: <%= @server_count %>
+<% offset = 0 %>
+<% @plat_list.each do |plat, host_list| %>
+<% host_list.each do |host| %>
+[.@Server]
+# name: <%= host[:hostname] %>
+host_ip: <%= host[:ip] %>
+port: 2010
+tag: partition:0,exp_platform:<%= plat %>,isp:<%= @stage_isp %>
+offset : <%= offset += 1 %>
+<% end %>
+<% end %>

@@ -1,0 +1,20 @@
+[@qm_display_title_conf] 
+[.recom_query_condition]
+trigger_key_type:  history_us_title_sign_list
+[.qm_display_title_output] 
+qm_display_title: 可能关注过
+
+
+[@qm_display_title_conf] 
+[.recom_query_condition]
+trigger_key_type:  us_title_sign_list
+[.qm_display_title_output] 
+qm_display_title: 猜你喜欢
+
+[@qm_display_title_conf] 
+[.recom_query_condition]
+global_id:20
+[.qm_display_title_output] 
+qm_display_title: 猜你感兴趣
+
+

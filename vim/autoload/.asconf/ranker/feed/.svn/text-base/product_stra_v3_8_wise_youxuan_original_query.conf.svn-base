@@ -1,0 +1,110 @@
+[@feed_product_stra_desc]
+@product_name:wise_youxuan_primary
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:bsq_bid_mt_ratio_sort
+alive:0
+[..plugin_params]
+[...bsq_bid_mt_ratio_for_sort]
+default_ratio:1.0
+
+[.@plugin_desc]
+plugin_instance_id:11
+plugin_name:youxuan_asyn_q_sort
+alive:0
+[..plugin_params]
+wasq_exp : 1
+rigq_exp : 0
+lpq_exp : 0
+bid_exp : 1
+multi_base : 1
+youxuan_sort_num : 3
+
+[.@plugin_desc]
+plugin_instance_id:12
+plugin_name:youxuan_adv_classify_sort
+alive:1
+[..plugin_params]
+wasq_exp:1
+rigq_exp:2
+lpq_exp:1
+bid_exp:1
+multi_base:100
+youxuan_sort_num:3
+[...classify_sort_weight]
+classify_na_ppim_weight:1000000
+classify_na_noppim_weight:10000
+classify_nona_ppim_weight:100
+classify_nona_noppim_weight:1
+classify_nona_noppim_adv_limit:2
+
+[.@plugin_desc]
+plugin_instance_id : 2
+plugin_name : advlist_entity_id_dedup
+alive : 0
+
+[.@plugin_desc]
+plugin_instance_id:6
+plugin_name:advlist_id_dedup
+alive:0
+[..plugin_params]
+adv_level_key_name:unit_id
+
+[.@plugin_desc]
+plugin_instance_id:3
+plugin_name:gsp_calc_price
+alive:1
+[..plugin_params]
+default_min_price : 1
+
+[.@plugin_desc]
+plugin_instance_id:7
+plugin_name:advlist_id_dedup
+alive:1
+[..plugin_params]
+adv_level_key_name:show_url_sign
+
+[.@plugin_desc]
+plugin_instance_id:8
+plugin_name: title_dedup 
+alive:1
+[..plugin_params]
+title_similarity_thr: 0.9
+
+[.@plugin_desc]
+plugin_instance_id:9
+plugin_name:youxuan_async_query_asn_info
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:4
+plugin_name:truncate_advlist_general
+alive:1
+[..plugin_params]
+truncate_adv_num:6
+
+[.@plugin_desc]
+plugin_instance_id:5
+plugin_name:no_db_query_stats
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:10
+plugin_name:youxuan_asyn_q_sort
+alive:0
+[..plugin_params]
+wasq_exp : 1
+rigq_exp : 0
+lpq_exp : 0
+bid_exp : 1
+multi_base : 1
+youxuan_sort_num : 3
+
+[.@plugin_desc]
+plugin_instance_id: 13
+plugin_name: generate_wenda_adv_list
+alive: 0
+[..plugin_params]
+append_product_name: wise_youxuan_wenda

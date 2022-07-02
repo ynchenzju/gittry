@@ -1,0 +1,106 @@
+GSTRANSPORT_CONFFILE : ./conf/gstransport.conf
+
+[@Downstream]
+name : ranker
+communication_name : imas2ranker
+platform_tag : exp_platform
+default_platform : <%= @ranker_default_platform %>
+
+[@Downstream]
+name : imbs
+communication_name : imas2imbsproxy
+platform_tag : exp_platform
+default_platform : n
+
+[@Downstream]
+name : hfbs
+communication_name : imas2hfbs
+platform_tag : exp_platform
+default_platform : <%= @hfbs_default_platform %>
+
+[@Downstream]
+name : upin
+communication_name : upin 
+platform_tag : exp_platform
+default_platform : <%= @upin_default_platform %>
+
+[@Downstream]
+name : prefetcher
+communication_name : prefetcher 
+platform_tag : exp_platform
+default_platform : n
+
+<% if @use_snas > 0 %>
+[@Downstream]
+name : snas
+communication_name : snas 
+platform_tag : exp_platform
+default_platform : <%= @snas_default_platform %>
+<% end %>
+
+<% if @use_chunhua > 0 %>
+[@Downstream]
+name : chunhua
+communication_name : chunhua
+platform_tag : platform
+default_platform : n
+[@Downstream]
+name : chunhua_opera
+communication_name : chunhua_opera
+platform_tag : platform
+default_platform : adappnfc
+<% end %>
+
+<% if @use_urlserver > 0 %>
+[@Downstream]
+name : urlserver
+communication_name : imas2urlserver
+platform_tag : exp_platform
+default_platform : n
+<% end%>
+
+<% if @use_nks > 0 %>
+[@Downstream]
+name : nks
+communication_name : imas2nks
+platform_tag : exp_platform
+default_platform : n
+<% end %>
+
+<% if @use_feed_bs > 0 %>
+[@Downstream]
+name : feed_bs
+communication_name : imas2feed_bs
+platform_tag : platform
+default_platform : n
+<% end %>
+
+<% if @use_kaiwu_ei > 0 %>
+[@Downstream]
+name : kaiwu_ei
+communication_name : imas2kaiwu_ei
+platform_tag : platform
+default_platform : n
+<% end %>
+
+[@Downstream]
+name : ztc
+communication_name : imas2ztcas
+platform_tag : platform
+default_platform : n
+
+<% if @use_esproxy> 0 %>
+[@Downstream]
+name : esproxy
+communication_name : imas2esproxy
+platform_tag : exp_platform
+default_platform : n 
+<% end %>
+
+<% if @use_dmp> 0 %>
+[@Downstream]
+name : dmp
+communication_name : imas2dmp
+platform_tag : platform
+default_platform : n 
+<% end %>

@@ -1,0 +1,7 @@
+chunhua_adv_q_cal_appq_weight : 0.0
+chunhua_adv_q_cal_wasq_weight : 1.0
+chunhua_adv_q_cal_weight_lb : 0.0
+chunhua_adv_q_cal_weight_ub : 10.0
+chunhua_union_leftq_t : 0.927171
+chunhua_baidu_leftq_t : 0.927171
+chunhua_q_left_default_t : 1.4

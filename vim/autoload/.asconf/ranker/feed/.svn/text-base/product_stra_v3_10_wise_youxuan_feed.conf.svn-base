@@ -1,0 +1,43 @@
+[@feed_product_stra_desc]
+@product_name:wise_youxuan_feed
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:1
+plugin_name:bsq_bid_mt_ratio_sort
+alive:1
+[..plugin_params]
+[...bsq_bid_mt_ratio_for_sort]
+default_ratio:1.0
+
+[.@plugin_desc]
+plugin_instance_id : 2
+plugin_name : advlist_entity_id_dedup
+alive : 1
+
+[.@plugin_desc]
+plugin_instance_id:3
+plugin_name:gsp_calc_price
+alive:1
+[..plugin_params]
+default_min_price : 1
+
+[.@plugin_desc]
+plugin_instance_id:5
+plugin_name:truncate_advlist_per_query
+alive:1
+[..plugin_params]
+truncate_adv_num:1
+
+[.@plugin_desc]
+plugin_instance_id:6
+plugin_name:truncate_advlist_general
+alive:1
+[..plugin_params]
+truncate_adv_num:6
+
+[.@plugin_desc]
+plugin_instance_id:7
+plugin_name:no_db_query_stats
+alive:1
+

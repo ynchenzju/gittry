@@ -1,0 +1,51 @@
+[@feed_product_stra_desc]
+@product_name:wise_ald_reform_c
+alive:0
+
+[.@plugin_desc]
+plugin_instance_id:12
+plugin_name:youxuan_asyn_q_sort
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:10
+plugin_name:youxuan_asyn_q_sort
+alive:0
+[..plugin_params]
+wasq_exp : 1
+rigq_exp : 0
+lpq_exp : 0
+bid_exp : 1
+multi_base : 1
+youxuan_sort_num : 3
+
+[.@plugin_desc]
+plugin_instance_id : 21
+plugin_name : advlist_entity_id_dedup
+alive : 1
+
+[.@plugin_desc]
+plugin_instance_id:17
+plugin_name:gsp_calc_price
+alive:1
+[..plugin_params]
+default_min_price : 1
+
+[.@plugin_desc]
+plugin_instance_id:19
+plugin_name:nst_admit_adv_filter
+alive:0
+[..plugin_params]
+admit_mt_list:3176,2062
+
+[.@plugin_desc]
+plugin_instance_id:18
+plugin_name:truncate_advlist
+alive:1
+[..plugin_params]
+truncate_adv_num:1
+
+[.@plugin_desc]
+plugin_instance_id:16
+plugin_name:no_db_query_stats
+alive:0

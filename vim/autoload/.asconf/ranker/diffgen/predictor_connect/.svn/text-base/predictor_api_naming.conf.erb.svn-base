@@ -1,0 +1,167 @@
+# 是否使用观星thin-api连接proxy
+use_thin_api : <%= @use_thin_api %>
+# thin-api连接配置文件地址 
+thin_conf_dir : ./conf/predictor_thin_connect
+# 开启观星服务化新路由
+enable_opera : 1
+
+[Predictor]
+
+<% if @has_ubmq %> 
+[.@Application]
+name : ubmq
+[..@Command]
+cmd : /ubmq/ps/predict 
+max_pack_size : <%= @ubmq_max_pack_size %> 
+
+[.@Platform]
+name : <%= @flow %>_ubmq
+application : ubmq
+tag : <%= @flow %> 
+backup_name : <%= @flow %>_ubmq
+shard_num : 1
+shard_type : 0
+@shard_name : n_ubmq_group0
+<% end %>
+
+<% if @ubmq_has_exp %>
+<% @ubmq_exps.each do |exp| %>
+[.@Platform]
+name : <%= exp %>_ubmq
+application : ubmq 
+tag : <%= exp %>
+backup_name : <%= @flow %>_ubmq
+shard_num : 1
+shard_type : 0
+@shard_name : <%= exp %>_ubmq_group0
+<% end %>
+
+<% @ubmq_exps.each do |exp| %>
+[.@Platform]
+name : <%= @flow %><%= exp %>_ubmq
+application : ubmq 
+tag : <%= @flow %><%= exp %>
+backup_name : <%= @flow %>_ubmq
+shard_num : 1
+shard_type : 0
+@shard_name : <%= exp %>_ubmq_group0
+<% end %>
+<% end %>
+
+<% if @has_wubmq %> 
+[.@Application]
+name : wubmq
+[..@Command]
+cmd : /imas/wise/ubmq
+max_pack_size : 40
+[..@Command]
+cmd : /ubmq/wise/predict
+max_pack_size : <%= @ubmq_max_pack_size %> 
+
+[.@Platform]
+name : <%= @flow %>_wubmq
+application : wubmq
+tag : 
+backup_name : <%= @flow %>_wubmq
+shard_num : 1
+shard_type : 0
+@shard_name : n_wubmq_group0
+
+[.@Platform]
+name : <%= @flow %>_new_wubmq
+application : wubmq
+tag : <%= @flow %> 
+backup_name : <%= @flow %>_wubmq
+shard_num : 1
+shard_type : 0
+@shard_name : n_wubmq_group0
+<% end %>
+
+<% if @wubmq_has_exp %>
+<% @wubmq_exps.each do |exp| %>
+[.@Platform]
+name : <%= exp %>_wubmq
+application : wubmq 
+tag : <%= exp %>
+backup_name : <%= @flow %>_wubmq
+shard_num : 1
+shard_type : 0
+@shard_name : <%= exp %>_wubmq_group0
+<% end %>
+
+<% @wubmq_exps.each do |exp| %>
+[.@Platform]
+name : <%= @flow %><%= exp %>_wubmq
+application : wubmq 
+tag : <%= @flow %><%= exp %>
+backup_name : <%= @flow %>_wubmq
+shard_num : 1
+shard_type : 0
+@shard_name : <%= exp %>_wubmq_group0
+<% end %>
+<% end %>
+
+<% if @has_adaptuiq %>
+# adaptuiq  
+[.@Application]
+name : adaptuiq 
+[..@Command]
+cmd : /uiq/ps/predictor 
+max_pack_size : 30
+
+[.@Platform]
+name : <%= @flow %>_adaptuiq
+application : adaptuiq 
+tag : <%= @flow %>
+backup_name : <%= @flow %>_adaptuiq
+shard_num : 1
+shard_type : 0
+@shard_name : n_adaptuiq_group0
+<% end %>
+
+####################################################################
+###       ubclient配置:自定义platform与service的对应关系       ###
+####################################################################
+
+[UbClientConfig]
+ConfType  : 10
+[.Reactor]
+ThreadNum  : 30 
+CheckTime : 1
+
+[.Naming]
+DIR : ./conf/
+FILE : naming_back.conf
+WebfootQueryTimeout: 30000
+SeviceSynInterval : 10
+IsUseBnsBackupConf : 1
+
+[.UbClient]
+
+<% if @has_wubmq %>
+$include : "predictor_wubmqnaming_n.conf"
+<% end %>
+<% if @wubmq_has_exp %>
+$include : "predictor_wubmqnaming_d0.conf"
+$include : "predictor_wubmqnaming_d1.conf"
+$include : "predictor_wubmqnaming_d2.conf"
+$include : "predictor_wubmqnaming_d3.conf"
+$include : "predictor_wubmqnaming_d4.conf"
+$include : "predictor_wubmqnaming_d5.conf"
+$include : "predictor_wubmqnaming_d6.conf"
+$include : "predictor_wubmqnaming_d7.conf"
+<% end %>
+<% if @has_ubmq %>
+$include : "predictor_ubmqnaming_n.conf"
+<% end %>
+
+<% if @ubmq_has_exp %> 
+$include : "predictor_ubmqnaming_d3.conf"
+$include : "predictor_ubmqnaming_d4.conf"
+$include : "predictor_ubmqnaming_d6.conf"
+<% end %>
+
+<% if @has_adaptuiq %>
+$include : "predictor_adaptuiqnaming_n.conf"
+<% end %>
+

@@ -1,0 +1,12 @@
+[@ztc_nst_mt_item]
+mt_id : 1019
+stage : 0
+dynamic_switch : 1
+if_need_mt_handler_name : is_ztc_adv
+json_template : {'mt':1019, 'comment':'#comment#', 'comment_format':'#comment_format#', 'commenturl':'#link#'}
+[@ztc_nst_mt_item]
+mt_id : 2186
+stage : 0
+dynamic_switch : 0
+if_need_mt_handler_name : is_ztc_adv
+json_template : {'mt':2186, 'shop_name':'#show_shop_name#'}

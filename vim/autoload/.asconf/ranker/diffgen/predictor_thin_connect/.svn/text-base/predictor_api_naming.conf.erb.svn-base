@@ -1,0 +1,52 @@
+max_pack_memory_cost : 2500000
+[UbClientConfig]
+ConfType  : 10
+[.Reactor]
+ThreadNum  : 200 
+CheckTime : 1
+
+[.Naming]
+DIR : ./conf/
+FILE : naming_back.conf
+WebfootQueryTimeout: 30000
+SeviceSynInterval : 10
+IsUseBnsBackupConf : 1
+
+[.UbClient]
+[UbClientConfig]                                                                                                      
+[.Naming]
+[..@Service]
+Name : predictor_proxy_name
+WebfootServiceName: group.opera-<%= @predictor_proxy_platform %>-predictorproxy-all-<%= @predictor_proxy_isp %>.<%= __product %>.all
+SendBuf : -1
+RecvBuf : -1
+ConnectAll :0
+DefaultPort :5382
+DefaultConnectTimeOut : 50
+DefaultReadTimeOut  : 110 
+DefaultWriteTimeOut  :30
+DefaultMaxConnect  :  2000
+DefaultRetry  :  5
+DefaultFetchConnMaxTime : 0
+#LONG / SHORT
+DefaultConnectType  :  LONG
+DefaultLinger  :  1
+ReqBuf  :  13107200 
+ResBuf  :  13107200
+DefaultAsyncWaitingNum  :  100
+
+[...CurrStrategy]
+ClassName : imLbStrategy
+RatioPrecision  :   1000
+MaxServerNum    :   1024
+FailQueueLen    :   10
+QueueBufLen :   2
+[....@Point]
+x : 3
+y : <%= @ratio1 %> 
+[....@Point]
+x : 10
+y : <%= @ratio2 %>
+
+[...CurrHealthy]
+ClassName  :UbClientHealthyChecker

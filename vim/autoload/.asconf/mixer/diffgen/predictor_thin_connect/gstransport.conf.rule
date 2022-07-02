@@ -1,0 +1,33 @@
+all do
+    ############# predictor proxy base #######
+    @predictorproxy_isp = @isp
+    @predictorproxy_platform = @platform
+end
+
+############# predictor proxy diff #######
+opera '[e2]+[ct,cu,cm]' do
+  @predictorproxy_isp = 'cm'
+end
+
+opera 'img+ct' do
+  @predictorproxy_isp = 'cm'
+end
+
+opera '[deptest]' do
+  @predictorproxy_isp = 'bj'
+  @predictorproxy_platform = 'bp'
+end
+
+opera '[bpoff,syssurvey]' do
+  @predictorproxy_isp = 'bj'
+  @predictorproxy_platform = 'bpoff'
+end
+
+opera '[e3,e1,e4,e5,e9,d]' do
+  @predictorproxy_platform = 'ps'
+end
+
+node 'bpoff' do
+  @predictorproxy_isp = 'bj'
+  @predictorproxy_platform = 'bpoff'
+end

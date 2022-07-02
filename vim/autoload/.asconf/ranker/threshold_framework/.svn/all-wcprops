@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/app/ecom/im/!svn/ver/441157/trunk/production/prod/ranker/conf/threshold_framework
+END
+soft_admit_thresholds.conf
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/app/ecom/im/!svn/ver/441157/trunk/production/prod/ranker/conf/threshold_framework/soft_admit_thresholds.conf
+END
+hard_admit_thresholds.conf
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/app/ecom/im/!svn/ver/441157/trunk/production/prod/ranker/conf/threshold_framework/hard_admit_thresholds.conf
+END
+thresholds.conf
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/app/ecom/im/!svn/ver/392865/trunk/production/prod/ranker/conf/threshold_framework/thresholds.conf
+END

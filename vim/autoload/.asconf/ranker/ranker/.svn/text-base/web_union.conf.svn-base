@@ -1,0 +1,7 @@
+process_switch : 1
+mt_priority_list : 2131,2132
+whole_mincpm_thr : 0
+whole_minbid_thr : 0
+whole_bid_ratio : 0.7
+response_adv_num : 1
+userid_blacklist_switch : 1

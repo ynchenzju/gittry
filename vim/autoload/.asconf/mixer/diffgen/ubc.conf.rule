@@ -1,0 +1,3 @@
+all do
+    @has_d_plat = 1
+end

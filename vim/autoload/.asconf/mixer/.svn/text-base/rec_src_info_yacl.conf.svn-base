@@ -1,0 +1,381 @@
+[@rec_src_conf]
+src_id : 939
+is_random : 1
+strategy_type : 1
+rec_query_from : 7
+
+[@rec_src_conf]
+src_id : 969
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501
+strategy_type : 1
+
+[@rec_src_conf]
+src_id : 970
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501
+strategy_type : 1
+
+[@rec_src_conf]
+src_id : 775
+strategy_type : 822
+
+[@rec_src_conf]
+src_id : 9999999
+is_random : 1
+strategy_type : 1
+
+[@rec_src_conf]
+src_id : 99920
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,8210,5501,7202,6707,8402,5801,5403,6008,5502
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+is_use_forum_trade : 1
+intentq_w : 1.0
+cpm_w : 0.0
+default_intent_q : 0.0
+is_use_query_weight : 0
+is_request_intentq : 0
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+top_query_cpm_trade_id : 2
+original_query_rank : 1
+session_rank : 2
+intent_model_rank : 5
+intent_rank : 4
+query_profile_rank : 7
+hot_query_rank : 6
+bar_name_rank : 8
+kaiwu_query_rank : 3
+cf_passport_rank : 9
+title_query_rank : 10
+kaiwu_partial_query_rank : 11
+composite_w : 0.0
+original_query_weight : 1.0
+session_weight : 1.0
+query_profile_weight : 1.0
+hot_query_weight : 1.0
+kaiwu_query_weight : 1.0
+intent_model_weight : 1.0
+cf_passport_weight : 1.0
+title_query_weight : 1.0
+intent_weight : 1.0
+bar_name_query_weight : 1.0
+kaiwu_partial_query_weight : 1.0
+
+is_feed_random_exploration : 1
+feed_random_exploration_ratio : 0.1
+[@rec_src_conf]
+src_id : 99921
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,8210,5501,7202,6707,8402,5801,5403,6008,5502
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+is_use_forum_trade : 1
+intentq_w : 1.0
+cpm_w : 0.0
+default_intent_q : 0.0
+is_use_query_weight : 0
+is_request_intentq : 0
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+top_query_cpm_trade_id : 1
+original_query_rank : 1
+session_rank : 2
+intent_model_rank : 5
+intent_rank : 4
+query_profile_rank : 7
+hot_query_rank : 6
+bar_name_rank : 8
+kaiwu_query_rank : 3
+cf_passport_rank : 9
+title_query_rank : 10
+kaiwu_partial_query_rank : 11
+composite_w : 0.0
+original_query_weight : 1.0
+session_weight : 1.0
+query_profile_weight : 1.0
+hot_query_weight : 1.0
+kaiwu_query_weight : 1.0
+intent_model_weight : 1.0
+cf_passport_weight : 1.0
+title_query_weight : 1.0
+intent_weight : 1.0
+bar_name_query_weight : 1.0
+kaiwu_partial_query_weight : 1.0
+
+is_feed_random_exploration : 1
+feed_random_exploration_ratio : 0.1
+[@rec_src_conf]
+src_id : 990
+strategy_type : 276
+
+[@rec_src_conf]
+src_id : 1022
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501
+strategy_type : 1
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+
+[@rec_src_conf]
+src_id : 1058
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501
+strategy_type : 1
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+
+[@rec_src_conf]
+src_id : 1059
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501
+strategy_type : 1
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+
+[@rec_src_conf]
+src_id : 991033
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,8210,5501,7202,6707,8402,5801,5403,6008,5502
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+intentq_w : 1.0
+cpm_w : 0.0
+default_intent_q : 0.0
+is_use_query_weight : 0
+is_request_intentq : 0
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+top_query_cpm_trade_id : 4
+original_query_rank : 1
+session_rank : 2
+intent_model_rank : 4
+intent_rank : 5
+query_profile_rank : 6
+hot_query_rank : 7
+bar_name_rank : 9
+kaiwu_query_rank : 8
+cf_passport_rank : 10
+title_query_rank : 3
+composite_w : 0.0
+original_query_weight : 1.0
+session_weight : 1.0
+query_profile_weight : 1.0
+hot_query_weight : 1.0
+kaiwu_query_weight : 1.0
+intent_model_weight : 1.0
+cf_passport_weight : 1.0
+title_query_weight : 1.0
+intent_weight : 1.0
+bar_name_query_weight : 1.0
+kaiwu_partial_query_weight : 1.0
+
+is_feed_random_exploration : 1
+feed_random_exploration_ratio : 0.1
+[@rec_src_conf]
+src_id : 991034
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,8210,5501,7202,6707,8402,5801,5403,6008,5502
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+intentq_w : 1.0
+cpm_w : 0.0
+default_intent_q : 0.0
+is_use_query_weight : 0
+is_request_intentq : 0
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+top_query_cpm_trade_id : 3
+original_query_rank : 1
+session_rank : 2
+intent_model_rank : 3
+intent_rank : 4
+query_profile_rank : 5
+hot_query_rank : 6
+bar_name_rank : 8
+kaiwu_query_rank : 7
+cf_passport_rank : 9
+title_query_rank : 10
+composite_w : 0.0
+original_query_weight : 1.0
+session_weight : 1.0
+query_profile_weight : 1.0
+hot_query_weight : 1.0
+kaiwu_query_weight : 1.0
+intent_model_weight : 1.0
+cf_passport_weight : 1.0
+title_query_weight : 1.0
+intent_weight : 1.0
+bar_name_query_weight : 1.0
+kaiwu_partial_query_weight : 1.0
+
+is_feed_random_exploration : 1
+feed_random_exploration_ratio : 0.1
+[@rec_src_conf]
+src_id : 1066
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501,7202
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+top_query_cpm_trade_id : 0
+
+is_feed_random_exploration : 1
+feed_random_exploration_ratio : 0.1
+[@rec_src_conf]
+src_id : 1023
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501,7202
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+
+[@rec_src_conf]
+src_id : 1076
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501,7202
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+
+[@rec_src_conf]
+src_id : 1080
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501,7202
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+
+[@rec_src_conf]
+src_id : 1081
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501,7202
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+
+[@rec_src_conf]
+src_id : 1078
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+
+[@rec_src_conf]
+src_id : 1088
+is_random : 0 
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501
+strategy_type : 310
+
+[@rec_src_conf]
+src_id : 991057
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,8210,5501,7202,6707,8402,5801,5403,6008,5502
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+is_use_forum_trade : 1
+intentq_w : 1.0
+cpm_w : 0.0
+default_intent_q : 0.0
+is_use_query_weight : 0
+is_request_intentq : 0
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+original_query_rank : 1
+session_rank : 2
+intent_model_rank : 5
+intent_rank : 4
+query_profile_rank : 7
+hot_query_rank : 6
+bar_name_rank : 8
+kaiwu_query_rank : 3
+composite_w : 0.0
+is_newqr_write_to_inttqr : 1
+
+[@rec_src_conf]
+src_id : 991026
+is_random : 1
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,8210,5501,7202,6707,8402,5801,5403,6008,5502
+strategy_type : 1
+rec_query_from : -1
+intent_model_pos : 1
+is_use_query_rank : 1
+is_use_forum_trade : 1
+intentq_w : 1.0
+cpm_w : 0.0
+default_intent_q : 0.0
+is_use_query_weight : 0
+is_request_intentq : 0
+max_rec_query_queue_size : 30
+not_random_select_query : 0
+original_query_rank : 1
+session_rank : 2
+intent_model_rank : 5
+intent_rank : 4
+query_profile_rank : 7
+hot_query_rank : 6
+bar_name_rank : 8
+kaiwu_query_rank : 3
+composite_w : 0.0
+is_newqr_write_to_inttqr : 1
+
+[@rec_src_conf]
+src_id : 1135
+is_random : 0 
+black_trade : 8201,8202,8203,8204,8205,8206,8207,8208,8209,5501
+strategy_type : 0
+
+[@rec_src_conf]
+src_id : 1118
+strategy_type : 22
+
+[@rec_src_conf] 
+src_id : 1157
+is_random : 1
+black_trade : 5104,5201,5202,5203,7199,5401,5601,5701,5703,5704,5702,5803,5805,5806,5904,5901,5905,6006,6007,6001,6003,6103,6102,6305,6301,6307,6303,6402,6419,6423,6403,6405,6407,6404,6420,6406,6410,6504,6503,6602,6603,6708,6707,6706,6703,6704,6702,6705,6709,6802,6801,6803,6902,6901,6904,7001,7405,7406,7403,7501,7502,7507,7509,7503,7508,7504,7505,7510,7608,7609,7611,7607,7606,7602,7605,7604,7612,7610,7708,7703,7701,7707,7801,7803,7805,7901,8001,8002,8101,8102,6201,8302,8303,8401,8405,8402,8406,8504,8501,8506,8505,8502,8511
+strategy_type : 1
+
+[@rec_src_conf]
+src_id : 1158
+is_random : 1
+black_trade : 5104,5201,5202,5203,7199,5401,5601,5701,5703,5704,5702,5803,5805,5806,5904,5901,5905,6006,6007,6001,6003,6103,6102,6305,6301,6307,6303,6402,6419,6423,6403,6405,6407,6404,6420,6406,6410,6504,6503,6602,6603,6708,6707,6706,6703,6704,6702,6705,6709,6802,6801,6803,6902,6901,6904,7001,7405,7406,7403,7501,7502,7507,7509,7503,7508,7504,7505,7510,7608,7609,7611,7607,7606,7602,7605,7604,7612,7610,7708,7703,7701,7707,7801,7803,7805,7901,8001,8002,8101,8102,6201,8302,8303,8401,8405,8402,8406,8504,8501,8506,8505,8502,8511
+strategy_type : 1
+
+is_custom_random : 1
+hot_flow_tag : 6
+[@rec_src_conf]
+src_id : 985
+is_random : 1
+strategy_type : 310
+
+[@rec_src_conf]
+src_id : 988
+strategy_type : 0 
+

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/cvm_extractor_conf
+END
+feature.conf
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/cvm_extractor_conf/feature.conf
+END
+selector.conf
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/app/ecom/im/!svn/ver/121835/trunk/production/prod/ranker/conf/ubm/cvm_extractor_conf/selector.conf
+END

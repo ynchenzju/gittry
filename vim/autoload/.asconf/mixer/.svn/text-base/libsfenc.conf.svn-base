@@ -1,0 +1,41 @@
+# 本地服务监听端口
+ENC_LOCAL_LISTEN_PORT :			2011
+
+# 分发中心IP及监听端口
+ENC_CENTER_IP :					10.23.251.51
+ENC_CENTER_IP2 :				10.23.251.51
+ENC_CENTER_LISTEN_PORT :		2011
+
+
+# 密码有效时间(分钟)，>=60
+# 建议该参数与分发中心的配置一致
+# 实际密码有效时间还受到分发中心配置的限制
+# 具体见分发中心的配置文件
+ENC_PASSWORD_EFFECTIVE_TIME :	1440
+
+
+# 采用的密码类型
+# 1: 使用从分发中心接收到的实时密码（若无可用的实时密码，将转而使用缺省密码）
+# 0: 使用缺省密码（见下面的缺省密码表）
+ENC_PASSWORD_TYPE :				1
+
+
+# 缺省密码表，各service必须保持一致，最长16个字符
+DEFAULT_PASSWORD_0 :            mBPYgrgZoO6DmlhO
+DEFAULT_PASSWORD_1 :            9mm3IfQpFjLffDId
+DEFAULT_PASSWORD_2 :            JjY5cqHnJrmgmCfq
+DEFAULT_PASSWORD_3 :            SkZ6iEmlFKwfF2ao
+DEFAULT_PASSWORD_4 :            9ankudNd3CEAzJIh
+DEFAULT_PASSWORD_5 :            j2LcTOg6vHaRUZq6
+DEFAULT_PASSWORD_6 :            tkr33EnKuqKZG2BR
+DEFAULT_PASSWORD_7 :            P2TBSBbVKXFeNqOx
+DEFAULT_PASSWORD_8 :            LXZd86xbJeTGTSDh
+DEFAULT_PASSWORD_9 :            FHBnsHMFCbhQMHyO
+
+
+
+# 用于压缩编码的Huffman表数据文件（与本配置文件同路径）
+ENC_HUFF_MAP_FILE :				huffmap.dat
+
+# 使用第ID个Huffman表进行压缩，目前可选0/1
+ENC_HUFF_MAP_ID :				1

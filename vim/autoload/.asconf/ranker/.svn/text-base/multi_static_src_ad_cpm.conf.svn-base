@@ -1,0 +1,47 @@
+[@src_ad_cpm_conf]
+src_id : 920
+default_ad_cpm : 5
+@ad_cpm : 7
+@ad_cpm : 3
+
+[@src_ad_cpm_conf]
+src_id : 921
+default_ad_cpm : 5
+@ad_cpm : 15
+@ad_cpm : 5
+
+[@src_ad_cpm_conf]
+src_id : 1035
+default_ad_cpm : 5
+@ad_cpm : 7
+@ad_cpm : 3
+
+[@src_ad_cpm_conf]
+src_id : 1036
+default_ad_cpm : 5
+@ad_cpm : 15
+@ad_cpm : 5
+
+[@src_ad_cpm_conf]
+src_id : 1033
+default_ad_cpm : 5
+@ad_cpm : 7
+@ad_cpm : 3
+
+[@src_ad_cpm_conf]
+src_id : 1034
+default_ad_cpm : 5
+@ad_cpm : 15
+@ad_cpm : 5
+
+[@src_ad_cpm_conf]
+src_id : 1047
+default_ad_cpm : 5
+@ad_cpm : 7
+@ad_cpm : 3
+
+[@src_ad_cpm_conf]
+src_id : 1048
+default_ad_cpm : 5
+@ad_cpm : 15
+@ad_cpm : 5

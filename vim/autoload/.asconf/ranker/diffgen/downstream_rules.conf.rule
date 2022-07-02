@@ -1,0 +1,6 @@
+# for vcsvr
+all do
+    @vcsvr_read_default_platform = 'n'
+    @vcsvr_write_default_platform = 'n'
+end
+

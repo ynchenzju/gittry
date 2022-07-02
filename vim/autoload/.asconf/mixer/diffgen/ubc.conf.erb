@@ -1,0 +1,45 @@
+
+[UbClientConfig]
+# 10表示全部service都从naming service获取；
+# 11表示全部service都从本地配置获取；
+# 12表示部分service从本地配置获取部分service从naming service获取，
+# 先加载依赖naming资源定位的service，
+# 然后加载依赖UbClient本地配置的service；
+ConfType  : 12
+
+[.Naming]
+DIR : ./conf/
+FILE : naming_back_ubc.conf
+WebfootQueryTimeout: 30000
+SeviceSynInterval : 10
+IsUseBnsBackupConf : 1
+
+[.Reactor]
+ThreadNum : 8
+CheckTime : 1
+
+[.UbClient]
+$include : ubc_csconnect_n_bns.conf
+<% if @has_d_plat > 0 %>
+$include : ubc_csconnect_d0_bns.conf
+$include : ubc_csconnect_d1_bns.conf
+$include : ubc_csconnect_d2_bns.conf
+$include : ubc_csconnect_d3_bns.conf
+$include : ubc_csconnect_d4_bns.conf
+$include : ubc_csconnect_d5_bns.conf
+<% end %>
+
+[.Galileo] 
+GALILEO_HOST : 127.0.0.1:8181
+GALILEO_DATA_PACK_SIZE : 131072
+GALILEO_ZOO_LOG : ./log/zoo.client.log
+DIR : ./conf
+FILE : galileo_backup.conf
+[..REQUEST_RESOURCE]
+NUM : 0
+#[...@RES_ARR]
+#NAME : service_name
+#ADDR : service_galileo_path
+#CAPACITY : 0
+[..REGISTER_RESOURCE]
+NUM : 0

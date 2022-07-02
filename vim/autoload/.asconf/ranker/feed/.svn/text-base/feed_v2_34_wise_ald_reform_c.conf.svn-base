@@ -1,0 +1,68 @@
+#wise_ald_reform_c
+[@fsdv2]
+@cond_qm_gids:23
+@cond_qm_gids:230001
+@cond_qm_gids:230002
+@cond_qm_gids:230003
+@cond_qm_gids:230004
+@cond_qm_gids:230005
+@cond_qm_gids:27
+@cond_qm_gids:270001
+@cond_qm_gids:270002
+@cond_qm_gids:270003
+@cond_qm_gids:270004
+@cond_qm_gids:270005
+alive:0
+
+#黑名单[1,20]
+[.@plugin_desc]
+plugin_instance_id:0
+plugin_name:query_black_list
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id:50
+plugin_name: target_url_black_list
+alive:0
+
+#打折 门槛[21,40]
+[.@plugin_desc]
+plugin_instance_id:7
+plugin_name:bid_discount
+alive:0
+[..plugin_params]
+discount : 0.85
+
+[.@plugin_desc]
+plugin_instance_id:5
+plugin_name:minbid_thr_filter
+alive:0
+[..plugin_params]
+minbid_thr:30
+
+[.@plugin_desc]
+plugin_instance_id:21
+plugin_name: update_sortq_with_utq
+alive:1
+
+[.@plugin_desc]
+plugin_instance_id : 32
+plugin_name : ctr_thr_filter
+alive : 0
+[..plugin_params]
+ctr_thr : 6000
+
+[.@plugin_desc]
+plugin_instance_id : 33
+plugin_name : mincpm_thr_filter
+alive : 1
+[..plugin_params]
+mincpm_thr : 0
+
+#样式物料处理[41,60]
+[.@plugin_desc]
+plugin_instance_id:19
+plugin_name:nst_admit_adv_filter
+alive:0
+[..plugin_params]
+admit_mt_list:3176,2062

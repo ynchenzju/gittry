@@ -1,0 +1,15 @@
+all do
+    @proxy_tag = 'ps'
+end
+
+    
+['ads','adsbp','bid','bp','bpoff','img'].each do |plat_name|
+    opera "#{plat_name}" do
+        @proxy_tag = "#{plat_name}"
+    end 
+
+    node "#{plat_name}" do
+        @proxy_tag = "#{plat_name}"
+    end 
+
+end

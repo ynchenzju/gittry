@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/app/ecom/im/!svn/ver/397223/trunk/production/prod/ranker/conf/msa/ubm
+END
+msa_ubm_feature_list.conf
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/app/ecom/im/!svn/ver/397223/trunk/production/prod/ranker/conf/msa/ubm/msa_ubm_feature_list.conf
+END
+msa_ubm_extract.conf
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/app/ecom/im/!svn/ver/397223/trunk/production/prod/ranker/conf/msa/ubm/msa_ubm_extract.conf
+END

@@ -1,0 +1,1104 @@
+#点后推
+[@query_recommend_description]
+alive : 1
+[.recommend_condition]
+flow_type : wise_page_ppim
+asyn_ads_mode : 0
+page_no : 0
+[.recommend_pass_process]
+@pass_process : parse_rec_stream_data
+@pass_process : recommend_data_from_url
+@pass_process : history_query_recommend_data_from_us
+@pass_process : query_recommend_combined_data
+@pass_process : entity_list_from_us_result
+@pass_process : generate_sim_query_title
+@pass_process : parse_columbus_data
+@pass_process : entity_process
+@pass_process : entity_list_from_erised_data
+@pass_process : add_hot_query_entity
+@pass_process : generate_userinfo
+@pass_process : generate_prequery_and_bdg_term
+@pass_process : recommend_data_from_xbox
+@pass_process : ori_query_wepvq_from_xbox
+
+
+[.@recommend_output_product]
+alive : 1
+recommend_output_product_name: ad_click_rs
+@select_result_set_fild_name : 
+[..ctr]
+alive : 1
+cut_alive : 0
+ctr_thr : 0
+uqueryq_replace_xqueryq : 0
+recom_query_qm_ctr1_alpha : 0
+recom_query_qm_ctr1_beta : 10
+recom_query_qm_ctr1_gamma : 0
+ori_query_qm_ctr1_alpha:0
+ori_query_qm_ctr1_beta:0
+ori_query_qm_ctr1_gamma:0
+
+[.@recommend_output_product]
+alive : 0
+recommend_output_product_name: predictor_query_asn
+qm_max_multi_queries_num:4
+@select_result_set_fild_name : 
+#1 only for rs, 2 for rs and predictor query-asn, 3 only for query-asn cainixihuan, 4 for query-asn youxuan primary.
+@rs_branch_ids:1
+@rs_branch_ids:2
+@predictor_query_asn_branch_ids:2
+@predictor_query_asn_branch_ids:3
+@predictor_query_asn_branch_ids:4
+[..interrelate]
+alive:1
+cut_alive:1
+interrelate_thr: 0.2
+[..ctr]
+alive:1
+cut_alive:1
+ctr_thr:0.2
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : title-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query
+result_set_field_name : title_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name : same_query_click_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 2
+max_multi_queries_num : 2
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 2
+max_multi_queries_num : 2
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_sim_query_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 0
+qm_ctr1_thr : 0
+multi_queries_branch_id : 1
+max_multi_queries_num : 0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : title-query-duplicate1
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query-lowpvr
+result_set_field_name : title_query_dict_recom_query_list_duplicate1 
+[...@trigger_depend_data]
+trigger_depend_data_field_name : same_query_click_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 3
+max_multi_queries_num : 2
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 3
+max_multi_queries_num : 2
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-query-query
+result_set_field_name : query_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_sign_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 2
+max_multi_queries_num : 2
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 2
+max_multi_queries_num : 2
+
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : fcpic-zone-material
+result_set_field_name : url_query_dict_recom_query_list_duplicate2 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 3
+max_multi_queries_num : 2
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : action-ads-xiafang-query
+result_set_field_name : query_query_dict_recom_query_list_duplicate2 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 3
+max_multi_queries_num : 2
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : target-url-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-plsa-sparse
+result_set_field_name : url_query_dict_recom_query_list_duplicate1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_whole_target_url_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 1
+max_multi_queries_num : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : url-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query-ps
+result_set_field_name : url_query_dict_recom_query_list
+[...@trigger_depend_data]
+trigger_depend_data_field_name: url_term_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive:1
+qm_ctr1_thr : 0
+gmulti_queries_branch_id : 1
+max_multi_queries_num : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_show_url_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+gmulti_queries_branch_id : 1
+max_multi_queries_num : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_target_url_term_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+gmulti_queries_branch_id : 1
+max_multi_queries_num : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_target_url_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 1
+max_multi_queries_num : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : url-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-qa-up
+result_set_field_name : title_query_dict_recom_query_list_duplicate2
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_target_url_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 4
+max_multi_queries_num : 2
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : next-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : next-query
+result_set_field_name : query_query_dict_recom_query_list_duplicate1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 1
+max_multi_queries_num : 0
+
+[@query_recommend_description]
+alive : 1
+[.recommend_condition]
+flow_type : wise
+asyn_ads_mode : 1
+page_no : 0
+
+[.@recommend_output_product]
+alive : 1
+recommend_output_product_name: ad_click_rs
+@select_result_set_fild_name : 
+[..ctr]
+alive:1
+cut_alive:0
+ctr_thr:0
+recom_query_qm_ctr1_alpha : 0
+recom_query_qm_ctr1_beta : 10
+recom_query_qm_ctr1_gamma : 0
+ori_query_qm_ctr1_alpha:0
+ori_query_qm_ctr1_beta:0
+ori_query_qm_ctr1_gamma:0
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : title-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query
+result_set_field_name : title_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name : pre_click_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : read_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : same_query_click_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_sim_query_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2 
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : rs_sim_query_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : ori_query_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : click_rs_sim_query_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : entity_title_list
+trigger_depend_data_field_priority: 980
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : history_us_title_list
+trigger_depend_data_field_priority: 970
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-query-query
+result_set_field_name : query_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_sign_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: rs_sim_query_sign_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 0
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: click_rs_sim_query_sign_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 0
+qm_ctr1_thr : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : target-url-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-plsa-sparse
+result_set_field_name : url_query_dict_recom_query_list_duplicate1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_whole_target_url_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : url-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query-ps
+result_set_field_name : url_query_dict_recom_query_list
+[...@trigger_depend_data]
+trigger_depend_data_field_name: url_term_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive:1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_show_url_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_target_url_term_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_target_url_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : next-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : next-query
+result_set_field_name : query_query_dict_recom_query_list_duplicate1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+
+
+
+[@query_recommend_description]
+alive : 1
+[.recommend_condition]
+flow_type : pc
+page_no : 0
+
+[.@recommend_output_product]
+alive : 1
+recommend_output_product_name: ad_click_rs
+@select_result_set_fild_name : 
+[..ctr]
+alive:1
+cut_alive:0
+ctr_thr:0
+recom_query_qm_ctr1_alpha : 0
+recom_query_qm_ctr1_beta : 10
+recom_query_qm_ctr1_gamma : 0
+ori_query_qm_ctr1_alpha:0
+ori_query_qm_ctr1_beta:0
+ori_query_qm_ctr1_gamma:0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : title-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query
+result_set_field_name : title_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name : pre_click_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : read_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : same_query_click_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_sim_query_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2 
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : rs_sim_query_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : ori_query_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : click_rs_sim_query_title_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : entity_title_list
+trigger_depend_data_field_priority: 980
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name : history_us_title_list
+trigger_depend_data_field_priority: 970
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-query-query
+result_set_field_name : query_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_sign_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: rs_sim_query_sign_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 0
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: click_rs_sim_query_sign_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 0
+qm_ctr1_thr : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : target-url-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-plsa-sparse
+result_set_field_name : url_query_dict_recom_query_list_duplicate1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_whole_target_url_list
+trigger_depend_data_field_priority: 991
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : url-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query-ps
+result_set_field_name : url_query_dict_recom_query_list
+[...@trigger_depend_data]
+trigger_depend_data_field_name: url_term_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive:1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_show_url_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_target_url_term_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[...@trigger_depend_data]
+trigger_depend_data_field_name: us_target_url_list
+trigger_depend_data_field_priority: 770
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : next-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : next-query
+result_set_field_name : query_query_dict_recom_query_list_duplicate1
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+
+#定制化mip二跳导流
+[@query_recommend_description]
+alive : 0
+[.recommend_condition]
+src_id : 982
+
+[.@recommend_output_product]
+alive : 1
+recommend_output_product_name: guide_flow_mip
+@select_result_set_fild_name : 
+[..ctr]
+alive : 1
+cut_alive : 0
+ctr_thr : 0
+uqueryq_replace_xqueryq : 0
+recom_query_qm_ctr1_alpha : 0
+recom_query_qm_ctr1_beta : 10
+recom_query_qm_ctr1_gamma : 0
+ori_query_qm_ctr1_alpha:0
+ori_query_qm_ctr1_beta:0
+ori_query_qm_ctr1_gamma:0
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : title-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query
+result_set_field_name : title_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name : same_query_click_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 2
+max_multi_queries_num : 2
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 2
+max_multi_queries_num : 2
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_sim_query_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 0
+qm_ctr1_thr : 0
+multi_queries_branch_id : 1
+max_multi_queries_num : 0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : title-query-duplicate1
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-title-query-lowpvr
+result_set_field_name : title_query_dict_recom_query_list_duplicate1 
+[...@trigger_depend_data]
+trigger_depend_data_field_name : same_query_click_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 3
+max_multi_queries_num : 2
+[...@trigger_depend_data]
+trigger_depend_data_field_name : us_title_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 3
+max_multi_queries_num : 2
+
+[.@recommend_strategy]
+alive : 1
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : rtp-query-query
+result_set_field_name : query_query_dict_recom_query_list 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_sign_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 2
+max_multi_queries_num : 2
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : 0.2
+interrelate_dict_thr : -2
+gbdt_thr : 0.3
+gbdt_feature_title_trigger : 1
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 2
+max_multi_queries_num : 2
+
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : query-query
+[..trigger]
+alive : 1
+trigger_type: xbox
+trigger_client : fcpic-zone-material
+result_set_field_name : url_query_dict_recom_query_list_duplicate2 
+[...@trigger_depend_data]
+trigger_depend_data_field_name: query_list
+trigger_depend_data_field_priority: 990
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : -2
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+qm_ctr1_thr : 0
+multi_queries_branch_id : 3
+max_multi_queries_num : 2
+[..interralte]
+alive :0
+[..ctr]
+alive :0
+
+[.@recommend_strategy]
+alive : 0
+strategy_name : hot-query
+[..trigger]
+alive : 1
+trigger_type: local
+trigger_client : entity_query_recommend
+result_set_field_name : entity_query_dict_hot_query_recom_query_list
+recom_query_random_num : 50
+recom_query_random_num_opt : 10
+[...@trigger_depend_data]
+trigger_depend_data_field_name: hot_query_entity_list
+trigger_depend_data_field_priority: 990 
+interrelate_thr : -2
+interrelate_dict_thr : -2
+gbdt_thr : 0
+gbdt_feature_title_trigger : 0
+ctr_thr : 0
+alive: 1
+

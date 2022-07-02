@@ -1,0 +1,23 @@
+all do
+   @ksarch_isp = 'tc'
+end
+
+opera 'gzns,gzhxy' do
+    @ksarch_isp = 'gz'
+end
+
+opera 'cu' do
+    @ksarch_isp = 'jx'
+end
+
+opera 'ct,cm' do
+    @ksarch_isp = 'tc'
+end
+
+opera 'ecj,nj' do
+    @ksarch_isp = 'nj03'
+end
+
+opera 'hd,hz' do
+    @ksarch_isp = 'hz'
+end

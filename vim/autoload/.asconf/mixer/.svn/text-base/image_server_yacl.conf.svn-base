@@ -1,0 +1,7 @@
+fc_pc_service_name : pc_fc_image_bind_unit
+fc_wise_service_name : wise_fc_image_tuji
+feed_single_service_name : feed_single_image
+feed_multi_service_name : feed_multi_image
+action_ads_medical_service_name : action_ads_medical
+fc_pic_single_service_name : fc_pic_single
+fc_pic_multi_service_name : fc_pic_multi

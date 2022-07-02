@@ -1,0 +1,31 @@
+name : xiaoming_bak
+age : 11
+girlfriend : lili
+pay : 10000
+
+@friends : lilei
+@friends : lili
+
+[villa]
+price : 2470000
+@areas : 15.2
+@areas : 21.9
+@areas : 30.8
+
+[@motorcade]
+oil : 1.5
+mph : 170000
+
+[@motorcade]
+oil : 2.2
+mph : 201000
+
+[@motorcade]
+oil : 2.7
+mph : 269000
+
+[pekingese]
+number : 3
+@nicknames : james
+@nicknames : vader
+@nicknames : bosh

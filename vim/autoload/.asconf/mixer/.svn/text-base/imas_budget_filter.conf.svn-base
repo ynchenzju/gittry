@@ -1,0 +1,15 @@
+[@budget_filter]
+exp_name : FEED_CONSUME_CONTROL_IP3_EXP
+switch_on : 0
+filter_level : User
+filter_ratio : 100
+[@budget_filter]
+exp_name : TIEBA_CONSUME_CONTROL_IP3_EXP
+switch_on : 0
+filter_level : User
+filter_ratio : 200
+[@budget_filter]
+exp_name : IKNOW_CONSUME_CONTROL_IP3_EXP
+switch_on : 1
+filter_level : User
+filter_ratio : 200
