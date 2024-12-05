@@ -1,0 +1,2163 @@
+{
+    "group_configs": [
+        {
+            "group_id": "baseline",
+            "is_default": true,
+            "calculation_units": [
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:ads",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "group_ids": "",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi1",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:cap",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 1.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 1.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi12",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "roi2", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.26,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.26,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_48",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.039,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.039,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_33",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.033,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.033,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_43",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.043,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.043,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roiall",
+                    "target_filter": {
+                        "item_types": ["roi2", "ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.27,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.27,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": 0.000001,
+                            "upper_bound": 6.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:add",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "group_ids": "",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.8,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -10.0,
+                            "upper_bound": 10.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 1.60,
+                            "ki": 0.80,
+                            "kd": 0.00,
+                            "weight": 0.2,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -10.0,
+                            "upper_bound": 10.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "group_id": "421645"
+        },
+        {
+            "group_id": "346144"
+        },
+        {
+            "group_id": "131218"
+        },
+        {
+            "group_id": "161827"
+        },
+        {
+            "group_id": "156063"
+        },
+        {
+            "group_id": "27647"
+        },
+        {
+            "group_id": "27646"
+        },
+        {
+            "group_id": "124931"
+        },
+        {
+            "group_id": "124932"
+        },
+        {
+            "group_id": "124934"
+        },
+        {
+            "group_id": "125037"
+        },
+        {
+            "group_id": "131219"
+        },
+        {
+            "group_id": "135295"
+        },
+        {
+            "group_id": "135293"
+        },
+        {
+            "group_id": "135294"
+        },
+        {
+            "group_id": "140118"
+        },
+        {
+            "group_id": "140406"
+        },
+        {
+            "group_id": "140407"
+        },
+        {
+            "group_id": "140812"
+        },
+        {
+            "group_id": "140813"
+        },
+        {
+            "group_id": "140814"
+        },
+        {
+            "group_id": "140815"
+        },
+        {
+            "group_id": "143728"
+        },
+        {
+            "group_id": "145501"
+        },
+        {
+            "group_id": "148295"
+        },
+        {
+            "group_id": "156059"
+        },
+        {
+            "group_id": "156060"
+        },
+        {
+            "group_id": "156061"
+        },
+        {
+            "group_id": "156062"
+        },
+        {
+            "group_id": "156064"
+        },
+        {
+            "group_id": "197954"
+        },
+        {
+            "group_id": "32400"
+        },
+        {
+            "group_id": "32401"
+        },
+        {
+            "group_id": "289657"
+        },
+        {
+            "group_id": "289658"
+        },
+        {
+            "group_id": "289659"
+        },
+        {
+            "group_id": "289660"
+        },
+        {
+            "group_id": "289661"
+        },
+        {
+            "group_id": "289662"
+        },
+        {
+            "group_id": "289663"
+        },
+        {
+            "group_id": "320986"
+        },
+        {
+            "group_id": "320987"
+        },
+        {
+            "group_id": "321134"
+        },
+        {
+            "group_id": "321525"
+        },
+        {
+            "group_id": "346138"
+        },
+        {
+            "group_id": "346139"
+        },
+        {
+            "group_id": "421642",
+            "calculation_units": [
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:ads",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "group_ids": "",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi1",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:cap",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi12",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "roi2", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.26,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.26,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_48",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.039,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.039,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_33",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.033,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.033,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_43",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.043,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.043,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roiall",
+                    "target_filter": {
+                        "item_types": ["roi2", "ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.27,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.27,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:add",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "group_ids": "",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "group_id": "421643",
+            "calculation_units": [
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:ads",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "group_ids": "",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi1",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:cap",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi12",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "roi2", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.26,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.26,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_48",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.039,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.039,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_33",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.033,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.033,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_43",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.043,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.043,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roiall",
+                    "target_filter": {
+                        "item_types": ["roi2", "ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.27,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.27,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:add",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "group_ids": "",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "group_id": "421644",
+            "calculation_units": [
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:ads",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "group_ids": "",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi1",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:cap",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.23,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi12",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "roi2", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.26,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.26,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_48",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.039,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.039,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_33",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.033,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.033,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roi2_43",
+                    "target_filter": {
+                        "item_types": ["roi2"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.043,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.043,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:roiall",
+                    "target_filter": {
+                        "item_types": ["roi2", "ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.27,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.27,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                },
+                {
+                    "version": "cum&real",
+                    "key": "cart_unify:ID:$date:$group_id-[355774:355775:355776:355777:355778:355779:355780:355781:395441]:add",
+                    "target_filter": {
+                        "item_types": ["ads_recall_simple_roi2","organic", "", "roi1", "organic_non_roi", "organic_recall_roi1"], 
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression",
+                        "group_ids": "",
+                        "is_ads": true
+                    },
+                    "all_filter": {
+                        "feature_details": [
+                            "order_successful-you_may_also_like-item",
+                            "order_detail-you_may_also_like-item",
+                            "shopping_cart-ymal-item",
+                            "order_list-you_may_also_like-item"
+                        ],
+                        "action": "impression"
+                    },
+                    "pid_params": [
+                        {
+                            "type": "cum",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.6,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        },
+                        {
+                            "type": "real",
+                            "kp": 3.2,
+                            "ki": 3.2,
+                            "kd": 0.1,
+                            "weight": 0.4,
+                            "target": 0.24,
+                            "threshold": 0.0,
+                            "initial": 1.0,
+                            "is_use_range": true,
+                            "lower_bound": -100.0,
+                            "upper_bound": 100.0,
+                            "alpha": 0.95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "group_id": "346143"
+        },
+        {
+            "group_id": "346145"
+        },
+        {
+            "group_id": "31138"
+        },
+        {
+            "group_id": "31139"
+        },
+        {
+            "group_id": "88574"
+        },
+        {
+            "group_id": "88575"
+        },
+        {
+            "group_id": "88576"
+        },
+        {
+            "group_id": "88577"
+        },
+        {
+            "group_id": "88578"
+        },
+        {
+            "group_id": "353643"
+        },
+        {
+            "group_id": "353644"
+        },
+        {
+            "group_id": "421640"
+        },
+        {
+            "group_id": "421641"
+        },
+        {
+            "group_id": "421646"
+        },
+        {
+            "group_id": "421647"
+        },
+        {
+            "group_id": "421648"
+        }
+    ]
+}
