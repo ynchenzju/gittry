@@ -44757,7 +44757,7 @@ exports:
     dense_size: 0
   - id: 19743
     export_key:
-      scope: “cart”
+      scope: "cart"
       input_node:
         name: item_data_type
         output_index: 0
@@ -44783,9 +44783,9 @@ exports:
     dense_size: 0
   - id: 19744
     export_key:
-      scope: “cart”
+      scope: "cart"
       input_node:
-        name: user_country
+        name: "user_country"
         output_index: 0
       slot_id: 205
     export_config:
@@ -44799,18 +44799,19 @@ exports:
       dense_method: 0
       dense_range: 0
       one_hot_set:
-      - vn
-      - th
-      - ph
-      - my
-      - tw
-      - sg
+      - "vn"
+      - "th"
+      - "ph"
+      - "my"
+      - "tw"
+      - "sg"
       one_hot_size: 0
-    tags: []
+    tags:
+      - "cart"
     description: ""
     converted_from: null
     mapping_global_slot_id: 40288
-    owner: xuehan.tan@shopee.com
+    owner: "xuehan.tan@shopee.com"
     dense_size: 6
 graph_name: "cart_feat"
 graph_type: "scenario_type"
