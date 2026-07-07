@@ -1,0 +1,59 @@
+io:
+    data_source: hdfs
+    minibatch_size: 256
+    use_disk_control: true
+    ss_batch_buffer_size: 8000
+    enable_data_file_shuffle: true
+    worker_use_disk_cache: true
+    use_parquet_reader_v2: true
+    hadoop_user_name: qifan.wang
+    hadoop_user_rpcpassword: C5DtzPbShdxx
+    cpp_data_converters:
+        - converter_name: LabelExtractor
+          converter_args:
+            lua_script_path: /workspace/data/label_fn.lua
+            labels:
+                - click
+                - cart
+                - order
+                - place_order
+                - ads_order
+            use_debug_info: false
+            use_sample_id: true
+        - converter_name: SparseExtractor
+        - converter_name: FilterBySampleId
+          converter_args:
+            lua_script_path: /workspace/data/sample_id.lua
+            lua_func: filter_fn
+        - converter_name: ExtractUserIdFromSampleId
+          converter_args:
+            lua_script_path: /workspace/data/sample_id.lua
+            lua_func: uid_fn
+        - converter_name: ShowClickExtractor
+          converter_args:
+            lua_script_path: /workspace/data/label_fn.lua
+            lua_func: show_click_fn
+        - converter_name: ExtractOriginFeatureFromDebugInfo
+          converter_args:
+            lua_script_path: /workspace/data/validate.lua
+    sample_type: parquet
+    valid_slots: 8001,2048,2051,2052,2053,2054,2055,2056,2058,2059,2060,2061,2062,2063,3101,3103,3111,3112,3113,3114,3115,3116,3117,3119,3120,3127,3128,3131,3132,3133,3134,3136,3137,3139,3140,3141,6213,6214,6215,3201,3202,3203,3206,3207,3301,3303,3311,3312,3313,3314,3315,3317,3336,3337,3339,3340,1803,1804,9503,1831,1832,3401,3403,3411,3412,3413,3414,3415,3417,7001,7002,7004,7010,7011,7015,7017,7018,7019,3436,3437,3439,7048,7051,22440,22441,22442,4021,4023,4024,4025,1466,22460,22461,22462,2001,2002,2004,2006,2009,2010,2011,2015,2017,2018,2019,1001,1008,1009,2033,1011,1012,1013,2036,2045
+    enable_drop_sample: true
+train_config:
+    days: 2026-06-03/13 2026-06-03/14 2026-06-03/15 2026-06-03/16 2026-06-03/17 2026-06-03/18 2026-06-03/19 2026-06-03/20 2026-06-03/21 2026-06-03/22 2026-06-03/23
+    data_path: hdfs://R2/projects/rcmd_data/hdfs/prod/alg/pdp/train_data_parquet/pdp_gr_item/product_detail_page/PH/$DAY/*.parquet
+    load_dnn_config:
+        load_nn: true
+        lax: true
+    save_model_days: '{2022..2048}-{01..12}-{01..31}/23 {2022..2048}-{01..12}-{01..31}/12'
+    data_done_file: ''
+    pass_size: 99999999
+    ego_plugin_path: /workspace/data/libego-plugin-v1.so
+    dump_path: hdfs://R2/projects/rcmd_feature/hdfs/prod/alg/pdp/pdp_ph_ot_mask_train_gr/rr_pdp_unify_llm_tk_l2_11391_118886/end_day/2026-06-03/ckpt/
+    dump_batch_frequency: 5000
+    max_session_per_device: 4
+    max_context_per_device: 16
+    gpu_merge_batch_buffer_size: 1
+    gpu_merge_once_batch_num: 1
+    ps_half_precision: true
+    train_threads: 16
