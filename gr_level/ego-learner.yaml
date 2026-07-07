@@ -1,0 +1,91 @@
+io:
+    data_source: hdfs
+    minibatch_size: 256
+    use_disk_control: true
+    ss_batch_buffer_size: 8000
+    enable_data_file_shuffle: true
+    worker_use_disk_cache: true
+    use_parquet_reader_v2: true
+    sample_type: parquet
+    parquet_format: request_to_item
+    valid_debug_info_keys:
+        - pb_msg
+        - DataType
+        - user_id
+        - item_id
+        - ROIItemType
+    hadoop_user_name: qifan.wang
+    hadoop_user_rpcpassword: C5DtzPbShdxx
+    enable_drop_sample: true
+    drop_sample_marks:
+        - drop_rr
+    cpp_data_converters:
+        - converter_name: LabelExtractor
+          converter_args:
+            lua_script_path: /workspace/data/label_fn.lua
+            labels:
+                - click
+                - cart
+                - order
+                - place_order
+                - ads_order
+            use_ext_info: false
+            use_sample_id: true
+        - converter_name: SparseExtractor
+        - converter_name: FilterBySome
+          converter_args:
+            lua_script_path: /workspace/data/sample_id.lua
+            lua_func: filter_fn
+            use_debug_info: false
+            use_sample_id: false
+            use_action_info: false
+            use_ext_info: true
+        - converter_name: ShowClickExtractor
+          converter_args:
+            lua_script_path: /workspace/data/label_fn.lua
+            lua_func: show_click_fn
+        - converter_name: ExtensionInfo
+          converter_args:
+            lua_script_path: /workspace/data/validate.lua
+            use_ext_info: true
+    valid_slots: 8001,2048,2051,2052,2053,2054,2055,2056,2058,2059,2060,2061,2062,2063,3101,3103,3111,3112,3113,3114,3115,3116,3117,3119,3120,3127,3128,3131,3132,3133,3134,3136,3137,3139,3140,3141,6213,6214,6215,3201,3202,3203,3206,3207,3301,3303,3311,3312,3313,3314,3315,3317,3336,3337,3339,3340,1803,1804,9503,1831,1832,3401,3403,3411,3412,3413,3414,3415,3417,7001,7002,7004,7010,7011,7015,7017,7018,7019,3436,3437,3439,7048,7051,22440,22441,22442,4021,4023,4024,4025,1466,22460,22461,22462,2001,2002,2004,2006,2009,2010,2011,2015,2017,2018,2019,1001,1008,1009,2033,1011,1012,1013,2036,2045
+    max_remote_io_threads: 4
+    worker_batch_buffer_size: 100
+    max_batch_parse_threads: 9
+    max_daily_io_num_on_worker: 1
+    ss_max_daily_io_num: 2
+    max_daily_io_num: 2
+    worker_use_max_disk_ratio: 0.5
+    remote_io_threads: 4
+    reload_data_each_round: false
+    worker_max_daily_io_num: 1
+    ss_preload_batch_threads: 4
+    worker_preload_batch_threads: 4
+    ss_use_local_disk_cache: true
+    ss_use_max_disk_ratio: 0.7
+    read_threads: 8
+    batch_parse_threads: 8
+    ss_use_disk_cache: true
+train_config:
+    days: 2026-06-08/00 2026-06-08/01 2026-06-08/02 2026-06-08/03 2026-06-08/04 2026-06-08/05 2026-06-08/06 2026-06-08/07 2026-06-08/08 2026-06-08/09 2026-06-08/10 2026-06-08/11 2026-06-08/12 2026-06-08/13 2026-06-08/14 2026-06-08/15 2026-06-08/16 2026-06-08/17 2026-06-08/18 2026-06-08/19 2026-06-08/20 2026-06-08/21 2026-06-08/22 2026-06-08/23
+    data_path: hdfs://R2/projects/rcmd_data/hdfs/prod/alg/pdp/train_data_parquet/pdp_gr/product_detail_page/PH/$DAY/*.parquet
+    load_dnn_config:
+        load_nn: true
+        lax: true
+    save_model_days: '{2022..2048}-{01..12}-{01..31}/23 {2022..2048}-{01..12}-{01..31}/12'
+    data_done_file: ''
+    pass_size: 99999999
+    ego_plugin_path: /workspace/data/libego-plugin-v1.so
+    dump_path: hdfs://R2/projects/rcmd_feature/hdfs/prod/alg/pdp/pdp_ph_ot_mask_gr/rr_pdp_unify_llm_tk_l2_11391_120645/end_day/2026-06-08/ckpt/
+    dump_batch_frequency: 5000
+    max_session_per_device: 4
+    max_context_per_device: 16
+    gpu_merge_batch_buffer_size: 1
+    gpu_merge_once_batch_num: 1
+    ps_half_precision: true
+    train_threads: 16
+    enable_train_round_metric: true
+    push_threads: 0
+metric_config:
+    target_calc_threads: 1
+    group_calc_threads: 0
