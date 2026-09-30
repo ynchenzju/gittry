@@ -350,29 +350,60 @@ user 侧的 8 个位置是**按信息类型**分的：3 个时间尺度（静态
 
 这是 v1m4 最容易让人困惑的地方 —— 同一个模型类，在训练和推理时跑的是**结构不同的计算图**。
 
-### 5.1 item cache：teacher-student
+### 5.1 item cache：训练时写入，推理时直读
+
+⚠️ **先澄清一个极易误读的点：这里没有知识蒸馏。** 没有独立的 teacher 模型、没有 soft target、没有蒸馏 loss、也没有两个网络之间的对齐目标。代码里的变量名叫 `item_teacher` / `brv4_item_cache_teacher` 纯属**历史命名**，它就是一个普通的 `DenseTower(816→640)`：训练时既提供前向值，又把自己的输出写进 cache slot。
+
+真正的机制是**在线 / 离线的计算分工**：
 
 ```
-   训练时                                    推理时
-   ────────                                  ────────
-   item 组 60 特征 (816 维)                   item cache slot 30102
-        │                                          │
-   DenseTower(816→640)                             │ 直接查表
-        │                                          │
-   item_teacher ──┐                                │
-                  ├─ replace_gradient ─► item_emb ◄┘
-   cache_emb ─────┘        │
-   (slot 30102)            └── 梯度只流向 teacher
-                             前向取 teacher 的值
-                             EGO AssignOptimizer 把
-                             teacher 输出写回 slot 30102
+   训练时                                        推理时
+   ──────                                        ──────
+   item 组 60 特征 (816 维)                       item cache slot 30102
+        │                                              │
+   DenseTower(816→640)  ← 普通层，正常训练、正常收梯度     │ 直接查表
+        │                                              │
+   producer_out ───────┐                               │
+                       ├─ replace_gradient ─► item_emb ◄┘
+   cache_emb ──────────┘         │
+   (slot 30102)                  ├── 前向：取 DenseTower 的输出（不是查表值）
+                                 ├── 反向：DenseTower 收到正常透传梯度
+                                 └── cache_emb 的“梯度”被替换成
+                                     DenseTower 的输出值本身
+                                     → EGO AssignOptimizer 据此
+                                       把该值写入 slot 30102
 ```
 
-**动机**：item 侧的 60 个特征（816 维）在推理时如果每次都要重算，1024 个候选就是 1024 次 816→640 的投影。把它们**离线预计算并写进 cache**，在线只查表，是巨大的节省。
+`replace_gradient` 的确切语义（EGO `tensorflow/feature/feature_input.py` L280-292）：
 
-`replace_gradient(teacher, cache, teacher)` 的语义是：前向用 teacher 的值，反向把梯度导向 teacher（不流向 cache 查表路径）。这样 teacher 能被正常训练，而训练好的输出通过 assign slot 机制沉淀到 cache 里。
+```python
+def replace_gradient(input_tensor, tensor_to_replace_gradient, grad_tensor):
+    @tf.custom_gradient
+    def func(input_tensor, tensor_to_replace_gradient):
+        def grad(upstream):
+            return upstream, grad_tensor     # ← 第二个返回值不是真梯度，是“替换值”
+        return input_tensor, grad
+    return func(input_tensor, tensor_to_replace_gradient)
+```
 
-**代价**：训练图里有 522,880 个参数（`brv4_item_cache_teacher`）在推理图里**完全不存在**。这也是"训练参数量 11.44M / 推理参数量 10.91M"这个差异的唯一来源。
+模型调的是 `replace_gradient(producer_out, cache_emb, producer_out)`，所以：
+
+| | 行为 |
+|---|---|
+| **前向** | 返回第一个参数 = DenseTower 的输出（**不是** cache 查表值） |
+| **对 DenseTower 的反向** | `upstream` 原样透传 → 正常参与梯度下降 |
+| **对 `cache_emb` 的反向** | 被替换成第三个参数，即 **DenseTower 的输出值本身** |
+
+最后一条是关键：assign slot 的“梯度”位置被填成了**要写入的值**，EGO 的 AssignOptimizer 就把它写进 slot 30102。所以它不是梯度下降意义上的梯度，而是**借梯度通道传递的写入载荷**。
+
+**动机**：item 侧 60 个特征（816 维）如果推理时每个候选都要重算，就是每候选 816×640 = **522,240 MAC**（约占候选级总量的 10%）。改成“训练时算一次并写入 cache、推理时只查表”，这部分在线计算**完全消失**。
+
+**代价**：`brv4_item_cache_teacher`（522,880 参数）只存在于训练图，推理图里没有。这是“训练参数 11.44M / 推理参数 10.91M”差异的**唯一来源**。
+
+⚠️ **一个隐含耦合**：cache 的内容质量完全依赖训练时 DenseTower 的输出。如果训练中断、item 特征分布漂移、或 slot 30102 被特征准入策略淘汰，推理侧读到的就是过期或全零的向量，而**模型不会报错**。两道防线：
+
+1. 入口必须调 `ego.config_feature_admission_evict(slots=[30102], delete_threshold=0, delete_after_unseen_days=9999)` 关闭该 slot 的淘汰
+2. `item_cache_norm`（`sqrt(sum(item_emb²))`）作为一个预测 target 导出，专门用于监控 cache 是否被正常写入
 
 ### 5.2 三处训推分叉
 
@@ -465,7 +496,7 @@ v1m4 不是凭空设计的，它是几条研究/工程线的合成：
 | **DIN / SimTier** | 目标物品与行为序列的相似度特征 | 6 路短序列 + 2 路长序列的多粒度余弦直方图（231/231/204 维） |
 | **FlashAttention** | online softmax 的分区归并 | TIM serving 路径的 `(max, den, num)` 三元组合并 |
 | **ESMM / MMoE 家族** | 多任务塔、任务间表征共享 | 5 个独立塔 + `common` token 共享 + `order` 类任务复用表征 |
-| **知识蒸馏 / cache 预计算** | 把重计算从在线挪到离线 | item cache 的 teacher-student + assign slot |
+| **在线/离线计算分工（cache 预计算）** | 把重计算从在线挪到离线 | item cache：训练时 DenseTower 算出 640 维并通过 assign slot 写入 slot 30102，推理时直读（**不是蒸馏**） |
 
 **v1m4 自己的贡献**主要是把这些拼成一个**在 1:1024 极端不对称下仍然高效**的结构，特别是：
 

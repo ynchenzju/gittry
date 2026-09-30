@@ -78,7 +78,7 @@ tests/                                 tf_fim_contracts.py / compiled_fim_checks
 | `user_long` | 74 | **1656** | user token 2 |
 | `context` | 24 | **432** | user token 3（与 indicator 拼接） |
 | `indicator_ctx_fea` | 1 | **128** | user token 3（`context_bundle_1`, slot 63122） |
-| `item` | 60 | **816** | 训练态 item cache teacher 的输入 |
+| `item` | 60 | **816** | 仅训练态：item cache 投影层（`brv4_item_cache_teacher`）的输入 |
 | `recall` | 5 | **80** | item token 1 |
 | `target_item_query_img` | 1 | **33** | SimTier 的 image query |
 | `target_item_query_title` | 1 | **33** | SimTier 的 title query |
@@ -545,8 +545,30 @@ cache_norm = tf.sqrt(tf.reduce_sum(tf.square(item_emb), axis=-1, keepdims=True),
 return item_emb, cache_norm
 ```
 
-💡 **训推分离机制**：训练态 `replace_gradient(teacher, cache_emb, teacher)` 让前向取 teacher 值、反向把梯度导向 teacher，同时 EGO 的 AssignOptimizer 把 teacher 输出**直接写入 slot 30102**；推理态只查表，60 个 item 特征（816 维）完全不参与计算图。
-⚠️ **`item` 组不能加 `ego.Normalization` 之外的处理，也不能在 serving 侧引用**：`brv4_item_cache_teacher` 是训练态专属变量（522,880 参数），serving 图里不存在。
+⚠️ **这里没有知识蒸馏**。没有独立的 teacher 模型、没有 soft target、没有蒸馏 loss、没有两网对齐目标。`item_teacher` / `brv4_item_cache_teacher` 只是**历史命名**，它就是一个普通 `DenseTower(816→640)`。重写时如果想避开误导，可以改叫 `item_cache_producer`（但改名会破坏 checkpoint，需配套映射脚本）。
+
+💡 **训推分离的真实机制是在线/离线计算分工**。`ego.replace_gradient(input_tensor, tensor_to_replace_gradient, grad_tensor)` 的实现（EGO `tensorflow/feature/feature_input.py` L280-292）是：
+
+```python
+@tf.custom_gradient
+def func(input_tensor, tensor_to_replace_gradient):
+    def grad(upstream):
+        return upstream, grad_tensor      # ← 第二个返回值不是真梯度，是“替换值”
+    return input_tensor, grad
+```
+
+模型调的是 `replace_gradient(producer_out, cache_emb, producer_out)`，所以：
+
+| | 行为 |
+|---|---|
+| 前向 | 返回第一个参数 = DenseTower 的输出（**不是** cache 查表值） |
+| 对 DenseTower 的反向 | `upstream` 原样透传 → 正常参与梯度下降 |
+| 对 `cache_emb` 的反向 | 被替换成第三个参数，即 **DenseTower 的输出值本身** |
+
+最后一条是关键：assign slot 的“梯度”位置被填成了**要写入的值**，EGO 的 AssignOptimizer 据此把它写进 slot 30102。它不是梯度下降意义上的梯度，而是**借梯度通道传递的写入载荷**。推理态只查表，60 个 item 特征（816 维）完全不进图，省下每候选 816×640 = 522,240 MAC（约候选级总量的 10%）。
+
+⚠️ **`item` 组只能在训练态引用**：`brv4_item_cache_teacher` 是训练态专属变量（522,880 参数），serving 图里不存在。在 serving 分支里引用 `self._group("item")` 会导致导出失败或静默产生候选级额外计算。
+⚠️ **cache 内容质量完全依赖训练态的写入**：训练中断、item 特征漂移、或 slot 30102 被特征准入淘汰，都会让推理读到过期/全零向量而**不报错**。两道防线：入口的 `config_feature_admission_evict(slots=[30102], delete_threshold=0, delete_after_unseen_days=9999)`，以及下面这个 `cache_norm` 监控量。
 💡 `cache_norm` 是**监控量**，作为 `item_cache_norm` target 导出（见 §5.12），不参与打分。⚠️ 它是真实 norm，**不要**改成 `rsqrt` 形式。
 
 ### 5.7 SimTier 多模态特征（`utils/simtier_v1m4.py`）
@@ -1528,7 +1550,7 @@ finally:
 |---|---:|---:|---:|
 | user token 投影（8 个） | 2,853,888 | 14,856 | 24.95% |
 | 序列流编码（5 条） | 110,976 | 0 | 0.97% |
-| item token（含 teacher） | 750,336 | 1,792 | 6.56% |
+| item token（含训练态 cache 投影） | 750,336 | 1,792 | 6.56% |
 | **FIM × 2 层** | **4,637,184** | 0 | **40.54%** |
 | rank_global | 393,984 | 4,096 | 3.44% |
 | **TIM** | **1,895,680** | 0 | **16.57%** |
@@ -1655,7 +1677,7 @@ item token 0（`item_token`）无参数 —— 它直接是 cache 的 chunk 0。
 | 环节 | 训练 | serving |
 |---|---|---|
 | batch 语义 | 所有特征 `B_train`，user/item 同 batch | user = `R`（COMMON），item = `C·R`（ITEM），行序 `[candidate, request]` |
-| item embedding | `DenseTower(816→640)` teacher + `replace_gradient`，写入 slot 30102 | **只查表** `assign_slot_emb`，816 维 item 特征完全不进图 |
+| item embedding | `DenseTower(816→640)` + `replace_gradient`，输出值经 assign slot 写入 slot 30102（**非蒸馏**） | **只查表** `assign_slot_emb`，816 维 item 特征完全不进图 |
 | `brv4_item_cache_teacher` | 存在（522,880 参数） | **不存在** |
 | FIM `_item_ca` | `broadcast_memory=False` → `masked_attention` | `broadcast_memory=True` → `request_shared_attention` |
 | FIM `_user_ca` | `broadcast_memory=False`（默认） | 同（user 本来就是请求粒度） |
@@ -1723,7 +1745,7 @@ item token 0（`item_token`）无参数 —— 它直接是 cache 的 chunk 0。
 ### 9.2 已知陷阱（重写时极易踩）
 
 1. **序列组里的静态特征会被 EGO 静默丢弃** —— 所以 `build_group_input` 必须 raise。同理，长度不齐的 concat 会静默错位。
-2. **`ego.Normalization` / `INormalization` 不能用在四类张量上**：① 序列组（moments 在 batch×time 上统计，padding 污染统计量）；② 冻结的多模态 embedding（下游要 `l2_normalize` 算 cosine，而 cosine 对减均值敏感）；③ assign slot / item cache（值由 teacher 每步写入，分布非平稳，moving stats 永远滞后）；④ 用于硬路由的 one-hot（减均值后 0/1 语义丢失）。
+2. **`ego.Normalization` / `INormalization` 不能用在四类张量上**：① 序列组（moments 在 batch×time 上统计，padding 污染统计量）；② 冻结的多模态 embedding（下游要 `l2_normalize` 算 cosine，而 cosine 对减均值敏感）；③ assign slot / item cache（值由训练态投影每步写入，分布非平稳，moving stats 永远滞后）；④ 用于硬路由的 one-hot（减均值后 0/1 语义丢失）。
    - 本模型当前对 `brv4_scene_token` 与 `click_mean`/`order_mean` 加了 `input_norm=True`，属于①④ 的边界情形；硬路由本身读的是原始 `scene_onehot_input` 所以没坏，但这是**已知的语义妥协**，不是最佳实践。
 3. **`tf.cast(float→int32)` 是向零截断，不是 floor**。负值会截到 0。SimTier 的索引计算依赖这一点。
 4. **SimTier 的 cosine 不能用 `matmul` 算**。硬分箱是离散映射，~1e-7 的 fp 差异会翻转桶归属。
